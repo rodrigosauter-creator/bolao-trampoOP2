@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
-    <title>Galeria da Copa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Fotos</title>
 
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
         }
 
         .galeria {
@@ -19,8 +23,13 @@
 
         .galeria img {
             width: 100%;
+            border-radius: 10px;
             cursor: pointer;
-            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+
+        .galeria img:hover {
+            transform: scale(1.03);
         }
 
         .modal {
@@ -30,6 +39,7 @@
             background: rgba(0,0,0,.9);
             justify-content: center;
             align-items: center;
+            z-index: 999;
         }
 
         .modal img {
@@ -38,60 +48,67 @@
         }
     </style>
 </head>
-
 <body>
 
-<h1>📸 Galeria da Copa</h1>
+<h1>📸 Galeria do Bolão</h1>
 
-<a href="index.html">⬅ Voltar ao bolão</a>
+<p>
+    <a href="index.html">⬅ Voltar ao bolão</a>
+</p>
 
 <div id="galeria" class="galeria"></div>
 
 <div id="modal" class="modal">
-    <img id="imagemGrande">
+    <img id="foto-ampliada">
 </div>
 
 <script>
+async function carregarGaleria() {
 
-fetch("fotos.json")
-.then(r => r.json())
-.then(lista => {
+    const resposta =
+        await fetch("fotos.json");
+
+    const fotos =
+        await resposta.json();
 
     const galeria =
         document.getElementById("galeria");
 
-    lista.forEach(foto => {
+    fotos.forEach(nomeArquivo => {
 
         const img =
             document.createElement("img");
 
-        img.src = "fotos/" + foto;
+        img.src =
+            "fotos/" + nomeArquivo;
 
-        img.onclick = () => {
+        img.loading = "lazy";
+
+        img.addEventListener("click", () => {
 
             document
-                .getElementById("imagemGrande")
+                .getElementById("foto-ampliada")
                 .src = img.src;
 
             document
                 .getElementById("modal")
                 .style.display = "flex";
-        };
+        });
 
         galeria.appendChild(img);
     });
+}
 
-});
+carregarGaleria();
 
 document
 .getElementById("modal")
-.onclick = () => {
+.addEventListener("click", () => {
 
     document
-    .getElementById("modal")
-    .style.display = "none";
-};
-
+        .getElementById("modal")
+        .style.display = "none";
+});
 </script>
 
 </body>
