@@ -1,6 +1,9 @@
-name: Atualizar dados do bolão
+name: Atualizar Bolão
 
 on:
+  schedule:
+    - cron: "*/15 * * * *"
+
   workflow_dispatch:
 
 permissions:
@@ -11,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Baixar repositório
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Configurar Python
@@ -23,18 +26,41 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-      - name: Executar script
+      - name: Baixar planilha atualizada
+        run: |
+          curl -L "https://1drv.ms/x/c/5a2880f4c2dd83a1/IQBNnJ-lJok9QqqY-fVSrpDFAW8dxM2r-jxsfo0ebBzubhM?e=IXDErV&download=1" \
+          -o nova_planilha.xlsx
+
+      - name: Verificar alteração na planilha
+        id: verificar
+        run: |
+          if [ ! -f "Copa do Mundo 2026.xlsx" ]; then
+            echo "alterou=true" >> $GITHUB_OUTPUT
+          elif cmp -s "Copa do Mundo 2026.xlsx" nova_planilha.xlsx; then
+            echo "alterou=false" >> $GITHUB_OUTPUT
+          else
+            echo "alterou=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Atualizar planilha
+        if: steps.verificar.outputs.alterou == 'true'
+        run: |
+          mv nova_planilha.xlsx "Copa do Mundo 2026.xlsx"
+
+      - name: Executar atualização
+        if: steps.verificar.outputs.alterou == 'true'
         run: |
           python atualizar.py
 
-      - name: Commit do JSON
+      - name: Commit e Push
+        if: steps.verificar.outputs.alterou == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
+          git add "Copa do Mundo 2026.xlsx"
           git add dados.json
 
-          git diff --cached --quiet && exit 0
+          git commit -m "Atualização automática do bolão" || exit 0
 
-          git commit -m "Atualização automática"
           git push
