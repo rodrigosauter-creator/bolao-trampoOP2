@@ -491,3 +491,23 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
     gap: 20px;
     justify-content: center;
 }
+
+.rodape-imagem {
+
+    max-width: 1100px;
+
+    margin: 40px auto;
+
+    text-align: center;
+}
+
+.rodape-imagem img {
+
+    width: 100%;
+
+    max-width: 1000px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,.2);
+}
