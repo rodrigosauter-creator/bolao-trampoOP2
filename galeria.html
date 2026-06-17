@@ -30,38 +30,41 @@
 
     </div>
 
-   <div id="modal" class="modal">
+    <div id="modal" class="modal">
 
-    <button
-        id="anterior"
-        class="seta">
-        ◀
-    </button>
+        <button
+            id="anterior"
+            class="seta">
+            ◀
+        </button>
 
-    <img id="foto-ampliada">
+        <img id="foto-ampliada">
 
-    <button
-        id="proxima"
-        class="seta">
-        ▶
-    </button>
+        <button
+            id="proxima"
+            class="seta">
+            ▶
+        </button>
 
     </div>
 
     <script>
+
+        let fotos = [];
+        let indiceAtual = 0;
 
         async function carregarGaleria() {
 
             const resposta =
                 await fetch("fotos.json");
 
-            const fotos =
+            fotos =
                 await resposta.json();
 
             const galeria =
                 document.getElementById("galeria");
 
-            fotos.forEach(nomeArquivo => {
+            fotos.forEach((nomeArquivo, indice) => {
 
                 const img =
                     document.createElement("img");
@@ -76,27 +79,75 @@
 
                 img.addEventListener(
                     "click",
-                    () => {
-
-                        document
-                            .getElementById(
-                                "foto-ampliada"
-                            )
-                            .src = img.src;
-
-                        document
-                            .getElementById(
-                                "modal"
-                            )
-                            .style.display = "flex";
-                    }
+                    () => abrirFoto(indice)
                 );
 
                 galeria.appendChild(img);
             });
         }
 
-        carregarGaleria();
+        function abrirFoto(indice) {
+
+            indiceAtual = indice;
+
+            document
+                .getElementById("foto-ampliada")
+                .src =
+                "fotos/" + fotos[indiceAtual];
+
+            document
+                .getElementById("modal")
+                .style.display = "flex";
+        }
+
+        function fotoAnterior() {
+
+            indiceAtual--;
+
+            if (indiceAtual < 0) {
+
+                indiceAtual =
+                    fotos.length - 1;
+            }
+
+            abrirFoto(indiceAtual);
+        }
+
+        function fotoProxima() {
+
+            indiceAtual++;
+
+            if (indiceAtual >= fotos.length) {
+
+                indiceAtual = 0;
+            }
+
+            abrirFoto(indiceAtual);
+        }
+
+        document
+            .getElementById("anterior")
+            .addEventListener(
+                "click",
+                (e) => {
+
+                    e.stopPropagation();
+
+                    fotoAnterior();
+                }
+            );
+
+        document
+            .getElementById("proxima")
+            .addEventListener(
+                "click",
+                (e) => {
+
+                    e.stopPropagation();
+
+                    fotoProxima();
+                }
+            );
 
         document
             .getElementById("modal")
@@ -105,12 +156,40 @@
                 () => {
 
                     document
-                        .getElementById(
-                            "modal"
-                        )
+                        .getElementById("modal")
                         .style.display = "none";
                 }
             );
+
+        document
+            .addEventListener(
+                "keydown",
+                (e) => {
+
+                    const modal =
+                        document.getElementById("modal");
+
+                    if (modal.style.display !== "flex")
+                        return;
+
+                    if (e.key === "ArrowLeft") {
+
+                        fotoAnterior();
+                    }
+
+                    if (e.key === "ArrowRight") {
+
+                        fotoProxima();
+                    }
+
+                    if (e.key === "Escape") {
+
+                        modal.style.display = "none";
+                    }
+                }
+            );
+
+        carregarGaleria();
 
     </script>
 
