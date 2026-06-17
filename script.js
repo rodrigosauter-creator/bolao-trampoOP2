@@ -550,81 +550,77 @@ function montarRankingRodadas(rankingRodadas) {
     container.innerHTML = "";
 
     rankingRodadas
-    .slice(
-        0,
-        dadosGlobais.jogos_realizados + 1
-    )
-    .forEach(
+        .slice(
+            0,
+            dadosGlobais.jogos_realizados + 1
+        )
+        .forEach(rodada => {
 
-        let html = `
+            let html = `
 
-        <div class="rodada-card">
+            <div class="rodada-card">
 
-            <div class="rodada-header">
+                <div class="rodada-header">
 
-                <h3>
+                    <h3>
 
-                    ${
-                        rodada.jogo === 0
-                        ? "Início"
-                        : `Jogo ${rodada.jogo}`
-                    }
+                        ${
+                            rodada.jogo === 0
+                            ? "Início"
+                            : `Jogo ${rodada.jogo}`
+                        }
 
-                </h3>
+                    </h3>
 
-                <span class="vencedor-rodada">
+                    <span class="vencedor-rodada">
 
-                    🏆 ${rodada.vencedor_rodada}
+                        🏆 ${rodada.vencedor_rodada}
 
-                </span>
+                    </span>
 
-            </div>
+                </div>
 
-            <table class="tabela-rodada">
+                <table class="tabela-rodada">
 
-                <thead>
+                    <thead>
+                        <tr>
+                            <th>Posição</th>
+                            <th>Apostador</th>
+                            <th>Pontos</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+            `;
+
+            rodada.ranking.forEach((item, indice) => {
+
+                let medalha = "";
+
+                if (indice === 0) medalha = "🥇";
+                else if (indice === 1) medalha = "🥈";
+                else if (indice === 2) medalha = "🥉";
+                else medalha = `${indice + 1}º`;
+
+                html += `
                     <tr>
-                        <th>Posição</th>
-                        <th>Apostador</th>
-                        <th>Pontos</th>
+                        <td>${medalha}</td>
+                        <td>${item.nome}</td>
+                        <td>${item.pontos}</td>
                     </tr>
-                </thead>
-
-                <tbody>
-        `;
-
-        rodada.ranking.forEach((item, indice) => {
-
-            let medalha = "";
-
-            if (indice === 0) medalha = "🥇";
-            else if (indice === 1) medalha = "🥈";
-            else if (indice === 2) medalha = "🥉";
-            else medalha = `${indice + 1}º`;
+                `;
+            });
 
             html += `
+                    </tbody>
+                </table>
 
-            <tr>
-
-                <td>${medalha}</td>
-
-                <td>${item.nome}</td>
-
-                <td>${item.pontos}</td>
-
-            </tr>
+            </div>
             `;
+
+            container.innerHTML += html;
+
         });
-
-        html += `
-                </tbody>
-            </table>
-
-        </div>
-        `;
-
-        container.innerHTML += html;
-    });
 }
 
 // =====================================================
