@@ -38,7 +38,16 @@ evolucao = {p.strip(): [] for p in participantes if p}
 
 for row in ws.iter_rows(min_row=2, values_only=True):
     jogo = row[0]
+    jogos_realizados = 0
 
+for jogo in jogos:
+
+    if (
+        jogo["golsA"] is not None and
+        jogo["golsB"] is not None
+    ):
+        jogos_realizados += 1
+        
     if jogo is None:
         continue
 
@@ -51,7 +60,9 @@ for row in ws.iter_rows(min_row=2, values_only=True):
 
 dados = {
     "classificacao": classificacao,
-    "evolucao": evolucao
+    "evolucao": evolucao,
+    "jogos": jogos,
+    "jogos_realizados": jogos_realizados
 }
 
 with open(ARQUIVO_JSON, "w", encoding="utf-8") as f:
