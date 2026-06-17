@@ -34,12 +34,9 @@ Object.entries(d.evolucao).forEach(([nome,valores])=>{
    valoresValidos.forEach(v=>labels.push(v.jogo));
  }
 
- let acumulado=0;
-
- const serie = valoresValidos.map(v=>{
-   acumulado += Number(v.pontos || 0);
-   return acumulado;
- });
+ const serie = valoresValidos.map(v =>
+   Number(v.pontos || 0)
+ );
 
  datasets.push({
    label:nome,
