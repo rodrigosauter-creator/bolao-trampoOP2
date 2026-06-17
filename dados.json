@@ -4136,28 +4136,28 @@
         {
           "jogo": 22,
           "selecao_a": "Inglaterra",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 2,
+          "gols_b": 1,
           "selecao_b": "Croácia",
-          "vencedor": "-",
+          "vencedor": "Inglaterra",
           "pontos": 0
         },
         {
           "jogo": 23,
           "selecao_a": "Gana",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 3,
+          "gols_b": 1,
           "selecao_b": "Panamá",
-          "vencedor": "-",
+          "vencedor": "Gana",
           "pontos": 0
         },
         {
           "jogo": 24,
           "selecao_a": "Uzbequistão",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 0,
+          "gols_b": 2,
           "selecao_b": "Colômbia",
-          "vencedor": "-",
+          "vencedor": "Colômbia",
           "pontos": 0
         },
         {
@@ -5070,37 +5070,37 @@
         {
           "jogo": 21,
           "selecao_a": "Portugal",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 4,
+          "gols_b": 0,
           "selecao_b": "RD Congo",
-          "vencedor": "-",
+          "vencedor": "Portugal",
           "pontos": 0
         },
         {
           "jogo": 22,
           "selecao_a": "Inglaterra",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 3,
+          "gols_b": 1,
           "selecao_b": "Croácia",
-          "vencedor": "-",
+          "vencedor": "Inglaterra",
           "pontos": 0
         },
         {
           "jogo": 23,
           "selecao_a": "Gana",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 2,
+          "gols_b": 0,
           "selecao_b": "Panamá",
-          "vencedor": "-",
+          "vencedor": "Gana",
           "pontos": 0
         },
         {
           "jogo": 24,
           "selecao_a": "Uzbequistão",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 0,
+          "gols_b": 2,
           "selecao_b": "Colômbia",
-          "vencedor": "-",
+          "vencedor": "Colômbia",
           "pontos": 0
         },
         {
@@ -6013,37 +6013,37 @@
         {
           "jogo": 21,
           "selecao_a": "Portugal",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 3,
+          "gols_b": 0,
           "selecao_b": "RD Congo",
-          "vencedor": "-",
+          "vencedor": "Portugal",
           "pontos": 0
         },
         {
           "jogo": 22,
           "selecao_a": "Inglaterra",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 2,
+          "gols_b": 1,
           "selecao_b": "Croácia",
-          "vencedor": "-",
+          "vencedor": "Inglaterra",
           "pontos": 0
         },
         {
           "jogo": 23,
           "selecao_a": "Gana",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 2,
+          "gols_b": 0,
           "selecao_b": "Panamá",
-          "vencedor": "-",
+          "vencedor": "Gana",
           "pontos": 0
         },
         {
           "jogo": 24,
           "selecao_a": "Uzbequistão",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 1,
+          "gols_b": 3,
           "selecao_b": "Colômbia",
-          "vencedor": "-",
+          "vencedor": "Colômbia",
           "pontos": 0
         },
         {
@@ -6956,37 +6956,37 @@
         {
           "jogo": 21,
           "selecao_a": "Portugal",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 3,
+          "gols_b": 0,
           "selecao_b": "RD Congo",
-          "vencedor": "-",
+          "vencedor": "Portugal",
           "pontos": 0
         },
         {
           "jogo": 22,
           "selecao_a": "Inglaterra",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 3,
+          "gols_b": 2,
           "selecao_b": "Croácia",
-          "vencedor": "-",
+          "vencedor": "Inglaterra",
           "pontos": 0
         },
         {
           "jogo": 23,
           "selecao_a": "Gana",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 1,
+          "gols_b": 1,
           "selecao_b": "Panamá",
-          "vencedor": "-",
+          "vencedor": "Empate",
           "pontos": 0
         },
         {
           "jogo": 24,
           "selecao_a": "Uzbequistão",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 1,
+          "gols_b": 4,
           "selecao_b": "Colômbia",
-          "vencedor": "-",
+          "vencedor": "Colômbia",
           "pontos": 0
         },
         {
@@ -8842,37 +8842,37 @@
         {
           "jogo": 21,
           "selecao_a": "Portugal",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 3,
+          "gols_b": 0,
           "selecao_b": "RD Congo",
-          "vencedor": "-",
+          "vencedor": "Portugal",
           "pontos": 0
         },
         {
           "jogo": 22,
           "selecao_a": "Inglaterra",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 1,
+          "gols_b": 2,
           "selecao_b": "Croácia",
-          "vencedor": "-",
+          "vencedor": "Croácia",
           "pontos": 0
         },
         {
           "jogo": 23,
           "selecao_a": "Gana",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 2,
+          "gols_b": 1,
           "selecao_b": "Panamá",
-          "vencedor": "-",
+          "vencedor": "Gana",
           "pontos": 0
         },
         {
           "jogo": 24,
           "selecao_a": "Uzbequistão",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 0,
+          "gols_b": 2,
           "selecao_b": "Colômbia",
-          "vencedor": "-",
+          "vencedor": "Colômbia",
           "pontos": 0
         },
         {
@@ -9785,37 +9785,37 @@
         {
           "jogo": 21,
           "selecao_a": "Portugal",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 4,
+          "gols_b": 1,
           "selecao_b": "RD Congo",
-          "vencedor": "-",
+          "vencedor": "Portugal",
           "pontos": 0
         },
         {
           "jogo": 22,
           "selecao_a": "Inglaterra",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 2,
+          "gols_b": 0,
           "selecao_b": "Croácia",
-          "vencedor": "-",
+          "vencedor": "Inglaterra",
           "pontos": 0
         },
         {
           "jogo": 23,
           "selecao_a": "Gana",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 2,
+          "gols_b": 2,
           "selecao_b": "Panamá",
-          "vencedor": "-",
+          "vencedor": "Empate",
           "pontos": 0
         },
         {
           "jogo": 24,
           "selecao_a": "Uzbequistão",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 0,
+          "gols_b": 3,
           "selecao_b": "Colômbia",
-          "vencedor": "-",
+          "vencedor": "Colômbia",
           "pontos": 0
         },
         {
