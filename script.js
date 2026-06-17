@@ -268,10 +268,6 @@ async function carregarDados() {
             dados.classificacao
         );
 
-        montarCardsDashboard(
-            dados.classificacao
-        );
-
         montarGrafico(
             dados.evolucao
         );
