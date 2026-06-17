@@ -181,15 +181,19 @@ function montarGrafico(evolucao) {
 
     if (!canvas) return;
 
+    const limite =
+        dadosGlobais.jogos_realizados + 1;
+
     const nomes =
         Object.keys(evolucao);
 
     const labels =
         evolucao[nomes[0]]
+            .slice(0, limite)
             .map(item =>
                 item.jogo === 0
-                ? "Início"
-                : `J${item.jogo}`
+                    ? "Início"
+                    : `J${item.jogo}`
             );
 
     const datasets = nomes.map(nome => {
@@ -199,6 +203,7 @@ function montarGrafico(evolucao) {
             label: nome,
 
             data: evolucao[nome]
+                .slice(0, limite)
                 .map(item => item.pontos),
 
             tension: 0.25,
@@ -544,7 +549,12 @@ function montarRankingRodadas(rankingRodadas) {
 
     container.innerHTML = "";
 
-    rankingRodadas.forEach(rodada => {
+    rankingRodadas
+    .slice(
+        0,
+        dadosGlobais.jogos_realizados + 1
+    )
+    .forEach(
 
         let html = `
 
@@ -635,7 +645,12 @@ function montarHistoricoLideranca(lideres) {
     const aparicoes = {};
     const permanencia = {};
 
-    lideres.forEach((item, indice) => {
+    lideres
+        .slice(
+            0,
+            dadosGlobais.jogos_realizados + 1
+        )
+        .forEach((item, indice) => {
 
         const lider = item.lider;
 
