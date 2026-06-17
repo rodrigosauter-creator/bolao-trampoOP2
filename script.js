@@ -258,72 +258,69 @@ async function carregarDados() {
 
     try {
 
-        console.log("1 - Entrou");
-
         const response =
             await fetch("dados.json");
 
-        console.log("2 - Fetch OK");
+        if (!response.ok) {
+
+            throw new Error(
+                `Erro ao carregar dados.json (${response.status})`
+            );
+
+        }
 
         const dados =
             await response.json();
 
-        console.log("3 - JSON OK");
-        console.log(dados);
-
         dadosGlobais = dados;
-
-        console.log("4 - Antes do pódio");
 
         montarPodio(
             dados.classificacao
         );
 
-        console.log("5 - Pódio OK");
-
         montarClassificacao(
             dados.classificacao
         );
-
-        console.log("6 - Classificação OK");
 
         montarCardsDashboard(
             dados.classificacao
         );
 
-        console.log("7 - Cards OK");
-
         montarGrafico(
             dados.evolucao
         );
-
-        console.log("8 - Gráfico OK");
 
         montarJogos(
             dados.jogos
         );
 
-        console.log("9 - Jogos OK");
-
         montarListaApostadores(
             dados.apostadores
         );
 
-        console.log("10 - Apostadores OK");
-
         inicializarAbas();
 
-        console.log("11 - Tudo OK");
+        console.log(
+            "Dados carregados com sucesso."
+        );
 
     } catch (erro) {
 
         console.error(
-            "ERRO:",
+            "Erro ao carregar dados:",
             erro
         );
 
     }
 }
+
+console.log("script.js carregado");
+
+document.addEventListener(
+    "DOMContentLoaded",
+    carregarDados
+);
+
 // =====================================================
 // JOGOS
 // =====================================================
