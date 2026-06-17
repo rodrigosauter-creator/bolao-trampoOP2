@@ -421,9 +421,13 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
 
     position: absolute;
 
-    background: rgba(255,255,255,.15);
+    top: 50%;
+
+    transform: translateY(-50%);
 
     border: none;
+
+    background: rgba(0,0,0,.6);
 
     color: white;
 
@@ -437,20 +441,19 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
 
     cursor: pointer;
 
-    transition: .2s;
+    z-index: 1001;
 }
 
-.seta:hover {
-
-    background: rgba(255,255,255,.3);
-}
-
+#seta-anterior,
 #anterior {
-
     left: 30px;
 }
 
+#seta-proxima,
 #proxima {
-
     right: 30px;
+}
+
+.seta:hover {
+    background: rgba(0,0,0,.8);
 }
