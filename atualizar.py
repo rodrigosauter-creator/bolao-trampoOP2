@@ -40,7 +40,7 @@ for row in ws.iter_rows(min_row=2, values_only=True):
     jogo = row[0]
     jogos_realizados = 0
 
-for jogo in jogos:
+for jogo in jogo:
 
     if (
         jogo["golsA"] is not None and
