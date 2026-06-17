@@ -14,7 +14,7 @@ wb = openpyxl.load_workbook(
 )
 
 # =========================
-# Classificação
+# CLASSIFICAÇÃO
 # =========================
 
 ws = wb["Classificação"]
@@ -27,10 +27,10 @@ for row in ws.iter_rows(
     values_only=True
 ):
 
-    posicao = row[4]   # Coluna E
-    nome = row[5]      # Coluna F
-    pontos = row[6]    # Coluna G
-    acertos = row[7]   # Coluna H
+    posicao = row[4]
+    nome = row[5]
+    pontos = row[6]
+    acertos = row[7]
 
     if nome is None:
         continue
@@ -43,7 +43,7 @@ for row in ws.iter_rows(
     })
 
 # =========================
-# Pontuação por rodada
+# EVOLUÇÃO
 # =========================
 
 ws = wb["Pontuação por rodada"]
@@ -58,15 +58,19 @@ cabecalho = list(
     )
 )
 
-participantes = cabecalho[1:]
+participantes = []
+
+for nome in cabecalho[1:8]:
+
+    if nome is not None:
+        participantes.append(
+            str(nome).strip()
+        )
 
 evolucao = {}
 
 for participante in participantes:
-
-    if participante:
-
-        evolucao[str(participante).strip()] = []
+    evolucao[participante] = []
 
 for row in ws.iter_rows(
     min_row=2,
@@ -83,21 +87,20 @@ for row in ws.iter_rows(
         start=1
     ):
 
-        if participante:
+        valor = row[i]
 
-            evolucao[
-                str(participante).strip()
-            ].append({
-                "jogo": jogo,
-                "pontos": row[i] if row[i] is not None else 0
-            })
+        evolucao[participante].append({
+            "jogo": int(jogo),
+            "pontos": valor if valor is not None else 0
+        })
 
 # =========================
-# Jogos realizados
+# JOGOS
 # =========================
 
 ws = wb["Tabela de Jogos"]
 
+jogos = []
 jogos_realizados = 0
 
 for row in ws.iter_rows(
@@ -105,20 +108,192 @@ for row in ws.iter_rows(
     values_only=True
 ):
 
-    golsA = row[2]  # Coluna C
-    golsB = row[4]  # Coluna E
+    jogo = row[0]
 
-    if golsA is not None and golsB is not None:
+    if jogo is None:
+        continue
+
+    selecao_a = row[1]
+    gols_a = row[2]
+    gols_b = row[4]
+    selecao_b = row[5]
+    vencedor = row[6]
+
+    realizado = (
+        gols_a is not None
+        and gols_b is not None
+    )
+
+    if realizado:
         jogos_realizados += 1
 
+    jogos.append({
+        "jogo": int(jogo),
+        "selecao_a": selecao_a,
+        "gols_a": gols_a,
+        "gols_b": gols_b,
+        "selecao_b": selecao_b,
+        "vencedor": vencedor,
+        "realizado": realizado
+    })
+
 # =========================
-# Exportação JSON
+# PALPITES DOS APOSTADORES
+# =========================
+
+abas_ignoradas = [
+    "Tabela de Jogos",
+    "Classificação",
+    "Pontuação por rodada"
+]
+
+apostadores = {}
+
+for nome_aba in wb.sheetnames:
+
+    if nome_aba in abas_ignoradas:
+        continue
+
+    ws = wb[nome_aba]
+
+    palpites = []
+
+    total = 0
+    acertos = 0
+
+    for row in ws.iter_rows(
+        min_row=3,
+        values_only=True
+    ):
+
+        jogo = row[8]
+
+        if jogo is None:
+            continue
+
+        pontos = row[22]
+
+        if row[23] is not None:
+            total = row[23]
+
+        if row[24] is not None:
+            acertos = row[24]
+
+        palpites.append({
+            "jogo": int(jogo),
+            "selecao_a": row[9],
+            "gols_a": row[10],
+            "gols_b": row[12],
+            "selecao_b": row[13],
+            "vencedor": row[14],
+            "pontos": pontos if pontos is not None else 0
+        })
+
+    apostadores[nome_aba] = {
+        "nome": nome_aba,
+        "total": total,
+        "acertos": acertos,
+        "palpites": palpites
+    }
+
+# =========================
+# RANKING POR JOGO
+# =========================
+
+ws = wb["Pontuação por rodada"]
+
+ranking_por_rodada = []
+
+linha = 2
+
+while True:
+
+    jogo = ws.cell(row=linha, column=10).value  # Coluna J
+
+    if jogo is None:
+        break
+
+    ranking = []
+
+    for col in range(11, 18):  # K até Q
+
+        nome = ws.cell(row=1, column=col).value
+
+        pontos = ws.cell(
+            row=linha,
+            column=col
+        ).value
+
+        ranking.append({
+            "nome": nome,
+            "pontos": pontos if pontos is not None else 0
+        })
+
+    ranking.sort(
+        key=lambda x: x["pontos"],
+        reverse=True
+    )
+
+    ranking_por_rodada.append({
+        "jogo": int(jogo),
+        "vencedor_rodada": ranking[0]["nome"],
+        "maior_pontuacao": ranking[0]["pontos"],
+        "ranking": ranking
+    })
+
+    linha += 1
+    
+# =========================
+# HISTÓRICO DE LIDERANÇA
+# =========================
+
+lideres = []
+
+for indice_jogo in range(len(jogos)):
+
+    ranking = []
+
+    for participante in participantes:
+
+        if indice_jogo >= len(
+            evolucao[participante]
+        ):
+            continue
+
+        pontos = evolucao[
+            participante
+        ][indice_jogo]["pontos"]
+
+        ranking.append({
+            "nome": participante,
+            "pontos": pontos
+        })
+
+    ranking.sort(
+        key=lambda x: x["pontos"],
+        reverse=True
+    )
+
+    if len(ranking) > 0:
+
+        lideres.append({
+            "jogo": indice_jogo,
+            "lider": ranking[0]["nome"],
+            "pontos": ranking[0]["pontos"]
+        })
+
+# =========================
+# EXPORTAÇÃO
 # =========================
 
 dados = {
     "classificacao": classificacao,
     "evolucao": evolucao,
-    "jogos_realizados": jogos_realizados
+    "jogos_realizados": jogos_realizados,
+    "jogos": jogos,
+    "apostadores": apostadores,
+    "ranking_por_rodada": ranking_por_rodada,
+    "lideres": lideres
 }
 
 with open(
