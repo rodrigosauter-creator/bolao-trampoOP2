@@ -1,0 +1,12 @@
+
+body{margin:0;font-family:Segoe UI,sans-serif;background:#0f172a;color:#fff}
+.hero{text-align:center;padding:40px;background:linear-gradient(135deg,#0b5,#036)}
+.container,.cards,.podio{max-width:1100px;margin:20px auto}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px}
+.card,.player,.container{background:#fff;color:#111;border-radius:12px;padding:20px}
+.podio{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.podio .card{text-align:center}
+table{width:100%;border-collapse:collapse}
+th,td{padding:12px;border-bottom:1px solid #ddd}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
+.player{box-shadow:0 2px 8px rgba(0,0,0,.15)}
