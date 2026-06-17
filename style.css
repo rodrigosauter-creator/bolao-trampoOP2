@@ -416,3 +416,41 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
 
     border-radius: 12px;
 }
+
+.seta {
+
+    position: absolute;
+
+    background: rgba(255,255,255,.15);
+
+    border: none;
+
+    color: white;
+
+    font-size: 2rem;
+
+    width: 60px;
+
+    height: 60px;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.seta:hover {
+
+    background: rgba(255,255,255,.3);
+}
+
+#anterior {
+
+    left: 30px;
+}
+
+#proxima {
+
+    right: 30px;
+}
