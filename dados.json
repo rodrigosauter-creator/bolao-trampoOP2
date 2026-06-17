@@ -4127,10 +4127,10 @@
         {
           "jogo": 21,
           "selecao_a": "Portugal",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 4,
+          "gols_b": 0,
           "selecao_b": "RD Congo",
-          "vencedor": "-",
+          "vencedor": "Portugal",
           "pontos": 0
         },
         {
