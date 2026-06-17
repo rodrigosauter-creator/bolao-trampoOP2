@@ -156,20 +156,6 @@ function montarClassificacao(classificacao) {
     });
 }
 
-
-function montarCardsDashboard(classificacao) {
-
-    document.getElementById("lider").textContent =
-        classificacao[0]?.nome || "-";
-
-    document.getElementById("participantes").textContent =
-        classificacao.length;
-
-    document.getElementById("maxPontos").textContent =
-        classificacao[0]?.pontos || 0;
-}
-
-
 // =====================================================
 // GRÁFICO DE EVOLUÇÃO
 // =====================================================
