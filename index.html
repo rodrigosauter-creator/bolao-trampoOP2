@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bolão Copa 2026</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<header class="hero">
+<h1>🏆 Bolão Copa do Mundo 2026</h1>
+<p>Ranking, estatísticas e evolução dos participantes</p>
+</header>
+
+<section class="podio" id="podio"></section>
+
+<section class="cards">
+<div class="card"><h3>Líder</h3><span id="lider">-</span></div>
+<div class="card"><h3>Participantes</h3><span id="participantes">-</span></div>
+<div class="card"><h3>Pontuação Máxima</h3><span id="maxPontos">-</span></div>
+</section>
+
+<section class="container">
+<h2>Classificação Geral</h2>
+<table id="ranking">
+<thead><tr><th>#</th><th>Nome</th><th>Pontos</th></tr></thead>
+<tbody></tbody>
+</table>
+</section>
+
+<section class="container">
+<h2>Evolução da Pontuação</h2>
+<canvas id="grafico"></canvas>
+</section>
+
+<section class="container">
+<h2>Participantes</h2>
+<div id="participantesGrid" class="grid"></div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
