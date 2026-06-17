@@ -1,100 +1,97 @@
 name: Atualizar Bolão
 
-
 on:
-schedule:
-- cron: "*/15 * * * *"
+  schedule:
+    - cron: "*/15 * * * *"
 
-workflow_dispatch:
+  workflow_dispatch:
 
 permissions:
-contents: write
+  contents: write
 
 jobs:
-atualizar:
-runs-on: ubuntu-latest
+  atualizar:
+    runs-on: ubuntu-latest
 
-```
-steps:
-  - name: Checkout
-    uses: actions/checkout@v4
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
 
-  - name: Configurar Python
-    uses: actions/setup-python@v5
-    with:
-      python-version: "3.12"
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
 
-  - name: Instalar dependências
-    run: |
-      pip install -r requirements.txt
+      - name: Instalar dependências
+        run: |
+          pip install -r requirements.txt
 
-  - name: Baixar planilha atualizada
-    run: |
-      curl -L \
-        "https://1drv.ms/x/c/5a2880f4c2dd83a1/IQBNnJ-lJok9QqqY-fVSrpDFAW8dxM2r-jxsfo0ebBzubhM?e=IXDErV&download=1" \
-        -o nova_planilha.xlsx
+      - name: Baixar planilha atualizada
+        run: |
+          curl -L \
+            "https://1drv.ms/x/c/5a2880f4c2dd83a1/IQBNnJ-lJok9QqqY-fVSrpDFAW8dxM2r-jxsfo0ebBzubhM?e=IXDErV&download=1" \
+            -o nova_planilha.xlsx
 
-  - name: Diagnóstico do download
-    run: |
-      echo "===== LISTAGEM ====="
-      ls -lah
+      - name: Diagnóstico do download
+        run: |
+          echo "===== LISTAGEM ====="
+          ls -lah
 
-      echo ""
-      echo "===== TIPO DO ARQUIVO ====="
-      file nova_planilha.xlsx
+          echo ""
+          echo "===== TIPO DO ARQUIVO ====="
+          file nova_planilha.xlsx
 
-      echo ""
-      echo "===== TAMANHO ====="
-      stat nova_planilha.xlsx || true
+          echo ""
+          echo "===== TAMANHO ====="
+          stat nova_planilha.xlsx || true
 
-      echo ""
-      echo "===== PRIMEIROS BYTES ====="
-      xxd -l 32 nova_planilha.xlsx || true
+          echo ""
+          echo "===== PRIMEIROS BYTES ====="
+          xxd -l 32 nova_planilha.xlsx || true
 
-      echo ""
-      echo "===== PRIMEIRAS LINHAS ====="
-      head -20 nova_planilha.xlsx || true
+          echo ""
+          echo "===== PRIMEIRAS LINHAS ====="
+          head -20 nova_planilha.xlsx || true
 
-  - name: Verificar alteração na planilha
-    id: verificar
-    run: |
-      if [ ! -f "Copa do Mundo 2026.xlsx" ]; then
-        echo "alterou=true" >> $GITHUB_OUTPUT
-      elif cmp -s "Copa do Mundo 2026.xlsx" nova_planilha.xlsx; then
-        echo "alterou=false" >> $GITHUB_OUTPUT
-      else
-        echo "alterou=true" >> $GITHUB_OUTPUT
-      fi
+      - name: Verificar alteração na planilha
+        id: verificar
+        run: |
+          if [ ! -f "Copa do Mundo 2026.xlsx" ]; then
+            echo "alterou=true" >> $GITHUB_OUTPUT
+          elif cmp -s "Copa do Mundo 2026.xlsx" nova_planilha.xlsx; then
+            echo "alterou=false" >> $GITHUB_OUTPUT
+          else
+            echo "alterou=true" >> $GITHUB_OUTPUT
+          fi
 
-  - name: Atualizar planilha
-    if: steps.verificar.outputs.alterou == 'true'
-    run: |
-      mv nova_planilha.xlsx "Copa do Mundo 2026.xlsx"
+      - name: Atualizar planilha
+        if: steps.verificar.outputs.alterou == 'true'
+        run: |
+          mv nova_planilha.xlsx "Copa do Mundo 2026.xlsx"
 
-  - name: Diagnóstico da planilha final
-    if: steps.verificar.outputs.alterou == 'true'
-    run: |
-      echo "===== PLANILHA FINAL ====="
-      file "Copa do Mundo 2026.xlsx"
+      - name: Diagnóstico da planilha final
+        if: steps.verificar.outputs.alterou == 'true'
+        run: |
+          echo "===== PLANILHA FINAL ====="
+          file "Copa do Mundo 2026.xlsx"
 
-      echo ""
-      echo "===== PRIMEIROS BYTES ====="
-      xxd -l 32 "Copa do Mundo 2026.xlsx"
+          echo ""
+          echo "===== PRIMEIROS BYTES ====="
+          xxd -l 32 "Copa do Mundo 2026.xlsx"
 
-  - name: Executar atualização
-    if: steps.verificar.outputs.alterou == 'true'
-    run: |
-      python atualizar.py
+      - name: Executar atualização
+        if: steps.verificar.outputs.alterou == 'true'
+        run: |
+          python atualizar.py
 
-  - name: Commit e Push
-    if: steps.verificar.outputs.alterou == 'true'
-    run: |
-      git config user.name "github-actions[bot]"
-      git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      - name: Commit e Push
+        if: steps.verificar.outputs.alterou == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-      git add .
+          git add .
 
-      git commit -m "Atualização automática do bolão" || exit 0
+          git commit -m "Atualização automática do bolão" || exit 0
 
-      git push
-```
+          git push
