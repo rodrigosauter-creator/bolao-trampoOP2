@@ -90,8 +90,9 @@ for row in ws.iter_rows(
         valor = row[i]
 
         evolucao[participante].append({
-            "jogo": int(jogo),
-            "pontos": valor if valor is not None else 0
+            "jogo": indice_jogo,
+            "pontos": pontos_acumulados,
+            "acertos": acertos_acumulados
         })
 
 # =========================
@@ -227,10 +228,14 @@ while True:
         ranking.append({
             "nome": nome,
             "pontos": pontos if pontos is not None else 0
+            "acertos": acertos
         })
 
     ranking.sort(
-        key=lambda x: x["pontos"],
+        key=lambda x: (
+            x["pontos"],
+            x["acertos"]
+        ),
         reverse=True
     )
 
