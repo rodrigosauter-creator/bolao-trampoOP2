@@ -2,44 +2,44 @@
   "classificacao": [
     {
       "posicao": 1,
+      "nome": "Ana",
+      "pontos": 24,
+      "acertos": 2
+    },
+    {
+      "posicao": 2,
       "nome": "Arthur",
       "pontos": 24,
       "acertos": 1
     },
     {
-      "posicao": 2,
-      "nome": "Rodrigo",
+      "posicao": 3,
+      "nome": "Carol",
       "pontos": 20,
       "acertos": 1
     },
     {
       "posicao": 3,
-      "nome": "Ana",
-      "pontos": 16,
+      "nome": "Rodrigo",
+      "pontos": 20,
       "acertos": 1
-    },
-    {
-      "posicao": 4,
-      "nome": "Isa",
-      "pontos": 13,
-      "acertos": 0
     },
     {
       "posicao": 5,
-      "nome": "Carol",
-      "pontos": 12,
-      "acertos": 1
+      "nome": "Isa",
+      "pontos": 19,
+      "acertos": 0
     },
     {
       "posicao": 6,
       "nome": "Trops",
-      "pontos": 7,
+      "pontos": 12,
       "acertos": 0
     },
     {
       "posicao": 7,
       "nome": "Dudu",
-      "pontos": 4,
+      "pontos": 9,
       "acertos": 0
     }
   ],
@@ -1867,23 +1867,23 @@
       },
       {
         "jogo": 17,
-        "pontos": 4
+        "pontos": 6
       },
       {
         "jogo": 17,
-        "pontos": 0
+        "pontos": 2
       },
       {
         "jogo": 18,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 18,
-        "pontos": 0
+        "pontos": 3
       },
       {
         "jogo": 19,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 19,
@@ -1891,7 +1891,7 @@
       },
       {
         "jogo": 20,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 20,
@@ -1899,7 +1899,7 @@
       },
       {
         "jogo": 21,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 21,
@@ -1907,7 +1907,7 @@
       },
       {
         "jogo": 22,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 22,
@@ -1915,7 +1915,7 @@
       },
       {
         "jogo": 23,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 23,
@@ -1923,7 +1923,7 @@
       },
       {
         "jogo": 24,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 24,
@@ -1931,7 +1931,7 @@
       },
       {
         "jogo": 25,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 25,
@@ -1939,7 +1939,7 @@
       },
       {
         "jogo": 26,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 26,
@@ -1947,7 +1947,7 @@
       },
       {
         "jogo": 27,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 27,
@@ -1955,7 +1955,7 @@
       },
       {
         "jogo": 28,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 28,
@@ -1963,7 +1963,7 @@
       },
       {
         "jogo": 29,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 29,
@@ -1971,7 +1971,7 @@
       },
       {
         "jogo": 30,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 30,
@@ -1979,7 +1979,7 @@
       },
       {
         "jogo": 31,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 31,
@@ -1987,7 +1987,7 @@
       },
       {
         "jogo": 32,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 32,
@@ -1995,7 +1995,7 @@
       },
       {
         "jogo": 33,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 33,
@@ -2003,7 +2003,7 @@
       },
       {
         "jogo": 34,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 34,
@@ -2011,7 +2011,7 @@
       },
       {
         "jogo": 35,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 35,
@@ -2019,7 +2019,7 @@
       },
       {
         "jogo": 36,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 36,
@@ -2027,7 +2027,7 @@
       },
       {
         "jogo": 37,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 37,
@@ -2035,7 +2035,7 @@
       },
       {
         "jogo": 38,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 38,
@@ -2043,7 +2043,7 @@
       },
       {
         "jogo": 39,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 39,
@@ -2051,7 +2051,7 @@
       },
       {
         "jogo": 40,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 40,
@@ -2059,7 +2059,7 @@
       },
       {
         "jogo": 41,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 41,
@@ -2067,7 +2067,7 @@
       },
       {
         "jogo": 42,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 42,
@@ -2075,7 +2075,7 @@
       },
       {
         "jogo": 43,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 43,
@@ -2083,7 +2083,7 @@
       },
       {
         "jogo": 44,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 44,
@@ -2091,7 +2091,7 @@
       },
       {
         "jogo": 45,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 45,
@@ -2099,7 +2099,7 @@
       },
       {
         "jogo": 46,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 46,
@@ -2107,7 +2107,7 @@
       },
       {
         "jogo": 47,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 47,
@@ -2115,7 +2115,7 @@
       },
       {
         "jogo": 48,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 48,
@@ -2123,7 +2123,7 @@
       },
       {
         "jogo": 49,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 49,
@@ -2131,7 +2131,7 @@
       },
       {
         "jogo": 50,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 50,
@@ -2139,7 +2139,7 @@
       },
       {
         "jogo": 51,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 51,
@@ -2147,7 +2147,7 @@
       },
       {
         "jogo": 52,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 52,
@@ -2155,7 +2155,7 @@
       },
       {
         "jogo": 53,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 53,
@@ -2163,7 +2163,7 @@
       },
       {
         "jogo": 54,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 54,
@@ -2171,7 +2171,7 @@
       },
       {
         "jogo": 55,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 55,
@@ -2179,7 +2179,7 @@
       },
       {
         "jogo": 56,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 56,
@@ -2187,7 +2187,7 @@
       },
       {
         "jogo": 57,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 57,
@@ -2195,7 +2195,7 @@
       },
       {
         "jogo": 58,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 58,
@@ -2203,7 +2203,7 @@
       },
       {
         "jogo": 59,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 59,
@@ -2211,7 +2211,7 @@
       },
       {
         "jogo": 60,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 60,
@@ -2219,7 +2219,7 @@
       },
       {
         "jogo": 61,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 61,
@@ -2227,7 +2227,7 @@
       },
       {
         "jogo": 62,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 62,
@@ -2235,7 +2235,7 @@
       },
       {
         "jogo": 63,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 63,
@@ -2243,7 +2243,7 @@
       },
       {
         "jogo": 64,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 64,
@@ -2251,7 +2251,7 @@
       },
       {
         "jogo": 65,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 65,
@@ -2259,7 +2259,7 @@
       },
       {
         "jogo": 66,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 66,
@@ -2267,7 +2267,7 @@
       },
       {
         "jogo": 67,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 67,
@@ -2275,7 +2275,7 @@
       },
       {
         "jogo": 68,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 68,
@@ -2283,7 +2283,7 @@
       },
       {
         "jogo": 69,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 69,
@@ -2291,7 +2291,7 @@
       },
       {
         "jogo": 70,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 70,
@@ -2299,7 +2299,7 @@
       },
       {
         "jogo": 71,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 71,
@@ -2307,7 +2307,7 @@
       },
       {
         "jogo": 72,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 72,
@@ -2315,7 +2315,7 @@
       },
       {
         "jogo": 73,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 73,
@@ -2323,7 +2323,7 @@
       },
       {
         "jogo": 74,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 74,
@@ -2331,7 +2331,7 @@
       },
       {
         "jogo": 75,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 75,
@@ -2339,7 +2339,7 @@
       },
       {
         "jogo": 76,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 76,
@@ -2347,7 +2347,7 @@
       },
       {
         "jogo": 77,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 77,
@@ -2355,7 +2355,7 @@
       },
       {
         "jogo": 78,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 78,
@@ -2363,7 +2363,7 @@
       },
       {
         "jogo": 79,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 79,
@@ -2371,7 +2371,7 @@
       },
       {
         "jogo": 80,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 80,
@@ -2379,7 +2379,7 @@
       },
       {
         "jogo": 81,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 81,
@@ -2387,7 +2387,7 @@
       },
       {
         "jogo": 82,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 82,
@@ -2395,7 +2395,7 @@
       },
       {
         "jogo": 83,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 83,
@@ -2403,7 +2403,7 @@
       },
       {
         "jogo": 84,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 84,
@@ -2411,7 +2411,7 @@
       },
       {
         "jogo": 85,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 85,
@@ -2419,7 +2419,7 @@
       },
       {
         "jogo": 86,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 86,
@@ -2427,7 +2427,7 @@
       },
       {
         "jogo": 87,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 87,
@@ -2435,7 +2435,7 @@
       },
       {
         "jogo": 88,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 88,
@@ -2443,7 +2443,7 @@
       },
       {
         "jogo": 89,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 89,
@@ -2451,7 +2451,7 @@
       },
       {
         "jogo": 90,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 90,
@@ -2459,7 +2459,7 @@
       },
       {
         "jogo": 91,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 91,
@@ -2467,7 +2467,7 @@
       },
       {
         "jogo": 92,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 92,
@@ -2475,7 +2475,7 @@
       },
       {
         "jogo": 93,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 93,
@@ -2483,7 +2483,7 @@
       },
       {
         "jogo": 94,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 94,
@@ -2491,7 +2491,7 @@
       },
       {
         "jogo": 95,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 95,
@@ -2499,7 +2499,7 @@
       },
       {
         "jogo": 96,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 96,
@@ -2507,7 +2507,7 @@
       },
       {
         "jogo": 97,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 97,
@@ -2515,7 +2515,7 @@
       },
       {
         "jogo": 98,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 98,
@@ -2523,7 +2523,7 @@
       },
       {
         "jogo": 99,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 99,
@@ -2531,7 +2531,7 @@
       },
       {
         "jogo": 100,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 100,
@@ -2539,7 +2539,7 @@
       },
       {
         "jogo": 101,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 101,
@@ -2547,7 +2547,7 @@
       },
       {
         "jogo": 102,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 102,
@@ -2555,7 +2555,7 @@
       },
       {
         "jogo": 103,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 103,
@@ -2563,7 +2563,7 @@
       },
       {
         "jogo": 104,
-        "pontos": 4
+        "pontos": 9
       },
       {
         "jogo": 104,
@@ -2701,31 +2701,31 @@
       },
       {
         "jogo": 16,
-        "pontos": 12
+        "pontos": 14
       },
       {
         "jogo": 16,
-        "pontos": 0
+        "pontos": 2
       },
       {
         "jogo": 17,
-        "pontos": 12
+        "pontos": 18
       },
       {
         "jogo": 17,
-        "pontos": 0
+        "pontos": 4
       },
       {
         "jogo": 18,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 18,
-        "pontos": 0
+        "pontos": 2
       },
       {
         "jogo": 19,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 19,
@@ -2733,7 +2733,7 @@
       },
       {
         "jogo": 20,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 20,
@@ -2741,7 +2741,7 @@
       },
       {
         "jogo": 21,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 21,
@@ -2749,7 +2749,7 @@
       },
       {
         "jogo": 22,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 22,
@@ -2757,7 +2757,7 @@
       },
       {
         "jogo": 23,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 23,
@@ -2765,7 +2765,7 @@
       },
       {
         "jogo": 24,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 24,
@@ -2773,7 +2773,7 @@
       },
       {
         "jogo": 25,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 25,
@@ -2781,7 +2781,7 @@
       },
       {
         "jogo": 26,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 26,
@@ -2789,7 +2789,7 @@
       },
       {
         "jogo": 27,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 27,
@@ -2797,7 +2797,7 @@
       },
       {
         "jogo": 28,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 28,
@@ -2805,7 +2805,7 @@
       },
       {
         "jogo": 29,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 29,
@@ -2813,7 +2813,7 @@
       },
       {
         "jogo": 30,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 30,
@@ -2821,7 +2821,7 @@
       },
       {
         "jogo": 31,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 31,
@@ -2829,7 +2829,7 @@
       },
       {
         "jogo": 32,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 32,
@@ -2837,7 +2837,7 @@
       },
       {
         "jogo": 33,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 33,
@@ -2845,7 +2845,7 @@
       },
       {
         "jogo": 34,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 34,
@@ -2853,7 +2853,7 @@
       },
       {
         "jogo": 35,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 35,
@@ -2861,7 +2861,7 @@
       },
       {
         "jogo": 36,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 36,
@@ -2869,7 +2869,7 @@
       },
       {
         "jogo": 37,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 37,
@@ -2877,7 +2877,7 @@
       },
       {
         "jogo": 38,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 38,
@@ -2885,7 +2885,7 @@
       },
       {
         "jogo": 39,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 39,
@@ -2893,7 +2893,7 @@
       },
       {
         "jogo": 40,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 40,
@@ -2901,7 +2901,7 @@
       },
       {
         "jogo": 41,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 41,
@@ -2909,7 +2909,7 @@
       },
       {
         "jogo": 42,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 42,
@@ -2917,7 +2917,7 @@
       },
       {
         "jogo": 43,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 43,
@@ -2925,7 +2925,7 @@
       },
       {
         "jogo": 44,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 44,
@@ -2933,7 +2933,7 @@
       },
       {
         "jogo": 45,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 45,
@@ -2941,7 +2941,7 @@
       },
       {
         "jogo": 46,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 46,
@@ -2949,7 +2949,7 @@
       },
       {
         "jogo": 47,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 47,
@@ -2957,7 +2957,7 @@
       },
       {
         "jogo": 48,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 48,
@@ -2965,7 +2965,7 @@
       },
       {
         "jogo": 49,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 49,
@@ -2973,7 +2973,7 @@
       },
       {
         "jogo": 50,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 50,
@@ -2981,7 +2981,7 @@
       },
       {
         "jogo": 51,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 51,
@@ -2989,7 +2989,7 @@
       },
       {
         "jogo": 52,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 52,
@@ -2997,7 +2997,7 @@
       },
       {
         "jogo": 53,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 53,
@@ -3005,7 +3005,7 @@
       },
       {
         "jogo": 54,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 54,
@@ -3013,7 +3013,7 @@
       },
       {
         "jogo": 55,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 55,
@@ -3021,7 +3021,7 @@
       },
       {
         "jogo": 56,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 56,
@@ -3029,7 +3029,7 @@
       },
       {
         "jogo": 57,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 57,
@@ -3037,7 +3037,7 @@
       },
       {
         "jogo": 58,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 58,
@@ -3045,7 +3045,7 @@
       },
       {
         "jogo": 59,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 59,
@@ -3053,7 +3053,7 @@
       },
       {
         "jogo": 60,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 60,
@@ -3061,7 +3061,7 @@
       },
       {
         "jogo": 61,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 61,
@@ -3069,7 +3069,7 @@
       },
       {
         "jogo": 62,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 62,
@@ -3077,7 +3077,7 @@
       },
       {
         "jogo": 63,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 63,
@@ -3085,7 +3085,7 @@
       },
       {
         "jogo": 64,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 64,
@@ -3093,7 +3093,7 @@
       },
       {
         "jogo": 65,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 65,
@@ -3101,7 +3101,7 @@
       },
       {
         "jogo": 66,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 66,
@@ -3109,7 +3109,7 @@
       },
       {
         "jogo": 67,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 67,
@@ -3117,7 +3117,7 @@
       },
       {
         "jogo": 68,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 68,
@@ -3125,7 +3125,7 @@
       },
       {
         "jogo": 69,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 69,
@@ -3133,7 +3133,7 @@
       },
       {
         "jogo": 70,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 70,
@@ -3141,7 +3141,7 @@
       },
       {
         "jogo": 71,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 71,
@@ -3149,7 +3149,7 @@
       },
       {
         "jogo": 72,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 72,
@@ -3157,7 +3157,7 @@
       },
       {
         "jogo": 73,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 73,
@@ -3165,7 +3165,7 @@
       },
       {
         "jogo": 74,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 74,
@@ -3173,7 +3173,7 @@
       },
       {
         "jogo": 75,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 75,
@@ -3181,7 +3181,7 @@
       },
       {
         "jogo": 76,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 76,
@@ -3189,7 +3189,7 @@
       },
       {
         "jogo": 77,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 77,
@@ -3197,7 +3197,7 @@
       },
       {
         "jogo": 78,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 78,
@@ -3205,7 +3205,7 @@
       },
       {
         "jogo": 79,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 79,
@@ -3213,7 +3213,7 @@
       },
       {
         "jogo": 80,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 80,
@@ -3221,7 +3221,7 @@
       },
       {
         "jogo": 81,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 81,
@@ -3229,7 +3229,7 @@
       },
       {
         "jogo": 82,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 82,
@@ -3237,7 +3237,7 @@
       },
       {
         "jogo": 83,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 83,
@@ -3245,7 +3245,7 @@
       },
       {
         "jogo": 84,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 84,
@@ -3253,7 +3253,7 @@
       },
       {
         "jogo": 85,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 85,
@@ -3261,7 +3261,7 @@
       },
       {
         "jogo": 86,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 86,
@@ -3269,7 +3269,7 @@
       },
       {
         "jogo": 87,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 87,
@@ -3277,7 +3277,7 @@
       },
       {
         "jogo": 88,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 88,
@@ -3285,7 +3285,7 @@
       },
       {
         "jogo": 89,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 89,
@@ -3293,7 +3293,7 @@
       },
       {
         "jogo": 90,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 90,
@@ -3301,7 +3301,7 @@
       },
       {
         "jogo": 91,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 91,
@@ -3309,7 +3309,7 @@
       },
       {
         "jogo": 92,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 92,
@@ -3317,7 +3317,7 @@
       },
       {
         "jogo": 93,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 93,
@@ -3325,7 +3325,7 @@
       },
       {
         "jogo": 94,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 94,
@@ -3333,7 +3333,7 @@
       },
       {
         "jogo": 95,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 95,
@@ -3341,7 +3341,7 @@
       },
       {
         "jogo": 96,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 96,
@@ -3349,7 +3349,7 @@
       },
       {
         "jogo": 97,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 97,
@@ -3357,7 +3357,7 @@
       },
       {
         "jogo": 98,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 98,
@@ -3365,7 +3365,7 @@
       },
       {
         "jogo": 99,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 99,
@@ -3373,7 +3373,7 @@
       },
       {
         "jogo": 100,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 100,
@@ -3381,7 +3381,7 @@
       },
       {
         "jogo": 101,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 101,
@@ -3389,7 +3389,7 @@
       },
       {
         "jogo": 102,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 102,
@@ -3397,7 +3397,7 @@
       },
       {
         "jogo": 103,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 103,
@@ -3405,7 +3405,7 @@
       },
       {
         "jogo": 104,
-        "pontos": 12
+        "pontos": 20
       },
       {
         "jogo": 104,
@@ -3551,23 +3551,23 @@
       },
       {
         "jogo": 17,
-        "pontos": 16
+        "pontos": 22
       },
       {
         "jogo": 17,
-        "pontos": 0
+        "pontos": 6
       },
       {
         "jogo": 18,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 18,
-        "pontos": 0
+        "pontos": 2
       },
       {
         "jogo": 19,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 19,
@@ -3575,7 +3575,7 @@
       },
       {
         "jogo": 20,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 20,
@@ -3583,7 +3583,7 @@
       },
       {
         "jogo": 21,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 21,
@@ -3591,7 +3591,7 @@
       },
       {
         "jogo": 22,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 22,
@@ -3599,7 +3599,7 @@
       },
       {
         "jogo": 23,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 23,
@@ -3607,7 +3607,7 @@
       },
       {
         "jogo": 24,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 24,
@@ -3615,7 +3615,7 @@
       },
       {
         "jogo": 25,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 25,
@@ -3623,7 +3623,7 @@
       },
       {
         "jogo": 26,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 26,
@@ -3631,7 +3631,7 @@
       },
       {
         "jogo": 27,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 27,
@@ -3639,7 +3639,7 @@
       },
       {
         "jogo": 28,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 28,
@@ -3647,7 +3647,7 @@
       },
       {
         "jogo": 29,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 29,
@@ -3655,7 +3655,7 @@
       },
       {
         "jogo": 30,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 30,
@@ -3663,7 +3663,7 @@
       },
       {
         "jogo": 31,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 31,
@@ -3671,7 +3671,7 @@
       },
       {
         "jogo": 32,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 32,
@@ -3679,7 +3679,7 @@
       },
       {
         "jogo": 33,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 33,
@@ -3687,7 +3687,7 @@
       },
       {
         "jogo": 34,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 34,
@@ -3695,7 +3695,7 @@
       },
       {
         "jogo": 35,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 35,
@@ -3703,7 +3703,7 @@
       },
       {
         "jogo": 36,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 36,
@@ -3711,7 +3711,7 @@
       },
       {
         "jogo": 37,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 37,
@@ -3719,7 +3719,7 @@
       },
       {
         "jogo": 38,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 38,
@@ -3727,7 +3727,7 @@
       },
       {
         "jogo": 39,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 39,
@@ -3735,7 +3735,7 @@
       },
       {
         "jogo": 40,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 40,
@@ -3743,7 +3743,7 @@
       },
       {
         "jogo": 41,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 41,
@@ -3751,7 +3751,7 @@
       },
       {
         "jogo": 42,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 42,
@@ -3759,7 +3759,7 @@
       },
       {
         "jogo": 43,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 43,
@@ -3767,7 +3767,7 @@
       },
       {
         "jogo": 44,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 44,
@@ -3775,7 +3775,7 @@
       },
       {
         "jogo": 45,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 45,
@@ -3783,7 +3783,7 @@
       },
       {
         "jogo": 46,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 46,
@@ -3791,7 +3791,7 @@
       },
       {
         "jogo": 47,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 47,
@@ -3799,7 +3799,7 @@
       },
       {
         "jogo": 48,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 48,
@@ -3807,7 +3807,7 @@
       },
       {
         "jogo": 49,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 49,
@@ -3815,7 +3815,7 @@
       },
       {
         "jogo": 50,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 50,
@@ -3823,7 +3823,7 @@
       },
       {
         "jogo": 51,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 51,
@@ -3831,7 +3831,7 @@
       },
       {
         "jogo": 52,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 52,
@@ -3839,7 +3839,7 @@
       },
       {
         "jogo": 53,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 53,
@@ -3847,7 +3847,7 @@
       },
       {
         "jogo": 54,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 54,
@@ -3855,7 +3855,7 @@
       },
       {
         "jogo": 55,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 55,
@@ -3863,7 +3863,7 @@
       },
       {
         "jogo": 56,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 56,
@@ -3871,7 +3871,7 @@
       },
       {
         "jogo": 57,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 57,
@@ -3879,7 +3879,7 @@
       },
       {
         "jogo": 58,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 58,
@@ -3887,7 +3887,7 @@
       },
       {
         "jogo": 59,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 59,
@@ -3895,7 +3895,7 @@
       },
       {
         "jogo": 60,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 60,
@@ -3903,7 +3903,7 @@
       },
       {
         "jogo": 61,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 61,
@@ -3911,7 +3911,7 @@
       },
       {
         "jogo": 62,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 62,
@@ -3919,7 +3919,7 @@
       },
       {
         "jogo": 63,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 63,
@@ -3927,7 +3927,7 @@
       },
       {
         "jogo": 64,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 64,
@@ -3935,7 +3935,7 @@
       },
       {
         "jogo": 65,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 65,
@@ -3943,7 +3943,7 @@
       },
       {
         "jogo": 66,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 66,
@@ -3951,7 +3951,7 @@
       },
       {
         "jogo": 67,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 67,
@@ -3959,7 +3959,7 @@
       },
       {
         "jogo": 68,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 68,
@@ -3967,7 +3967,7 @@
       },
       {
         "jogo": 69,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 69,
@@ -3975,7 +3975,7 @@
       },
       {
         "jogo": 70,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 70,
@@ -3983,7 +3983,7 @@
       },
       {
         "jogo": 71,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 71,
@@ -3991,7 +3991,7 @@
       },
       {
         "jogo": 72,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 72,
@@ -3999,7 +3999,7 @@
       },
       {
         "jogo": 73,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 73,
@@ -4007,7 +4007,7 @@
       },
       {
         "jogo": 74,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 74,
@@ -4015,7 +4015,7 @@
       },
       {
         "jogo": 75,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 75,
@@ -4023,7 +4023,7 @@
       },
       {
         "jogo": 76,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 76,
@@ -4031,7 +4031,7 @@
       },
       {
         "jogo": 77,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 77,
@@ -4039,7 +4039,7 @@
       },
       {
         "jogo": 78,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 78,
@@ -4047,7 +4047,7 @@
       },
       {
         "jogo": 79,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 79,
@@ -4055,7 +4055,7 @@
       },
       {
         "jogo": 80,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 80,
@@ -4063,7 +4063,7 @@
       },
       {
         "jogo": 81,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 81,
@@ -4071,7 +4071,7 @@
       },
       {
         "jogo": 82,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 82,
@@ -4079,7 +4079,7 @@
       },
       {
         "jogo": 83,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 83,
@@ -4087,7 +4087,7 @@
       },
       {
         "jogo": 84,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 84,
@@ -4095,7 +4095,7 @@
       },
       {
         "jogo": 85,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 85,
@@ -4103,7 +4103,7 @@
       },
       {
         "jogo": 86,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 86,
@@ -4111,7 +4111,7 @@
       },
       {
         "jogo": 87,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 87,
@@ -4119,7 +4119,7 @@
       },
       {
         "jogo": 88,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 88,
@@ -4127,7 +4127,7 @@
       },
       {
         "jogo": 89,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 89,
@@ -4135,7 +4135,7 @@
       },
       {
         "jogo": 90,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 90,
@@ -4143,7 +4143,7 @@
       },
       {
         "jogo": 91,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 91,
@@ -4151,7 +4151,7 @@
       },
       {
         "jogo": 92,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 92,
@@ -4159,7 +4159,7 @@
       },
       {
         "jogo": 93,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 93,
@@ -4167,7 +4167,7 @@
       },
       {
         "jogo": 94,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 94,
@@ -4175,7 +4175,7 @@
       },
       {
         "jogo": 95,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 95,
@@ -4183,7 +4183,7 @@
       },
       {
         "jogo": 96,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 96,
@@ -4191,7 +4191,7 @@
       },
       {
         "jogo": 97,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 97,
@@ -4199,7 +4199,7 @@
       },
       {
         "jogo": 98,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 98,
@@ -4207,7 +4207,7 @@
       },
       {
         "jogo": 99,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 99,
@@ -4215,7 +4215,7 @@
       },
       {
         "jogo": 100,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 100,
@@ -4223,7 +4223,7 @@
       },
       {
         "jogo": 101,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 101,
@@ -4231,7 +4231,7 @@
       },
       {
         "jogo": 102,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 102,
@@ -4239,7 +4239,7 @@
       },
       {
         "jogo": 103,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 103,
@@ -4247,7 +4247,7 @@
       },
       {
         "jogo": 104,
-        "pontos": 16
+        "pontos": 24
       },
       {
         "jogo": 104,
@@ -4393,23 +4393,23 @@
       },
       {
         "jogo": 17,
-        "pontos": 13
+        "pontos": 17
       },
       {
         "jogo": 17,
-        "pontos": 0
+        "pontos": 4
       },
       {
         "jogo": 18,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 18,
-        "pontos": 0
+        "pontos": 2
       },
       {
         "jogo": 19,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 19,
@@ -4417,7 +4417,7 @@
       },
       {
         "jogo": 20,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 20,
@@ -4425,7 +4425,7 @@
       },
       {
         "jogo": 21,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 21,
@@ -4433,7 +4433,7 @@
       },
       {
         "jogo": 22,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 22,
@@ -4441,7 +4441,7 @@
       },
       {
         "jogo": 23,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 23,
@@ -4449,7 +4449,7 @@
       },
       {
         "jogo": 24,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 24,
@@ -4457,7 +4457,7 @@
       },
       {
         "jogo": 25,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 25,
@@ -4465,7 +4465,7 @@
       },
       {
         "jogo": 26,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 26,
@@ -4473,7 +4473,7 @@
       },
       {
         "jogo": 27,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 27,
@@ -4481,7 +4481,7 @@
       },
       {
         "jogo": 28,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 28,
@@ -4489,7 +4489,7 @@
       },
       {
         "jogo": 29,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 29,
@@ -4497,7 +4497,7 @@
       },
       {
         "jogo": 30,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 30,
@@ -4505,7 +4505,7 @@
       },
       {
         "jogo": 31,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 31,
@@ -4513,7 +4513,7 @@
       },
       {
         "jogo": 32,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 32,
@@ -4521,7 +4521,7 @@
       },
       {
         "jogo": 33,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 33,
@@ -4529,7 +4529,7 @@
       },
       {
         "jogo": 34,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 34,
@@ -4537,7 +4537,7 @@
       },
       {
         "jogo": 35,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 35,
@@ -4545,7 +4545,7 @@
       },
       {
         "jogo": 36,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 36,
@@ -4553,7 +4553,7 @@
       },
       {
         "jogo": 37,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 37,
@@ -4561,7 +4561,7 @@
       },
       {
         "jogo": 38,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 38,
@@ -4569,7 +4569,7 @@
       },
       {
         "jogo": 39,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 39,
@@ -4577,7 +4577,7 @@
       },
       {
         "jogo": 40,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 40,
@@ -4585,7 +4585,7 @@
       },
       {
         "jogo": 41,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 41,
@@ -4593,7 +4593,7 @@
       },
       {
         "jogo": 42,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 42,
@@ -4601,7 +4601,7 @@
       },
       {
         "jogo": 43,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 43,
@@ -4609,7 +4609,7 @@
       },
       {
         "jogo": 44,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 44,
@@ -4617,7 +4617,7 @@
       },
       {
         "jogo": 45,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 45,
@@ -4625,7 +4625,7 @@
       },
       {
         "jogo": 46,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 46,
@@ -4633,7 +4633,7 @@
       },
       {
         "jogo": 47,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 47,
@@ -4641,7 +4641,7 @@
       },
       {
         "jogo": 48,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 48,
@@ -4649,7 +4649,7 @@
       },
       {
         "jogo": 49,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 49,
@@ -4657,7 +4657,7 @@
       },
       {
         "jogo": 50,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 50,
@@ -4665,7 +4665,7 @@
       },
       {
         "jogo": 51,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 51,
@@ -4673,7 +4673,7 @@
       },
       {
         "jogo": 52,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 52,
@@ -4681,7 +4681,7 @@
       },
       {
         "jogo": 53,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 53,
@@ -4689,7 +4689,7 @@
       },
       {
         "jogo": 54,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 54,
@@ -4697,7 +4697,7 @@
       },
       {
         "jogo": 55,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 55,
@@ -4705,7 +4705,7 @@
       },
       {
         "jogo": 56,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 56,
@@ -4713,7 +4713,7 @@
       },
       {
         "jogo": 57,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 57,
@@ -4721,7 +4721,7 @@
       },
       {
         "jogo": 58,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 58,
@@ -4729,7 +4729,7 @@
       },
       {
         "jogo": 59,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 59,
@@ -4737,7 +4737,7 @@
       },
       {
         "jogo": 60,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 60,
@@ -4745,7 +4745,7 @@
       },
       {
         "jogo": 61,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 61,
@@ -4753,7 +4753,7 @@
       },
       {
         "jogo": 62,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 62,
@@ -4761,7 +4761,7 @@
       },
       {
         "jogo": 63,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 63,
@@ -4769,7 +4769,7 @@
       },
       {
         "jogo": 64,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 64,
@@ -4777,7 +4777,7 @@
       },
       {
         "jogo": 65,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 65,
@@ -4785,7 +4785,7 @@
       },
       {
         "jogo": 66,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 66,
@@ -4793,7 +4793,7 @@
       },
       {
         "jogo": 67,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 67,
@@ -4801,7 +4801,7 @@
       },
       {
         "jogo": 68,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 68,
@@ -4809,7 +4809,7 @@
       },
       {
         "jogo": 69,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 69,
@@ -4817,7 +4817,7 @@
       },
       {
         "jogo": 70,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 70,
@@ -4825,7 +4825,7 @@
       },
       {
         "jogo": 71,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 71,
@@ -4833,7 +4833,7 @@
       },
       {
         "jogo": 72,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 72,
@@ -4841,7 +4841,7 @@
       },
       {
         "jogo": 73,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 73,
@@ -4849,7 +4849,7 @@
       },
       {
         "jogo": 74,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 74,
@@ -4857,7 +4857,7 @@
       },
       {
         "jogo": 75,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 75,
@@ -4865,7 +4865,7 @@
       },
       {
         "jogo": 76,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 76,
@@ -4873,7 +4873,7 @@
       },
       {
         "jogo": 77,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 77,
@@ -4881,7 +4881,7 @@
       },
       {
         "jogo": 78,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 78,
@@ -4889,7 +4889,7 @@
       },
       {
         "jogo": 79,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 79,
@@ -4897,7 +4897,7 @@
       },
       {
         "jogo": 80,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 80,
@@ -4905,7 +4905,7 @@
       },
       {
         "jogo": 81,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 81,
@@ -4913,7 +4913,7 @@
       },
       {
         "jogo": 82,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 82,
@@ -4921,7 +4921,7 @@
       },
       {
         "jogo": 83,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 83,
@@ -4929,7 +4929,7 @@
       },
       {
         "jogo": 84,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 84,
@@ -4937,7 +4937,7 @@
       },
       {
         "jogo": 85,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 85,
@@ -4945,7 +4945,7 @@
       },
       {
         "jogo": 86,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 86,
@@ -4953,7 +4953,7 @@
       },
       {
         "jogo": 87,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 87,
@@ -4961,7 +4961,7 @@
       },
       {
         "jogo": 88,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 88,
@@ -4969,7 +4969,7 @@
       },
       {
         "jogo": 89,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 89,
@@ -4977,7 +4977,7 @@
       },
       {
         "jogo": 90,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 90,
@@ -4985,7 +4985,7 @@
       },
       {
         "jogo": 91,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 91,
@@ -4993,7 +4993,7 @@
       },
       {
         "jogo": 92,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 92,
@@ -5001,7 +5001,7 @@
       },
       {
         "jogo": 93,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 93,
@@ -5009,7 +5009,7 @@
       },
       {
         "jogo": 94,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 94,
@@ -5017,7 +5017,7 @@
       },
       {
         "jogo": 95,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 95,
@@ -5025,7 +5025,7 @@
       },
       {
         "jogo": 96,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 96,
@@ -5033,7 +5033,7 @@
       },
       {
         "jogo": 97,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 97,
@@ -5041,7 +5041,7 @@
       },
       {
         "jogo": 98,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 98,
@@ -5049,7 +5049,7 @@
       },
       {
         "jogo": 99,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 99,
@@ -5057,7 +5057,7 @@
       },
       {
         "jogo": 100,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 100,
@@ -5065,7 +5065,7 @@
       },
       {
         "jogo": 101,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 101,
@@ -5073,7 +5073,7 @@
       },
       {
         "jogo": 102,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 102,
@@ -5081,7 +5081,7 @@
       },
       {
         "jogo": 103,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 103,
@@ -5089,7 +5089,7 @@
       },
       {
         "jogo": 104,
-        "pontos": 13
+        "pontos": 19
       },
       {
         "jogo": 104,
@@ -5235,23 +5235,23 @@
       },
       {
         "jogo": 17,
-        "pontos": 7
+        "pontos": 10
       },
       {
         "jogo": 17,
-        "pontos": 0
+        "pontos": 3
       },
       {
         "jogo": 18,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 18,
-        "pontos": 0
+        "pontos": 2
       },
       {
         "jogo": 19,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 19,
@@ -5259,7 +5259,7 @@
       },
       {
         "jogo": 20,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 20,
@@ -5267,7 +5267,7 @@
       },
       {
         "jogo": 21,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 21,
@@ -5275,7 +5275,7 @@
       },
       {
         "jogo": 22,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 22,
@@ -5283,7 +5283,7 @@
       },
       {
         "jogo": 23,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 23,
@@ -5291,7 +5291,7 @@
       },
       {
         "jogo": 24,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 24,
@@ -5299,7 +5299,7 @@
       },
       {
         "jogo": 25,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 25,
@@ -5307,7 +5307,7 @@
       },
       {
         "jogo": 26,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 26,
@@ -5315,7 +5315,7 @@
       },
       {
         "jogo": 27,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 27,
@@ -5323,7 +5323,7 @@
       },
       {
         "jogo": 28,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 28,
@@ -5331,7 +5331,7 @@
       },
       {
         "jogo": 29,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 29,
@@ -5339,7 +5339,7 @@
       },
       {
         "jogo": 30,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 30,
@@ -5347,7 +5347,7 @@
       },
       {
         "jogo": 31,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 31,
@@ -5355,7 +5355,7 @@
       },
       {
         "jogo": 32,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 32,
@@ -5363,7 +5363,7 @@
       },
       {
         "jogo": 33,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 33,
@@ -5371,7 +5371,7 @@
       },
       {
         "jogo": 34,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 34,
@@ -5379,7 +5379,7 @@
       },
       {
         "jogo": 35,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 35,
@@ -5387,7 +5387,7 @@
       },
       {
         "jogo": 36,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 36,
@@ -5395,7 +5395,7 @@
       },
       {
         "jogo": 37,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 37,
@@ -5403,7 +5403,7 @@
       },
       {
         "jogo": 38,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 38,
@@ -5411,7 +5411,7 @@
       },
       {
         "jogo": 39,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 39,
@@ -5419,7 +5419,7 @@
       },
       {
         "jogo": 40,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 40,
@@ -5427,7 +5427,7 @@
       },
       {
         "jogo": 41,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 41,
@@ -5435,7 +5435,7 @@
       },
       {
         "jogo": 42,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 42,
@@ -5443,7 +5443,7 @@
       },
       {
         "jogo": 43,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 43,
@@ -5451,7 +5451,7 @@
       },
       {
         "jogo": 44,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 44,
@@ -5459,7 +5459,7 @@
       },
       {
         "jogo": 45,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 45,
@@ -5467,7 +5467,7 @@
       },
       {
         "jogo": 46,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 46,
@@ -5475,7 +5475,7 @@
       },
       {
         "jogo": 47,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 47,
@@ -5483,7 +5483,7 @@
       },
       {
         "jogo": 48,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 48,
@@ -5491,7 +5491,7 @@
       },
       {
         "jogo": 49,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 49,
@@ -5499,7 +5499,7 @@
       },
       {
         "jogo": 50,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 50,
@@ -5507,7 +5507,7 @@
       },
       {
         "jogo": 51,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 51,
@@ -5515,7 +5515,7 @@
       },
       {
         "jogo": 52,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 52,
@@ -5523,7 +5523,7 @@
       },
       {
         "jogo": 53,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 53,
@@ -5531,7 +5531,7 @@
       },
       {
         "jogo": 54,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 54,
@@ -5539,7 +5539,7 @@
       },
       {
         "jogo": 55,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 55,
@@ -5547,7 +5547,7 @@
       },
       {
         "jogo": 56,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 56,
@@ -5555,7 +5555,7 @@
       },
       {
         "jogo": 57,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 57,
@@ -5563,7 +5563,7 @@
       },
       {
         "jogo": 58,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 58,
@@ -5571,7 +5571,7 @@
       },
       {
         "jogo": 59,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 59,
@@ -5579,7 +5579,7 @@
       },
       {
         "jogo": 60,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 60,
@@ -5587,7 +5587,7 @@
       },
       {
         "jogo": 61,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 61,
@@ -5595,7 +5595,7 @@
       },
       {
         "jogo": 62,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 62,
@@ -5603,7 +5603,7 @@
       },
       {
         "jogo": 63,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 63,
@@ -5611,7 +5611,7 @@
       },
       {
         "jogo": 64,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 64,
@@ -5619,7 +5619,7 @@
       },
       {
         "jogo": 65,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 65,
@@ -5627,7 +5627,7 @@
       },
       {
         "jogo": 66,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 66,
@@ -5635,7 +5635,7 @@
       },
       {
         "jogo": 67,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 67,
@@ -5643,7 +5643,7 @@
       },
       {
         "jogo": 68,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 68,
@@ -5651,7 +5651,7 @@
       },
       {
         "jogo": 69,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 69,
@@ -5659,7 +5659,7 @@
       },
       {
         "jogo": 70,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 70,
@@ -5667,7 +5667,7 @@
       },
       {
         "jogo": 71,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 71,
@@ -5675,7 +5675,7 @@
       },
       {
         "jogo": 72,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 72,
@@ -5683,7 +5683,7 @@
       },
       {
         "jogo": 73,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 73,
@@ -5691,7 +5691,7 @@
       },
       {
         "jogo": 74,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 74,
@@ -5699,7 +5699,7 @@
       },
       {
         "jogo": 75,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 75,
@@ -5707,7 +5707,7 @@
       },
       {
         "jogo": 76,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 76,
@@ -5715,7 +5715,7 @@
       },
       {
         "jogo": 77,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 77,
@@ -5723,7 +5723,7 @@
       },
       {
         "jogo": 78,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 78,
@@ -5731,7 +5731,7 @@
       },
       {
         "jogo": 79,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 79,
@@ -5739,7 +5739,7 @@
       },
       {
         "jogo": 80,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 80,
@@ -5747,7 +5747,7 @@
       },
       {
         "jogo": 81,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 81,
@@ -5755,7 +5755,7 @@
       },
       {
         "jogo": 82,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 82,
@@ -5763,7 +5763,7 @@
       },
       {
         "jogo": 83,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 83,
@@ -5771,7 +5771,7 @@
       },
       {
         "jogo": 84,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 84,
@@ -5779,7 +5779,7 @@
       },
       {
         "jogo": 85,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 85,
@@ -5787,7 +5787,7 @@
       },
       {
         "jogo": 86,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 86,
@@ -5795,7 +5795,7 @@
       },
       {
         "jogo": 87,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 87,
@@ -5803,7 +5803,7 @@
       },
       {
         "jogo": 88,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 88,
@@ -5811,7 +5811,7 @@
       },
       {
         "jogo": 89,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 89,
@@ -5819,7 +5819,7 @@
       },
       {
         "jogo": 90,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 90,
@@ -5827,7 +5827,7 @@
       },
       {
         "jogo": 91,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 91,
@@ -5835,7 +5835,7 @@
       },
       {
         "jogo": 92,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 92,
@@ -5843,7 +5843,7 @@
       },
       {
         "jogo": 93,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 93,
@@ -5851,7 +5851,7 @@
       },
       {
         "jogo": 94,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 94,
@@ -5859,7 +5859,7 @@
       },
       {
         "jogo": 95,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 95,
@@ -5867,7 +5867,7 @@
       },
       {
         "jogo": 96,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 96,
@@ -5875,7 +5875,7 @@
       },
       {
         "jogo": 97,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 97,
@@ -5883,7 +5883,7 @@
       },
       {
         "jogo": 98,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 98,
@@ -5891,7 +5891,7 @@
       },
       {
         "jogo": 99,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 99,
@@ -5899,7 +5899,7 @@
       },
       {
         "jogo": 100,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 100,
@@ -5907,7 +5907,7 @@
       },
       {
         "jogo": 101,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 101,
@@ -5915,7 +5915,7 @@
       },
       {
         "jogo": 102,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 102,
@@ -5923,7 +5923,7 @@
       },
       {
         "jogo": 103,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 103,
@@ -5931,7 +5931,7 @@
       },
       {
         "jogo": 104,
-        "pontos": 7
+        "pontos": 12
       },
       {
         "jogo": 104,
