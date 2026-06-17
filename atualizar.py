@@ -255,14 +255,10 @@ for indice_jogo in range(len(jogos)):
 
     for participante in participantes:
 
-        if indice_jogo >= len(
-            evolucao[participante]
-        ):
+        if indice_jogo >= len(evolucao[participante]):
             continue
 
-        pontos = evolucao[
-            participante
-        ][indice_jogo]["pontos"]
+        pontos = evolucao[participante][indice_jogo]["pontos"]
 
         ranking.append({
             "nome": participante,
@@ -276,10 +272,17 @@ for indice_jogo in range(len(jogos)):
 
     if len(ranking) > 0:
 
+        if indice_jogo == 0:
+            lider = "-"
+            pontos = 0
+        else:
+            lider = ranking[0]["nome"]
+            pontos = ranking[0]["pontos"]
+
         lideres.append({
             "jogo": indice_jogo,
-            "lider": ranking[0]["nome"],
-            "pontos": ranking[0]["pontos"]
+            "lider": lider,
+            "pontos": pontos
         })
 
 # =========================
