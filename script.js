@@ -255,53 +255,75 @@ function montarGrafico(evolucao) {
 let dadosGlobais = null;
 
 async function carregarDados() {
-    
-    console.log("Entrou em carregarDados");
 
-    const response =
-        await fetch("dados.json");
+    try {
 
-    const dados =
-        await response.json();
+        console.log("1 - Entrou");
 
-    dadosGlobais = dados;
+        const response =
+            await fetch("dados.json");
 
-    montarPodio(
-        dados.classificacao
-    );
+        console.log("2 - Fetch OK");
 
-    montarClassificacao(
-        dados.classificacao
-    );
+        const dados =
+            await response.json();
 
-    montarCardsDashboard(
-        dados.classificacao
-    );
+        console.log("3 - JSON OK");
+        console.log(dados);
 
-    montarGrafico(
-        dados.evolucao
-    );
+        dadosGlobais = dados;
 
-   montarJogos(
-       dados.jogos
-    ); 
+        console.log("4 - Antes do pódio");
 
- montarListaApostadores(
-    dados.apostadores
-);
+        montarPodio(
+            dados.classificacao
+        );
 
-    inicializarAbas();
+        console.log("5 - Pódio OK");
 
-    console.log(
-        "Dados carregados com sucesso."
-    );
+        montarClassificacao(
+            dados.classificacao
+        );
+
+        console.log("6 - Classificação OK");
+
+        montarCardsDashboard(
+            dados.classificacao
+        );
+
+        console.log("7 - Cards OK");
+
+        montarGrafico(
+            dados.evolucao
+        );
+
+        console.log("8 - Gráfico OK");
+
+        montarJogos(
+            dados.jogos
+        );
+
+        console.log("9 - Jogos OK");
+
+        montarListaApostadores(
+            dados.apostadores
+        );
+
+        console.log("10 - Apostadores OK");
+
+        inicializarAbas();
+
+        console.log("11 - Tudo OK");
+
+    } catch (erro) {
+
+        console.error(
+            "ERRO:",
+            erro
+        );
+
+    }
 }
-
-document.addEventListener(
-    "DOMContentLoaded",
-    carregarDados
-);
-
 // =====================================================
 // JOGOS
 // =====================================================
