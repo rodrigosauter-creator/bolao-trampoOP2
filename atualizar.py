@@ -262,11 +262,15 @@ for indice_jogo in range(len(jogos)):
 
         ranking.append({
             "nome": participante,
-            "pontos": pontos
+            "pontos": pontos,
+            "acertos": acertos
         })
 
-    ranking.sort(
-        key=lambda x: x["pontos"],
+        ranking.sort(
+        key=lambda x: (
+            x["pontos"],
+            x["acertos"]
+        ),
         reverse=True
     )
 
