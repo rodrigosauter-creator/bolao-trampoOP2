@@ -24,16 +24,27 @@ ranking.forEach((p,i)=>{
 const labels=[];
 const datasets=[];
 
+const jogosRealizados = d.jogos_realizados || 0;
+
 Object.entries(d.evolucao).forEach(([nome,valores])=>{
+
+ const valoresValidos = valores.slice(0, jogosRealizados);
+
  if(labels.length===0){
-   valores.forEach(v=>labels.push(v.jogo));
+   valoresValidos.forEach(v=>labels.push(v.jogo));
  }
+
  let acumulado=0;
- const serie=valores.map(v=>acumulado += Number(v.pontos||0));
+
+ const serie = valoresValidos.map(v=>{
+   acumulado += Number(v.pontos || 0);
+   return acumulado;
+ });
 
  datasets.push({
    label:nome,
-   data:serie
+   data:serie,
+   tension:0.3
  });
 });
 
