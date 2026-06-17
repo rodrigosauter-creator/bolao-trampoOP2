@@ -1,115 +1,105 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeria de Fotos</title>
+    <title>Galeria do Bolão</title>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-
-        h1 {
-            text-align: center;
-        }
-
-        .galeria {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 15px;
-        }
-
-        .galeria img {
-            width: 100%;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
-
-        .galeria img:hover {
-            transform: scale(1.03);
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,.9);
-            justify-content: center;
-            align-items: center;
-            z-index: 999;
-        }
-
-        .modal img {
-            max-width: 95%;
-            max-height: 95%;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<h1>📸 Galeria do Bolão</h1>
+    <div class="hero">
+        <h1>📸 Galeria do Bolão</h1>
+        <p>Fotos e momentos da Copa</p>
+    </div>
 
-<p>
-    <a href="index.html">⬅ Voltar ao bolão</a>
-</p>
+    <div class="menu">
+        <button
+            class="tab active"
+            onclick="window.location.href='index.html'">
+            ⬅ Voltar ao Bolão
+        </button>
+    </div>
 
-<div id="galeria" class="galeria"></div>
+    <div class="container">
 
-<div id="modal" class="modal">
-    <img id="foto-ampliada">
-</div>
+        <div id="galeria" class="galeria-grid"></div>
 
-<script>
-async function carregarGaleria() {
+    </div>
 
-    const resposta =
-        await fetch("fotos.json");
+    <div id="modal" class="modal">
+        <img id="foto-ampliada">
+    </div>
 
-    const fotos =
-        await resposta.json();
+    <script>
 
-    const galeria =
-        document.getElementById("galeria");
+        async function carregarGaleria() {
 
-    fotos.forEach(nomeArquivo => {
+            const resposta =
+                await fetch("fotos.json");
 
-        const img =
-            document.createElement("img");
+            const fotos =
+                await resposta.json();
 
-        img.src =
-            "fotos/" + nomeArquivo;
+            const galeria =
+                document.getElementById("galeria");
 
-        img.loading = "lazy";
+            fotos.forEach(nomeArquivo => {
 
-        img.addEventListener("click", () => {
+                const img =
+                    document.createElement("img");
 
-            document
-                .getElementById("foto-ampliada")
-                .src = img.src;
+                img.src =
+                    "fotos/" + nomeArquivo;
 
-            document
-                .getElementById("modal")
-                .style.display = "flex";
-        });
+                img.loading = "lazy";
 
-        galeria.appendChild(img);
-    });
-}
+                img.className =
+                    "foto-galeria";
 
-carregarGaleria();
+                img.addEventListener(
+                    "click",
+                    () => {
 
-document
-.getElementById("modal")
-.addEventListener("click", () => {
+                        document
+                            .getElementById(
+                                "foto-ampliada"
+                            )
+                            .src = img.src;
 
-    document
-        .getElementById("modal")
-        .style.display = "none";
-});
-</script>
+                        document
+                            .getElementById(
+                                "modal"
+                            )
+                            .style.display = "flex";
+                    }
+                );
+
+                galeria.appendChild(img);
+            });
+        }
+
+        carregarGaleria();
+
+        document
+            .getElementById("modal")
+            .addEventListener(
+                "click",
+                () => {
+
+                    document
+                        .getElementById(
+                            "modal"
+                        )
+                        .style.display = "none";
+                }
+            );
+
+    </script>
 
 </body>
+
 </html>
