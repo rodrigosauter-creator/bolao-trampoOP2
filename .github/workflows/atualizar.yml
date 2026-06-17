@@ -27,10 +27,10 @@ jobs:
           pip install -r requirements.txt
 
       - name: Baixar planilha atualizada
-      run: |
-        curl -L \
-          "https://drive.google.com/uc?export=download&id=1or5SP8xMIXPLYDImrxNxZQdd5uRlHfuu" \
-          -o nova_planilha.xlsx
+        run: |
+          curl -L \
+            "https://drive.google.com/uc?export=download&id=1or5SP8xMIXPLYDImrxNxZQdd5uRlHfuu" \
+            -o nova_planilha.xlsx
 
       - name: Diagnóstico do download
         run: |
