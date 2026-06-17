@@ -1,0 +1,2995 @@
+{
+  "classificacao": [
+    {
+      "posicao": 1,
+      "nome": "Arthur",
+      "pontos": 24
+    },
+    {
+      "posicao": 2,
+      "nome": "Rodrigo",
+      "pontos": 20
+    },
+    {
+      "posicao": 3,
+      "nome": "Ana",
+      "pontos": 16
+    },
+    {
+      "posicao": 4,
+      "nome": "Isa",
+      "pontos": 13
+    },
+    {
+      "posicao": 5,
+      "nome": "Carol",
+      "pontos": 12
+    },
+    {
+      "posicao": 6,
+      "nome": "Trops",
+      "pontos": 7
+    },
+    {
+      "posicao": 7,
+      "nome": "Dudu",
+      "pontos": 4
+    }
+  ],
+  "evolucao": {
+    "Rodrigo": [
+      {
+        "jogo": 0,
+        "pontos": 0
+      },
+      {
+        "jogo": 1,
+        "pontos": 4
+      },
+      {
+        "jogo": 2,
+        "pontos": 4
+      },
+      {
+        "jogo": 3,
+        "pontos": 4
+      },
+      {
+        "jogo": 4,
+        "pontos": 6
+      },
+      {
+        "jogo": 5,
+        "pontos": 6
+      },
+      {
+        "jogo": 6,
+        "pontos": 6
+      },
+      {
+        "jogo": 7,
+        "pontos": 8
+      },
+      {
+        "jogo": 8,
+        "pontos": 8
+      },
+      {
+        "jogo": 9,
+        "pontos": 10
+      },
+      {
+        "jogo": 10,
+        "pontos": 10
+      },
+      {
+        "jogo": 11,
+        "pontos": 10
+      },
+      {
+        "jogo": 12,
+        "pontos": 12
+      },
+      {
+        "jogo": 13,
+        "pontos": 12
+      },
+      {
+        "jogo": 14,
+        "pontos": 12
+      },
+      {
+        "jogo": 15,
+        "pontos": 12
+      },
+      {
+        "jogo": 16,
+        "pontos": 12
+      },
+      {
+        "jogo": 17,
+        "pontos": 18
+      },
+      {
+        "jogo": 18,
+        "pontos": 20
+      },
+      {
+        "jogo": 19,
+        "pontos": 20
+      },
+      {
+        "jogo": 20,
+        "pontos": 20
+      },
+      {
+        "jogo": 21,
+        "pontos": 20
+      },
+      {
+        "jogo": 22,
+        "pontos": 20
+      },
+      {
+        "jogo": 23,
+        "pontos": 20
+      },
+      {
+        "jogo": 24,
+        "pontos": 20
+      },
+      {
+        "jogo": 25,
+        "pontos": 20
+      },
+      {
+        "jogo": 26,
+        "pontos": 20
+      },
+      {
+        "jogo": 27,
+        "pontos": 20
+      },
+      {
+        "jogo": 28,
+        "pontos": 20
+      },
+      {
+        "jogo": 29,
+        "pontos": 20
+      },
+      {
+        "jogo": 30,
+        "pontos": 20
+      },
+      {
+        "jogo": 31,
+        "pontos": 20
+      },
+      {
+        "jogo": 32,
+        "pontos": 20
+      },
+      {
+        "jogo": 33,
+        "pontos": 20
+      },
+      {
+        "jogo": 34,
+        "pontos": 20
+      },
+      {
+        "jogo": 35,
+        "pontos": 20
+      },
+      {
+        "jogo": 36,
+        "pontos": 20
+      },
+      {
+        "jogo": 37,
+        "pontos": 20
+      },
+      {
+        "jogo": 38,
+        "pontos": 20
+      },
+      {
+        "jogo": 39,
+        "pontos": 20
+      },
+      {
+        "jogo": 40,
+        "pontos": 20
+      },
+      {
+        "jogo": 41,
+        "pontos": 20
+      },
+      {
+        "jogo": 42,
+        "pontos": 20
+      },
+      {
+        "jogo": 43,
+        "pontos": 20
+      },
+      {
+        "jogo": 44,
+        "pontos": 20
+      },
+      {
+        "jogo": 45,
+        "pontos": 20
+      },
+      {
+        "jogo": 46,
+        "pontos": 20
+      },
+      {
+        "jogo": 47,
+        "pontos": 20
+      },
+      {
+        "jogo": 48,
+        "pontos": 20
+      },
+      {
+        "jogo": 49,
+        "pontos": 20
+      },
+      {
+        "jogo": 50,
+        "pontos": 20
+      },
+      {
+        "jogo": 51,
+        "pontos": 20
+      },
+      {
+        "jogo": 52,
+        "pontos": 20
+      },
+      {
+        "jogo": 53,
+        "pontos": 20
+      },
+      {
+        "jogo": 54,
+        "pontos": 20
+      },
+      {
+        "jogo": 55,
+        "pontos": 20
+      },
+      {
+        "jogo": 56,
+        "pontos": 20
+      },
+      {
+        "jogo": 57,
+        "pontos": 20
+      },
+      {
+        "jogo": 58,
+        "pontos": 20
+      },
+      {
+        "jogo": 59,
+        "pontos": 20
+      },
+      {
+        "jogo": 60,
+        "pontos": 20
+      },
+      {
+        "jogo": 61,
+        "pontos": 20
+      },
+      {
+        "jogo": 62,
+        "pontos": 20
+      },
+      {
+        "jogo": 63,
+        "pontos": 20
+      },
+      {
+        "jogo": 64,
+        "pontos": 20
+      },
+      {
+        "jogo": 65,
+        "pontos": 20
+      },
+      {
+        "jogo": 66,
+        "pontos": 20
+      },
+      {
+        "jogo": 67,
+        "pontos": 20
+      },
+      {
+        "jogo": 68,
+        "pontos": 20
+      },
+      {
+        "jogo": 69,
+        "pontos": 20
+      },
+      {
+        "jogo": 70,
+        "pontos": 20
+      },
+      {
+        "jogo": 71,
+        "pontos": 20
+      },
+      {
+        "jogo": 72,
+        "pontos": 20
+      },
+      {
+        "jogo": 73,
+        "pontos": 20
+      },
+      {
+        "jogo": 74,
+        "pontos": 20
+      },
+      {
+        "jogo": 75,
+        "pontos": 20
+      },
+      {
+        "jogo": 76,
+        "pontos": 20
+      },
+      {
+        "jogo": 77,
+        "pontos": 20
+      },
+      {
+        "jogo": 78,
+        "pontos": 20
+      },
+      {
+        "jogo": 79,
+        "pontos": 20
+      },
+      {
+        "jogo": 80,
+        "pontos": 20
+      },
+      {
+        "jogo": 81,
+        "pontos": 20
+      },
+      {
+        "jogo": 82,
+        "pontos": 20
+      },
+      {
+        "jogo": 83,
+        "pontos": 20
+      },
+      {
+        "jogo": 84,
+        "pontos": 20
+      },
+      {
+        "jogo": 85,
+        "pontos": 20
+      },
+      {
+        "jogo": 86,
+        "pontos": 20
+      },
+      {
+        "jogo": 87,
+        "pontos": 20
+      },
+      {
+        "jogo": 88,
+        "pontos": 20
+      },
+      {
+        "jogo": 89,
+        "pontos": 20
+      },
+      {
+        "jogo": 90,
+        "pontos": 20
+      },
+      {
+        "jogo": 91,
+        "pontos": 20
+      },
+      {
+        "jogo": 92,
+        "pontos": 20
+      },
+      {
+        "jogo": 93,
+        "pontos": 20
+      },
+      {
+        "jogo": 94,
+        "pontos": 20
+      },
+      {
+        "jogo": 95,
+        "pontos": 20
+      },
+      {
+        "jogo": 96,
+        "pontos": 20
+      },
+      {
+        "jogo": 97,
+        "pontos": 20
+      },
+      {
+        "jogo": 98,
+        "pontos": 20
+      },
+      {
+        "jogo": 99,
+        "pontos": 20
+      },
+      {
+        "jogo": 100,
+        "pontos": 20
+      },
+      {
+        "jogo": 101,
+        "pontos": 20
+      },
+      {
+        "jogo": 102,
+        "pontos": 20
+      },
+      {
+        "jogo": 103,
+        "pontos": 20
+      },
+      {
+        "jogo": 104,
+        "pontos": 20
+      }
+    ],
+    "Arthur": [
+      {
+        "jogo": 0,
+        "pontos": 0
+      },
+      {
+        "jogo": 1,
+        "pontos": 4
+      },
+      {
+        "jogo": 2,
+        "pontos": 8
+      },
+      {
+        "jogo": 3,
+        "pontos": 8
+      },
+      {
+        "jogo": 4,
+        "pontos": 10
+      },
+      {
+        "jogo": 5,
+        "pontos": 10
+      },
+      {
+        "jogo": 6,
+        "pontos": 10
+      },
+      {
+        "jogo": 7,
+        "pontos": 12
+      },
+      {
+        "jogo": 8,
+        "pontos": 12
+      },
+      {
+        "jogo": 9,
+        "pontos": 14
+      },
+      {
+        "jogo": 10,
+        "pontos": 14
+      },
+      {
+        "jogo": 11,
+        "pontos": 14
+      },
+      {
+        "jogo": 12,
+        "pontos": 16
+      },
+      {
+        "jogo": 13,
+        "pontos": 16
+      },
+      {
+        "jogo": 14,
+        "pontos": 16
+      },
+      {
+        "jogo": 15,
+        "pontos": 16
+      },
+      {
+        "jogo": 16,
+        "pontos": 16
+      },
+      {
+        "jogo": 17,
+        "pontos": 22
+      },
+      {
+        "jogo": 18,
+        "pontos": 24
+      },
+      {
+        "jogo": 19,
+        "pontos": 24
+      },
+      {
+        "jogo": 20,
+        "pontos": 24
+      },
+      {
+        "jogo": 21,
+        "pontos": 24
+      },
+      {
+        "jogo": 22,
+        "pontos": 24
+      },
+      {
+        "jogo": 23,
+        "pontos": 24
+      },
+      {
+        "jogo": 24,
+        "pontos": 24
+      },
+      {
+        "jogo": 25,
+        "pontos": 24
+      },
+      {
+        "jogo": 26,
+        "pontos": 24
+      },
+      {
+        "jogo": 27,
+        "pontos": 24
+      },
+      {
+        "jogo": 28,
+        "pontos": 24
+      },
+      {
+        "jogo": 29,
+        "pontos": 24
+      },
+      {
+        "jogo": 30,
+        "pontos": 24
+      },
+      {
+        "jogo": 31,
+        "pontos": 24
+      },
+      {
+        "jogo": 32,
+        "pontos": 24
+      },
+      {
+        "jogo": 33,
+        "pontos": 24
+      },
+      {
+        "jogo": 34,
+        "pontos": 24
+      },
+      {
+        "jogo": 35,
+        "pontos": 24
+      },
+      {
+        "jogo": 36,
+        "pontos": 24
+      },
+      {
+        "jogo": 37,
+        "pontos": 24
+      },
+      {
+        "jogo": 38,
+        "pontos": 24
+      },
+      {
+        "jogo": 39,
+        "pontos": 24
+      },
+      {
+        "jogo": 40,
+        "pontos": 24
+      },
+      {
+        "jogo": 41,
+        "pontos": 24
+      },
+      {
+        "jogo": 42,
+        "pontos": 24
+      },
+      {
+        "jogo": 43,
+        "pontos": 24
+      },
+      {
+        "jogo": 44,
+        "pontos": 24
+      },
+      {
+        "jogo": 45,
+        "pontos": 24
+      },
+      {
+        "jogo": 46,
+        "pontos": 24
+      },
+      {
+        "jogo": 47,
+        "pontos": 24
+      },
+      {
+        "jogo": 48,
+        "pontos": 24
+      },
+      {
+        "jogo": 49,
+        "pontos": 24
+      },
+      {
+        "jogo": 50,
+        "pontos": 24
+      },
+      {
+        "jogo": 51,
+        "pontos": 24
+      },
+      {
+        "jogo": 52,
+        "pontos": 24
+      },
+      {
+        "jogo": 53,
+        "pontos": 24
+      },
+      {
+        "jogo": 54,
+        "pontos": 24
+      },
+      {
+        "jogo": 55,
+        "pontos": 24
+      },
+      {
+        "jogo": 56,
+        "pontos": 24
+      },
+      {
+        "jogo": 57,
+        "pontos": 24
+      },
+      {
+        "jogo": 58,
+        "pontos": 24
+      },
+      {
+        "jogo": 59,
+        "pontos": 24
+      },
+      {
+        "jogo": 60,
+        "pontos": 24
+      },
+      {
+        "jogo": 61,
+        "pontos": 24
+      },
+      {
+        "jogo": 62,
+        "pontos": 24
+      },
+      {
+        "jogo": 63,
+        "pontos": 24
+      },
+      {
+        "jogo": 64,
+        "pontos": 24
+      },
+      {
+        "jogo": 65,
+        "pontos": 24
+      },
+      {
+        "jogo": 66,
+        "pontos": 24
+      },
+      {
+        "jogo": 67,
+        "pontos": 24
+      },
+      {
+        "jogo": 68,
+        "pontos": 24
+      },
+      {
+        "jogo": 69,
+        "pontos": 24
+      },
+      {
+        "jogo": 70,
+        "pontos": 24
+      },
+      {
+        "jogo": 71,
+        "pontos": 24
+      },
+      {
+        "jogo": 72,
+        "pontos": 24
+      },
+      {
+        "jogo": 73,
+        "pontos": 24
+      },
+      {
+        "jogo": 74,
+        "pontos": 24
+      },
+      {
+        "jogo": 75,
+        "pontos": 24
+      },
+      {
+        "jogo": 76,
+        "pontos": 24
+      },
+      {
+        "jogo": 77,
+        "pontos": 24
+      },
+      {
+        "jogo": 78,
+        "pontos": 24
+      },
+      {
+        "jogo": 79,
+        "pontos": 24
+      },
+      {
+        "jogo": 80,
+        "pontos": 24
+      },
+      {
+        "jogo": 81,
+        "pontos": 24
+      },
+      {
+        "jogo": 82,
+        "pontos": 24
+      },
+      {
+        "jogo": 83,
+        "pontos": 24
+      },
+      {
+        "jogo": 84,
+        "pontos": 24
+      },
+      {
+        "jogo": 85,
+        "pontos": 24
+      },
+      {
+        "jogo": 86,
+        "pontos": 24
+      },
+      {
+        "jogo": 87,
+        "pontos": 24
+      },
+      {
+        "jogo": 88,
+        "pontos": 24
+      },
+      {
+        "jogo": 89,
+        "pontos": 24
+      },
+      {
+        "jogo": 90,
+        "pontos": 24
+      },
+      {
+        "jogo": 91,
+        "pontos": 24
+      },
+      {
+        "jogo": 92,
+        "pontos": 24
+      },
+      {
+        "jogo": 93,
+        "pontos": 24
+      },
+      {
+        "jogo": 94,
+        "pontos": 24
+      },
+      {
+        "jogo": 95,
+        "pontos": 24
+      },
+      {
+        "jogo": 96,
+        "pontos": 24
+      },
+      {
+        "jogo": 97,
+        "pontos": 24
+      },
+      {
+        "jogo": 98,
+        "pontos": 24
+      },
+      {
+        "jogo": 99,
+        "pontos": 24
+      },
+      {
+        "jogo": 100,
+        "pontos": 24
+      },
+      {
+        "jogo": 101,
+        "pontos": 24
+      },
+      {
+        "jogo": 102,
+        "pontos": 24
+      },
+      {
+        "jogo": 103,
+        "pontos": 24
+      },
+      {
+        "jogo": 104,
+        "pontos": 24
+      }
+    ],
+    "Dudu": [
+      {
+        "jogo": 0,
+        "pontos": 0
+      },
+      {
+        "jogo": 1,
+        "pontos": 0
+      },
+      {
+        "jogo": 2,
+        "pontos": 0
+      },
+      {
+        "jogo": 3,
+        "pontos": 0
+      },
+      {
+        "jogo": 4,
+        "pontos": 0
+      },
+      {
+        "jogo": 5,
+        "pontos": 0
+      },
+      {
+        "jogo": 6,
+        "pontos": 0
+      },
+      {
+        "jogo": 7,
+        "pontos": 2
+      },
+      {
+        "jogo": 8,
+        "pontos": 2
+      },
+      {
+        "jogo": 9,
+        "pontos": 4
+      },
+      {
+        "jogo": 10,
+        "pontos": 4
+      },
+      {
+        "jogo": 11,
+        "pontos": 4
+      },
+      {
+        "jogo": 12,
+        "pontos": 4
+      },
+      {
+        "jogo": 13,
+        "pontos": 4
+      },
+      {
+        "jogo": 14,
+        "pontos": 4
+      },
+      {
+        "jogo": 15,
+        "pontos": 4
+      },
+      {
+        "jogo": 16,
+        "pontos": 4
+      },
+      {
+        "jogo": 17,
+        "pontos": 4
+      },
+      {
+        "jogo": 18,
+        "pontos": 4
+      },
+      {
+        "jogo": 19,
+        "pontos": 4
+      },
+      {
+        "jogo": 20,
+        "pontos": 4
+      },
+      {
+        "jogo": 21,
+        "pontos": 4
+      },
+      {
+        "jogo": 22,
+        "pontos": 4
+      },
+      {
+        "jogo": 23,
+        "pontos": 4
+      },
+      {
+        "jogo": 24,
+        "pontos": 4
+      },
+      {
+        "jogo": 25,
+        "pontos": 4
+      },
+      {
+        "jogo": 26,
+        "pontos": 4
+      },
+      {
+        "jogo": 27,
+        "pontos": 4
+      },
+      {
+        "jogo": 28,
+        "pontos": 4
+      },
+      {
+        "jogo": 29,
+        "pontos": 4
+      },
+      {
+        "jogo": 30,
+        "pontos": 4
+      },
+      {
+        "jogo": 31,
+        "pontos": 4
+      },
+      {
+        "jogo": 32,
+        "pontos": 4
+      },
+      {
+        "jogo": 33,
+        "pontos": 4
+      },
+      {
+        "jogo": 34,
+        "pontos": 4
+      },
+      {
+        "jogo": 35,
+        "pontos": 4
+      },
+      {
+        "jogo": 36,
+        "pontos": 4
+      },
+      {
+        "jogo": 37,
+        "pontos": 4
+      },
+      {
+        "jogo": 38,
+        "pontos": 4
+      },
+      {
+        "jogo": 39,
+        "pontos": 4
+      },
+      {
+        "jogo": 40,
+        "pontos": 4
+      },
+      {
+        "jogo": 41,
+        "pontos": 4
+      },
+      {
+        "jogo": 42,
+        "pontos": 4
+      },
+      {
+        "jogo": 43,
+        "pontos": 4
+      },
+      {
+        "jogo": 44,
+        "pontos": 4
+      },
+      {
+        "jogo": 45,
+        "pontos": 4
+      },
+      {
+        "jogo": 46,
+        "pontos": 4
+      },
+      {
+        "jogo": 47,
+        "pontos": 4
+      },
+      {
+        "jogo": 48,
+        "pontos": 4
+      },
+      {
+        "jogo": 49,
+        "pontos": 4
+      },
+      {
+        "jogo": 50,
+        "pontos": 4
+      },
+      {
+        "jogo": 51,
+        "pontos": 4
+      },
+      {
+        "jogo": 52,
+        "pontos": 4
+      },
+      {
+        "jogo": 53,
+        "pontos": 4
+      },
+      {
+        "jogo": 54,
+        "pontos": 4
+      },
+      {
+        "jogo": 55,
+        "pontos": 4
+      },
+      {
+        "jogo": 56,
+        "pontos": 4
+      },
+      {
+        "jogo": 57,
+        "pontos": 4
+      },
+      {
+        "jogo": 58,
+        "pontos": 4
+      },
+      {
+        "jogo": 59,
+        "pontos": 4
+      },
+      {
+        "jogo": 60,
+        "pontos": 4
+      },
+      {
+        "jogo": 61,
+        "pontos": 4
+      },
+      {
+        "jogo": 62,
+        "pontos": 4
+      },
+      {
+        "jogo": 63,
+        "pontos": 4
+      },
+      {
+        "jogo": 64,
+        "pontos": 4
+      },
+      {
+        "jogo": 65,
+        "pontos": 4
+      },
+      {
+        "jogo": 66,
+        "pontos": 4
+      },
+      {
+        "jogo": 67,
+        "pontos": 4
+      },
+      {
+        "jogo": 68,
+        "pontos": 4
+      },
+      {
+        "jogo": 69,
+        "pontos": 4
+      },
+      {
+        "jogo": 70,
+        "pontos": 4
+      },
+      {
+        "jogo": 71,
+        "pontos": 4
+      },
+      {
+        "jogo": 72,
+        "pontos": 4
+      },
+      {
+        "jogo": 73,
+        "pontos": 4
+      },
+      {
+        "jogo": 74,
+        "pontos": 4
+      },
+      {
+        "jogo": 75,
+        "pontos": 4
+      },
+      {
+        "jogo": 76,
+        "pontos": 4
+      },
+      {
+        "jogo": 77,
+        "pontos": 4
+      },
+      {
+        "jogo": 78,
+        "pontos": 4
+      },
+      {
+        "jogo": 79,
+        "pontos": 4
+      },
+      {
+        "jogo": 80,
+        "pontos": 4
+      },
+      {
+        "jogo": 81,
+        "pontos": 4
+      },
+      {
+        "jogo": 82,
+        "pontos": 4
+      },
+      {
+        "jogo": 83,
+        "pontos": 4
+      },
+      {
+        "jogo": 84,
+        "pontos": 4
+      },
+      {
+        "jogo": 85,
+        "pontos": 4
+      },
+      {
+        "jogo": 86,
+        "pontos": 4
+      },
+      {
+        "jogo": 87,
+        "pontos": 4
+      },
+      {
+        "jogo": 88,
+        "pontos": 4
+      },
+      {
+        "jogo": 89,
+        "pontos": 4
+      },
+      {
+        "jogo": 90,
+        "pontos": 4
+      },
+      {
+        "jogo": 91,
+        "pontos": 4
+      },
+      {
+        "jogo": 92,
+        "pontos": 4
+      },
+      {
+        "jogo": 93,
+        "pontos": 4
+      },
+      {
+        "jogo": 94,
+        "pontos": 4
+      },
+      {
+        "jogo": 95,
+        "pontos": 4
+      },
+      {
+        "jogo": 96,
+        "pontos": 4
+      },
+      {
+        "jogo": 97,
+        "pontos": 4
+      },
+      {
+        "jogo": 98,
+        "pontos": 4
+      },
+      {
+        "jogo": 99,
+        "pontos": 4
+      },
+      {
+        "jogo": 100,
+        "pontos": 4
+      },
+      {
+        "jogo": 101,
+        "pontos": 4
+      },
+      {
+        "jogo": 102,
+        "pontos": 4
+      },
+      {
+        "jogo": 103,
+        "pontos": 4
+      },
+      {
+        "jogo": 104,
+        "pontos": 4
+      }
+    ],
+    "Carol": [
+      {
+        "jogo": 0,
+        "pontos": 0
+      },
+      {
+        "jogo": 1,
+        "pontos": 4
+      },
+      {
+        "jogo": 2,
+        "pontos": 4
+      },
+      {
+        "jogo": 3,
+        "pontos": 4
+      },
+      {
+        "jogo": 4,
+        "pontos": 4
+      },
+      {
+        "jogo": 5,
+        "pontos": 4
+      },
+      {
+        "jogo": 6,
+        "pontos": 4
+      },
+      {
+        "jogo": 7,
+        "pontos": 10
+      },
+      {
+        "jogo": 8,
+        "pontos": 10
+      },
+      {
+        "jogo": 9,
+        "pontos": 12
+      },
+      {
+        "jogo": 10,
+        "pontos": 12
+      },
+      {
+        "jogo": 11,
+        "pontos": 12
+      },
+      {
+        "jogo": 12,
+        "pontos": 12
+      },
+      {
+        "jogo": 13,
+        "pontos": 12
+      },
+      {
+        "jogo": 14,
+        "pontos": 12
+      },
+      {
+        "jogo": 15,
+        "pontos": 12
+      },
+      {
+        "jogo": 16,
+        "pontos": 12
+      },
+      {
+        "jogo": 17,
+        "pontos": 12
+      },
+      {
+        "jogo": 18,
+        "pontos": 12
+      },
+      {
+        "jogo": 19,
+        "pontos": 12
+      },
+      {
+        "jogo": 20,
+        "pontos": 12
+      },
+      {
+        "jogo": 21,
+        "pontos": 12
+      },
+      {
+        "jogo": 22,
+        "pontos": 12
+      },
+      {
+        "jogo": 23,
+        "pontos": 12
+      },
+      {
+        "jogo": 24,
+        "pontos": 12
+      },
+      {
+        "jogo": 25,
+        "pontos": 12
+      },
+      {
+        "jogo": 26,
+        "pontos": 12
+      },
+      {
+        "jogo": 27,
+        "pontos": 12
+      },
+      {
+        "jogo": 28,
+        "pontos": 12
+      },
+      {
+        "jogo": 29,
+        "pontos": 12
+      },
+      {
+        "jogo": 30,
+        "pontos": 12
+      },
+      {
+        "jogo": 31,
+        "pontos": 12
+      },
+      {
+        "jogo": 32,
+        "pontos": 12
+      },
+      {
+        "jogo": 33,
+        "pontos": 12
+      },
+      {
+        "jogo": 34,
+        "pontos": 12
+      },
+      {
+        "jogo": 35,
+        "pontos": 12
+      },
+      {
+        "jogo": 36,
+        "pontos": 12
+      },
+      {
+        "jogo": 37,
+        "pontos": 12
+      },
+      {
+        "jogo": 38,
+        "pontos": 12
+      },
+      {
+        "jogo": 39,
+        "pontos": 12
+      },
+      {
+        "jogo": 40,
+        "pontos": 12
+      },
+      {
+        "jogo": 41,
+        "pontos": 12
+      },
+      {
+        "jogo": 42,
+        "pontos": 12
+      },
+      {
+        "jogo": 43,
+        "pontos": 12
+      },
+      {
+        "jogo": 44,
+        "pontos": 12
+      },
+      {
+        "jogo": 45,
+        "pontos": 12
+      },
+      {
+        "jogo": 46,
+        "pontos": 12
+      },
+      {
+        "jogo": 47,
+        "pontos": 12
+      },
+      {
+        "jogo": 48,
+        "pontos": 12
+      },
+      {
+        "jogo": 49,
+        "pontos": 12
+      },
+      {
+        "jogo": 50,
+        "pontos": 12
+      },
+      {
+        "jogo": 51,
+        "pontos": 12
+      },
+      {
+        "jogo": 52,
+        "pontos": 12
+      },
+      {
+        "jogo": 53,
+        "pontos": 12
+      },
+      {
+        "jogo": 54,
+        "pontos": 12
+      },
+      {
+        "jogo": 55,
+        "pontos": 12
+      },
+      {
+        "jogo": 56,
+        "pontos": 12
+      },
+      {
+        "jogo": 57,
+        "pontos": 12
+      },
+      {
+        "jogo": 58,
+        "pontos": 12
+      },
+      {
+        "jogo": 59,
+        "pontos": 12
+      },
+      {
+        "jogo": 60,
+        "pontos": 12
+      },
+      {
+        "jogo": 61,
+        "pontos": 12
+      },
+      {
+        "jogo": 62,
+        "pontos": 12
+      },
+      {
+        "jogo": 63,
+        "pontos": 12
+      },
+      {
+        "jogo": 64,
+        "pontos": 12
+      },
+      {
+        "jogo": 65,
+        "pontos": 12
+      },
+      {
+        "jogo": 66,
+        "pontos": 12
+      },
+      {
+        "jogo": 67,
+        "pontos": 12
+      },
+      {
+        "jogo": 68,
+        "pontos": 12
+      },
+      {
+        "jogo": 69,
+        "pontos": 12
+      },
+      {
+        "jogo": 70,
+        "pontos": 12
+      },
+      {
+        "jogo": 71,
+        "pontos": 12
+      },
+      {
+        "jogo": 72,
+        "pontos": 12
+      },
+      {
+        "jogo": 73,
+        "pontos": 12
+      },
+      {
+        "jogo": 74,
+        "pontos": 12
+      },
+      {
+        "jogo": 75,
+        "pontos": 12
+      },
+      {
+        "jogo": 76,
+        "pontos": 12
+      },
+      {
+        "jogo": 77,
+        "pontos": 12
+      },
+      {
+        "jogo": 78,
+        "pontos": 12
+      },
+      {
+        "jogo": 79,
+        "pontos": 12
+      },
+      {
+        "jogo": 80,
+        "pontos": 12
+      },
+      {
+        "jogo": 81,
+        "pontos": 12
+      },
+      {
+        "jogo": 82,
+        "pontos": 12
+      },
+      {
+        "jogo": 83,
+        "pontos": 12
+      },
+      {
+        "jogo": 84,
+        "pontos": 12
+      },
+      {
+        "jogo": 85,
+        "pontos": 12
+      },
+      {
+        "jogo": 86,
+        "pontos": 12
+      },
+      {
+        "jogo": 87,
+        "pontos": 12
+      },
+      {
+        "jogo": 88,
+        "pontos": 12
+      },
+      {
+        "jogo": 89,
+        "pontos": 12
+      },
+      {
+        "jogo": 90,
+        "pontos": 12
+      },
+      {
+        "jogo": 91,
+        "pontos": 12
+      },
+      {
+        "jogo": 92,
+        "pontos": 12
+      },
+      {
+        "jogo": 93,
+        "pontos": 12
+      },
+      {
+        "jogo": 94,
+        "pontos": 12
+      },
+      {
+        "jogo": 95,
+        "pontos": 12
+      },
+      {
+        "jogo": 96,
+        "pontos": 12
+      },
+      {
+        "jogo": 97,
+        "pontos": 12
+      },
+      {
+        "jogo": 98,
+        "pontos": 12
+      },
+      {
+        "jogo": 99,
+        "pontos": 12
+      },
+      {
+        "jogo": 100,
+        "pontos": 12
+      },
+      {
+        "jogo": 101,
+        "pontos": 12
+      },
+      {
+        "jogo": 102,
+        "pontos": 12
+      },
+      {
+        "jogo": 103,
+        "pontos": 12
+      },
+      {
+        "jogo": 104,
+        "pontos": 12
+      }
+    ],
+    "Ana": [
+      {
+        "jogo": 0,
+        "pontos": 0
+      },
+      {
+        "jogo": 1,
+        "pontos": 0
+      },
+      {
+        "jogo": 2,
+        "pontos": 6
+      },
+      {
+        "jogo": 3,
+        "pontos": 6
+      },
+      {
+        "jogo": 4,
+        "pontos": 6
+      },
+      {
+        "jogo": 5,
+        "pontos": 6
+      },
+      {
+        "jogo": 6,
+        "pontos": 6
+      },
+      {
+        "jogo": 7,
+        "pontos": 8
+      },
+      {
+        "jogo": 8,
+        "pontos": 12
+      },
+      {
+        "jogo": 9,
+        "pontos": 14
+      },
+      {
+        "jogo": 10,
+        "pontos": 14
+      },
+      {
+        "jogo": 11,
+        "pontos": 14
+      },
+      {
+        "jogo": 12,
+        "pontos": 16
+      },
+      {
+        "jogo": 13,
+        "pontos": 16
+      },
+      {
+        "jogo": 14,
+        "pontos": 16
+      },
+      {
+        "jogo": 15,
+        "pontos": 16
+      },
+      {
+        "jogo": 16,
+        "pontos": 16
+      },
+      {
+        "jogo": 17,
+        "pontos": 16
+      },
+      {
+        "jogo": 18,
+        "pontos": 16
+      },
+      {
+        "jogo": 19,
+        "pontos": 16
+      },
+      {
+        "jogo": 20,
+        "pontos": 16
+      },
+      {
+        "jogo": 21,
+        "pontos": 16
+      },
+      {
+        "jogo": 22,
+        "pontos": 16
+      },
+      {
+        "jogo": 23,
+        "pontos": 16
+      },
+      {
+        "jogo": 24,
+        "pontos": 16
+      },
+      {
+        "jogo": 25,
+        "pontos": 16
+      },
+      {
+        "jogo": 26,
+        "pontos": 16
+      },
+      {
+        "jogo": 27,
+        "pontos": 16
+      },
+      {
+        "jogo": 28,
+        "pontos": 16
+      },
+      {
+        "jogo": 29,
+        "pontos": 16
+      },
+      {
+        "jogo": 30,
+        "pontos": 16
+      },
+      {
+        "jogo": 31,
+        "pontos": 16
+      },
+      {
+        "jogo": 32,
+        "pontos": 16
+      },
+      {
+        "jogo": 33,
+        "pontos": 16
+      },
+      {
+        "jogo": 34,
+        "pontos": 16
+      },
+      {
+        "jogo": 35,
+        "pontos": 16
+      },
+      {
+        "jogo": 36,
+        "pontos": 16
+      },
+      {
+        "jogo": 37,
+        "pontos": 16
+      },
+      {
+        "jogo": 38,
+        "pontos": 16
+      },
+      {
+        "jogo": 39,
+        "pontos": 16
+      },
+      {
+        "jogo": 40,
+        "pontos": 16
+      },
+      {
+        "jogo": 41,
+        "pontos": 16
+      },
+      {
+        "jogo": 42,
+        "pontos": 16
+      },
+      {
+        "jogo": 43,
+        "pontos": 16
+      },
+      {
+        "jogo": 44,
+        "pontos": 16
+      },
+      {
+        "jogo": 45,
+        "pontos": 16
+      },
+      {
+        "jogo": 46,
+        "pontos": 16
+      },
+      {
+        "jogo": 47,
+        "pontos": 16
+      },
+      {
+        "jogo": 48,
+        "pontos": 16
+      },
+      {
+        "jogo": 49,
+        "pontos": 16
+      },
+      {
+        "jogo": 50,
+        "pontos": 16
+      },
+      {
+        "jogo": 51,
+        "pontos": 16
+      },
+      {
+        "jogo": 52,
+        "pontos": 16
+      },
+      {
+        "jogo": 53,
+        "pontos": 16
+      },
+      {
+        "jogo": 54,
+        "pontos": 16
+      },
+      {
+        "jogo": 55,
+        "pontos": 16
+      },
+      {
+        "jogo": 56,
+        "pontos": 16
+      },
+      {
+        "jogo": 57,
+        "pontos": 16
+      },
+      {
+        "jogo": 58,
+        "pontos": 16
+      },
+      {
+        "jogo": 59,
+        "pontos": 16
+      },
+      {
+        "jogo": 60,
+        "pontos": 16
+      },
+      {
+        "jogo": 61,
+        "pontos": 16
+      },
+      {
+        "jogo": 62,
+        "pontos": 16
+      },
+      {
+        "jogo": 63,
+        "pontos": 16
+      },
+      {
+        "jogo": 64,
+        "pontos": 16
+      },
+      {
+        "jogo": 65,
+        "pontos": 16
+      },
+      {
+        "jogo": 66,
+        "pontos": 16
+      },
+      {
+        "jogo": 67,
+        "pontos": 16
+      },
+      {
+        "jogo": 68,
+        "pontos": 16
+      },
+      {
+        "jogo": 69,
+        "pontos": 16
+      },
+      {
+        "jogo": 70,
+        "pontos": 16
+      },
+      {
+        "jogo": 71,
+        "pontos": 16
+      },
+      {
+        "jogo": 72,
+        "pontos": 16
+      },
+      {
+        "jogo": 73,
+        "pontos": 16
+      },
+      {
+        "jogo": 74,
+        "pontos": 16
+      },
+      {
+        "jogo": 75,
+        "pontos": 16
+      },
+      {
+        "jogo": 76,
+        "pontos": 16
+      },
+      {
+        "jogo": 77,
+        "pontos": 16
+      },
+      {
+        "jogo": 78,
+        "pontos": 16
+      },
+      {
+        "jogo": 79,
+        "pontos": 16
+      },
+      {
+        "jogo": 80,
+        "pontos": 16
+      },
+      {
+        "jogo": 81,
+        "pontos": 16
+      },
+      {
+        "jogo": 82,
+        "pontos": 16
+      },
+      {
+        "jogo": 83,
+        "pontos": 16
+      },
+      {
+        "jogo": 84,
+        "pontos": 16
+      },
+      {
+        "jogo": 85,
+        "pontos": 16
+      },
+      {
+        "jogo": 86,
+        "pontos": 16
+      },
+      {
+        "jogo": 87,
+        "pontos": 16
+      },
+      {
+        "jogo": 88,
+        "pontos": 16
+      },
+      {
+        "jogo": 89,
+        "pontos": 16
+      },
+      {
+        "jogo": 90,
+        "pontos": 16
+      },
+      {
+        "jogo": 91,
+        "pontos": 16
+      },
+      {
+        "jogo": 92,
+        "pontos": 16
+      },
+      {
+        "jogo": 93,
+        "pontos": 16
+      },
+      {
+        "jogo": 94,
+        "pontos": 16
+      },
+      {
+        "jogo": 95,
+        "pontos": 16
+      },
+      {
+        "jogo": 96,
+        "pontos": 16
+      },
+      {
+        "jogo": 97,
+        "pontos": 16
+      },
+      {
+        "jogo": 98,
+        "pontos": 16
+      },
+      {
+        "jogo": 99,
+        "pontos": 16
+      },
+      {
+        "jogo": 100,
+        "pontos": 16
+      },
+      {
+        "jogo": 101,
+        "pontos": 16
+      },
+      {
+        "jogo": 102,
+        "pontos": 16
+      },
+      {
+        "jogo": 103,
+        "pontos": 16
+      },
+      {
+        "jogo": 104,
+        "pontos": 16
+      }
+    ],
+    "Isa": [
+      {
+        "jogo": 0,
+        "pontos": 0
+      },
+      {
+        "jogo": 1,
+        "pontos": 2
+      },
+      {
+        "jogo": 2,
+        "pontos": 6
+      },
+      {
+        "jogo": 3,
+        "pontos": 6
+      },
+      {
+        "jogo": 4,
+        "pontos": 6
+      },
+      {
+        "jogo": 5,
+        "pontos": 6
+      },
+      {
+        "jogo": 6,
+        "pontos": 6
+      },
+      {
+        "jogo": 7,
+        "pontos": 9
+      },
+      {
+        "jogo": 8,
+        "pontos": 9
+      },
+      {
+        "jogo": 9,
+        "pontos": 11
+      },
+      {
+        "jogo": 10,
+        "pontos": 11
+      },
+      {
+        "jogo": 11,
+        "pontos": 11
+      },
+      {
+        "jogo": 12,
+        "pontos": 11
+      },
+      {
+        "jogo": 13,
+        "pontos": 11
+      },
+      {
+        "jogo": 14,
+        "pontos": 11
+      },
+      {
+        "jogo": 15,
+        "pontos": 11
+      },
+      {
+        "jogo": 16,
+        "pontos": 13
+      },
+      {
+        "jogo": 17,
+        "pontos": 13
+      },
+      {
+        "jogo": 18,
+        "pontos": 13
+      },
+      {
+        "jogo": 19,
+        "pontos": 13
+      },
+      {
+        "jogo": 20,
+        "pontos": 13
+      },
+      {
+        "jogo": 21,
+        "pontos": 13
+      },
+      {
+        "jogo": 22,
+        "pontos": 13
+      },
+      {
+        "jogo": 23,
+        "pontos": 13
+      },
+      {
+        "jogo": 24,
+        "pontos": 13
+      },
+      {
+        "jogo": 25,
+        "pontos": 13
+      },
+      {
+        "jogo": 26,
+        "pontos": 13
+      },
+      {
+        "jogo": 27,
+        "pontos": 13
+      },
+      {
+        "jogo": 28,
+        "pontos": 13
+      },
+      {
+        "jogo": 29,
+        "pontos": 13
+      },
+      {
+        "jogo": 30,
+        "pontos": 13
+      },
+      {
+        "jogo": 31,
+        "pontos": 13
+      },
+      {
+        "jogo": 32,
+        "pontos": 13
+      },
+      {
+        "jogo": 33,
+        "pontos": 13
+      },
+      {
+        "jogo": 34,
+        "pontos": 13
+      },
+      {
+        "jogo": 35,
+        "pontos": 13
+      },
+      {
+        "jogo": 36,
+        "pontos": 13
+      },
+      {
+        "jogo": 37,
+        "pontos": 13
+      },
+      {
+        "jogo": 38,
+        "pontos": 13
+      },
+      {
+        "jogo": 39,
+        "pontos": 13
+      },
+      {
+        "jogo": 40,
+        "pontos": 13
+      },
+      {
+        "jogo": 41,
+        "pontos": 13
+      },
+      {
+        "jogo": 42,
+        "pontos": 13
+      },
+      {
+        "jogo": 43,
+        "pontos": 13
+      },
+      {
+        "jogo": 44,
+        "pontos": 13
+      },
+      {
+        "jogo": 45,
+        "pontos": 13
+      },
+      {
+        "jogo": 46,
+        "pontos": 13
+      },
+      {
+        "jogo": 47,
+        "pontos": 13
+      },
+      {
+        "jogo": 48,
+        "pontos": 13
+      },
+      {
+        "jogo": 49,
+        "pontos": 13
+      },
+      {
+        "jogo": 50,
+        "pontos": 13
+      },
+      {
+        "jogo": 51,
+        "pontos": 13
+      },
+      {
+        "jogo": 52,
+        "pontos": 13
+      },
+      {
+        "jogo": 53,
+        "pontos": 13
+      },
+      {
+        "jogo": 54,
+        "pontos": 13
+      },
+      {
+        "jogo": 55,
+        "pontos": 13
+      },
+      {
+        "jogo": 56,
+        "pontos": 13
+      },
+      {
+        "jogo": 57,
+        "pontos": 13
+      },
+      {
+        "jogo": 58,
+        "pontos": 13
+      },
+      {
+        "jogo": 59,
+        "pontos": 13
+      },
+      {
+        "jogo": 60,
+        "pontos": 13
+      },
+      {
+        "jogo": 61,
+        "pontos": 13
+      },
+      {
+        "jogo": 62,
+        "pontos": 13
+      },
+      {
+        "jogo": 63,
+        "pontos": 13
+      },
+      {
+        "jogo": 64,
+        "pontos": 13
+      },
+      {
+        "jogo": 65,
+        "pontos": 13
+      },
+      {
+        "jogo": 66,
+        "pontos": 13
+      },
+      {
+        "jogo": 67,
+        "pontos": 13
+      },
+      {
+        "jogo": 68,
+        "pontos": 13
+      },
+      {
+        "jogo": 69,
+        "pontos": 13
+      },
+      {
+        "jogo": 70,
+        "pontos": 13
+      },
+      {
+        "jogo": 71,
+        "pontos": 13
+      },
+      {
+        "jogo": 72,
+        "pontos": 13
+      },
+      {
+        "jogo": 73,
+        "pontos": 13
+      },
+      {
+        "jogo": 74,
+        "pontos": 13
+      },
+      {
+        "jogo": 75,
+        "pontos": 13
+      },
+      {
+        "jogo": 76,
+        "pontos": 13
+      },
+      {
+        "jogo": 77,
+        "pontos": 13
+      },
+      {
+        "jogo": 78,
+        "pontos": 13
+      },
+      {
+        "jogo": 79,
+        "pontos": 13
+      },
+      {
+        "jogo": 80,
+        "pontos": 13
+      },
+      {
+        "jogo": 81,
+        "pontos": 13
+      },
+      {
+        "jogo": 82,
+        "pontos": 13
+      },
+      {
+        "jogo": 83,
+        "pontos": 13
+      },
+      {
+        "jogo": 84,
+        "pontos": 13
+      },
+      {
+        "jogo": 85,
+        "pontos": 13
+      },
+      {
+        "jogo": 86,
+        "pontos": 13
+      },
+      {
+        "jogo": 87,
+        "pontos": 13
+      },
+      {
+        "jogo": 88,
+        "pontos": 13
+      },
+      {
+        "jogo": 89,
+        "pontos": 13
+      },
+      {
+        "jogo": 90,
+        "pontos": 13
+      },
+      {
+        "jogo": 91,
+        "pontos": 13
+      },
+      {
+        "jogo": 92,
+        "pontos": 13
+      },
+      {
+        "jogo": 93,
+        "pontos": 13
+      },
+      {
+        "jogo": 94,
+        "pontos": 13
+      },
+      {
+        "jogo": 95,
+        "pontos": 13
+      },
+      {
+        "jogo": 96,
+        "pontos": 13
+      },
+      {
+        "jogo": 97,
+        "pontos": 13
+      },
+      {
+        "jogo": 98,
+        "pontos": 13
+      },
+      {
+        "jogo": 99,
+        "pontos": 13
+      },
+      {
+        "jogo": 100,
+        "pontos": 13
+      },
+      {
+        "jogo": 101,
+        "pontos": 13
+      },
+      {
+        "jogo": 102,
+        "pontos": 13
+      },
+      {
+        "jogo": 103,
+        "pontos": 13
+      },
+      {
+        "jogo": 104,
+        "pontos": 13
+      }
+    ],
+    "Trops": [
+      {
+        "jogo": 0,
+        "pontos": 0
+      },
+      {
+        "jogo": 1,
+        "pontos": 3
+      },
+      {
+        "jogo": 2,
+        "pontos": 3
+      },
+      {
+        "jogo": 3,
+        "pontos": 3
+      },
+      {
+        "jogo": 4,
+        "pontos": 3
+      },
+      {
+        "jogo": 5,
+        "pontos": 3
+      },
+      {
+        "jogo": 6,
+        "pontos": 3
+      },
+      {
+        "jogo": 7,
+        "pontos": 5
+      },
+      {
+        "jogo": 8,
+        "pontos": 5
+      },
+      {
+        "jogo": 9,
+        "pontos": 7
+      },
+      {
+        "jogo": 10,
+        "pontos": 7
+      },
+      {
+        "jogo": 11,
+        "pontos": 7
+      },
+      {
+        "jogo": 12,
+        "pontos": 7
+      },
+      {
+        "jogo": 13,
+        "pontos": 7
+      },
+      {
+        "jogo": 14,
+        "pontos": 7
+      },
+      {
+        "jogo": 15,
+        "pontos": 7
+      },
+      {
+        "jogo": 16,
+        "pontos": 7
+      },
+      {
+        "jogo": 17,
+        "pontos": 7
+      },
+      {
+        "jogo": 18,
+        "pontos": 7
+      },
+      {
+        "jogo": 19,
+        "pontos": 7
+      },
+      {
+        "jogo": 20,
+        "pontos": 7
+      },
+      {
+        "jogo": 21,
+        "pontos": 7
+      },
+      {
+        "jogo": 22,
+        "pontos": 7
+      },
+      {
+        "jogo": 23,
+        "pontos": 7
+      },
+      {
+        "jogo": 24,
+        "pontos": 7
+      },
+      {
+        "jogo": 25,
+        "pontos": 7
+      },
+      {
+        "jogo": 26,
+        "pontos": 7
+      },
+      {
+        "jogo": 27,
+        "pontos": 7
+      },
+      {
+        "jogo": 28,
+        "pontos": 7
+      },
+      {
+        "jogo": 29,
+        "pontos": 7
+      },
+      {
+        "jogo": 30,
+        "pontos": 7
+      },
+      {
+        "jogo": 31,
+        "pontos": 7
+      },
+      {
+        "jogo": 32,
+        "pontos": 7
+      },
+      {
+        "jogo": 33,
+        "pontos": 7
+      },
+      {
+        "jogo": 34,
+        "pontos": 7
+      },
+      {
+        "jogo": 35,
+        "pontos": 7
+      },
+      {
+        "jogo": 36,
+        "pontos": 7
+      },
+      {
+        "jogo": 37,
+        "pontos": 7
+      },
+      {
+        "jogo": 38,
+        "pontos": 7
+      },
+      {
+        "jogo": 39,
+        "pontos": 7
+      },
+      {
+        "jogo": 40,
+        "pontos": 7
+      },
+      {
+        "jogo": 41,
+        "pontos": 7
+      },
+      {
+        "jogo": 42,
+        "pontos": 7
+      },
+      {
+        "jogo": 43,
+        "pontos": 7
+      },
+      {
+        "jogo": 44,
+        "pontos": 7
+      },
+      {
+        "jogo": 45,
+        "pontos": 7
+      },
+      {
+        "jogo": 46,
+        "pontos": 7
+      },
+      {
+        "jogo": 47,
+        "pontos": 7
+      },
+      {
+        "jogo": 48,
+        "pontos": 7
+      },
+      {
+        "jogo": 49,
+        "pontos": 7
+      },
+      {
+        "jogo": 50,
+        "pontos": 7
+      },
+      {
+        "jogo": 51,
+        "pontos": 7
+      },
+      {
+        "jogo": 52,
+        "pontos": 7
+      },
+      {
+        "jogo": 53,
+        "pontos": 7
+      },
+      {
+        "jogo": 54,
+        "pontos": 7
+      },
+      {
+        "jogo": 55,
+        "pontos": 7
+      },
+      {
+        "jogo": 56,
+        "pontos": 7
+      },
+      {
+        "jogo": 57,
+        "pontos": 7
+      },
+      {
+        "jogo": 58,
+        "pontos": 7
+      },
+      {
+        "jogo": 59,
+        "pontos": 7
+      },
+      {
+        "jogo": 60,
+        "pontos": 7
+      },
+      {
+        "jogo": 61,
+        "pontos": 7
+      },
+      {
+        "jogo": 62,
+        "pontos": 7
+      },
+      {
+        "jogo": 63,
+        "pontos": 7
+      },
+      {
+        "jogo": 64,
+        "pontos": 7
+      },
+      {
+        "jogo": 65,
+        "pontos": 7
+      },
+      {
+        "jogo": 66,
+        "pontos": 7
+      },
+      {
+        "jogo": 67,
+        "pontos": 7
+      },
+      {
+        "jogo": 68,
+        "pontos": 7
+      },
+      {
+        "jogo": 69,
+        "pontos": 7
+      },
+      {
+        "jogo": 70,
+        "pontos": 7
+      },
+      {
+        "jogo": 71,
+        "pontos": 7
+      },
+      {
+        "jogo": 72,
+        "pontos": 7
+      },
+      {
+        "jogo": 73,
+        "pontos": 7
+      },
+      {
+        "jogo": 74,
+        "pontos": 7
+      },
+      {
+        "jogo": 75,
+        "pontos": 7
+      },
+      {
+        "jogo": 76,
+        "pontos": 7
+      },
+      {
+        "jogo": 77,
+        "pontos": 7
+      },
+      {
+        "jogo": 78,
+        "pontos": 7
+      },
+      {
+        "jogo": 79,
+        "pontos": 7
+      },
+      {
+        "jogo": 80,
+        "pontos": 7
+      },
+      {
+        "jogo": 81,
+        "pontos": 7
+      },
+      {
+        "jogo": 82,
+        "pontos": 7
+      },
+      {
+        "jogo": 83,
+        "pontos": 7
+      },
+      {
+        "jogo": 84,
+        "pontos": 7
+      },
+      {
+        "jogo": 85,
+        "pontos": 7
+      },
+      {
+        "jogo": 86,
+        "pontos": 7
+      },
+      {
+        "jogo": 87,
+        "pontos": 7
+      },
+      {
+        "jogo": 88,
+        "pontos": 7
+      },
+      {
+        "jogo": 89,
+        "pontos": 7
+      },
+      {
+        "jogo": 90,
+        "pontos": 7
+      },
+      {
+        "jogo": 91,
+        "pontos": 7
+      },
+      {
+        "jogo": 92,
+        "pontos": 7
+      },
+      {
+        "jogo": 93,
+        "pontos": 7
+      },
+      {
+        "jogo": 94,
+        "pontos": 7
+      },
+      {
+        "jogo": 95,
+        "pontos": 7
+      },
+      {
+        "jogo": 96,
+        "pontos": 7
+      },
+      {
+        "jogo": 97,
+        "pontos": 7
+      },
+      {
+        "jogo": 98,
+        "pontos": 7
+      },
+      {
+        "jogo": 99,
+        "pontos": 7
+      },
+      {
+        "jogo": 100,
+        "pontos": 7
+      },
+      {
+        "jogo": 101,
+        "pontos": 7
+      },
+      {
+        "jogo": 102,
+        "pontos": 7
+      },
+      {
+        "jogo": 103,
+        "pontos": 7
+      },
+      {
+        "jogo": 104,
+        "pontos": 7
+      }
+    ]
+  }
+}
