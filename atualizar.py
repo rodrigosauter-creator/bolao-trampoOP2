@@ -4,68 +4,160 @@ import json
 ARQUIVO_EXCEL = "Copa do Mundo 2026.xlsx"
 ARQUIVO_JSON = "dados.json"
 
-wb = openpyxl.load_workbook(ARQUIVO_EXCEL, data_only=True)
+wb = openpyxl.load_workbook(
+ARQUIVO_EXCEL,
+data_only=True
+)
 
 # =========================
+
 # Classificação
+
 # =========================
+
 ws = wb["Classificação"]
 
 classificacao = []
-for row in ws.iter_rows(min_row=3, max_col=7, values_only=True):
-    posicao = row[4]
-    nome = row[5]
-    pontos = row[6]
 
-    if nome is None:
-        continue
+for row in ws.iter_rows(
+min_row=3,
+max_col=8,
+values_only=True
+):
 
-    classificacao.append({
-        "posicao": int(posicao),
-        "nome": str(nome),
-        "pontos": int(pontos)
-    })
+```
+posicao = row[4]   # E
+nome = row[5]      # F
+pontos = row[6]    # G
+acertos = row[7]   # H
+
+if nome is None:
+    continue
+
+classificacao.append({
+    "posicao": int(posicao) if posicao is not None else 0,
+    "nome": str(nome),
+    "pontos": int(pontos) if pontos is not None else 0,
+    "acertos": int(acertos) if acertos is not None else 0
+})
+```
 
 # =========================
+
 # Pontuação por rodada
+
 # =========================
+
 ws = wb["Pontuação por rodada"]
 
-cabecalho = [c for c in next(ws.iter_rows(min_row=1, max_row=1, values_only=True))[:8]]
+cabecalho = list(
+next(
+ws.iter_rows(
+min_row=1,
+max_row=1,
+values_only=True
+)
+)
+)
+
 participantes = cabecalho[1:]
 
-evolucao = {p.strip(): [] for p in participantes if p}
-
-for row in ws.iter_rows(min_row=2, values_only=True):
-    jogo = row[0]
-    jogos_realizados = 0
-
-for jogo in jogo:
-
-    if (
-        jogo["golsA"] is not None and
-        jogo["golsB"] is not None
-    ):
-        jogos_realizados += 1
-        
-    if jogo is None:
-        continue
-
-    for i, participante in enumerate(participantes, start=1):
-        if participante:
-            evolucao[participante.strip()].append({
-                "jogo": jogo,
-                "pontos": row[i]
-            })
-
-dados = {
-    "classificacao": classificacao,
-    "evolucao": evolucao,
-    "jogos": jogos,
-    "jogos_realizados": jogos_realizados
+evolucao = {
+p.strip(): []
+for p in participantes
+if p
 }
 
-with open(ARQUIVO_JSON, "w", encoding="utf-8") as f:
-    json.dump(dados, f, ensure_ascii=False, indent=2)
+for row in ws.iter_rows(
+min_row=2,
+values_only=True
+):
 
-print("dados.json gerado com sucesso!")
+```
+jogo = row[0]
+
+if jogo is None:
+    continue
+
+for i, participante in enumerate(
+    participantes,
+    start=1
+):
+
+    if participante:
+
+        evolucao[
+            participante.strip()
+        ].append({
+
+            "jogo": jogo,
+
+            # IMPORTANTE:
+            # estes valores já são acumulados
+            "pontos": (
+                row[i]
+                if row[i] is not None
+                else 0
+            )
+        })
+```
+
+# =========================
+
+# Jogos realizados
+
+# =========================
+
+ws = wb["Tabela de Jogos"]
+
+jogos_realizados = 0
+
+for row in ws.iter_rows(
+min_row=3,
+values_only=True
+):
+
+```
+golsA = row[2]  # coluna C
+golsB = row[4]  # coluna E
+
+if (
+    golsA is not None and
+    golsB is not None
+):
+    jogos_realizados += 1
+```
+
+# =========================
+
+# Exportação
+
+# =========================
+
+dados = {
+"classificacao": classificacao,
+"evolucao": evolucao,
+"jogos_realizados": jogos_realizados
+}
+
+with open(
+ARQUIVO_JSON,
+"w",
+encoding="utf-8"
+) as f:
+
+```
+json.dump(
+    dados,
+    f,
+    ensure_ascii=False,
+    indent=2
+)
+```
+
+wb.close()
+
+print(
+f"dados.json gerado com sucesso. "
+f"Jogos realizados: {jogos_realizados}"
+)
