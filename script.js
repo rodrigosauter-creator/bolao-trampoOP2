@@ -525,6 +525,3 @@ function mostrarApostador(apostador) {
 
     detalhes.innerHTML = html;
 }
-
-
-}
