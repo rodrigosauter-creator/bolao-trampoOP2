@@ -10,3 +10,341 @@ table{width:100%;border-collapse:collapse}
 th,td{padding:12px;border-bottom:1px solid #ddd}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
 .player{box-shadow:0 2px 8px rgba(0,0,0,.15)}
+
+/* ============================= */
+/* MENU */
+/* ============================= */
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+.tab {
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    background: #e5e7eb;
+    transition: .2s;
+}
+
+.tab:hover {
+    transform: translateY(-2px);
+}
+
+.tab.active {
+    background: #2563eb;
+    color: white;
+}
+
+/* páginas */
+
+.pagina {
+    display: none;
+}
+
+.pagina.ativa {
+    display: block;
+}
+
+/* ============================= */
+/* PÓDIO */
+/* ============================= */
+
+.podio {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.podio-card {
+
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    min-width: 220px;
+
+    text-align: center;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+}
+
+.medalha {
+    font-size: 2rem;
+}
+
+.pontuacao {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.acertos {
+    color: #6b7280;
+}
+
+/* ============================= */
+/* JOGOS */
+/* ============================= */
+
+#listaJogos {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.jogo-card {
+
+    background: white;
+
+    border-radius: 12px;
+
+    padding: 16px;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,.08);
+}
+
+.jogo-numero {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.jogo-times {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.time {
+    flex: 1;
+}
+
+.time.vencedor {
+    font-weight: bold;
+    color: #16a34a;
+}
+
+.bandeira {
+    font-size: 1.3rem;
+    margin-right: 5px;
+}
+
+.placar {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.jogo-status {
+    margin-top: 10px;
+    color: #6b7280;
+}
+
+/* ============================= */
+/* APOSTADORES */
+/* ============================= */
+
+.grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(220px,1fr));
+
+    gap: 15px;
+}
+
+.participante-card {
+
+    background: white;
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+    cursor: pointer;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,.08);
+
+    transition: .2s;
+}
+
+.participante-card:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 8px 18px rgba(0,0,0,.12);
+}
+
+.participante-info {
+
+    margin-top: 6px;
+
+    color: #6b7280;
+}
+
+.apostador-resumo {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin: 15px 0;
+
+    flex-wrap: wrap;
+}
+
+.resumo-card {
+
+    background: #f3f4f6;
+
+    padding: 12px 18px;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+}
+
+.tabela-palpites {
+
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+.tabela-palpites th,
+.tabela-palpites td {
+
+    border-bottom: 1px solid #e5e7eb;
+
+    padding: 10px;
+}
+
+/* ============================= */
+/* RODADAS */
+/* ============================= */
+
+.rodada-card {
+
+    background: white;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,.08);
+}
+
+.rodada-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+.vencedor-rodada {
+
+    font-weight: bold;
+
+    color: #f59e0b;
+}
+
+.tabela-rodada {
+
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+.tabela-rodada th,
+.tabela-rodada td {
+
+    padding: 10px;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* ============================= */
+/* LIDERANÇA */
+/* ============================= */
+
+.lideranca-resumo {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-bottom: 20px;
+}
+
+.grid-lideranca {
+
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(300px,1fr)
+    );
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+}
+
+.grid-lideranca table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+.grid-lideranca th,
+.grid-lideranca td {
+
+    padding: 10px;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+    .jogo-times {
+
+        flex-direction: column;
+    }
+
+    .rodada-header {
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .apostador-resumo {
+
+        flex-direction: column;
+    }
+}
