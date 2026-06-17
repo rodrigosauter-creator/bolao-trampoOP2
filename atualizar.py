@@ -90,11 +90,10 @@ for row in ws.iter_rows(
         valor = row[i]
 
         evolucao[participante].append({
-            "jogo": indice_jogo,
-            "pontos": pontos_acumulados,
-            "acertos": acertos_acumulados
+            "jogo": int(jogo),
+            "pontos": valor if valor is not None else 0
         })
-
+        
 # =========================
 # JOGOS
 # =========================
@@ -209,16 +208,22 @@ linha = 2
 
 while True:
 
-    jogo = ws.cell(row=linha, column=10).value  # Coluna J
+    jogo = ws.cell(
+        row=linha,
+        column=10
+    ).value
 
     if jogo is None:
         break
 
     ranking = []
 
-    for col in range(11, 18):  # K até Q
+    for col in range(11, 18):
 
-        nome = ws.cell(row=1, column=col).value
+        nome = ws.cell(
+            row=1,
+            column=col
+        ).value
 
         pontos = ws.cell(
             row=linha,
@@ -228,14 +233,10 @@ while True:
         ranking.append({
             "nome": nome,
             "pontos": pontos if pontos is not None else 0
-            "acertos": acertos
         })
 
     ranking.sort(
-        key=lambda x: (
-            x["pontos"],
-            x["acertos"]
-        ),
+        key=lambda x: x["pontos"],
         reverse=True
     )
 
@@ -260,31 +261,35 @@ for indice_jogo in range(len(jogos)):
 
     for participante in participantes:
 
-        if indice_jogo >= len(evolucao[participante]):
+        if indice_jogo >= len(
+            evolucao[participante]
+        ):
             continue
 
-        pontos = evolucao[participante][indice_jogo]["pontos"]
+        pontos = (
+            evolucao[participante]
+            [indice_jogo]["pontos"]
+        )
 
         ranking.append({
             "nome": participante,
-            "pontos": pontos,
-            "acertos": acertos
+            "pontos": pontos
         })
 
-        ranking.sort(
-        key=lambda x: (
-            x["pontos"],
-            x["acertos"]
-        ),
+    ranking.sort(
+        key=lambda x: x["pontos"],
         reverse=True
     )
 
     if len(ranking) > 0:
 
         if indice_jogo == 0:
+
             lider = "-"
             pontos = 0
+
         else:
+
             lider = ranking[0]["nome"]
             pontos = ranking[0]["pontos"]
 
@@ -293,7 +298,7 @@ for indice_jogo in range(len(jogos)):
             "lider": lider,
             "pontos": pontos
         })
-
+        
 # =========================
 # EXPORTAÇÃO
 # =========================
