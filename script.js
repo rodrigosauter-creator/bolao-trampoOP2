@@ -255,6 +255,8 @@ function montarGrafico(evolucao) {
 let dadosGlobais = null;
 
 async function carregarDados() {
+    
+    console.log("Entrou em carregarDados");
 
     const response =
         await fetch("dados.json");
