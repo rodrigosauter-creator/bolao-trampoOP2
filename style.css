@@ -511,3 +511,39 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
 
     box-shadow: 0 4px 12px rgba(0,0,0,.2);
 }
+
+/* ============================= */
+/* FILTROS DE FASE */
+/* ============================= */
+
+.filtro-rodada {
+
+    padding: 10px 14px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    background: white;
+
+    color: #111;
+
+    font-size: 15px;
+
+    margin-bottom: 20px;
+
+    width: 100%;
+
+    max-width: 350px;
+
+    cursor: pointer;
+}
+
+.filtro-rodada:focus {
+
+    outline: none;
+
+    border-color: #2563eb;
+
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
