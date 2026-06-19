@@ -514,7 +514,7 @@ function montarListaApostadores(apostadores) {
         });
 }
 
-function mostrarApostador(apostador) {
+function mostrarApostador(apostador, faseAtual = "todos") {
 
     const detalhes =
         document.getElementById(
@@ -568,55 +568,67 @@ function mostrarApostador(apostador) {
             <tbody>
     `;
 
-   const palpitesFiltrados =
+const todosPalpites =
+    apostador.palpitesOriginais ||
     apostador.palpites;
+
+const [inicio, fim] =
+    obterFaixaRodada(faseAtual);
+
+let palpitesFiltrados =
+    todosPalpites;
+
+if (faseAtual !== "todos") {
+
+    palpitesFiltrados =
+        todosPalpites.filter(
+            p =>
+                Number(p.jogo) >= inicio &&
+                Number(p.jogo) <= fim
+        );
+}
 
 palpitesFiltrados.forEach(
     palpite => {
-        
-            html += `
 
-            <tr>
+        html += `
 
-                <td>
-                    ${palpite.jogo}
-                </td>
+        <tr>
 
-                <td>
+            <td>
+                ${palpite.jogo}
+            </td>
 
-                    ${flag(
-                        palpite.selecao_a
-                    )}
+            <td>
 
-                    ${palpite.selecao_a}
+                ${flag(
+                    palpite.selecao_a
+                )}
 
-                    <strong>
-                        ${palpite.gols_a}
-                        x
-                        ${palpite.gols_b}
-                    </strong>
+                ${palpite.selecao_a}
 
-                    ${flag(
-                        palpite.selecao_b
-                    )}
+                <strong>
+                    ${palpite.gols_a}
+                    x
+                    ${palpite.gols_b}
+                </strong>
 
-                    ${palpite.selecao_b}
+                ${flag(
+                    palpite.selecao_b
+                )}
 
-                </td>
+                ${palpite.selecao_b}
 
-                <td>
-                    ${palpite.pontos}
-                </td>
+            </td>
 
-            </tr>
-            `;
-        }
-    );
+            <td>
+                ${palpite.pontos}
+            </td>
 
-    html += `
-            </tbody>
-        </table>
-    `;
+        </tr>
+        `;
+    }
+);
 
     detalhes.innerHTML = html;
 
