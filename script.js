@@ -276,6 +276,25 @@ async function carregarDados() {
             dados.jogos
         );
 
+        const filtroJogos =
+            document.getElementById("filtroJogos");
+        
+        if (filtroJogos) {
+        
+            filtroJogos.addEventListener(
+                "change",
+                e => {
+        
+                    montarJogos(
+                        dados.jogos,
+                        e.target.value
+                    );
+        
+                }
+            );
+        
+        }
+        
         montarListaApostadores(
             dados.apostadores
         );
@@ -307,8 +326,11 @@ document.addEventListener(
 // JOGOS
 // =====================================================
 
-function montarJogos(jogos) {
+function montarJogos(jogos, fase = "todos") {
 
+    const jogosFiltrados =
+        filtrarJogosPorFase(jogos, fase);
+    
     const container =
         document.getElementById("listaJogos");
 
@@ -316,7 +338,7 @@ function montarJogos(jogos) {
 
     container.innerHTML = "";
 
-    jogos.forEach(jogo => {
+    jogosFiltrados.forEach(jogo => {
 
         const status =
             jogo.realizado
@@ -393,6 +415,53 @@ function montarJogos(jogos) {
     });
 }
 
+function obterFaixaRodada(fase) {
+
+    switch (fase) {
+
+        case "1":
+            return [1, 24];
+
+        case "2":
+            return [25, 48];
+
+        case "3":
+            return [49, 72];
+
+        case "16":
+            return [73, 88];
+
+        case "8":
+            return [89, 96];
+
+        case "4":
+            return [97, 100];
+
+        case "semi":
+            return [101, 102];
+
+        case "terceiro":
+            return [103, 103];
+
+        case "final":
+            return [104, 104];
+
+        case "todos":
+        default:
+            return [0, 999];
+    }
+}
+
+function filtrarJogosPorFase(jogos, fase) {
+
+    const [inicio, fim] = obterFaixaRodada(fase);
+
+    return jogos.filter(jogo =>
+        jogo.jogo >= inicio &&
+        jogo.jogo <= fim
+    );
+}
+
 // =====================================================
 // APOSTADORES
 // =====================================================
@@ -429,11 +498,15 @@ function montarListaApostadores(apostadores) {
                 </div>
             `;
 
-            card.addEventListener(
+          card.addEventListener(
                 "click",
                 () =>
                     mostrarApostador(
-                        apostador
+                        {
+                            ...apostador,
+                            palpitesOriginais:
+                                apostador.palpites
+                        }
                     )
             );
 
@@ -450,9 +523,25 @@ function mostrarApostador(apostador) {
 
     if (!detalhes) return;
 
+    const filtroHTML = `
+    <select id="filtroPalpites" class="filtro-rodada">
+        <option value="todos">Todas as fases</option>
+        <option value="1">1ª Rodada (1-24)</option>
+        <option value="2">2ª Rodada (25-48)</option>
+        <option value="3">3ª Rodada (49-72)</option>
+        <option value="16">16-Avos (73-88)</option>
+        <option value="8">Oitavas (89-96)</option>
+        <option value="4">Quartas (97-100)</option>
+        <option value="semi">Semifinais (101-102)</option>
+        <option value="terceiro">3º Lugar (103)</option>
+        <option value="final">Final (104)</option>
+    </select>
+    `;
+
     let html = `
 
         <h2>${apostador.nome}</h2>
+        ${filtroHTML}
 
         <div class="apostador-resumo">
 
@@ -479,9 +568,12 @@ function mostrarApostador(apostador) {
             <tbody>
     `;
 
-    apostador.palpites.forEach(
-        palpite => {
+   const palpitesFiltrados =
+    apostador.palpites;
 
+palpitesFiltrados.forEach(
+    palpite => {
+        
             html += `
 
             <tr>
@@ -527,4 +619,28 @@ function mostrarApostador(apostador) {
     `;
 
     detalhes.innerHTML = html;
+
+    document
+    .getElementById("filtroPalpites")
+    .addEventListener("change", e => {
+
+        const [inicio, fim] =
+            obterFaixaRodada(
+                e.target.value
+            );
+
+        const copia = {
+            ...apostador,
+
+            palpites:
+                apostador.palpites.filter(
+                    p =>
+                        p.jogo >= inicio &&
+                        p.jogo <= fim
+                )
+        };
+
+        mostrarApostador(copia);
+
+    });
 }
