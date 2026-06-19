@@ -117,9 +117,22 @@
 
         <section class="container">
 
-            <h2>Resultados dos Jogos</h2>
+<h2>Resultados dos Jogos</h2>
 
-            <div id="listaJogos"></div>
+<select id="filtroJogos" class="filtro-rodada">
+    <option value="todos">Todas as fases</option>
+    <option value="1">1ª Rodada (1-24)</option>
+    <option value="2">2ª Rodada (25-48)</option>
+    <option value="3">3ª Rodada (49-72)</option>
+    <option value="16">16-Avos (73-88)</option>
+    <option value="8">Oitavas (89-96)</option>
+    <option value="4">Quartas (97-100)</option>
+    <option value="semi">Semifinais (101-102)</option>
+    <option value="terceiro">3º Lugar (103)</option>
+    <option value="final">Final (104)</option>
+</select>
+
+<div id="listaJogos"></div>
 
         </section>
 
