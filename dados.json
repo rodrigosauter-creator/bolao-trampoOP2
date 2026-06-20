@@ -3,43 +3,43 @@
     {
       "posicao": 1,
       "nome": "Ana",
-      "pontos": 48,
+      "pontos": 60,
       "acertos": 3
     },
     {
       "posicao": 2,
       "nome": "Arthur",
-      "pontos": 48,
+      "pontos": 58,
       "acertos": 2
     },
     {
       "posicao": 3,
-      "nome": "Carol",
-      "pontos": 33,
-      "acertos": 1
-    },
-    {
-      "posicao": 3,
-      "nome": "Rodrigo",
-      "pontos": 33,
-      "acertos": 1
-    },
-    {
-      "posicao": 5,
       "nome": "Isa",
-      "pontos": 32,
+      "pontos": 45,
       "acertos": 0
+    },
+    {
+      "posicao": 4,
+      "nome": "Carol",
+      "pontos": 44,
+      "acertos": 2
+    },
+    {
+      "posicao": 4,
+      "nome": "Rodrigo",
+      "pontos": 44,
+      "acertos": 2
     },
     {
       "posicao": 6,
       "nome": "Trops",
-      "pontos": 31,
+      "pontos": 41,
       "acertos": 0
     },
     {
       "posicao": 7,
       "nome": "Dudu",
-      "pontos": 23,
+      "pontos": 33,
       "acertos": 1
     }
   ],
@@ -163,307 +163,307 @@
       },
       {
         "jogo": 29,
-        "pontos": 33
+        "pontos": 36
       },
       {
         "jogo": 30,
-        "pontos": 33
+        "pontos": 38
       },
       {
         "jogo": 31,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 32,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 33,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 34,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 35,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 36,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 37,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 38,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 39,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 40,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 41,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 42,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 43,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 44,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 45,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 46,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 47,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 48,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 49,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 50,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 51,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 52,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 53,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 54,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 55,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 56,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 57,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 58,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 59,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 60,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 61,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 62,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 63,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 64,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 65,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 66,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 67,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 68,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 69,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 70,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 71,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 72,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 73,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 74,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 75,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 76,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 77,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 78,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 79,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 80,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 81,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 82,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 83,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 84,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 85,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 86,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 87,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 88,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 89,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 90,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 91,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 92,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 93,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 94,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 95,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 96,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 97,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 98,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 99,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 100,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 101,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 102,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 103,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 104,
-        "pontos": 33
+        "pontos": 44
       }
     ],
     "Arthur": [
@@ -585,307 +585,307 @@
       },
       {
         "jogo": 29,
-        "pontos": 48
+        "pontos": 52
       },
       {
         "jogo": 30,
-        "pontos": 48
+        "pontos": 54
       },
       {
         "jogo": 31,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 32,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 33,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 34,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 35,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 36,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 37,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 38,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 39,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 40,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 41,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 42,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 43,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 44,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 45,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 46,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 47,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 48,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 49,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 50,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 51,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 52,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 53,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 54,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 55,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 56,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 57,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 58,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 59,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 60,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 61,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 62,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 63,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 64,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 65,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 66,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 67,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 68,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 69,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 70,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 71,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 72,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 73,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 74,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 75,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 76,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 77,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 78,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 79,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 80,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 81,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 82,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 83,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 84,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 85,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 86,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 87,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 88,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 89,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 90,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 91,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 92,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 93,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 94,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 95,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 96,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 97,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 98,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 99,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 100,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 101,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 102,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 103,
-        "pontos": 48
+        "pontos": 58
       },
       {
         "jogo": 104,
-        "pontos": 48
+        "pontos": 58
       }
     ],
     "Dudu": [
@@ -1007,307 +1007,307 @@
       },
       {
         "jogo": 29,
-        "pontos": 23
+        "pontos": 27
       },
       {
         "jogo": 30,
-        "pontos": 23
+        "pontos": 29
       },
       {
         "jogo": 31,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 32,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 33,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 34,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 35,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 36,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 37,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 38,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 39,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 40,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 41,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 42,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 43,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 44,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 45,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 46,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 47,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 48,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 49,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 50,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 51,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 52,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 53,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 54,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 55,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 56,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 57,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 58,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 59,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 60,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 61,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 62,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 63,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 64,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 65,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 66,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 67,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 68,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 69,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 70,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 71,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 72,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 73,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 74,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 75,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 76,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 77,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 78,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 79,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 80,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 81,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 82,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 83,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 84,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 85,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 86,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 87,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 88,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 89,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 90,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 91,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 92,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 93,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 94,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 95,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 96,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 97,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 98,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 99,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 100,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 101,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 102,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 103,
-        "pontos": 23
+        "pontos": 33
       },
       {
         "jogo": 104,
-        "pontos": 23
+        "pontos": 33
       }
     ],
     "Carol": [
@@ -1429,307 +1429,307 @@
       },
       {
         "jogo": 29,
-        "pontos": 33
+        "pontos": 35
       },
       {
         "jogo": 30,
-        "pontos": 33
+        "pontos": 38
       },
       {
         "jogo": 31,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 32,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 33,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 34,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 35,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 36,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 37,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 38,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 39,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 40,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 41,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 42,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 43,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 44,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 45,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 46,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 47,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 48,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 49,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 50,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 51,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 52,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 53,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 54,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 55,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 56,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 57,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 58,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 59,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 60,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 61,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 62,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 63,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 64,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 65,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 66,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 67,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 68,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 69,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 70,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 71,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 72,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 73,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 74,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 75,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 76,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 77,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 78,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 79,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 80,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 81,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 82,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 83,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 84,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 85,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 86,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 87,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 88,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 89,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 90,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 91,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 92,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 93,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 94,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 95,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 96,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 97,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 98,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 99,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 100,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 101,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 102,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 103,
-        "pontos": 33
+        "pontos": 44
       },
       {
         "jogo": 104,
-        "pontos": 33
+        "pontos": 44
       }
     ],
     "Ana": [
@@ -1851,307 +1851,307 @@
       },
       {
         "jogo": 29,
-        "pontos": 48
+        "pontos": 50
       },
       {
         "jogo": 30,
-        "pontos": 48
+        "pontos": 52
       },
       {
         "jogo": 31,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 32,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 33,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 34,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 35,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 36,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 37,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 38,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 39,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 40,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 41,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 42,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 43,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 44,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 45,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 46,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 47,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 48,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 49,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 50,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 51,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 52,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 53,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 54,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 55,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 56,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 57,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 58,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 59,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 60,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 61,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 62,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 63,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 64,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 65,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 66,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 67,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 68,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 69,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 70,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 71,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 72,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 73,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 74,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 75,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 76,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 77,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 78,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 79,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 80,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 81,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 82,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 83,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 84,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 85,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 86,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 87,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 88,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 89,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 90,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 91,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 92,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 93,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 94,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 95,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 96,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 97,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 98,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 99,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 100,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 101,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 102,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 103,
-        "pontos": 48
+        "pontos": 60
       },
       {
         "jogo": 104,
-        "pontos": 48
+        "pontos": 60
       }
     ],
     "Isa": [
@@ -2273,307 +2273,307 @@
       },
       {
         "jogo": 29,
-        "pontos": 32
+        "pontos": 35
       },
       {
         "jogo": 30,
-        "pontos": 32
+        "pontos": 37
       },
       {
         "jogo": 31,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 32,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 33,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 34,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 35,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 36,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 37,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 38,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 39,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 40,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 41,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 42,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 43,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 44,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 45,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 46,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 47,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 48,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 49,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 50,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 51,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 52,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 53,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 54,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 55,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 56,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 57,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 58,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 59,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 60,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 61,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 62,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 63,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 64,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 65,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 66,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 67,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 68,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 69,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 70,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 71,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 72,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 73,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 74,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 75,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 76,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 77,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 78,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 79,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 80,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 81,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 82,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 83,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 84,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 85,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 86,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 87,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 88,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 89,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 90,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 91,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 92,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 93,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 94,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 95,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 96,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 97,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 98,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 99,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 100,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 101,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 102,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 103,
-        "pontos": 32
+        "pontos": 45
       },
       {
         "jogo": 104,
-        "pontos": 32
+        "pontos": 45
       }
     ],
     "Trops": [
@@ -2699,307 +2699,307 @@
       },
       {
         "jogo": 30,
-        "pontos": 31
+        "pontos": 33
       },
       {
         "jogo": 31,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 32,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 33,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 34,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 35,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 36,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 37,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 38,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 39,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 40,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 41,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 42,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 43,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 44,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 45,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 46,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 47,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 48,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 49,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 50,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 51,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 52,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 53,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 54,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 55,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 56,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 57,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 58,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 59,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 60,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 61,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 62,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 63,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 64,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 65,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 66,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 67,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 68,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 69,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 70,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 71,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 72,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 73,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 74,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 75,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 76,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 77,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 78,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 79,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 80,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 81,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 82,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 83,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 84,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 85,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 86,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 87,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 88,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 89,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 90,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 91,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 92,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 93,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 94,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 95,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 96,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 97,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 98,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 99,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 100,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 101,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 102,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 103,
-        "pontos": 31
+        "pontos": 41
       },
       {
         "jogo": 104,
-        "pontos": 31
+        "pontos": 41
       }
     ]
   },
-  "jogos_realizados": 28,
+  "jogos_realizados": 31,
   "jogos": [
     {
       "jogo": 1,
@@ -3256,29 +3256,29 @@
     {
       "jogo": 29,
       "selecao_a": "EUA",
-      "gols_a": null,
-      "gols_b": null,
+      "gols_a": 2,
+      "gols_b": 0,
       "selecao_b": "Austrália",
-      "vencedor": "-",
-      "realizado": false
+      "vencedor": "EUA",
+      "realizado": true
     },
     {
       "jogo": 30,
       "selecao_a": "Escócia",
-      "gols_a": null,
-      "gols_b": null,
+      "gols_a": 0,
+      "gols_b": 1,
       "selecao_b": "Marrocos",
-      "vencedor": "-",
-      "realizado": false
+      "vencedor": "Marrocos",
+      "realizado": true
     },
     {
       "jogo": 31,
       "selecao_a": "Brasil",
-      "gols_a": null,
-      "gols_b": null,
+      "gols_a": 3,
+      "gols_b": 0,
       "selecao_b": "Haiti",
-      "vencedor": "-",
-      "realizado": false
+      "vencedor": "Brasil",
+      "realizado": true
     },
     {
       "jogo": 32,
@@ -3941,8 +3941,8 @@
   "apostadores": {
     "Rodrigo": {
       "nome": "Rodrigo",
-      "total": 33,
-      "acertos": 1,
+      "total": 44,
+      "acertos": 2,
       "palpites": [
         {
           "jogo": 1,
@@ -4203,7 +4203,7 @@
           "gols_b": 1,
           "selecao_b": "Austrália",
           "vencedor": "EUA",
-          "pontos": 0
+          "pontos": 3
         },
         {
           "jogo": 30,
@@ -4212,7 +4212,7 @@
           "gols_b": 3,
           "selecao_b": "Marrocos",
           "vencedor": "Marrocos",
-          "pontos": 0
+          "pontos": 2
         },
         {
           "jogo": 31,
@@ -4221,7 +4221,7 @@
           "gols_b": 1,
           "selecao_b": "Haiti",
           "vencedor": "Brasil",
-          "pontos": 0
+          "pontos": 6
         },
         {
           "jogo": 32,
@@ -4884,7 +4884,7 @@
     },
     "Arthur": {
       "nome": "Arthur",
-      "total": 48,
+      "total": 58,
       "acertos": 2,
       "palpites": [
         {
@@ -5146,33 +5146,33 @@
           "gols_b": 1,
           "selecao_b": "Austrália",
           "vencedor": "EUA",
-          "pontos": 0
+          "pontos": 4
         },
         {
           "jogo": 30,
           "selecao_a": "Escócia",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 0,
+          "gols_b": 3,
           "selecao_b": "Marrocos",
-          "vencedor": "-",
-          "pontos": 0
+          "vencedor": "Marrocos",
+          "pontos": 2
         },
         {
           "jogo": 31,
           "selecao_a": "Brasil",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 4,
+          "gols_b": 0,
           "selecao_b": "Haiti",
-          "vencedor": "-",
-          "pontos": 0
+          "vencedor": "Brasil",
+          "pontos": 4
         },
         {
           "jogo": 32,
           "selecao_a": "Turquia",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 2,
+          "gols_b": 1,
           "selecao_b": "Paraguai",
-          "vencedor": "-",
+          "vencedor": "Turquia",
           "pontos": 0
         },
         {
@@ -5827,7 +5827,7 @@
     },
     "Dudu": {
       "nome": "Dudu",
-      "total": 23,
+      "total": 33,
       "acertos": 1,
       "palpites": [
         {
@@ -6089,7 +6089,7 @@
           "gols_b": 1,
           "selecao_b": "Austrália",
           "vencedor": "EUA",
-          "pontos": 0
+          "pontos": 4
         },
         {
           "jogo": 30,
@@ -6098,7 +6098,7 @@
           "gols_b": 2,
           "selecao_b": "Marrocos",
           "vencedor": "Marrocos",
-          "pontos": 0
+          "pontos": 2
         },
         {
           "jogo": 31,
@@ -6107,7 +6107,7 @@
           "gols_b": 0,
           "selecao_b": "Haiti",
           "vencedor": "Brasil",
-          "pontos": 0
+          "pontos": 4
         },
         {
           "jogo": 32,
@@ -6770,8 +6770,8 @@
     },
     "Carol": {
       "nome": "Carol",
-      "total": 33,
-      "acertos": 1,
+      "total": 44,
+      "acertos": 2,
       "palpites": [
         {
           "jogo": 1,
@@ -7032,7 +7032,7 @@
           "gols_b": 2,
           "selecao_b": "Austrália",
           "vencedor": "EUA",
-          "pontos": 0
+          "pontos": 2
         },
         {
           "jogo": 30,
@@ -7041,7 +7041,7 @@
           "gols_b": 2,
           "selecao_b": "Marrocos",
           "vencedor": "Marrocos",
-          "pontos": 0
+          "pontos": 3
         },
         {
           "jogo": 31,
@@ -7050,7 +7050,7 @@
           "gols_b": 1,
           "selecao_b": "Haiti",
           "vencedor": "Brasil",
-          "pontos": 0
+          "pontos": 6
         },
         {
           "jogo": 32,
@@ -7713,7 +7713,7 @@
     },
     "Ana": {
       "nome": "Ana",
-      "total": 48,
+      "total": 60,
       "acertos": 3,
       "palpites": [
         {
@@ -7975,7 +7975,7 @@
           "gols_b": 2,
           "selecao_b": "Austrália",
           "vencedor": "EUA",
-          "pontos": 0
+          "pontos": 2
         },
         {
           "jogo": 30,
@@ -7984,7 +7984,7 @@
           "gols_b": 3,
           "selecao_b": "Marrocos",
           "vencedor": "Marrocos",
-          "pontos": 0
+          "pontos": 2
         },
         {
           "jogo": 31,
@@ -7993,7 +7993,7 @@
           "gols_b": 1,
           "selecao_b": "Haiti",
           "vencedor": "Brasil",
-          "pontos": 0
+          "pontos": 8
         },
         {
           "jogo": 32,
@@ -8656,7 +8656,7 @@
     },
     "Isa": {
       "nome": "Isa",
-      "total": 32,
+      "total": 45,
       "acertos": 0,
       "palpites": [
         {
@@ -8918,7 +8918,7 @@
           "gols_b": 1,
           "selecao_b": "Austrália",
           "vencedor": "EUA",
-          "pontos": 0
+          "pontos": 3
         },
         {
           "jogo": 30,
@@ -8927,7 +8927,7 @@
           "gols_b": 2,
           "selecao_b": "Marrocos",
           "vencedor": "Marrocos",
-          "pontos": 0
+          "pontos": 2
         },
         {
           "jogo": 31,
@@ -8936,7 +8936,7 @@
           "gols_b": 1,
           "selecao_b": "Haiti",
           "vencedor": "Brasil",
-          "pontos": 0
+          "pontos": 8
         },
         {
           "jogo": 32,
@@ -9599,7 +9599,7 @@
     },
     "Trops": {
       "nome": "Trops",
-      "total": 31,
+      "total": 41,
       "acertos": 0,
       "palpites": [
         {
@@ -9870,7 +9870,7 @@
           "gols_b": 3,
           "selecao_b": "Marrocos",
           "vencedor": "Marrocos",
-          "pontos": 0
+          "pontos": 2
         },
         {
           "jogo": 31,
@@ -9879,7 +9879,7 @@
           "gols_b": 1,
           "selecao_b": "Haiti",
           "vencedor": "Brasil",
-          "pontos": 0
+          "pontos": 8
         },
         {
           "jogo": 32,
@@ -11558,29 +11558,29 @@
       ]
     },
     {
-      "jogo": 0,
+      "jogo": 3,
       "vencedor_rodada": "Arthur",
-      "maior_pontuacao": 0,
+      "maior_pontuacao": 4,
       "ranking": [
         {
           "nome": "Arthur",
-          "pontos": 0
+          "pontos": 4
         },
         {
           "nome": "Dudu",
-          "pontos": 0
-        },
-        {
-          "nome": "Carol",
-          "pontos": 0
-        },
-        {
-          "nome": "Ana",
-          "pontos": 0
+          "pontos": 4
         },
         {
           "nome": " Isa",
-          "pontos": 0
+          "pontos": 3
+        },
+        {
+          "nome": "Carol",
+          "pontos": 2
+        },
+        {
+          "nome": "Ana",
+          "pontos": 2
         },
         {
           "nome": "Trops",
@@ -11593,33 +11593,33 @@
       ]
     },
     {
-      "jogo": 0,
-      "vencedor_rodada": "Arthur",
-      "maior_pontuacao": 0,
+      "jogo": 2,
+      "vencedor_rodada": "Carol",
+      "maior_pontuacao": 3,
       "ranking": [
         {
+          "nome": "Carol",
+          "pontos": 3
+        },
+        {
           "nome": "Arthur",
-          "pontos": 0
+          "pontos": 2
         },
         {
           "nome": "Dudu",
-          "pontos": 0
-        },
-        {
-          "nome": "Carol",
-          "pontos": 0
+          "pontos": 2
         },
         {
           "nome": "Ana",
-          "pontos": 0
+          "pontos": 2
         },
         {
           "nome": " Isa",
-          "pontos": 0
+          "pontos": 2
         },
         {
           "nome": "Trops",
-          "pontos": 0
+          "pontos": 2
         },
         {
           "nome": null,
@@ -11628,33 +11628,33 @@
       ]
     },
     {
-      "jogo": 0,
-      "vencedor_rodada": "Arthur",
-      "maior_pontuacao": 0,
+      "jogo": 6,
+      "vencedor_rodada": "Ana",
+      "maior_pontuacao": 8,
       "ranking": [
         {
-          "nome": "Arthur",
-          "pontos": 0
-        },
-        {
-          "nome": "Dudu",
-          "pontos": 0
-        },
-        {
-          "nome": "Carol",
-          "pontos": 0
-        },
-        {
           "nome": "Ana",
-          "pontos": 0
+          "pontos": 8
         },
         {
           "nome": " Isa",
-          "pontos": 0
+          "pontos": 8
         },
         {
           "nome": "Trops",
-          "pontos": 0
+          "pontos": 8
+        },
+        {
+          "nome": "Carol",
+          "pontos": 6
+        },
+        {
+          "nome": "Arthur",
+          "pontos": 4
+        },
+        {
+          "nome": "Dudu",
+          "pontos": 4
         },
         {
           "nome": null,
@@ -14367,377 +14367,377 @@
     {
       "jogo": 29,
       "lider": "Arthur",
-      "pontos": 48
+      "pontos": 52
     },
     {
       "jogo": 30,
       "lider": "Arthur",
-      "pontos": 48
+      "pontos": 54
     },
     {
       "jogo": 31,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 32,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 33,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 34,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 35,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 36,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 37,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 38,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 39,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 40,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 41,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 42,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 43,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 44,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 45,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 46,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 47,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 48,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 49,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 50,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 51,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 52,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 53,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 54,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 55,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 56,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 57,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 58,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 59,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 60,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 61,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 62,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 63,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 64,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 65,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 66,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 67,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 68,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 69,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 70,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 71,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 72,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 73,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 74,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 75,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 76,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 77,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 78,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 79,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 80,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 81,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 82,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 83,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 84,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 85,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 86,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 87,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 88,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 89,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 90,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 91,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 92,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 93,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 94,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 95,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 96,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 97,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 98,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 99,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 100,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 101,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 102,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     },
     {
       "jogo": 103,
-      "lider": "Arthur",
-      "pontos": 48
+      "lider": "Ana",
+      "pontos": 60
     }
   ]
 }
