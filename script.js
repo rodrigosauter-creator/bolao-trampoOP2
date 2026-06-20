@@ -504,8 +504,7 @@ function montarListaApostadores(apostadores) {
                     mostrarApostador(
                         {
                             ...apostador,
-                            palpitesOriginais:
-                                apostador.palpites
+                            palpitesOriginais: structuredClone(apostador.palpites)
                         }
                     )
             );
@@ -625,25 +624,7 @@ console.log(
     "Palpites encontrados:",
     palpitesFiltrados.length
 );
-
-palpitesFiltrados.forEach(
-    palpite => {
-
-        html += `
-
-        <tr>
-
-            <td>
-                ${palpite.jogo}
-            </td>
-
-            ...
-
-        </tr>
-        `;
-    }
-);
-    
+  
 palpitesFiltrados.forEach(
     palpite => {
 
