@@ -515,6 +515,13 @@ function montarListaApostadores(apostadores) {
 
 function mostrarApostador(apostador, faseAtual = "todos") {
 
+    const classificacao = dadosGlobais.classificacao;
+
+    const infoRanking = classificacao.find(
+    p => p.nome === apostador.nome
+);
+    const posicao = infoRanking ? infoRanking.posicao : "-";
+    
     const detalhes =
         document.getElementById(
             "detalhesApostador"
@@ -574,15 +581,19 @@ const filtroHTML = `
         ${filtroHTML}
 
         <div class="apostador-resumo">
-
+        
+            <div class="resumo-card">
+                📊 ${posicao}º lugar
+            </div>
+        
             <div class="resumo-card">
                 🏆 ${apostador.total} pts
             </div>
-
+        
             <div class="resumo-card">
                 🎯 ${apostador.acertos} acerto(s)
             </div>
-
+        
         </div>
 
         <table class="tabela-palpites">
