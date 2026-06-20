@@ -523,20 +523,51 @@ function mostrarApostador(apostador, faseAtual = "todos") {
 
     if (!detalhes) return;
 
-    const filtroHTML = `
-    <select id="filtroPalpites" class="filtro-rodada">
-        <option value="todos">Todas as fases</option>
-        <option value="1">1ª Rodada (1-24)</option>
-        <option value="2">2ª Rodada (25-48)</option>
-        <option value="3">3ª Rodada (49-72)</option>
-        <option value="16">16-Avos (73-88)</option>
-        <option value="8">Oitavas (89-96)</option>
-        <option value="4">Quartas (97-100)</option>
-        <option value="semi">Semifinais (101-102)</option>
-        <option value="terceiro">3º Lugar (103)</option>
-        <option value="final">Final (104)</option>
-    </select>
-    `;
+const filtroHTML = `
+<select id="filtroPalpites" class="filtro-rodada">
+
+    <option value="todos" ${faseAtual === "todos" ? "selected" : ""}>
+        Todas as fases
+    </option>
+
+    <option value="1" ${faseAtual === "1" ? "selected" : ""}>
+        1ª Rodada (1-24)
+    </option>
+
+    <option value="2" ${faseAtual === "2" ? "selected" : ""}>
+        2ª Rodada (25-48)
+    </option>
+
+    <option value="3" ${faseAtual === "3" ? "selected" : ""}>
+        3ª Rodada (49-72)
+    </option>
+
+    <option value="16" ${faseAtual === "16" ? "selected" : ""}>
+        16-Avos (73-88)
+    </option>
+
+    <option value="8" ${faseAtual === "8" ? "selected" : ""}>
+        Oitavas (89-96)
+    </option>
+
+    <option value="4" ${faseAtual === "4" ? "selected" : ""}>
+        Quartas (97-100)
+    </option>
+
+    <option value="semi" ${faseAtual === "semi" ? "selected" : ""}>
+        Semifinais (101-102)
+    </option>
+
+    <option value="terceiro" ${faseAtual === "terceiro" ? "selected" : ""}>
+        3º Lugar (103)
+    </option>
+
+    <option value="final" ${faseAtual === "final" ? "selected" : ""}>
+        Final (104)
+    </option>
+
+</select>
+`;
 
     let html = `
 
@@ -588,6 +619,31 @@ if (faseAtual !== "todos") {
         );
 }
 
+console.log(
+    "Fase:",
+    faseAtual,
+    "Palpites encontrados:",
+    palpitesFiltrados.length
+);
+
+palpitesFiltrados.forEach(
+    palpite => {
+
+        html += `
+
+        <tr>
+
+            <td>
+                ${palpite.jogo}
+            </td>
+
+            ...
+
+        </tr>
+        `;
+    }
+);
+    
 palpitesFiltrados.forEach(
     palpite => {
 
@@ -632,27 +688,18 @@ palpitesFiltrados.forEach(
 
     detalhes.innerHTML = html;
 
-    document
+document
     .getElementById("filtroPalpites")
     .addEventListener("change", e => {
 
-        const [inicio, fim] =
-            obterFaixaRodada(
-                e.target.value
-            );
-
-        const copia = {
-            ...apostador,
-
-            palpites:
-                apostador.palpites.filter(
-                    p =>
-                        p.jogo >= inicio &&
-                        p.jogo <= fim
-                )
-        };
-
-        mostrarApostador(copia);
+        mostrarApostador(
+            {
+                ...apostador,
+                palpitesOriginais:
+                    todosPalpites
+            },
+            e.target.value
+        );
 
     });
 }
