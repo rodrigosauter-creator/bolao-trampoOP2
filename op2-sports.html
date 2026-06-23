@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>OP2 Sports - Global Penalty Duel</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial;
+    background:#070b14;
+    color:white;
+}
+
+header{
+    background:#0f172a;
+    padding:15px;
+    text-align:center;
+    font-weight:bold;
+    border-bottom:1px solid #1e293b;
+}
+
+.container{
+    padding:15px;
+    max-width:800px;
+    margin:auto;
+}
+
+.card{
+    background:#0f172a;
+    margin:10px 0;
+    padding:15px;
+    border-radius:12px;
+}
+
+button, select{
+    padding:10px;
+    border-radius:8px;
+    border:none;
+    margin:5px;
+}
+
+button{
+    background:#2563eb;
+    color:white;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#1d4ed8;
+}
+
+.ranking-card{
+    display:flex;
+    justify-content:space-between;
+    padding:10px;
+    margin:6px 0;
+    background:#111827;
+    border-radius:10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>⚽ OP2 SPORTS | GLOBAL PENALTY DUEL</header>
+
+<div class="container">
+
+<!-- LOGIN -->
+<div class="card">
+    <h3>Entrar</h3>
+
+    <select id="jogador">
+        <option>Ana</option>
+        <option>Arthur</option>
+        <option>Carol</option>
+        <option>Rodrigo</option>
+        <option>Dudu</option>
+    </select>
+
+    <button onclick="iniciar()">Jogar</button>
+</div>
+
+<!-- GAME -->
+<div class="card" id="game" style="display:none;">
+    <h3 id="status"></h3>
+
+    <button onclick="chutar('esquerda')">⬅️ Esquerda</button>
+    <button onclick="chutar('centro')">⬆️ Centro</button>
+    <button onclick="chutar('direita')">➡️ Direita</button>
+
+    <p id="placar">Gols: 0</p>
+</div>
+
+<!-- RANKING -->
+<div class="card">
+    <h3>🏆 Ranking Global</h3>
+    <div id="ranking"></div>
+</div>
+
+</div>
+
+<!-- FIREBASE -->
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+
+<script>
+/* ===== FIREBASE CONFIG  ===== */
+const firebaseConfig = {
+  apiKey: "AIzaSyD-dNiU2LkpDrMeioKtkES0XcxS5Hpu0Hs",
+  authDomain: "op2-sports-36242.firebaseapp.com",
+  projectId: "op2-sports-36242",
+  storageBucket: "op2-sports-36242.firebasestorage.app",
+  messagingSenderId: "162472705579",
+  appId: "1:162472705579:web:4a63a82fb14a638f99746e"
+};
+
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+
+/* ===== GAME STATE ===== */
+let jogadorAtual = "";
+let gols = 0;
+
+const jogadores = ["Ana","Arthur","Carol","Rodrigo","Dudu"];
+
+/* ===== INIT ===== */
+function iniciar(){
+
+    jogadorAtual = document.getElementById("jogador").value;
+
+    gols = 0;
+    document.getElementById("placar").innerText = "Gols: 0";
+    document.getElementById("status").innerText = "Jogador: " + jogadorAtual;
+    document.getElementById("game").style.display = "block";
+}
+
+/* ===== GAME ===== */
+function chutar(lado){
+
+    const lados = ["esquerda","centro","direita"];
+    const defesa = lados[Math.floor(Math.random()*3)];
+
+    if(lado !== defesa) gols++;
+
+    document.getElementById("placar").innerText =
+        `Gols: ${gols} ⚽`;
+
+    if(gols >= 5){
+        finalizar();
+    }
+}
+
+/* ===== FINAL + FIREBASE ===== */
+function finalizar(){
+
+    const ref = db.collection("ranking").doc(jogadorAtual);
+
+    ref.get().then(doc => {
+
+        if(doc.exists){
+            const atual = doc.data().gols;
+            ref.update({
+                gols: atual + gols
+            });
+        } else {
+            ref.set({
+                gols: gols
+            });
+        }
+
+        document.getElementById("game").style.display = "none";
+        atualizarRanking();
+    });
+}
+
+/* ===== RANKING GLOBAL ===== */
+function atualizarRanking(){
+
+    db.collection("ranking")
+    .orderBy("gols","desc")
+    .get()
+    .then(snapshot => {
+
+        let html = "";
+        let pos = 1;
+
+        snapshot.forEach(doc => {
+
+            let medalha = "";
+            if(pos===1) medalha="🥇";
+            else if(pos===2) medalha="🥈";
+            else if(pos===3) medalha="🥉";
+
+            html += `
+            <div class="ranking-card">
+                <div>${medalha} <b>${doc.id}</b></div>
+                <div>⚽ ${doc.data().gols}</div>
+            </div>
+            `;
+
+            pos++;
+        });
+
+        document.getElementById("ranking").innerHTML = html;
+    });
+}
+
+/* ===== LOAD ===== */
+atualizarRanking();
+
+</script>
+
+</body>
+</html>
