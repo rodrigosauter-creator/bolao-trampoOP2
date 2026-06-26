@@ -9,7 +9,7 @@
     {
       "posicao": 2,
       "nome": "Arthur",
-      "pontos": 107,
+      "pontos": 109,
       "acertos": 4
     },
     {
@@ -697,195 +697,195 @@
       },
       {
         "jogo": 57,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 58,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 59,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 60,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 61,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 62,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 63,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 64,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 65,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 66,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 67,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 68,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 69,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 70,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 71,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 72,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 73,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 74,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 75,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 76,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 77,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 78,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 79,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 80,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 81,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 82,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 83,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 84,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 85,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 86,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 87,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 88,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 89,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 90,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 91,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 92,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 93,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 94,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 95,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 96,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 97,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 98,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 99,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 100,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 101,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 102,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 103,
-        "pontos": 107
+        "pontos": 109
       },
       {
         "jogo": 104,
-        "pontos": 107
+        "pontos": 109
       }
     ],
     "Dudu": [
@@ -4884,7 +4884,7 @@
     },
     "Arthur": {
       "nome": "Arthur",
-      "total": 107,
+      "total": 109,
       "acertos": 4,
       "palpites": [
         {
@@ -5394,19 +5394,19 @@
         {
           "jogo": 57,
           "selecao_a": "Tunísia",
-          "gols_a": 2,
-          "gols_b": 1,
+          "gols_a": 0,
+          "gols_b": 4,
           "selecao_b": "Holanda",
-          "vencedor": "Tunísia",
-          "pontos": 0
+          "vencedor": "Holanda",
+          "pontos": 2
         },
         {
           "jogo": 58,
           "selecao_a": "Japão",
-          "gols_a": 0,
-          "gols_b": 4,
+          "gols_a": 2,
+          "gols_b": 1,
           "selecao_b": "Suécia",
-          "vencedor": "Suécia",
+          "vencedor": "Japão",
           "pontos": 0
         },
         {
@@ -12555,16 +12555,16 @@
           "pontos": 4
         },
         {
+          "nome": "Arthur",
+          "pontos": 2
+        },
+        {
           "nome": " Isa",
           "pontos": 2
         },
         {
           "nome": "Trops",
           "pontos": 2
-        },
-        {
-          "nome": "Arthur",
-          "pontos": 0
         },
         {
           "nome": null,
