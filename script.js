@@ -497,11 +497,11 @@ card.innerHTML = `
         <div class="faixa-card">
 
             <div class="pontos-card">
-                ${apostador.total} pts
+               🏆 ${apostador.total} pts
             </div>
 
             <div class="acertos-card">
-                ${apostador.acertos} acerto(s)
+                🎯 ${apostador.acertos} acerto(s)
             </div>
 
         </div>
