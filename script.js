@@ -494,7 +494,7 @@ card.innerHTML = `
             alt="${apostador.nome}"
             class="imagem-card">
 
-        <div class="info-card">
+        <div class="faixa-card">
 
             <div class="pontos-card">
                 🏆 ${apostador.total} pts
@@ -508,7 +508,6 @@ card.innerHTML = `
 
     </div>
 `;
-
           card.addEventListener(
                 "click",
                 () =>
