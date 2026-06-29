@@ -496,10 +496,6 @@ function montarListaApostadores(apostadores) {
 
         <div class="info-card">
 
-            <div class="posicao-card">
-                🏆 ${apostador.posicao}º Lugar
-            </div>
-
             <div class="pontos-card">
                 ${apostador.total} pts
             </div>
