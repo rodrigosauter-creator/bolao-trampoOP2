@@ -638,3 +638,27 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
     font-size:16px;
 
 }
+
+/* ============================= */
+/* BANNER DOS APOSTADORES */
+/* ============================= */
+
+.banner-apostadores{
+
+    text-align:center;
+
+    margin:25px 0;
+
+}
+
+.banner-apostadores img{
+
+    width:100%;
+
+    max-width:1000px;
+
+    border-radius:16px;
+
+    box-shadow:0 6px 18px rgba(0,0,0,.20);
+
+}
