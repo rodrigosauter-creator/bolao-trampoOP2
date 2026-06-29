@@ -562,3 +562,30 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
     margin-top: 8px;
     margin-left: 20px;
 }
+
+card.innerHTML = `
+    <div class="card-apostador">
+
+        <img
+            src="imagens/cards/${apostador.nome}.png"
+            alt="${apostador.nome}"
+            class="imagem-card">
+
+        <div class="info-card">
+
+            <div class="posicao-card">
+                🏆 ${apostador.posicao}º Lugar
+            </div>
+
+            <div class="pontos-card">
+                ${apostador.total} pts
+            </div>
+
+            <div class="acertos-card">
+                🎯 ${apostador.acertos} acerto(s)
+            </div>
+
+        </div>
+
+    </div>
+`;
