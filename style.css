@@ -563,83 +563,78 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
     margin-left: 20px;
 }
 
-card.innerHTML = `
-    <div class="card-apostador">
-
-        <img
-            src="imagens/cards/${apostador.nome}.png"
-            alt="${apostador.nome}"
-            class="imagem-card">
-
-        <div class="info-card">
-
-            <div class="posicao-card">
-                🏆 ${apostador.posicao}º Lugar
-            </div>
-
-            <div class="pontos-card">
-                ${apostador.total} pts
-            </div>
-
-            <div class="acertos-card">
-                🎯 ${apostador.acertos} acerto(s)
-            </div>
-
-        </div>
-
-    </div>
-`;
+/* ============================= */
+/* CARD DOS APOSTADORES */
+/* ============================= */
 
 .participante-card{
+
     cursor:pointer;
+
     transition:.25s;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
     background:transparent;
-    padding:0;
-    border:none;
-    box-shadow:none;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.18);
+
 }
 
 .participante-card:hover{
+
     transform:translateY(-8px) scale(1.03);
+
+    box-shadow:0 14px 28px rgba(0,0,0,.28);
+
 }
 
 .card-apostador{
-    position:relative;
-    overflow:hidden;
+
     border-radius:18px;
+
+    overflow:hidden;
+
+    background:white;
+
 }
 
 .imagem-card{
+
     width:100%;
+
     display:block;
-    border-radius:18px;
-    box-shadow:0 8px 18px rgba(0,0,0,.25);
+
 }
 
-.info-card{
-    position:absolute;
-    left:0;
-    right:0;
-    bottom:0;
-    padding:14px;
+.faixa-card{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:linear-gradient(90deg,#0b5ed7,#2563eb);
+
     color:white;
-    background:linear-gradient(
-        transparent,
-        rgba(0,0,0,.85)
-    );
-}
 
-.posicao-card{
-    font-size:18px;
+    padding:12px 15px;
+
     font-weight:bold;
+
 }
 
 .pontos-card{
-    font-size:24px;
-    font-weight:bold;
+
+    font-size:18px;
+
 }
 
 .acertos-card{
-    margin-top:4px;
-    font-size:15px;
+
+    font-size:16px;
+
 }
