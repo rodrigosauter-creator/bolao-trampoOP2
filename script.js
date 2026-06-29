@@ -486,17 +486,32 @@ function montarListaApostadores(apostadores) {
             card.className =
                 "participante-card";
 
-            card.innerHTML = `
-                <h3>${apostador.nome}</h3>
+           card.innerHTML = `
+    <div class="card-apostador">
 
-                <div class="participante-info">
-                    ${apostador.total} pts
-                </div>
+        <img
+            src="imagens/perfis/${apostador.nome}.png"
+            alt="${apostador.nome}"
+            class="imagem-card">
 
-                <div class="participante-info">
-                    ${apostador.acertos} acerto(s)
-                </div>
-            `;
+        <div class="info-card">
+
+            <div class="posicao-card">
+                🏆 ${apostador.posicao}º Lugar
+            </div>
+
+            <div class="pontos-card">
+                ${apostador.total} pts
+            </div>
+
+            <div class="acertos-card">
+                🎯 ${apostador.acertos} acerto(s)
+            </div>
+
+        </div>
+
+    </div>
+`;
 
           card.addEventListener(
                 "click",
