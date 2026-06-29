@@ -490,7 +490,7 @@ function montarListaApostadores(apostadores) {
     <div class="card-apostador">
 
         <img
-            src="imagens/perfis/${apostador.nome}.png"
+            src="imagens/cards/${apostador.nome}.png"
             alt="${apostador.nome}"
             class="imagem-card">
 
