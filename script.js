@@ -486,7 +486,7 @@ function montarListaApostadores(apostadores) {
             card.className =
                 "participante-card";
 
-           card.innerHTML = `
+card.innerHTML = `
     <div class="card-apostador">
 
         <img
@@ -497,7 +497,7 @@ function montarListaApostadores(apostadores) {
         <div class="info-card">
 
             <div class="pontos-card">
-                ${apostador.total} pts
+                🏆 ${apostador.total} pts
             </div>
 
             <div class="acertos-card">
