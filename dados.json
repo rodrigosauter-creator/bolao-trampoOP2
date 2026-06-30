@@ -27,7 +27,7 @@
     {
       "posicao": 5,
       "nome": "Dudu",
-      "pontos": 121,
+      "pontos": 127,
       "acertos": 6
     },
     {
@@ -1187,127 +1187,127 @@
       },
       {
         "jogo": 74,
-        "pontos": 121
+        "pontos": 127
       },
       {
         "jogo": 75,
-        "pontos": 121
+        "pontos": 127
       },
       {
         "jogo": 76,
-        "pontos": 121
+        "pontos": 127
       },
       {
         "jogo": 77,
-        "pontos": 121
+        "pontos": 127
       },
       {
         "jogo": 78,
-        "pontos": 121
+        "pontos": 127
       },
       {
         "jogo": 79,
-        "pontos": 121
+        "pontos": 127
       },
       {
         "jogo": 80,
-        "pontos": 121
+        "pontos": 127
       },
       {
         "jogo": 81,
-        "pontos": 121
+        "pontos": 127
       },
       {
         "jogo": 82,
-        "pontos": 121
+        "pontos": 127
       },
       {
         "jogo": 83,
-        "pontos": 121
+        "pontos": 127
       },
       {
         "jogo": 84,
-        "pontos": 121
+        "pontos": 127
       },
       {
         "jogo": 85,
-        "pontos": 121
+        "pontos": 127
       },
       {
         "jogo": 86,
-        "pontos": 121
+        "pontos": 127
       },
       {
         "jogo": 87,
-        "pontos": 121
+        "pontos": 127
       },
       {
         "jogo": 88,
-        "pontos": 121
+        "pontos": 127
       },
       {
         "jogo": 89,
-        "pontos": 121
+        "pontos": 127
       },
       {
         "jogo": 90,
-        "pontos": 121
+        "pontos": 127
       },
       {
         "jogo": 91,
-        "pontos": 121
+        "pontos": 127
       },
       {
         "jogo": 92,
-        "pontos": 121
+        "pontos": 127
       },
       {
         "jogo": 93,
-        "pontos": 121
+        "pontos": 127
       },
       {
         "jogo": 94,
-        "pontos": 121
+        "pontos": 127
       },
       {
         "jogo": 95,
-        "pontos": 121
+        "pontos": 127
       },
       {
         "jogo": 96,
-        "pontos": 121
+        "pontos": 127
       },
       {
         "jogo": 97,
-        "pontos": 121
+        "pontos": 127
       },
       {
         "jogo": 98,
-        "pontos": 121
+        "pontos": 127
       },
       {
         "jogo": 99,
-        "pontos": 121
+        "pontos": 127
       },
       {
         "jogo": 100,
-        "pontos": 121
+        "pontos": 127
       },
       {
         "jogo": 101,
-        "pontos": 121
+        "pontos": 127
       },
       {
         "jogo": 102,
-        "pontos": 121
+        "pontos": 127
       },
       {
         "jogo": 103,
-        "pontos": 121
+        "pontos": 127
       },
       {
         "jogo": 104,
-        "pontos": 121
+        "pontos": 127
       }
     ],
     "Carol": [
@@ -3734,8 +3734,8 @@
     {
       "jogo": 74,
       "selecao_a": "Brasil",
-      "gols_a": 1,
-      "gols_b": 0,
+      "gols_a": 2,
+      "gols_b": 1,
       "selecao_b": "Japão",
       "vencedor": "Brasil",
       "penaltis": "x",
@@ -4781,8 +4781,8 @@
         {
           "jogo": 74,
           "selecao_a": "Brasil",
-          "gols_a": 1,
-          "gols_b": 0,
+          "gols_a": 2,
+          "gols_b": 1,
           "selecao_b": "Japão",
           "vencedor": "Brasil",
           "penaltis": "x",
@@ -6139,7 +6139,7 @@
     },
     "Dudu": {
       "nome": "Dudu",
-      "total": 121,
+      "total": 127,
       "acertos": 6,
       "palpites": [
         {
@@ -6880,7 +6880,7 @@
           "selecao_b": "Japão",
           "vencedor": "Brasil",
           "penaltis": "x",
-          "pontos": 6
+          "pontos": 12
         },
         {
           "jogo": 75,
@@ -13966,9 +13966,13 @@
     },
     {
       "jogo": 18,
-      "vencedor_rodada": "Ana",
-      "maior_pontuacao": 10,
+      "vencedor_rodada": "Dudu",
+      "maior_pontuacao": 12,
       "ranking": [
+        {
+          "nome": "Dudu",
+          "pontos": 12
+        },
         {
           "nome": "Ana",
           "pontos": 10
@@ -13979,10 +13983,6 @@
         },
         {
           "nome": "Arthur",
-          "pontos": 6
-        },
-        {
-          "nome": "Dudu",
           "pontos": 6
         },
         {
