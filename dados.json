@@ -8,20 +8,20 @@
     },
     {
       "posicao": 2,
+      "nome": "Isa",
+      "pontos": 146,
+      "acertos": 4
+    },
+    {
+      "posicao": 3,
       "nome": "Arthur",
       "pontos": 141,
       "acertos": 5
     },
     {
-      "posicao": 3,
-      "nome": "Isa",
-      "pontos": 137,
-      "acertos": 3
-    },
-    {
       "posicao": 4,
       "nome": "Rodrigo",
-      "pontos": 129,
+      "pontos": 139,
       "acertos": 5
     },
     {
@@ -351,119 +351,119 @@
       },
       {
         "jogo": 76,
-        "pontos": 129
+        "pontos": 139
       },
       {
         "jogo": 77,
-        "pontos": 129
+        "pontos": 139
       },
       {
         "jogo": 78,
-        "pontos": 129
+        "pontos": 139
       },
       {
         "jogo": 79,
-        "pontos": 129
+        "pontos": 139
       },
       {
         "jogo": 80,
-        "pontos": 129
+        "pontos": 139
       },
       {
         "jogo": 81,
-        "pontos": 129
+        "pontos": 139
       },
       {
         "jogo": 82,
-        "pontos": 129
+        "pontos": 139
       },
       {
         "jogo": 83,
-        "pontos": 129
+        "pontos": 139
       },
       {
         "jogo": 84,
-        "pontos": 129
+        "pontos": 139
       },
       {
         "jogo": 85,
-        "pontos": 129
+        "pontos": 139
       },
       {
         "jogo": 86,
-        "pontos": 129
+        "pontos": 139
       },
       {
         "jogo": 87,
-        "pontos": 129
+        "pontos": 139
       },
       {
         "jogo": 88,
-        "pontos": 129
+        "pontos": 139
       },
       {
         "jogo": 89,
-        "pontos": 129
+        "pontos": 139
       },
       {
         "jogo": 90,
-        "pontos": 129
+        "pontos": 139
       },
       {
         "jogo": 91,
-        "pontos": 129
+        "pontos": 139
       },
       {
         "jogo": 92,
-        "pontos": 129
+        "pontos": 139
       },
       {
         "jogo": 93,
-        "pontos": 129
+        "pontos": 139
       },
       {
         "jogo": 94,
-        "pontos": 129
+        "pontos": 139
       },
       {
         "jogo": 95,
-        "pontos": 129
+        "pontos": 139
       },
       {
         "jogo": 96,
-        "pontos": 129
+        "pontos": 139
       },
       {
         "jogo": 97,
-        "pontos": 129
+        "pontos": 139
       },
       {
         "jogo": 98,
-        "pontos": 129
+        "pontos": 139
       },
       {
         "jogo": 99,
-        "pontos": 129
+        "pontos": 139
       },
       {
         "jogo": 100,
-        "pontos": 129
+        "pontos": 139
       },
       {
         "jogo": 101,
-        "pontos": 129
+        "pontos": 139
       },
       {
         "jogo": 102,
-        "pontos": 129
+        "pontos": 139
       },
       {
         "jogo": 103,
-        "pontos": 129
+        "pontos": 139
       },
       {
         "jogo": 104,
-        "pontos": 129
+        "pontos": 139
       }
     ],
     "Arthur": [
@@ -2461,119 +2461,119 @@
       },
       {
         "jogo": 76,
-        "pontos": 137
+        "pontos": 146
       },
       {
         "jogo": 77,
-        "pontos": 137
+        "pontos": 146
       },
       {
         "jogo": 78,
-        "pontos": 137
+        "pontos": 146
       },
       {
         "jogo": 79,
-        "pontos": 137
+        "pontos": 146
       },
       {
         "jogo": 80,
-        "pontos": 137
+        "pontos": 146
       },
       {
         "jogo": 81,
-        "pontos": 137
+        "pontos": 146
       },
       {
         "jogo": 82,
-        "pontos": 137
+        "pontos": 146
       },
       {
         "jogo": 83,
-        "pontos": 137
+        "pontos": 146
       },
       {
         "jogo": 84,
-        "pontos": 137
+        "pontos": 146
       },
       {
         "jogo": 85,
-        "pontos": 137
+        "pontos": 146
       },
       {
         "jogo": 86,
-        "pontos": 137
+        "pontos": 146
       },
       {
         "jogo": 87,
-        "pontos": 137
+        "pontos": 146
       },
       {
         "jogo": 88,
-        "pontos": 137
+        "pontos": 146
       },
       {
         "jogo": 89,
-        "pontos": 137
+        "pontos": 146
       },
       {
         "jogo": 90,
-        "pontos": 137
+        "pontos": 146
       },
       {
         "jogo": 91,
-        "pontos": 137
+        "pontos": 146
       },
       {
         "jogo": 92,
-        "pontos": 137
+        "pontos": 146
       },
       {
         "jogo": 93,
-        "pontos": 137
+        "pontos": 146
       },
       {
         "jogo": 94,
-        "pontos": 137
+        "pontos": 146
       },
       {
         "jogo": 95,
-        "pontos": 137
+        "pontos": 146
       },
       {
         "jogo": 96,
-        "pontos": 137
+        "pontos": 146
       },
       {
         "jogo": 97,
-        "pontos": 137
+        "pontos": 146
       },
       {
         "jogo": 98,
-        "pontos": 137
+        "pontos": 146
       },
       {
         "jogo": 99,
-        "pontos": 137
+        "pontos": 146
       },
       {
         "jogo": 100,
-        "pontos": 137
+        "pontos": 146
       },
       {
         "jogo": 101,
-        "pontos": 137
+        "pontos": 146
       },
       {
         "jogo": 102,
-        "pontos": 137
+        "pontos": 146
       },
       {
         "jogo": 103,
-        "pontos": 137
+        "pontos": 146
       },
       {
         "jogo": 104,
-        "pontos": 137
+        "pontos": 146
       }
     ],
     "Trops": [
@@ -2999,7 +2999,7 @@
       }
     ]
   },
-  "jogos_realizados": 75,
+  "jogos_realizados": 76,
   "jogos": [
     {
       "jogo": 1,
@@ -3754,12 +3754,12 @@
     {
       "jogo": 76,
       "selecao_a": "Holanda",
-      "gols_a": null,
-      "gols_b": null,
+      "gols_a": 1,
+      "gols_b": 1,
       "selecao_b": "Marrocos",
-      "vencedor": "-",
-      "penaltis": "x",
-      "realizado": false
+      "vencedor": "Empate",
+      "penaltis": "Marrocos",
+      "realizado": true
     },
     {
       "jogo": 77,
@@ -4045,8 +4045,8 @@
   "apostadores": {
     "Rodrigo": {
       "nome": "Rodrigo",
-      "total": 129,
-      "acertos": 5,
+      "total": false,
+      "acertos": false,
       "palpites": [
         {
           "jogo": 1,
@@ -4806,35 +4806,35 @@
           "selecao_b": "Marrocos",
           "vencedor": "Empate",
           "penaltis": "Marrocos",
-          "pontos": 0
+          "pontos": 10
         },
         {
           "jogo": 77,
           "selecao_a": "Costa do Marfim",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 1,
+          "gols_b": 2,
           "selecao_b": "Noruega",
-          "vencedor": "-",
+          "vencedor": "Noruega",
           "penaltis": "x",
           "pontos": 0
         },
         {
           "jogo": 78,
           "selecao_a": "França",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 4,
+          "gols_b": 1,
           "selecao_b": "Suécia",
-          "vencedor": "-",
+          "vencedor": "França",
           "penaltis": "x",
           "pontos": 0
         },
         {
           "jogo": 79,
           "selecao_a": "México",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 2,
+          "gols_b": 0,
           "selecao_b": "Equador",
-          "vencedor": "-",
+          "vencedor": "México",
           "penaltis": "x",
           "pontos": 0
         },
@@ -5092,8 +5092,8 @@
     },
     "Arthur": {
       "nome": "Arthur",
-      "total": 141,
-      "acertos": 5,
+      "total": false,
+      "acertos": false,
       "palpites": [
         {
           "jogo": 1,
@@ -5858,30 +5858,30 @@
         {
           "jogo": 77,
           "selecao_a": "Costa do Marfim",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 1,
+          "gols_b": 2,
           "selecao_b": "Noruega",
-          "vencedor": "-",
+          "vencedor": "Noruega",
           "penaltis": "x",
           "pontos": 0
         },
         {
           "jogo": 78,
           "selecao_a": "França",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 4,
+          "gols_b": 1,
           "selecao_b": "Suécia",
-          "vencedor": "-",
+          "vencedor": "França",
           "penaltis": "x",
           "pontos": 0
         },
         {
           "jogo": 79,
           "selecao_a": "México",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 1,
+          "gols_b": 0,
           "selecao_b": "Equador",
-          "vencedor": "-",
+          "vencedor": "México",
           "penaltis": "x",
           "pontos": 0
         },
@@ -6139,8 +6139,8 @@
     },
     "Dudu": {
       "nome": "Dudu",
-      "total": 127,
-      "acertos": 6,
+      "total": false,
+      "acertos": false,
       "palpites": [
         {
           "jogo": 1,
@@ -6905,31 +6905,31 @@
         {
           "jogo": 77,
           "selecao_a": "Costa do Marfim",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 1,
+          "gols_b": 3,
           "selecao_b": "Noruega",
-          "vencedor": "-",
+          "vencedor": "Noruega",
           "penaltis": "x",
           "pontos": 0
         },
         {
           "jogo": 78,
           "selecao_a": "França",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 3,
+          "gols_b": 1,
           "selecao_b": "Suécia",
-          "vencedor": "-",
+          "vencedor": "França",
           "penaltis": "x",
           "pontos": 0
         },
         {
           "jogo": 79,
           "selecao_a": "México",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 2,
+          "gols_b": 2,
           "selecao_b": "Equador",
-          "vencedor": "-",
-          "penaltis": "x",
+          "vencedor": "Empate",
+          "penaltis": "Equador",
           "pontos": 0
         },
         {
@@ -7186,8 +7186,8 @@
     },
     "Carol": {
       "nome": "Carol",
-      "total": 119,
-      "acertos": 4,
+      "total": false,
+      "acertos": false,
       "palpites": [
         {
           "jogo": 1,
@@ -7952,30 +7952,30 @@
         {
           "jogo": 77,
           "selecao_a": "Costa do Marfim",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 1,
+          "gols_b": 2,
           "selecao_b": "Noruega",
-          "vencedor": "-",
+          "vencedor": "Noruega",
           "penaltis": "x",
           "pontos": 0
         },
         {
           "jogo": 78,
           "selecao_a": "França",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 3,
+          "gols_b": 0,
           "selecao_b": "Suécia",
-          "vencedor": "-",
+          "vencedor": "França",
           "penaltis": "x",
           "pontos": 0
         },
         {
           "jogo": 79,
           "selecao_a": "México",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 2,
+          "gols_b": 1,
           "selecao_b": "Equador",
-          "vencedor": "-",
+          "vencedor": "México",
           "penaltis": "x",
           "pontos": 0
         },
@@ -8233,8 +8233,8 @@
     },
     "Ana": {
       "nome": "Ana",
-      "total": 147,
-      "acertos": 5,
+      "total": false,
+      "acertos": false,
       "palpites": [
         {
           "jogo": 1,
@@ -8999,80 +8999,80 @@
         {
           "jogo": 77,
           "selecao_a": "Costa do Marfim",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 2,
+          "gols_b": 4,
           "selecao_b": "Noruega",
-          "vencedor": "-",
+          "vencedor": "Noruega",
           "penaltis": "x",
           "pontos": 0
         },
         {
           "jogo": 78,
           "selecao_a": "França",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 4,
+          "gols_b": 1,
           "selecao_b": "Suécia",
-          "vencedor": "-",
+          "vencedor": "França",
           "penaltis": "x",
           "pontos": 0
         },
         {
           "jogo": 79,
           "selecao_a": "México",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 2,
+          "gols_b": 2,
           "selecao_b": "Equador",
-          "vencedor": "-",
-          "penaltis": "x",
+          "vencedor": "Empate",
+          "penaltis": "México",
           "pontos": 0
         },
         {
           "jogo": 80,
           "selecao_a": "Inglaterra",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 4,
+          "gols_b": 2,
           "selecao_b": "RD Congo",
-          "vencedor": "-",
+          "vencedor": "Inglaterra",
           "penaltis": "x",
           "pontos": 0
         },
         {
           "jogo": 81,
           "selecao_a": "Bélgica",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 3,
+          "gols_b": 3,
           "selecao_b": "Senegal",
-          "vencedor": "-",
+          "vencedor": "Empate",
           "penaltis": "x",
           "pontos": 0
         },
         {
           "jogo": 82,
           "selecao_a": "EUA",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 2,
+          "gols_b": 1,
           "selecao_b": "Bósnia",
-          "vencedor": "-",
+          "vencedor": "EUA",
           "penaltis": "x",
           "pontos": 0
         },
         {
           "jogo": 83,
           "selecao_a": "Espanha",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 4,
+          "gols_b": 1,
           "selecao_b": "Áustria",
-          "vencedor": "-",
+          "vencedor": "Espanha",
           "penaltis": "x",
           "pontos": 0
         },
         {
           "jogo": 84,
           "selecao_a": "Portugal",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 3,
+          "gols_b": 2,
           "selecao_b": "Croácia",
-          "vencedor": "-",
+          "vencedor": "Portugal",
           "penaltis": "x",
           "pontos": 0
         },
@@ -9280,8 +9280,8 @@
     },
     "Isa": {
       "nome": "Isa",
-      "total": 137,
-      "acertos": 3,
+      "total": false,
+      "acertos": false,
       "palpites": [
         {
           "jogo": 1,
@@ -10041,35 +10041,35 @@
           "selecao_b": "Marrocos",
           "vencedor": "Empate",
           "penaltis": "Holanda",
-          "pontos": 0
+          "pontos": 9
         },
         {
           "jogo": 77,
           "selecao_a": "Costa do Marfim",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 2,
+          "gols_b": 3,
           "selecao_b": "Noruega",
-          "vencedor": "-",
+          "vencedor": "Noruega",
           "penaltis": "x",
           "pontos": 0
         },
         {
           "jogo": 78,
           "selecao_a": "França",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 4,
+          "gols_b": 1,
           "selecao_b": "Suécia",
-          "vencedor": "-",
+          "vencedor": "França",
           "penaltis": "x",
           "pontos": 0
         },
         {
           "jogo": 79,
           "selecao_a": "México",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 2,
+          "gols_b": 1,
           "selecao_b": "Equador",
-          "vencedor": "-",
+          "vencedor": "México",
           "penaltis": "x",
           "pontos": 0
         },
@@ -10327,8 +10327,8 @@
     },
     "Trops": {
       "nome": "Trops",
-      "total": 110,
-      "acertos": 1,
+      "total": false,
+      "acertos": false,
       "palpites": [
         {
           "jogo": 1,
@@ -11093,31 +11093,31 @@
         {
           "jogo": 77,
           "selecao_a": "Costa do Marfim",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 2,
+          "gols_b": 2,
           "selecao_b": "Noruega",
-          "vencedor": "-",
-          "penaltis": "x",
+          "vencedor": "Empate",
+          "penaltis": "Costa do Marfim",
           "pontos": 0
         },
         {
           "jogo": 78,
           "selecao_a": "França",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 3,
+          "gols_b": 1,
           "selecao_b": "Suécia",
-          "vencedor": "-",
+          "vencedor": "França",
           "penaltis": "x",
           "pontos": 0
         },
         {
           "jogo": 79,
           "selecao_a": "México",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 1,
+          "gols_b": 1,
           "selecao_b": "Equador",
-          "vencedor": "-",
-          "penaltis": "x",
+          "vencedor": "Empate",
+          "penaltis": "México",
           "pontos": 0
         },
         {
@@ -14035,10 +14035,14 @@
       ]
     },
     {
-      "jogo": 0,
-      "vencedor_rodada": "Arthur",
-      "maior_pontuacao": 0,
+      "jogo": 10,
+      "vencedor_rodada": " Isa",
+      "maior_pontuacao": 9,
       "ranking": [
+        {
+          "nome": " Isa",
+          "pontos": 9
+        },
         {
           "nome": "Arthur",
           "pontos": 0
@@ -14053,10 +14057,6 @@
         },
         {
           "nome": "Ana",
-          "pontos": 0
-        },
-        {
-          "nome": " Isa",
           "pontos": 0
         },
         {
