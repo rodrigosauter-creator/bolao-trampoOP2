@@ -662,3 +662,29 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
     box-shadow:0 6px 18px rgba(0,0,0,.20);
 
 }
+
+/* ============================= */
+/* PÊNALTIS */
+/* ============================= */
+
+.jogo-penaltis{
+
+    margin-top:8px;
+
+    color:#2563eb;
+
+    font-weight:bold;
+
+}
+
+.tabela-palpites small{
+
+    display:block;
+
+    margin-top:6px;
+
+    color:#2563eb;
+
+    font-size:.9rem;
+
+}
