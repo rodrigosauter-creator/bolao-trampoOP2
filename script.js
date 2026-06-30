@@ -616,99 +616,78 @@ const filtroHTML = `
         
         </div>
 
-        <table class="tabela-palpites">
+<div class="lista-palpites-card">
+`;
 
-            <thead>
-                <tr>
-                    <th>Jogo</th>
-                    <th>Palpite</th>
-                    <th>Pontos</th>
-                </tr>
-            </thead>
-
-            <tbody>
-    `;
-
-const todosPalpites =
-    apostador.palpitesOriginais ||
-    apostador.palpites;
-
-const [inicio, fim] =
-    obterFaixaRodada(faseAtual);
-
-let palpitesFiltrados =
-    todosPalpites;
-
-if (faseAtual !== "todos") {
-
-    palpitesFiltrados =
-        todosPalpites.filter(
-            p =>
-                Number(p.jogo) >= inicio &&
-                Number(p.jogo) <= fim
-        );
-}
-
-console.log(
-    "Fase:",
-    faseAtual,
-    "Palpites encontrados:",
-    palpitesFiltrados.length
-);
-  
 palpitesFiltrados.forEach(
     palpite => {
 
+        const acertouEmCheio =
+            Number(palpite.palpite_certo) === 1;
+
         html += `
 
-        <tr>
+        <div class="palpite-card ${
+            acertouEmCheio ? "palpite-card-certo" : ""
+        }">
 
-            <td>
-                ${palpite.jogo}
-            </td>
+            ${
+                acertouEmCheio
+                ? `<div class="selo-palpite">PLACAR EXATO</div>`
+                : ""
+            }
 
-            <td>
+            <div class="palpite-topo">
+                <span>
+                    ${
+                        acertouEmCheio
+                        ? "🏆"
+                        : "⚽"
+                    }
+                    Jogo ${palpite.jogo}
+                </span>
 
-    ${flag(
-        palpite.selecao_a
-    )}
+                <strong>
+                    ${palpite.pontos} pts
+                </strong>
+            </div>
 
-    ${palpite.selecao_a}
+            <div class="palpite-confronto">
 
-    <strong>
-        ${palpite.gols_a}
-        x
-        ${palpite.gols_b}
-    </strong>
+                <span>
+                    ${flag(palpite.selecao_a)}
+                    ${palpite.selecao_a}
+                </span>
 
-    ${flag(
-        palpite.selecao_b
-    )}
+                <strong>
+                    ${palpite.gols_a} x ${palpite.gols_b}
+                </strong>
 
-    ${palpite.selecao_b}
+                <span>
+                    ${flag(palpite.selecao_b)}
+                    ${palpite.selecao_b}
+                </span>
 
-    ${
-        palpite.jogo >= 73
-        ? `
-            <br>
-            <small>
-                <strong>Pênaltis:</strong>
-                ${palpite.penaltis}
-            </small>
-        `
-        : ""
-    }
+            </div>
 
-</td>
+            ${
+                Number(palpite.jogo) >= 73
+                ? `
+                    <div class="palpite-penaltis">
+                        <strong>Pênaltis:</strong> ${palpite.penaltis}
+                    </div>
+                `
+                : ""
+            }
 
-            <td>
-                ${palpite.pontos}
-            </td>
-
-        </tr>
+        </div>
         `;
     }
 );
+
+html += `
+</div>
+`;
 
     detalhes.innerHTML = html;
 
