@@ -688,3 +688,75 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
     font-size:.9rem;
 
 }
+
+.lista-palpites-card{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+.palpite-card{
+    position:relative;
+    background:white;
+    border-radius:14px;
+    padding:16px;
+    border:1px solid #e5e7eb;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+.palpite-card-certo{
+    border:2px solid #f59e0b;
+    background:#fffbeb;
+}
+
+.selo-palpite{
+    position:absolute;
+    top:12px;
+    right:12px;
+    background:#f59e0b;
+    color:white;
+    font-size:12px;
+    font-weight:bold;
+    padding:5px 8px;
+    border-radius:999px;
+}
+
+.palpite-topo{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:12px;
+    font-weight:bold;
+}
+
+.palpite-confronto{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:12px;
+    font-size:16px;
+}
+
+.palpite-confronto strong{
+    font-size:22px;
+    color:#1e3a8a;
+}
+
+.palpite-penaltis{
+    margin-top:10px;
+    color:#2563eb;
+    font-weight:bold;
+}
+
+@media (max-width:768px){
+    .palpite-confronto{
+        flex-direction:column;
+        gap:6px;
+    }
+
+    .selo-palpite{
+        position:static;
+        display:inline-block;
+        margin-bottom:10px;
+    }
+}
