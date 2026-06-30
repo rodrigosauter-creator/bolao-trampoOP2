@@ -144,7 +144,7 @@ for row in ws.iter_rows(
         "jogo": int(jogo),
         "selecao_a": selecao_a,
         "gols_a": gols_a,
-        "gols_b": gols_b
+        "gols_b": gols_b,
         "selecao_b": selecao_b,
         "vencedor": vencedor,
         "penaltis": penaltis,
