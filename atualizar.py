@@ -194,15 +194,16 @@ for nome_aba in wb.sheetnames:
             acertos = row[24]
 
         palpites.append({
-            "jogo": int(jogo),
-            "selecao_a": row[9],
-            "gols_a": row[10],
-            "gols_b": row[12],
-            "selecao_b": row[13],
-            "vencedor": row[14],
-            "penaltis": tratar_penaltis(row[15], jogo),
-            "pontos": pontos if pontos is not None else 0
-        })
+    "jogo": int(jogo),
+    "selecao_a": row[9],
+    "gols_a": row[10],
+    "gols_b": row[12],
+    "selecao_b": row[13],
+    "vencedor": row[14],
+    "penaltis": tratar_penaltis(row[15], jogo),
+    "palpite_certo": int(row[21]) if row[21] is not None else 0,
+    "pontos": pontos if pontos is not None else 0
+})
 
     apostadores[nome_aba] = {
         "nome": nome_aba,
