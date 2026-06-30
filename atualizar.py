@@ -42,6 +42,16 @@ for row in ws.iter_rows(
         "acertos": int(acertos) if acertos is not None else 0
     })
 
+def tratar_penaltis(valor, jogo):
+
+    if int(jogo) < 73:
+        return None
+
+    if valor is None or str(valor).strip() == "":
+        return "x"
+
+    return str(valor).strip()
+
 # =========================
 # EVOLUÇÃO
 # =========================
@@ -118,11 +128,14 @@ for row in ws.iter_rows(
     gols_b = row[4]
     selecao_b = row[5]
     vencedor = row[6]
-
+    penaltis = tratar_penaltis(row[7], jogo)
+    
     realizado = (
         gols_a is not None
         and gols_b is not None
     )
+
+    
 
     if realizado:
         jogos_realizados += 1
@@ -137,18 +150,6 @@ for row in ws.iter_rows(
         "penaltis": penaltis,
         "realizado": realizado
     })
-
-def tratar_penaltis(valor, jogo):
-
-    if int(jogo) < 73:
-        return None
-
-    if valor is None or str(valor).strip() == "":
-        return "x"
-
-    return str(valor).strip()
-
-penaltis = tratar_penaltis(row[7], jogo)
 
 # =========================
 # PALPITES DOS APOSTADORES
