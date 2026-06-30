@@ -131,11 +131,24 @@ for row in ws.iter_rows(
         "jogo": int(jogo),
         "selecao_a": selecao_a,
         "gols_a": gols_a,
-        "gols_b": gols_b,
+        "gols_b": gols_b
         "selecao_b": selecao_b,
         "vencedor": vencedor,
+        "penaltis": penaltis,
         "realizado": realizado
     })
+
+def tratar_penaltis(valor, jogo):
+
+    if int(jogo) < 73:
+        return None
+
+    if valor is None or str(valor).strip() == "":
+        return "x"
+
+    return str(valor).strip()
+
+penaltis = tratar_penaltis(row[7], jogo)
 
 # =========================
 # PALPITES DOS APOSTADORES
@@ -186,6 +199,7 @@ for nome_aba in wb.sheetnames:
             "gols_b": row[12],
             "selecao_b": row[13],
             "vencedor": row[14],
+            "penaltis": tratar_penaltis(row[15], jogo),
             "pontos": pontos if pontos is not None else 0
         })
 
