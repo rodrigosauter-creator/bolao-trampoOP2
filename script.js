@@ -535,174 +535,158 @@ card.innerHTML = `
 
 function mostrarApostador(apostador, faseAtual = "todos") {
 
-    const classificacao = dadosGlobais.classificacao;
-
-    const infoRanking = classificacao.find(
-    p => p.nome === apostador.nome
-);
-    const posicao = infoRanking ? infoRanking.posicao : "-";
-    
     const detalhes =
-        document.getElementById(
-            "detalhesApostador"
-        );
+        document.getElementById("detalhesApostador");
 
     if (!detalhes) return;
 
-const filtroHTML = `
-<select id="filtroPalpites" class="filtro-rodada">
+    const classificacao =
+        dadosGlobais.classificacao;
 
-    <option value="todos" ${faseAtual === "todos" ? "selected" : ""}>
-        Todas as fases
-    </option>
+    const infoRanking =
+        classificacao.find(
+            p => p.nome === apostador.nome
+        );
 
-    <option value="1" ${faseAtual === "1" ? "selected" : ""}>
-        1ª Rodada (1-24)
-    </option>
+    const posicao =
+        infoRanking ? infoRanking.posicao : "-";
 
-    <option value="2" ${faseAtual === "2" ? "selected" : ""}>
-        2ª Rodada (25-48)
-    </option>
+    const todosPalpites =
+        apostador.palpitesOriginais ||
+        apostador.palpites;
 
-    <option value="3" ${faseAtual === "3" ? "selected" : ""}>
-        3ª Rodada (49-72)
-    </option>
+    const [inicio, fim] =
+        obterFaixaRodada(faseAtual);
 
-    <option value="16" ${faseAtual === "16" ? "selected" : ""}>
-        16-Avos (73-88)
-    </option>
+    let palpitesFiltrados =
+        todosPalpites;
 
-    <option value="8" ${faseAtual === "8" ? "selected" : ""}>
-        Oitavas (89-96)
-    </option>
+    if (faseAtual !== "todos") {
 
-    <option value="4" ${faseAtual === "4" ? "selected" : ""}>
-        Quartas (97-100)
-    </option>
+        palpitesFiltrados =
+            todosPalpites.filter(
+                p =>
+                    Number(p.jogo) >= inicio &&
+                    Number(p.jogo) <= fim
+            );
+    }
 
-    <option value="semi" ${faseAtual === "semi" ? "selected" : ""}>
-        Semifinais (101-102)
-    </option>
-
-    <option value="terceiro" ${faseAtual === "terceiro" ? "selected" : ""}>
-        3º Lugar (103)
-    </option>
-
-    <option value="final" ${faseAtual === "final" ? "selected" : ""}>
-        Final (104)
-    </option>
-
-</select>
-`;
+    const filtroHTML = `
+        <select id="filtroPalpites" class="filtro-rodada">
+            <option value="todos" ${faseAtual === "todos" ? "selected" : ""}>Todas as fases</option>
+            <option value="1" ${faseAtual === "1" ? "selected" : ""}>1ª Rodada (1-24)</option>
+            <option value="2" ${faseAtual === "2" ? "selected" : ""}>2ª Rodada (25-48)</option>
+            <option value="3" ${faseAtual === "3" ? "selected" : ""}>3ª Rodada (49-72)</option>
+            <option value="16" ${faseAtual === "16" ? "selected" : ""}>16-Avos (73-88)</option>
+            <option value="8" ${faseAtual === "8" ? "selected" : ""}>Oitavas (89-96)</option>
+            <option value="4" ${faseAtual === "4" ? "selected" : ""}>Quartas (97-100)</option>
+            <option value="semi" ${faseAtual === "semi" ? "selected" : ""}>Semifinais (101-102)</option>
+            <option value="terceiro" ${faseAtual === "terceiro" ? "selected" : ""}>3º Lugar (103)</option>
+            <option value="final" ${faseAtual === "final" ? "selected" : ""}>Final (104)</option>
+        </select>
+    `;
 
     let html = `
-
         <h2>${apostador.nome}</h2>
+
         ${filtroHTML}
 
         <div class="apostador-resumo">
-        
+
             <div class="resumo-card">
                 📊 ${posicao}º lugar
             </div>
-        
+
             <div class="resumo-card">
-                🏆 ${apostador.total} pts
+                🏆 ${Number(apostador.total) || 0} pts
             </div>
-        
+
             <div class="resumo-card">
-                🎯 ${apostador.acertos} acerto(s)
+                🎯 ${Number(apostador.acertos) || 0} acerto(s)
             </div>
-        
+
         </div>
 
-<div class="lista-palpites-card">
-`;
+        <div class="lista-palpites-card">
+    `;
 
-palpitesFiltrados.forEach(
-    palpite => {
+    palpitesFiltrados.forEach(palpite => {
 
         const acertouEmCheio =
             Number(palpite.palpite_certo) === 1;
 
         html += `
+            <div class="palpite-card ${acertouEmCheio ? "palpite-card-certo" : ""}">
 
-        <div class="palpite-card ${
-            acertouEmCheio ? "palpite-card-certo" : ""
-        }">
+                ${
+                    acertouEmCheio
+                    ? `<div class="selo-palpite">PLACAR EXATO</div>`
+                    : ""
+                }
 
-            ${
-                acertouEmCheio
-                ? `<div class="selo-palpite">PLACAR EXATO</div>`
-                : ""
-            }
+                <div class="palpite-topo">
+                    <span>
+                        ${acertouEmCheio ? "🏆" : "⚽"}
+                        Jogo ${palpite.jogo}
+                    </span>
 
-            <div class="palpite-topo">
-                <span>
-                    ${
-                        acertouEmCheio
-                        ? "🏆"
-                        : "⚽"
-                    }
-                    Jogo ${palpite.jogo}
-                </span>
+                    <strong>
+                        ${palpite.pontos} pts
+                    </strong>
+                </div>
 
-                <strong>
-                    ${palpite.pontos} pts
-                </strong>
+                <div class="palpite-confronto">
+
+                    <span>
+                        ${flag(palpite.selecao_a)}
+                        ${palpite.selecao_a}
+                    </span>
+
+                    <strong>
+                        ${palpite.gols_a} x ${palpite.gols_b}
+                    </strong>
+
+                    <span>
+                        ${flag(palpite.selecao_b)}
+                        ${palpite.selecao_b}
+                    </span>
+
+                </div>
+
+                ${
+                    Number(palpite.jogo) >= 73
+                    ? `
+                        <div class="palpite-penaltis">
+                            <strong>Pênaltis:</strong> ${palpite.penaltis}
+                        </div>
+                    `
+                    : ""
+                }
+
             </div>
-
-            <div class="palpite-confronto">
-
-                <span>
-                    ${flag(palpite.selecao_a)}
-                    ${palpite.selecao_a}
-                </span>
-
-                <strong>
-                    ${palpite.gols_a} x ${palpite.gols_b}
-                </strong>
-
-                <span>
-                    ${flag(palpite.selecao_b)}
-                    ${palpite.selecao_b}
-                </span>
-
-            </div>
-
-            ${
-                Number(palpite.jogo) >= 73
-                ? `
-                    <div class="palpite-penaltis">
-                        <strong>Pênaltis:</strong> ${palpite.penaltis}
-                    </div>
-                `
-                : ""
-            }
-
-        </div>
         `;
-    }
-);
+    });
 
-html += `
-</div>
-`;
+    html += `
+        </div>
+    `;
 
     detalhes.innerHTML = html;
 
-document
-    .getElementById("filtroPalpites")
-    .addEventListener("change", e => {
+    document
+        .getElementById("filtroPalpites")
+        .addEventListener("change", e => {
 
-        mostrarApostador(
-            {
-                ...apostador,
-                palpitesOriginais:
-                    todosPalpites
-            },
-            e.target.value
-        );
+            mostrarApostador(
+                {
+                    ...apostador,
+                    palpitesOriginais:
+                        todosPalpites
+                },
+                e.target.value
+            );
 
-    });
+        });
 }
+
+    detalhes.innerHTML = html;
