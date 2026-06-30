@@ -408,6 +408,16 @@ function montarJogos(jogos, fase = "todos") {
                     : "⏳ Aguardando"
                 }
 
+                ${
+    jogo.jogo >= 73
+    ? `
+        <div class="jogo-penaltis">
+            <strong>Pênaltis:</strong> ${jogo.penaltis}
+        </div>
+    `
+    : ""
+}
+
             </div>
 
         </div>
@@ -659,25 +669,37 @@ palpitesFiltrados.forEach(
 
             <td>
 
-                ${flag(
-                    palpite.selecao_a
-                )}
+    ${flag(
+        palpite.selecao_a
+    )}
 
-                ${palpite.selecao_a}
+    ${palpite.selecao_a}
 
-                <strong>
-                    ${palpite.gols_a}
-                    x
-                    ${palpite.gols_b}
-                </strong>
+    <strong>
+        ${palpite.gols_a}
+        x
+        ${palpite.gols_b}
+    </strong>
 
-                ${flag(
-                    palpite.selecao_b
-                )}
+    ${flag(
+        palpite.selecao_b
+    )}
 
-                ${palpite.selecao_b}
+    ${palpite.selecao_b}
 
-            </td>
+    ${
+        palpite.jogo >= 73
+        ? `
+            <br>
+            <small>
+                <strong>Pênaltis:</strong>
+                ${palpite.penaltis}
+            </small>
+        `
+        : ""
+    }
+
+</td>
 
             <td>
                 ${palpite.pontos}
