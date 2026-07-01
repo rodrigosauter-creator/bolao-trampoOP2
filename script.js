@@ -769,6 +769,23 @@ function mostrarApostador(apostador, faseAtual = "todos") {
 
         const acertouEmCheio =
             Number(palpite.palpite_certo) === 1;
+        const selecaoA =
+            palpite.selecao_a || "Aguardando oponente";
+        
+        const selecaoB =
+            palpite.selecao_b || "Aguardando oponente";
+        
+        const bandeiraA =
+            palpite.selecao_a ? flag(palpite.selecao_a) : "⏳";
+        
+        const bandeiraB =
+            palpite.selecao_b ? flag(palpite.selecao_b) : "⏳";
+        
+        let placarPalpite;
+        
+        if (!palpite.selecao_a && !palpite.selecao_b) {
+            placarPalpite = "⏳";
+        }
 
         html += `
             <div class="palpite-card ${acertouEmCheio ? "palpite-card-certo" : ""}">
@@ -796,8 +813,8 @@ function mostrarApostador(apostador, faseAtual = "todos") {
                 <div class="palpite-confronto">
 
                     <span>
-                        ${flag(palpite.selecao_a)}
-                        ${palpite.selecao_a}
+                        ${bandeiraA}
+                        ${selecaoA}
                     </span>
 
                     <strong>
@@ -805,8 +822,8 @@ function mostrarApostador(apostador, faseAtual = "todos") {
                     </strong>
 
                     <span>
-                        ${flag(palpite.selecao_b)}
-                        ${palpite.selecao_b}
+                        ${bandeiraB}
+                        ${selecaoB}
                     </span>
 
                 </div>
