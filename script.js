@@ -160,21 +160,116 @@ function montarClassificacao(classificacao) {
 // GRÁFICO DE EVOLUÇÃO
 // =====================================================
 
-function montarGrafico(evolucao) {
+let graficoPontuacao = null;
+let evolucaoGlobal = null;
 
-    const canvas =
-        document.getElementById("grafico");
+function montarFiltroGrafico(evolucao) {
 
-    if (!canvas) return;
+    const container =
+        document.getElementById("filtroGrafico");
 
-    const limite =
-        dadosGlobais.jogos_realizados + 1;
+    if (!container) return;
 
     const nomes =
         Object.keys(evolucao);
 
+    container.innerHTML = `
+        <div class="filtro-grafico-titulo">
+            Filtrar apostadores:
+        </div>
+
+        <div class="filtro-grafico-opcoes">
+
+            <label class="filtro-check todos">
+                <input
+                    type="checkbox"
+                    id="selecionarTodosGrafico"
+                    checked>
+                Todos
+            </label>
+
+            ${nomes.map(nome => `
+                <label class="filtro-check">
+                    <input
+                        type="checkbox"
+                        class="check-apostador-grafico"
+                        value="${nome}"
+                        checked>
+                    ${nome}
+                </label>
+            `).join("")}
+
+        </div>
+    `;
+
+    const checkTodos =
+        document.getElementById("selecionarTodosGrafico");
+
+    const checks =
+        document.querySelectorAll(".check-apostador-grafico");
+
+    checkTodos.addEventListener("change", () => {
+
+        checks.forEach(check => {
+            check.checked = checkTodos.checked;
+        });
+
+        atualizarGrafico();
+    });
+
+    checks.forEach(check => {
+
+        check.addEventListener("change", () => {
+
+            const todosMarcados =
+                [...checks].every(c => c.checked);
+
+            checkTodos.checked = todosMarcados;
+
+            atualizarGrafico();
+
+        });
+
+    });
+}
+
+function obterApostadoresSelecionados() {
+
+    const checks =
+        document.querySelectorAll(".check-apostador-grafico:checked");
+
+    return [...checks].map(check => check.value);
+}
+
+function montarGrafico(evolucao) {
+
+    evolucaoGlobal = evolucao;
+
+    montarFiltroGrafico(evolucao);
+
+    atualizarGrafico();
+}
+
+function atualizarGrafico() {
+
+    const canvas =
+        document.getElementById("grafico");
+
+    if (!canvas || !evolucaoGlobal) return;
+
+    const limite =
+        dadosGlobais.jogos_realizados + 1;
+
+    const nomesSelecionados =
+        obterApostadoresSelecionados();
+
+    const nomes =
+        nomesSelecionados.length > 0
+            ? nomesSelecionados
+            : Object.keys(evolucaoGlobal);
+
     const labels =
-        evolucao[nomes[0]]
+        evolucaoGlobal[Object.keys(evolucaoGlobal)[0]]
             .slice(0, limite)
             .map(item =>
                 item.jogo === 0
@@ -182,57 +277,62 @@ function montarGrafico(evolucao) {
                     : `J${item.jogo}`
             );
 
-    const datasets = nomes.map(nome => {
+    const datasets =
+        nomes.map(nome => {
 
-        return {
+            return {
+                label: nome,
 
-            label: nome,
+                data:
+                    evolucaoGlobal[nome]
+                        .slice(0, limite)
+                        .map(item => item.pontos),
 
-            data: evolucao[nome]
-                .slice(0, limite)
-                .map(item => item.pontos),
+                tension: 0.25,
 
-            tension: 0.25,
+                fill: false
+            };
+        });
 
-            fill: false
-        };
-    });
+    if (graficoPontuacao) {
+        graficoPontuacao.destroy();
+    }
 
-    new Chart(canvas, {
+    graficoPontuacao =
+        new Chart(canvas, {
 
-        type: "line",
+            type: "line",
 
-        data: {
-            labels,
-            datasets
-        },
-
-        options: {
-
-            responsive: true,
-
-            interaction: {
-                mode: "index",
-                intersect: false
+            data: {
+                labels,
+                datasets
             },
 
-            plugins: {
+            options: {
 
-                legend: {
-                    position: "bottom"
-                }
-            },
+                responsive: true,
 
-            scales: {
+                interaction: {
+                    mode: "index",
+                    intersect: false
+                },
 
-                y: {
-                    beginAtZero: true
+                plugins: {
+
+                    legend: {
+                        position: "bottom"
+                    }
+                },
+
+                scales: {
+
+                    y: {
+                        beginAtZero: true
+                    }
                 }
             }
-        }
-    });
+        });
 }
-
 
 // =====================================================
 // CARREGAMENTO PRINCIPAL
