@@ -794,10 +794,22 @@ const temPalpite =
     palpite.gols_b !== undefined &&
     palpite.gols_b !== "";
 
-const placarPalpite =
-    temPalpite
-        ? `${palpite.gols_a} x ${palpite.gols_b}`
-        : "";
+let placarPalpite;
+
+if (temPalpite) {
+
+    placarPalpite =
+        `${palpite.gols_a} x ${palpite.gols_b}`;
+
+} else if (confrontoDefinido) {
+
+    placarPalpite = "vs";
+
+} else {
+
+    placarPalpite = "";
+
+}
 
         html += `
             <div class="palpite-card ${acertouEmCheio ? "palpite-card-certo" : ""}">
