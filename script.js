@@ -18,7 +18,7 @@ const bandeiras = {
     "Brasil":"br",
     "Marrocos":"ma",
     "Haiti":"ht",
-    "Estados Unidos":"us",
+    "EUA":"us",
     "Paraguai":"py",
     "Austrália":"au",
     "Turquia":"tr",
