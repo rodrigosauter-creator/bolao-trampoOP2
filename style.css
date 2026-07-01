@@ -1146,93 +1146,71 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
 
 .chave-grid{
     display:grid;
-    grid-template-columns:repeat(9, 240px);
-    grid-template-rows:repeat(16, 72px);
-    gap:0 26px;
-    overflow-x:auto;
-    padding:20px 10px 40px;
+    grid-template-columns:repeat(9, minmax(180px, 1fr));
+    gap:20px;
     align-items:center;
+    overflow-x:auto;
+    padding:20px 0;
+}
+
+.titulo-final{
+    text-align:center;
+    font-weight:800;
+    color:#1e3a8a;
+    margin:10px 0 6px;
 }
 
 .chave-coluna{
-    display:contents;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
 }
 
 .chave-coluna h3{
     text-align:center;
     color:#1e3a8a;
-    font-size:24px;
-    margin:0;
-    align-self:end;
 }
 
-/* Títulos */
-.chave-coluna:nth-child(1) h3{ grid-column:1; grid-row:1; }
-.chave-coluna:nth-child(2) h3{ grid-column:2; grid-row:1; }
-.chave-coluna:nth-child(3) h3{ grid-column:3; grid-row:1; }
-.chave-coluna:nth-child(4) h3{ grid-column:4; grid-row:1; }
-.chave-coluna:nth-child(5) h3{ grid-column:5; grid-row:1; }
-.chave-coluna:nth-child(6) h3{ grid-column:6; grid-row:1; }
-.chave-coluna:nth-child(7) h3{ grid-column:7; grid-row:1; }
-.chave-coluna:nth-child(8) h3{ grid-column:8; grid-row:1; }
-.chave-coluna:nth-child(9) h3{ grid-column:9; grid-row:1; }
-
-/* Cards base */
 .chave-card{
-    min-height:120px;
+    background:#fff;
+    border:1px solid #e5e7eb;
+    border-radius:14px;
+    padding:12px;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+    min-height:95px;
 }
 
-/* LADO ESQUERDO */
-/* 16-avos */
-.chave-coluna:nth-child(1) .chave-card:nth-of-type(1){ grid-column:1; grid-row:2 / span 2; }
-.chave-coluna:nth-child(1) .chave-card:nth-of-type(2){ grid-column:1; grid-row:4 / span 2; }
-.chave-coluna:nth-child(1) .chave-card:nth-of-type(3){ grid-column:1; grid-row:6 / span 2; }
-.chave-coluna:nth-child(1) .chave-card:nth-of-type(4){ grid-column:1; grid-row:8 / span 2; }
-.chave-coluna:nth-child(1) .chave-card:nth-of-type(5){ grid-column:1; grid-row:10 / span 2; }
-.chave-coluna:nth-child(1) .chave-card:nth-of-type(6){ grid-column:1; grid-row:12 / span 2; }
-.chave-coluna:nth-child(1) .chave-card:nth-of-type(7){ grid-column:1; grid-row:14 / span 2; }
-.chave-coluna:nth-child(1) .chave-card:nth-of-type(8){ grid-column:1; grid-row:16 / span 2; }
+.chave-numero{
+    font-weight:800;
+    color:#2563eb;
+    margin-bottom:8px;
+}
 
-/* Oitavas */
-.chave-coluna:nth-child(2) .chave-card:nth-of-type(1){ grid-column:2; grid-row:3 / span 2; }
-.chave-coluna:nth-child(2) .chave-card:nth-of-type(2){ grid-column:2; grid-row:7 / span 2; }
-.chave-coluna:nth-child(2) .chave-card:nth-of-type(3){ grid-column:2; grid-row:11 / span 2; }
-.chave-coluna:nth-child(2) .chave-card:nth-of-type(4){ grid-column:2; grid-row:15 / span 2; }
+.chave-time{
+    display:grid;
+    grid-template-columns:auto 1fr auto;
+    align-items:center;
+    gap:6px;
+    margin:6px 0;
+}
 
-/* Quartas */
-.chave-coluna:nth-child(3) .chave-card:nth-of-type(1){ grid-column:3; grid-row:5 / span 2; }
-.chave-coluna:nth-child(3) .chave-card:nth-of-type(2){ grid-column:3; grid-row:13 / span 2; }
+.chave-vencedor{
+    background:#dcfce7;
+    border-radius:8px;
+    padding:2px 4px;
+    font-weight:800;
+}
 
-/* Semifinal esquerda */
-.chave-coluna:nth-child(4) .chave-card:nth-of-type(1){ grid-column:4; grid-row:9 / span 2; }
+.chave-penaltis{
+    margin-top:8px;
+    font-size:13px;
+    color:#2563eb;
+    font-weight:700;
+}
 
-/* CENTRO */
-.chave-centro .titulo-final:nth-of-type(1){ grid-column:5; grid-row:5; }
-.chave-centro .chave-card:nth-of-type(1){ grid-column:5; grid-row:6 / span 2; }
-
-.chave-centro .titulo-final:nth-of-type(2){ grid-column:5; grid-row:10; }
-.chave-centro .chave-card:nth-of-type(2){ grid-column:5; grid-row:11 / span 2; }
-
-/* Semifinal direita */
-.chave-coluna:nth-child(6) .chave-card:nth-of-type(1){ grid-column:6; grid-row:9 / span 2; }
-
-/* LADO DIREITO */
-/* Quartas */
-.chave-coluna:nth-child(7) .chave-card:nth-of-type(1){ grid-column:7; grid-row:5 / span 2; }
-.chave-coluna:nth-child(7) .chave-card:nth-of-type(2){ grid-column:7; grid-row:13 / span 2; }
-
-/* Oitavas */
-.chave-coluna:nth-child(8) .chave-card:nth-of-type(1){ grid-column:8; grid-row:3 / span 2; }
-.chave-coluna:nth-child(8) .chave-card:nth-of-type(2){ grid-column:8; grid-row:7 / span 2; }
-.chave-coluna:nth-child(8) .chave-card:nth-of-type(3){ grid-column:8; grid-row:11 / span 2; }
-.chave-coluna:nth-child(8) .chave-card:nth-of-type(4){ grid-column:8; grid-row:15 / span 2; }
-
-/* 16-avos direita */
-.chave-coluna:nth-child(9) .chave-card:nth-of-type(1){ grid-column:9; grid-row:2 / span 2; }
-.chave-coluna:nth-child(9) .chave-card:nth-of-type(2){ grid-column:9; grid-row:4 / span 2; }
-.chave-coluna:nth-child(9) .chave-card:nth-of-type(3){ grid-column:9; grid-row:6 / span 2; }
-.chave-coluna:nth-child(9) .chave-card:nth-of-type(4){ grid-column:9; grid-row:8 / span 2; }
-.chave-coluna:nth-child(9) .chave-card:nth-of-type(5){ grid-column:9; grid-row:10 / span 2; }
-.chave-coluna:nth-child(9) .chave-card:nth-of-type(6){ grid-column:9; grid-row:12 / span 2; }
-.chave-coluna:nth-child(9) .chave-card:nth-of-type(7){ grid-column:9; grid-row:14 / span 2; }
-.chave-coluna:nth-child(9) .chave-card:nth-of-type(8){ grid-column:9; grid-row:16 / span 2; }
+.chave-indefinido{
+    text-align:center;
+    color:#64748b;
+    font-weight:700;
+    padding:18px 0;
+}
