@@ -453,6 +453,22 @@ function montarJogos(jogos, fase = "todos") {
 
     jogosFiltrados.forEach(jogo => {
 
+        const selecaoA =
+        jogo.selecao_a || "Aguardando oponente";
+
+        const selecaoB =
+        jogo.selecao_b || "Aguardando oponente";
+
+        const bandeiraA =
+            jogo.selecao_a
+                ? flag(jogo.selecao_a)
+                : "⏳";
+
+        const bandeiraB =
+            jogo.selecao_b
+                ? flag(jogo.selecao_b)
+                : "⏳";
+        
         const status =
             jogo.realizado
                 ? "realizado"
@@ -484,13 +500,12 @@ function montarJogos(jogos, fase = "todos") {
                 }">
 
                     <span class="bandeira">
-                        ${flag(jogo.selecao_a)}
+                        ${bandeiraA}
                     </span>
-
+                    
                     <span>
-                        ${jogo.selecao_a}
+                        ${selecaoA}
                     </span>
-
                 </div>
 
                 <div class="placar">
@@ -502,13 +517,12 @@ function montarJogos(jogos, fase = "todos") {
                 }">
 
                     <span class="bandeira">
-                        ${flag(jogo.selecao_b)}
+                        ${bandeiraB}
                     </span>
-
+                    
                     <span>
-                        ${jogo.selecao_b}
+                        ${selecaoB}
                     </span>
-
                 </div>
 
             </div>
@@ -529,6 +543,16 @@ function montarJogos(jogos, fase = "todos") {
         </div>
     `
     : ""
+}
+
+${
+    !jogo.selecao_a && !jogo.selecao_b
+        ? `
+        <div class="jogo-aviso">
+            ⏳ Aguardando definição do confronto
+        </div>
+        `
+        : ""
 }
 
             </div>
