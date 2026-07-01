@@ -782,3 +782,135 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
         margin-bottom:10px;
     }
 }
+
+/* ============================= */
+/* CLASSIFICAÇÃO GERAL */
+/* ============================= */
+
+#ranking{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    overflow:hidden;
+
+    border-radius:14px;
+
+}
+
+#ranking thead{
+
+    background:#f8fafc;
+
+}
+
+#ranking th{
+
+    text-align:center;
+
+    padding:16px;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#1e293b;
+
+}
+
+#ranking td{
+
+    text-align:center;
+
+    padding:18px 16px;
+
+    font-size:17px;
+
+    border-bottom:1px solid #e5e7eb;
+
+    transition:.2s;
+
+}
+
+#ranking tbody tr{
+
+    transition:.2s;
+
+}
+
+#ranking tbody tr:hover{
+
+    background:#eff6ff;
+
+}
+
+/* Nome em destaque */
+
+#ranking td:nth-child(2){
+
+    font-weight:600;
+
+}
+
+/* Pontuação */
+
+#ranking td:nth-child(3){
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    color:#1d4ed8;
+
+}
+
+/* Acertos */
+
+#ranking td:nth-child(4){
+
+    font-weight:bold;
+
+    color:#dc2626;
+
+}
+
+/* Top 3 */
+
+#ranking tbody tr:nth-child(1){
+
+    background:#fff8dc;
+
+}
+
+#ranking tbody tr:nth-child(2){
+
+    background:#f8fafc;
+
+}
+
+#ranking tbody tr:nth-child(3){
+
+    background:#fff4e6;
+
+}
+
+/* Medalhas */
+
+#ranking tbody tr:nth-child(1) td:first-child::before{
+
+    content:"🥇 ";
+
+}
+
+#ranking tbody tr:nth-child(2) td:first-child::before{
+
+    content:"🥈 ";
+
+}
+
+#ranking tbody tr:nth-child(3) td:first-child::before{
+
+    content:"🥉 ";
+
+}
