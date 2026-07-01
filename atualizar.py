@@ -188,7 +188,7 @@ for nome_aba in wb.sheetnames:
     total = 0
     acertos = 0
 
-    for row in ws.iter_rows(
+        for row in ws.iter_rows(
         min_row=3,
         values_only=True
     ):
@@ -206,24 +206,18 @@ for nome_aba in wb.sheetnames:
         if row[24] is not None:
             acertos = row[24]
 
+        palpites.append({
+            "jogo": int(jogo),
+            "selecao_a": row[9],
+            "gols_a": row[10],
+            "gols_b": row[12],
+            "selecao_b": row[13],
+            "vencedor": row[14],
+            "penaltis": tratar_penaltis(row[15], jogo),
+            "palpite_certo": int(row[21]) if row[21] is not None else 0,
+            "pontos": pontos if pontos is not None else 0
+        })
 
-    print(
-    nome_aba,
-    jogo,
-    row[21]
-)
-    
-    palpites.append({
-    "jogo": int(jogo),
-    "selecao_a": row[9],
-    "gols_a": row[10],
-    "gols_b": row[12],
-    "selecao_b": row[13],
-    "vencedor": row[14],
-    "penaltis": tratar_penaltis(row[15], jogo),
-    "palpite_certo": tratar_palpite_certo(row[21]),
-    "pontos": pontos if pontos is not None else 0
-})
 
     apostadores[nome_aba] = {
         "nome": nome_aba,
@@ -231,6 +225,8 @@ for nome_aba in wb.sheetnames:
         "acertos": acertos,
         "palpites": palpites
     }
+
+print(len(dados["apostadores"]["Rodrigo"]["palpites"]))
 
 # =========================
 # RANKING POR JOGO
