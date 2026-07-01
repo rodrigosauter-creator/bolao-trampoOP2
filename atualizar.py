@@ -213,7 +213,7 @@ for nome_aba in wb.sheetnames:
     row[21]
 )
     
-        palpites.append({
+    palpites.append({
     "jogo": int(jogo),
     "selecao_a": row[9],
     "gols_a": row[10],
