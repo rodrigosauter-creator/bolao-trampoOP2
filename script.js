@@ -388,7 +388,9 @@ async function carregarDados() {
         montarJogos(
             dados.jogos
         );
-
+        
+        montarChaveamento(dados.jogos);
+        
         const filtroJogos =
             document.getElementById("filtroJogos");
         
@@ -925,4 +927,126 @@ ${
 
 }, 50);
     
+}
+
+// =====================================================
+// MATA-MATA
+// =====================================================
+
+function buscarJogo(numero) {
+    return dadosGlobais.jogos.find(j => Number(j.jogo) === numero);
+}
+
+function nomeTime(jogo, lado) {
+    const nome = lado === "a" ? jogo?.selecao_a : jogo?.selecao_b;
+    return nome || "Aguardando oponente";
+}
+
+function linhaTime(jogo, lado) {
+    const nome = nomeTime(jogo, lado);
+    const gols = lado === "a" ? jogo?.gols_a : jogo?.gols_b;
+
+    return `
+        <div class="chave-time">
+            <span>${nome !== "Aguardando oponente" ? flag(nome) : "⏳"}</span>
+            <span>${nome}</span>
+            <strong>${gols ?? ""}</strong>
+        </div>
+    `;
+}
+
+function vencedorJogo(jogo) {
+    if (!jogo || !jogo.realizado) return "";
+
+    if (jogo.penaltis && jogo.penaltis !== "x") {
+        return jogo.penaltis;
+    }
+
+    return jogo.vencedor;
+}
+
+function cardChave(numero) {
+    const jogo = buscarJogo(numero);
+
+    if (!jogo || (!jogo.selecao_a && !jogo.selecao_b)) {
+        return `
+            <div class="chave-card">
+                <div class="chave-numero">Jogo ${numero}</div>
+                <div class="chave-indefinido">
+                    ⏳ Aguardando definição do confronto
+                </div>
+            </div>
+        `;
+    }
+
+    const vencedor = vencedorJogo(jogo);
+
+    return `
+        <div class="chave-card">
+            <div class="chave-numero">Jogo ${numero}</div>
+
+            <div class="${vencedor === jogo.selecao_a ? "chave-vencedor" : ""}">
+                ${linhaTime(jogo, "a")}
+            </div>
+
+            <div class="${vencedor === jogo.selecao_b ? "chave-vencedor" : ""}">
+                ${linhaTime(jogo, "b")}
+            </div>
+
+            ${
+                jogo.penaltis && jogo.penaltis !== "x"
+                ? `<div class="chave-penaltis">🥅 Pênaltis: ${jogo.penaltis}</div>`
+                : ""
+            }
+        </div>
+    `;
+}
+
+function montarChaveamento() {
+    const container = document.getElementById("chaveamento");
+    if (!container) return;
+
+    container.innerHTML = `
+        <div class="chave-grid">
+
+            <div class="chave-coluna">
+                <h3>16-Avos</h3>
+                ${[73,76,84,83,82,81].map(cardChave).join("")}
+            </div>
+
+            <div class="chave-coluna">
+                <h3>Oitavas</h3>
+                ${[89,90,93,94].map(cardChave).join("")}
+            </div>
+
+            <div class="chave-coluna">
+                <h3>Quartas</h3>
+                ${[97,98].map(cardChave).join("")}
+            </div>
+
+            <div class="chave-coluna chave-centro">
+                <h3>Final</h3>
+                ${cardChave(101)}
+                ${cardChave(104)}
+                ${cardChave(103)}
+                ${cardChave(102)}
+            </div>
+
+            <div class="chave-coluna">
+                <h3>Quartas</h3>
+                ${[99,100].map(cardChave).join("")}
+            </div>
+
+            <div class="chave-coluna">
+                <h3>Oitavas</h3>
+                ${[91,92,95,96].map(cardChave).join("")}
+            </div>
+
+            <div class="chave-coluna">
+                <h3>16-Avos</h3>
+                ${[74,77,79,80,87,86,85,88].map(cardChave).join("")}
+            </div>
+
+        </div>
+    `;
 }
