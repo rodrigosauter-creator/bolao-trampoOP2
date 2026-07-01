@@ -206,6 +206,13 @@ for nome_aba in wb.sheetnames:
         if row[24] is not None:
             acertos = row[24]
 
+
+    print(
+    nome_aba,
+    jogo,
+    row[21]
+)
+    
         palpites.append({
     "jogo": int(jogo),
     "selecao_a": row[9],
