@@ -52,50 +52,24 @@ const bandeiras = {
     "Colômbia":"co",
     "Croácia":"hr",
     "Gana":"gh",
-    "Panamá":"pa"
+    "Panamá":"pa",
+    "Inglaterra":"gb-eng",
+    "Escócia":"gb-sct"
 
 };
 
 function flag(pais){
 
-    // Inglaterra e Escócia usam SVG local
-
-    if(pais === "Inglaterra"){
-
-        return `
-            <img
-                src="imagens/bandeiras/england.svg"
-                class="bandeira-img"
-                alt="Inglaterra">
-        `;
-
-    }
-
-    if(pais === "Escócia"){
-
-        return `
-            <img
-                src="imagens/bandeiras/scotland.svg"
-                class="bandeira-img"
-                alt="Escócia">
-        `;
-
-    }
-
     const codigo = bandeiras[pais];
 
-    if(!codigo){
-
-        return "";
-    }
+    if(!codigo) return "";
 
     return `
         <img
-            src="https://flagcdn.com/w40/${codigo}.png"
+            src="https://cdn.jsdelivr.net/gh/HatScripts/circle-flags/flags/${codigo}.svg"
             class="bandeira-img"
             alt="${pais}">
     `;
-
 }
 
 
