@@ -534,25 +534,29 @@ function montarJogos(jogos, fase = "todos") {
 
 </div>
 
-            <div class="jogo-status">
+           <div class="jogo-status">
 
-                ${
-                    jogo.realizado
+    ${
+        confrontoDefinido
+            ? (
+                jogo.realizado
                     ? "✅ Finalizado"
                     : "⏳ Aguardando"
-                }
+              )
+            : ""
+    }
 
-                ${
-    jogo.jogo >= 73 && jogo.penaltis && jogo.penaltis !== "x"
-    ? `
-        <div class="jogo-penaltis">
-            <strong>🥅 Pênaltis:</strong> ${jogo.penaltis}
-        </div>
-    `
-    : ""
-}
-
+    ${
+        jogo.jogo >= 73 && jogo.penaltis && jogo.penaltis !== "x"
+        ? `
+            <div class="jogo-penaltis">
+                <strong>🥅 Pênaltis:</strong> ${jogo.penaltis}
             </div>
+        `
+        : ""
+    }
+
+</div>
 
         </div>
         `;
