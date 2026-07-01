@@ -625,22 +625,24 @@ function mostrarApostador(apostador, faseAtual = "todos") {
             <div class="palpite-card ${acertouEmCheio ? "palpite-card-certo" : ""}">
 
                 
-                <div class="palpite-topo">
-                    <span>
-                        ${acertouEmCheio ? "🏆" : "⚽"}
-                        Jogo ${palpite.jogo}
-                    </span>
-                    
-                    ${
-                        acertouEmCheio
-                        ? `<div class="selo-palpite">PLACAR EXATO</div>`
-                        : ""
-                    }        
-                    
-                    <strong>
-                        ${palpite.pontos} pts
-                    </strong>
-                </div>
+                <div class="palpite-topo ${acertouEmCheio ? "com-selo" : "sem-selo"}">
+
+    <span>
+        ${acertouEmCheio ? "🏆" : "⚽"}
+        Jogo ${palpite.jogo}
+    </span>
+
+    ${
+        acertouEmCheio
+        ? `<div class="selo-palpite">PLACAR EXATO</div>`
+        : ""
+    }
+
+    <strong class="pontos-jogo">
+        ${palpite.pontos} pts
+    </strong>
+
+</div>
 
                 <div class="palpite-confronto">
 
