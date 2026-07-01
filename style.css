@@ -897,20 +897,34 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
 
 /* Medalhas */
 
+#ranking tbody tr:nth-child(1) td:first-child,
+#ranking tbody tr:nth-child(2) td:first-child,
+#ranking tbody tr:nth-child(3) td:first-child{
+
+    font-size:0;
+
+}
+
 #ranking tbody tr:nth-child(1) td:first-child::before{
 
-    content:"🥇 ";
+    content:"🥇";
+
+    font-size:28px;
 
 }
 
 #ranking tbody tr:nth-child(2) td:first-child::before{
 
-    content:"🥈 ";
+    content:"🥈";
+
+    font-size:28px;
 
 }
 
 #ranking tbody tr:nth-child(3) td:first-child::before{
 
-    content:"🥉 ";
+    content:"🥉";
+
+    font-size:28px;
 
 }
