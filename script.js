@@ -770,23 +770,34 @@ function mostrarApostador(apostador, faseAtual = "todos") {
 
         const acertouEmCheio =
             Number(palpite.palpite_certo) === 1;
-        const selecaoA =
-            palpite.selecao_a || "Aguardando oponente";
         
-        const selecaoB =
-            palpite.selecao_b || "Aguardando oponente";
-        
-        const bandeiraA =
-            palpite.selecao_a ? flag(palpite.selecao_a) : "⏳";
-        
-        const bandeiraB =
-            palpite.selecao_b ? flag(palpite.selecao_b) : "⏳";
-        
-        let placarPalpite;
-        
-        if (!palpite.selecao_a && !palpite.selecao_b) {
-            placarPalpite = "⏳";
-        }
+        const confrontoDefinido =
+    palpite.selecao_a || palpite.selecao_b;
+
+const selecaoA =
+    palpite.selecao_a || "Aguardando oponente";
+
+const selecaoB =
+    palpite.selecao_b || "Aguardando oponente";
+
+const bandeiraA =
+    palpite.selecao_a ? flag(palpite.selecao_a) : "⏳";
+
+const bandeiraB =
+    palpite.selecao_b ? flag(palpite.selecao_b) : "⏳";
+
+const temPalpite =
+    palpite.gols_a !== null &&
+    palpite.gols_a !== undefined &&
+    palpite.gols_a !== "" &&
+    palpite.gols_b !== null &&
+    palpite.gols_b !== undefined &&
+    palpite.gols_b !== "";
+
+const placarPalpite =
+    temPalpite
+        ? `${palpite.gols_a} x ${palpite.gols_b}`
+        : "";
 
         html += `
             <div class="palpite-card ${acertouEmCheio ? "palpite-card-certo" : ""}">
@@ -813,21 +824,31 @@ function mostrarApostador(apostador, faseAtual = "todos") {
 
                 <div class="palpite-confronto">
 
-                    <span>
-                        ${bandeiraA}
-                        ${selecaoA}
-                    </span>
-
-                    <strong>
-                        ${palpite.gols_a} x ${palpite.gols_b}
-                    </strong>
-
-                    <span>
-                        ${bandeiraB}
-                        ${selecaoB}
-                    </span>
-
+    ${
+        !confrontoDefinido
+            ? `
+                <div class="palpite-confronto-indefinido">
+                    ⏳ Aguardando definição do confronto
                 </div>
+            `
+            : `
+                <span>
+                    ${bandeiraA}
+                    ${selecaoA}
+                </span>
+
+                <strong>
+                    ${placarPalpite}
+                </strong>
+
+                <span>
+                    ${bandeiraB}
+                    ${selecaoB}
+                </span>
+            `
+    }
+
+</div>
 
                 ${
                     palpite.jogo >= 73 && palpite.penaltis && palpite.penaltis !== "x"
