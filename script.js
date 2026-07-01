@@ -708,6 +708,21 @@ function mostrarApostador(apostador, faseAtual = "todos") {
             );
 
         });
+
+    setTimeout(() => {
+
+    const y =
+        detalhes.getBoundingClientRect().top +
+        window.pageYOffset -
+        80; // ajuste conforme a altura do cabeçalho
+
+    window.scrollTo({
+        top: y,
+        behavior: "smooth"
+    });
+
+}, 50);
+    
 }
 
     detalhes.innerHTML = html;
