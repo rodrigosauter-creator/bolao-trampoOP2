@@ -479,9 +479,7 @@ function filtrarJogosPorFase(jogos, fase) {
 function montarListaApostadores(apostadores) {
 
     const grid =
-        document.getElementById(
-            "participantesGrid"
-        );
+        document.getElementById("participantesGrid");
 
     if (!grid) return;
 
@@ -490,47 +488,61 @@ function montarListaApostadores(apostadores) {
     Object.values(apostadores)
         .forEach(apostador => {
 
+            const infoRanking =
+                dadosGlobais.classificacao.find(
+                    p => p.nome === apostador.nome
+                );
+
+            const pontos =
+                infoRanking ? infoRanking.pontos : 0;
+
+            const acertos =
+                infoRanking ? infoRanking.acertos : 0;
+
             const card =
                 document.createElement("div");
 
-            card.className =
-                "participante-card";
+            card.className = "participante-card";
 
-card.innerHTML = `
-    <div class="card-apostador">
+            card.innerHTML = `
+                <div class="card-apostador">
 
-        <img
-            src="imagens/cards/${apostador.nome}.png"
-            alt="${apostador.nome}"
-            class="imagem-card">
+                    <img
+                        src="imagens/cards/${apostador.nome}.png"
+                        alt="${apostador.nome}"
+                        class="imagem-card">
 
-        <div class="faixa-card">
+                    <div class="faixa-card">
 
-            <div class="pontos-card">
-               🏆 ${apostador.total} pts
-            </div>
+                        <div class="pontos-card">
+                            🏆 ${pontos} pts
+                        </div>
 
-            <div class="acertos-card">
-                🎯 ${apostador.acertos} acerto(s)
-            </div>
+                        <div class="acertos-card">
+                            🎯 ${acertos} acerto(s)
+                        </div>
 
-        </div>
+                    </div>
 
-    </div>
-`;
-          card.addEventListener(
+                </div>
+            `;
+
+            card.addEventListener(
                 "click",
                 () =>
                     mostrarApostador(
                         {
                             ...apostador,
-                            palpitesOriginais: structuredClone(apostador.palpites)
+                            palpitesOriginais:
+                                apostador.palpites
                         }
                     )
             );
 
             grid.appendChild(card);
+
         });
+
 }
 
 function mostrarApostador(apostador, faseAtual = "todos") {
