@@ -1011,40 +1011,51 @@ function montarChaveamento() {
 
             <div class="chave-coluna">
                 <h3>16-Avos</h3>
-                ${[73,76,84,83,82,81].map(cardChave).join("")}
+                ${[75, 78, 73, 76, 84, 83, 82, 81].map(cardChave).join("")}
             </div>
 
             <div class="chave-coluna">
                 <h3>Oitavas</h3>
-                ${[89,90,93,94].map(cardChave).join("")}
+                ${[90, 89, 93, 94].map(cardChave).join("")}
             </div>
 
             <div class="chave-coluna">
                 <h3>Quartas</h3>
-                ${[97,98].map(cardChave).join("")}
+                ${[97, 98].map(cardChave).join("")}
+            </div>
+
+            <div class="chave-coluna">
+                <h3>Semifinais</h3>
+                ${[101].map(cardChave).join("")}
             </div>
 
             <div class="chave-coluna chave-centro">
                 <h3>Final</h3>
-                ${cardChave(101)}
+                <div class="titulo-final">🏆 Final</div>
                 ${cardChave(104)}
+
+                <div class="titulo-final">🥉 3º Lugar</div>
                 ${cardChave(103)}
-                ${cardChave(102)}
+            </div>
+
+            <div class="chave-coluna">
+                <h3>Semifinais</h3>
+                ${[102].map(cardChave).join("")}
             </div>
 
             <div class="chave-coluna">
                 <h3>Quartas</h3>
-                ${[99,100].map(cardChave).join("")}
+                ${[99, 100].map(cardChave).join("")}
             </div>
 
             <div class="chave-coluna">
                 <h3>Oitavas</h3>
-                ${[91,92,95,96].map(cardChave).join("")}
+                ${[91, 92, 95, 96].map(cardChave).join("")}
             </div>
 
             <div class="chave-coluna">
                 <h3>16-Avos</h3>
-                ${[74,77,79,80,87,86,85,88].map(cardChave).join("")}
+                ${[74, 77, 79, 80, 87, 86, 85, 88].map(cardChave).join("")}
             </div>
 
         </div>
