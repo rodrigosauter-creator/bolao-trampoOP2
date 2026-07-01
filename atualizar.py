@@ -52,6 +52,19 @@ def tratar_penaltis(valor, jogo):
 
     return str(valor).strip()
 
+
+def tratar_palpite_certo(valor):
+
+    if valor is None:
+        return 0
+
+    valor_texto = str(valor).strip().lower()
+
+    if valor_texto in ["1", "true", "verdadeiro", "sim"]:
+        return 1
+
+    return 0
+    
 # =========================
 # EVOLUÇÃO
 # =========================
@@ -201,7 +214,7 @@ for nome_aba in wb.sheetnames:
     "selecao_b": row[13],
     "vencedor": row[14],
     "penaltis": tratar_penaltis(row[15], jogo),
-    "palpite_certo": int(row[21]) if row[21] is not None else 0,
+    "palpite_certo": tratar_palpite_certo(row[21]),
     "pontos": pontos if pontos is not None else 0
 })
 
