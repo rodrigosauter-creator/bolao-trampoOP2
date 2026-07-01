@@ -1106,3 +1106,18 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
     margin-right:8px;
     vertical-align:middle;
 }
+
+.jogo-aviso,
+.palpite-aviso{
+
+    margin-top:14px;
+
+    text-align:center;
+
+    color:#6b7280;
+
+    font-style:italic;
+
+    font-weight:600;
+
+}
