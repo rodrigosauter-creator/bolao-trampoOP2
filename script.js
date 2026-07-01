@@ -522,10 +522,10 @@ function montarJogos(jogos, fase = "todos") {
                 }
 
                 ${
-    jogo.jogo >= 73
+    jogo.jogo >= 73 && jogo.penaltis && jogo.penaltis !== "x"
     ? `
         <div class="jogo-penaltis">
-            <strong>Pênaltis:</strong> ${jogo.penaltis}
+            <strong>🥅 Pênaltis:</strong> ${jogo.penaltis}
         </div>
     `
     : ""
@@ -788,13 +788,13 @@ function mostrarApostador(apostador, faseAtual = "todos") {
                 </div>
 
                 ${
-                    Number(palpite.jogo) >= 73
-                    ? `
-                        <div class="palpite-penaltis">
-                            <strong>Pênaltis:</strong> ${palpite.penaltis}
-                        </div>
-                    `
-                    : ""
+                    palpite.jogo >= 73 && palpite.penaltis && palpite.penaltis !== "x"
+    ? `
+        <div class="palpite-penaltis">
+            <strong>🥅 Pênaltis:</strong> ${palpite.penaltis}
+        </div>
+    `
+    : ""
                 }
 
             </div>
