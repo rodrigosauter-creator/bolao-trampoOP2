@@ -768,6 +768,14 @@ function mostrarApostador(apostador, faseAtual = "todos") {
 
     palpitesFiltrados.forEach(palpite => {
 
+        const jogoReal =
+    dadosGlobais.jogos.find(
+        j => j.jogo === palpite.jogo
+    );
+
+const jogoRealizado =
+    jogoReal?.realizado ?? false;
+        
         const acertouEmCheio =
             Number(palpite.palpite_certo) === 1;
         
@@ -828,9 +836,15 @@ if (temPalpite) {
         : ""
     }
 
-    <strong class="pontos-jogo">
-        ${palpite.pontos} pts
-    </strong>
+${
+    jogoRealizado
+        ? `
+            <strong class="pontos-jogo">
+                ${palpite.pontos} pts
+            </strong>
+        `
+        : ""
+}
 
 </div>
 
