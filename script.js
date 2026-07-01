@@ -3,60 +3,99 @@
 // =====================================================
 
 const bandeiras = {
-    "México":"🇲🇽",
-    "África do Sul":"🇿🇦",
-    "Coreia do Sul":"🇰🇷",
-    "Tchéquia":"🇨🇿",
-    "Canadá":"🇨🇦",
-    "Bósnia":"🇧🇦",
-    "Bosnia":"🇧🇦",
-    "Qatar":"🇶🇦",
-    "Suíça":"🇨🇭",
-    "Suiça":"🇨🇭",
-    "Brasil":"🇧🇷",
-    "Marrocos":"🇲🇦",
-    "Haiti":"🇭🇹",
-    "Escócia":"🏴",
-    "Estados Unidos":"🇺🇸",
-    "Paraguai":"🇵🇾",
-    "Austrália":"🇦🇺",
-    "Turquia":"🇹🇷",
-    "Alemanha":"🇩🇪",
-    "Curaçao":"🇨🇼",
-    "Costa do Marfim":"🇨🇮",
-    "Equador":"🇪🇨",
-    "Holanda":"🇳🇱",
-    "Japão":"🇯🇵",
-    "Suécia":"🇸🇪",
-    "Tunísia":"🇹🇳",
-    "Bélgica":"🇧🇪",
-    "Egito":"🇪🇬",
-    "Irã":"🇮🇷",
-    "Nova Zelândia":"🇳🇿",
-    "Espanha":"🇪🇸",
-    "Cabo Verde":"🇨🇻",
-    "Arábia Saudita":"🇸🇦",
-    "Uruguai":"🇺🇾",
-    "França":"🇫🇷",
-    "Senegal":"🇸🇳",
-    "Iraque":"🇮🇶",
-    "Noruega":"🇳🇴",
-    "Argentina":"🇦🇷",
-    "Argélia":"🇩🇿",
-    "Áustria":"🇦🇹",
-    "Jordânia":"🇯🇴",
-    "Portugal":"🇵🇹",
-    "RD Congo":"🇨🇩",
-    "Uzbequistão":"🇺🇿",
-    "Colômbia":"🇨🇴",
-    "Inglaterra":"🏴",
-    "Croácia":"🇭🇷",
-    "Gana":"🇬🇭",
-    "Panamá":"🇵🇦"
+
+    "México":"mx",
+    "África do Sul":"za",
+    "Coreia do Sul":"kr",
+    "Tchéquia":"cz",
+    "Canadá":"ca",
+    "Bósnia":"ba",
+    "Bosnia":"ba",
+    "Qatar":"qa",
+    "Catar":"qa",
+    "Suíça":"ch",
+    "Suiça":"ch",
+    "Brasil":"br",
+    "Marrocos":"ma",
+    "Haiti":"ht",
+    "Estados Unidos":"us",
+    "Paraguai":"py",
+    "Austrália":"au",
+    "Turquia":"tr",
+    "Alemanha":"de",
+    "Curaçao":"cw",
+    "Costa do Marfim":"ci",
+    "Equador":"ec",
+    "Holanda":"nl",
+    "Japão":"jp",
+    "Suécia":"se",
+    "Tunísia":"tn",
+    "Bélgica":"be",
+    "Egito":"eg",
+    "Irã":"ir",
+    "Nova Zelândia":"nz",
+    "Espanha":"es",
+    "Cabo Verde":"cv",
+    "Arábia Saudita":"sa",
+    "Uruguai":"uy",
+    "França":"fr",
+    "Senegal":"sn",
+    "Iraque":"iq",
+    "Noruega":"no",
+    "Argentina":"ar",
+    "Argélia":"dz",
+    "Áustria":"at",
+    "Jordânia":"jo",
+    "Portugal":"pt",
+    "RD Congo":"cd",
+    "Uzbequistão":"uz",
+    "Colômbia":"co",
+    "Croácia":"hr",
+    "Gana":"gh",
+    "Panamá":"pa"
+
 };
 
-function flag(pais) {
-    return bandeiras[pais] || "🏳️";
+function flag(pais){
+
+    // Inglaterra e Escócia usam SVG local
+
+    if(pais === "Inglaterra"){
+
+        return `
+            <img
+                src="imagens/bandeiras/england.svg"
+                class="bandeira-img"
+                alt="Inglaterra">
+        `;
+
+    }
+
+    if(pais === "Escócia"){
+
+        return `
+            <img
+                src="imagens/bandeiras/scotland.svg"
+                class="bandeira-img"
+                alt="Escócia">
+        `;
+
+    }
+
+    const codigo = bandeiras[pais];
+
+    if(!codigo){
+
+        return "";
+    }
+
+    return `
+        <img
+            src="https://flagcdn.com/w40/${codigo}.png"
+            class="bandeira-img"
+            alt="${pais}">
+    `;
+
 }
 
 
