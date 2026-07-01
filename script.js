@@ -1029,10 +1029,15 @@ function montarChaveamento() {
                 ${[101].map(cardChave).join("")}
             </div>
 
-            <div class="chave-coluna chave-centro">
-                <h3>Final</h3>
-                <div class="titulo-final">🏆 Final</div>
-                ${cardChave(104)}
+<div class="chave-coluna chave-centro">
+
+    ${cardCampeao()}
+
+    <div class="titulo-final">
+        🏆 Final
+    </div>
+
+    ${cardChave(104)}
 
                 <div class="titulo-final">🥉 3º Lugar</div>
                 ${cardChave(103)}
@@ -1056,6 +1061,42 @@ function montarChaveamento() {
             <div class="chave-coluna">
                 <h3>16-Avos</h3>
                 ${[74, 77, 79, 80, 87, 86, 85, 88].map(cardChave).join("")}
+            </div>
+
+        </div>
+    `;
+}
+
+function cardCampeao(){
+
+    const final = buscarJogo(104);
+
+    let nome = "?";
+    let bandeira = "❓";
+
+    if(final && final.realizado){
+
+        nome = final.penaltis && final.penaltis !== "x"
+            ? final.penaltis
+            : final.vencedor;
+
+        bandeira = flag(nome);
+
+    }
+
+    return `
+        <div class="card-campeao">
+
+            <div class="titulo-campeao">
+                🏆 CAMPEÃO
+            </div>
+
+            <div class="bandeira-campeao">
+                ${bandeira}
+            </div>
+
+            <div class="nome-campeao">
+                ${nome}
             </div>
 
         </div>
