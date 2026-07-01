@@ -440,9 +440,6 @@ document.addEventListener(
 // =====================================================
 
 function montarJogos(jogos, fase = "todos") {
-
-    const confrontoDefinido =
-    jogo.selecao_a || jogo.selecao_b;
     
     const jogosFiltrados =
         filtrarJogosPorFase(jogos, fase);
@@ -455,6 +452,9 @@ function montarJogos(jogos, fase = "todos") {
     container.innerHTML = "";
 
     jogosFiltrados.forEach(jogo => {
+
+        const confrontoDefinido =
+        jogo.selecao_a || jogo.selecao_b;
 
         const selecaoA =
         jogo.selecao_a || "Aguardando oponente";
@@ -875,5 +875,3 @@ function mostrarApostador(apostador, faseAtual = "todos") {
 }, 50);
     
 }
-
-    detalhes.innerHTML = html;
