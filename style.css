@@ -1050,3 +1050,48 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
         margin:8px 0;
     }
 }
+
+/* ============================= */
+/* FILTRO DO GRÁFICO */
+/* ============================= */
+
+.filtro-grafico{
+    margin:15px 0 25px;
+}
+
+.filtro-grafico-titulo{
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+.filtro-grafico-opcoes{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.filtro-check{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    background:#f3f4f6;
+    color:#111;
+    padding:8px 12px;
+    border-radius:999px;
+    cursor:pointer;
+    font-weight:600;
+    transition:.2s;
+}
+
+.filtro-check:hover{
+    background:#dbeafe;
+}
+
+.filtro-check input{
+    cursor:pointer;
+}
+
+.filtro-check.todos{
+    background:#2563eb;
+    color:white;
+}
