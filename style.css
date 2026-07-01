@@ -709,37 +709,50 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
     background:#fffbeb;
 }
 
-.selo-palpite{
-    position:absolute;
-    top:12px;
-    right:12px;
-    background:#f59e0b;
-    color:white;
-    font-size:12px;
-    font-weight:bold;
-    padding:5px 8px;
-    border-radius:999px;
-}
-
 .palpite-topo{
-    display:flex;
-    justify-content:space-between;
+    display:grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items:center;
+    gap:12px;
     margin-bottom:12px;
     font-weight:bold;
 }
 
+.selo-palpite{
+    justify-self:center;
+    background:#f59e0b;
+    color:white;
+    font-size:12px;
+    font-weight:bold;
+    padding:5px 10px;
+    border-radius:999px;
+}
+
+.palpite-topo strong{
+    justify-self:end;
+}
+
 .palpite-confronto{
-    display:flex;
-    justify-content:space-between;
+    display:grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items:center;
     gap:12px;
     font-size:16px;
 }
 
+.palpite-confronto span:first-child{
+    justify-self:start;
+}
+
 .palpite-confronto strong{
-    font-size:22px;
+    justify-self:center;
+    font-size:24px;
     color:#1e3a8a;
+}
+
+.palpite-confronto span:last-child{
+    justify-self:end;
+    text-align:right;
 }
 
 .palpite-penaltis{
