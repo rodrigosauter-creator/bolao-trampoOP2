@@ -1210,3 +1210,108 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
     font-weight:700;
     padding:18px 0;
 }
+
+/* ============================= */
+/* ALINHAMENTO DO CHAVEAMENTO */
+/* ============================= */
+
+.chave-grid{
+    display:grid;
+    grid-template-columns:
+        minmax(190px, 1fr)
+        minmax(190px, 1fr)
+        minmax(190px, 1fr)
+        minmax(190px, 1fr)
+        minmax(210px, 1.1fr)
+        minmax(190px, 1fr)
+        minmax(190px, 1fr)
+        minmax(190px, 1fr)
+        minmax(190px, 1fr);
+
+    gap:20px;
+
+    align-items:start;
+
+    overflow-x:auto;
+
+    padding:20px 10px 30px;
+}
+
+.chave-coluna{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.chave-coluna h3{
+    text-align:center;
+    color:#1e3a8a;
+    margin-bottom:16px;
+}
+
+/* 16-avos */
+.chave-coluna:nth-child(1),
+.chave-coluna:nth-child(9){
+    gap:16px;
+}
+
+/* Oitavas */
+.chave-coluna:nth-child(2),
+.chave-coluna:nth-child(8){
+    padding-top:72px;
+    gap:54px;
+}
+
+/* Quartas */
+.chave-coluna:nth-child(3),
+.chave-coluna:nth-child(7){
+    padding-top:185px;
+    gap:150px;
+}
+
+/* Semifinais */
+.chave-coluna:nth-child(4),
+.chave-coluna:nth-child(6){
+    padding-top:390px;
+    gap:260px;
+}
+
+/* Final e 3º lugar */
+.chave-centro{
+    padding-top:300px;
+    gap:24px;
+}
+
+.titulo-final{
+    text-align:center;
+    font-weight:800;
+    color:#1e3a8a;
+    margin:10px 0 6px;
+}
+
+/* Cards */
+.chave-card{
+    min-height:115px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+    .chave-grid{
+        grid-template-columns:repeat(9, 220px);
+        gap:18px;
+    }
+
+    .chave-coluna:nth-child(2),
+    .chave-coluna:nth-child(8),
+    .chave-coluna:nth-child(3),
+    .chave-coluna:nth-child(7),
+    .chave-coluna:nth-child(4),
+    .chave-coluna:nth-child(6),
+    .chave-centro{
+        padding-top:0;
+    }
+}
