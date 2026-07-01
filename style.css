@@ -1214,3 +1214,53 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
     font-weight:700;
     padding:18px 0;
 }
+
+.card-campeao{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+}
+
+.titulo-campeao{
+
+    font-size:15px;
+
+    font-weight:800;
+
+    color:#1e3a8a;
+
+    margin-bottom:8px;
+
+}
+
+.bandeira-campeao{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:10px;
+
+}
+
+.bandeira-campeao img{
+
+    width:72px;
+
+    height:72px;
+
+}
+
+.nome-campeao{
+
+    font-size:22px;
+
+    font-weight:800;
+
+    color:#111827;
+
+}
