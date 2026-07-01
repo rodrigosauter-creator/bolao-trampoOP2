@@ -441,6 +441,9 @@ document.addEventListener(
 
 function montarJogos(jogos, fase = "todos") {
 
+    const confrontoDefinido =
+    jogo.selecao_a || jogo.selecao_b;
+    
     const jogosFiltrados =
         filtrarJogosPorFase(jogos, fase);
     
@@ -493,39 +496,43 @@ function montarJogos(jogos, fase = "todos") {
                 Jogo ${jogo.jogo}
             </div>
 
-            <div class="jogo-times">
+<div class="jogo-times">
 
-                <div class="time ${
-                    vencedorA ? "vencedor" : ""
-                }">
-
-                    <span class="bandeira">
-                        ${bandeiraA}
-                    </span>
-                    
-                    <span>
-                        ${selecaoA}
-                    </span>
-                </div>
-
-                <div class="placar">
-                    ${placar}
-                </div>
-
-                <div class="time ${
-                    vencedorB ? "vencedor" : ""
-                }">
-
-                    <span class="bandeira">
-                        ${bandeiraB}
-                    </span>
-                    
-                    <span>
-                        ${selecaoB}
-                    </span>
-                </div>
-
+    ${
+        !confrontoDefinido
+        ? `
+            <div class="jogo-confronto-indefinido">
+                ⏳ Aguardando definição do confronto
             </div>
+        `
+        : `
+            <div class="time ${vencedorA ? "vencedor" : ""}">
+                <span class="bandeira">
+                    ${bandeiraA}
+                </span>
+
+                <span>
+                    ${selecaoA}
+                </span>
+            </div>
+
+            <div class="placar">
+                ${placar}
+            </div>
+
+            <div class="time ${vencedorB ? "vencedor" : ""}">
+                <span class="bandeira">
+                    ${bandeiraB}
+                </span>
+
+                <span>
+                    ${selecaoB}
+                </span>
+            </div>
+        `
+    }
+
+</div>
 
             <div class="jogo-status">
 
@@ -543,16 +550,6 @@ function montarJogos(jogos, fase = "todos") {
         </div>
     `
     : ""
-}
-
-${
-    !jogo.selecao_a && !jogo.selecao_b
-        ? `
-        <div class="jogo-aviso">
-            ⏳ Aguardando definição do confronto
-        </div>
-        `
-        : ""
 }
 
             </div>
