@@ -550,7 +550,13 @@ function mostrarApostador(apostador, faseAtual = "todos") {
 
     const posicao =
         infoRanking ? infoRanking.posicao : "-";
+  
+    const pontosRanking =
+    infoRanking ? infoRanking.pontos : apostador.total;
 
+    const acertosRanking =
+        infoRanking ? infoRanking.acertos : apostador.acertos;
+    
     const todosPalpites =
         apostador.palpitesOriginais ||
         apostador.palpites;
@@ -598,11 +604,11 @@ function mostrarApostador(apostador, faseAtual = "todos") {
             </div>
 
             <div class="resumo-card">
-                🏆 ${Number(apostador.total) || 0} pts
+                🏆 ${pontosRanking} pts
             </div>
 
             <div class="resumo-card">
-                🎯 ${Number(apostador.acertos) || 0} acerto(s)
+                🎯 ${acertosRanking} acerto(s)
             </div>
 
         </div>
@@ -618,18 +624,19 @@ function mostrarApostador(apostador, faseAtual = "todos") {
         html += `
             <div class="palpite-card ${acertouEmCheio ? "palpite-card-certo" : ""}">
 
-                ${
-                    acertouEmCheio
-                    ? `<div class="selo-palpite">PLACAR EXATO</div>`
-                    : ""
-                }
-
+                
                 <div class="palpite-topo">
                     <span>
                         ${acertouEmCheio ? "🏆" : "⚽"}
                         Jogo ${palpite.jogo}
                     </span>
-
+                    
+                    ${
+                        acertouEmCheio
+                        ? `<div class="selo-palpite">PLACAR EXATO</div>`
+                        : ""
+                    }        
+                    
                     <strong>
                         ${palpite.pontos} pts
                     </strong>
