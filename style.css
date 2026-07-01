@@ -1100,98 +1100,20 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
 // BANDEIRAS
 // =====================================================
 
-const bandeiras = {
+.bandeira-img{
 
-    "México":"mx",
-    "África do Sul":"za",
-    "Coreia do Sul":"kr",
-    "Tchéquia":"cz",
-    "Canadá":"ca",
-    "Bósnia":"ba",
-    "Bosnia":"ba",
-    "Qatar":"qa",
-    "Catar":"qa",
-    "Suíça":"ch",
-    "Suiça":"ch",
-    "Brasil":"br",
-    "Marrocos":"ma",
-    "Haiti":"ht",
-    "Estados Unidos":"us",
-    "Paraguai":"py",
-    "Austrália":"au",
-    "Turquia":"tr",
-    "Alemanha":"de",
-    "Curaçao":"cw",
-    "Costa do Marfim":"ci",
-    "Equador":"ec",
-    "Holanda":"nl",
-    "Japão":"jp",
-    "Suécia":"se",
-    "Tunísia":"tn",
-    "Bélgica":"be",
-    "Egito":"eg",
-    "Irã":"ir",
-    "Nova Zelândia":"nz",
-    "Espanha":"es",
-    "Cabo Verde":"cv",
-    "Arábia Saudita":"sa",
-    "Uruguai":"uy",
-    "França":"fr",
-    "Senegal":"sn",
-    "Iraque":"iq",
-    "Noruega":"no",
-    "Argentina":"ar",
-    "Argélia":"dz",
-    "Áustria":"at",
-    "Jordânia":"jo",
-    "Portugal":"pt",
-    "RD Congo":"cd",
-    "Uzbequistão":"uz",
-    "Colômbia":"co",
-    "Croácia":"hr",
-    "Gana":"gh",
-    "Panamá":"pa"
+    width:26px;
 
-};
+    height:18px;
 
-function flag(pais){
+    object-fit:cover;
 
-    // Inglaterra e Escócia usam SVG local
+    border-radius:2px;
 
-    if(pais === "Inglaterra"){
+    margin-right:8px;
 
-        return `
-            <img
-                src="imagens/bandeiras/england.svg"
-                class="bandeira-img"
-                alt="Inglaterra">
-        `;
+    vertical-align:middle;
 
-    }
-
-    if(pais === "Escócia"){
-
-        return `
-            <img
-                src="imagens/bandeiras/scotland.svg"
-                class="bandeira-img"
-                alt="Escócia">
-        `;
-
-    }
-
-    const codigo = bandeiras[pais];
-
-    if(!codigo){
-
-        return "";
-    }
-
-    return `
-        <img
-            src="https://flagcdn.com/w40/${codigo}.png"
-            class="bandeira-img"
-            alt="${pais}">
-    `;
+    box-shadow:0 1px 2px rgba(0,0,0,.15);
 
 }
