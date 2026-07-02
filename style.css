@@ -1144,6 +1144,10 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
 /* CHAVEAMENTO - GRID ALINHADO */
 /* ============================= */
 
+#chaveamento{
+    position:relative;
+}
+
 .chave-grid{
     display:grid;
     grid-template-columns:repeat(9, minmax(180px, 1fr));
@@ -1151,6 +1155,7 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
     align-items:center;
     overflow-x:auto;
     padding:20px 0;
+    position:relative;
 }
 
 .titulo-final{
@@ -1171,6 +1176,11 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
     color:#1e3a8a;
 }
 
+.slot-chave{
+    position:relative;
+    z-index:2;
+}
+
 .chave-card{
     background:#fff;
     border:1px solid #e5e7eb;
@@ -1178,6 +1188,8 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
     padding:12px;
     box-shadow:0 4px 12px rgba(0,0,0,.08);
     min-height:95px;
+    position:relative;
+    z-index:2;
 }
 
 .chave-numero{
@@ -1215,149 +1227,74 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
     padding:18px 0;
 }
 
+/* ============================= */
+/* LINHAS DESENHADAS VIA JS */
+/* ============================= */
+
+.linhas-chave{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    z-index:1;
+}
+
+/* ============================= */
+/* CAMPEÃO */
+/* ============================= */
+
 .card-campeao{
-
     text-align:center;
-
     margin-bottom:30px;
-
 }
 
 .titulo-campeao{
-
     font-size:15px;
-
     font-weight:800;
-
     color:#1e3a8a;
-
     margin-bottom:8px;
-
 }
 
 .bandeira-campeao{
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     margin-bottom:10px;
-
+    font-size:72px;
+    line-height:1;
 }
 
 .bandeira-campeao img{
-
     width:72px;
-
     height:72px;
-
 }
 
 .nome-campeao{
-
     font-size:22px;
-
     font-weight:800;
-
     color:#111827;
-
 }
 
 /* ============================= */
-/* AJUSTE VISUAL DO BRACKET */
+/* AJUSTES POR FASE */
 /* ============================= */
 
-.chave-grid-bracket{
-    grid-template-columns: repeat(9, 190px);
-    align-items:start;
-    gap:28px;
-}
-
-.grupo-chave{
-    position:relative;
-    display:flex;
-    flex-direction:column;
-    gap:14px;
-}
-
-/* Espaçamento vertical entre blocos */
-.fase-16avos .grupo-chave{
-    margin-bottom:20px;
-}
-
-.fase-oitavas .grupo-chave{
-    margin-bottom:155px;
-    padding-top:70px;
-}
-
-.fase-quartas .grupo-chave{
-    margin-bottom:370px;
-    padding-top:195px;
+.chave-centro{
+    align-self:center;
 }
 
 .fase-semis{
-    padding-top:455px;
+    align-self:center;
 }
 
-.chave-centro{
-    padding-top:300px;
-}
+/* ============================= */
+/* MOBILE */
+/* ============================= */
 
-/* Linhas do lado esquerdo */
-.esquerda .grupo-chave::before{
-    content:"";
-    position:absolute;
-    right:-28px;
-    top:47px;
-    width:28px;
-    border-top:2px solid #111;
-}
-
-.esquerda .grupo-chave::after{
-    content:"";
-    position:absolute;
-    right:-28px;
-    top:47px;
-    height:109px;
-    border-right:2px solid #111;
-}
-
-/* Linhas do lado direito */
-.direita .grupo-chave::before{
-    content:"";
-    position:absolute;
-    left:-28px;
-    top:47px;
-    width:28px;
-    border-top:2px solid #111;
-}
-
-.direita .grupo-chave::after{
-    content:"";
-    position:absolute;
-    left:-28px;
-    top:47px;
-    height:109px;
-    border-left:2px solid #111;
-}
-
-/* Linhas maiores entre fases */
-.fase-oitavas.esquerda .grupo-chave::before,
-.fase-quartas.esquerda .grupo-chave::before{
-    right:-28px;
-}
-
-.fase-oitavas.direita .grupo-chave::before,
-.fase-quartas.direita .grupo-chave::before{
-    left:-28px;
-}
-
-/* Ajuste mobile */
 @media(max-width:900px){
-    .chave-grid-bracket{
-        grid-template-columns: repeat(9, 190px);
+    .chave-grid{
+        grid-template-columns:repeat(9, 190px);
         overflow-x:auto;
     }
 }
