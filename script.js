@@ -1023,160 +1023,69 @@ function montarChaveamento() {
     if (!container) return;
 
     container.innerHTML = `
-        <div class="chave-area">
+        <div class="bracket-wrapper">
 
-            <h3 class="titulo-fase" style="left:20px; top:10px;">16-Avos</h3>
-            <h3 class="titulo-fase" style="left:300px; top:280px;">Oitavas</h3>
-            <h3 class="titulo-fase" style="left:580px; top:430px;">Quartas</h3>
-            <h3 class="titulo-fase" style="left:860px; top:540px;">Semifinais</h3>
+            <div class="bracket-side left-side">
 
-            ${slotChave(75, 20, 70)}
-            ${slotChave(78, 20, 225)}
-            ${slotChave(73, 20, 380)}
-            ${slotChave(76, 20, 535)}
-            ${slotChave(84, 20, 690)}
-            ${slotChave(83, 20, 845)}
-            ${slotChave(82, 20, 1000)}
-            ${slotChave(81, 20, 1155)}
+                <div class="bracket-round">
+                    <h3>16-Avos</h3>
+                    ${[75,78,73,76,84,83,82,81].map(cardChave).join("")}
+                </div>
 
-            ${slotChave(90, 300, 300)}
-            ${slotChave(89, 300, 455)}
-            ${slotChave(93, 300, 765)}
-            ${slotChave(94, 300, 920)}
+                <div class="bracket-round round-oitavas">
+                    <h3>Oitavas</h3>
+                    ${[90,89,93,94].map(cardChave).join("")}
+                </div>
 
-            ${slotChave(97, 580, 500)}
-            ${slotChave(98, 580, 820)}
+                <div class="bracket-round round-quartas">
+                    <h3>Quartas</h3>
+                    ${[97,98].map(cardChave).join("")}
+                </div>
 
-            ${slotChave(101, 860, 650)}
+                <div class="bracket-round round-semis">
+                    <h3>Semifinais</h3>
+                    ${cardChave(101)}
+                </div>
 
-            <div class="centro-final" style="left:1140px; top:330px;">
-                ${cardCampeao()}
-                <div class="titulo-final">🏆 Final</div>
-                ${slotChave(104, 0, 180)}
-                <div class="titulo-final">🥉 3º Lugar</div>
-                ${slotChave(103, 0, 350)}
             </div>
 
-            <h3 class="titulo-fase" style="left:1420px; top:540px;">Semifinais</h3>
-            <h3 class="titulo-fase" style="left:1700px; top:430px;">Quartas</h3>
-            <h3 class="titulo-fase" style="left:1980px; top:280px;">Oitavas</h3>
-            <h3 class="titulo-fase" style="left:2260px; top:10px;">16-Avos</h3>
+            <div class="bracket-center">
+                ${cardCampeao()}
 
-            ${slotChave(102, 1420, 650)}
+                <div class="titulo-final">🏆 Final</div>
+                ${cardChave(104)}
 
-            ${slotChave(99, 1700, 500)}
-            ${slotChave(100, 1700, 820)}
+                <div class="titulo-final">🥉 3º Lugar</div>
+                ${cardChave(103)}
+            </div>
 
-            ${slotChave(91, 1980, 300)}
-            ${slotChave(92, 1980, 455)}
-            ${slotChave(95, 1980, 765)}
-            ${slotChave(96, 1980, 920)}
+            <div class="bracket-side right-side">
 
-            ${slotChave(74, 2260, 70)}
-            ${slotChave(77, 2260, 225)}
-            ${slotChave(79, 2260, 380)}
-            ${slotChave(80, 2260, 535)}
-            ${slotChave(87, 2260, 690)}
-            ${slotChave(86, 2260, 845)}
-            ${slotChave(85, 2260, 1000)}
-            ${slotChave(88, 2260, 1155)}
+                <div class="bracket-round round-semis">
+                    <h3>Semifinais</h3>
+                    ${cardChave(102)}
+                </div>
+
+                <div class="bracket-round round-quartas">
+                    <h3>Quartas</h3>
+                    ${[99,100].map(cardChave).join("")}
+                </div>
+
+                <div class="bracket-round round-oitavas">
+                    <h3>Oitavas</h3>
+                    ${[91,92,95,96].map(cardChave).join("")}
+                </div>
+
+                <div class="bracket-round">
+                    <h3>16-Avos</h3>
+                    ${[74,77,79,80,87,86,85,88].map(cardChave).join("")}
+                </div>
+
+            </div>
 
         </div>
     `;
-
-    setTimeout(desenharLinhasChave, 300);
 }
-
-function desenharLinhasChave() {
-    const container = document.getElementById("chaveamento");
-    if (!container) return;
-
-    const antiga = container.querySelector(".linhas-chave");
-    if (antiga) antiga.remove();
-
-    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-    svg.classList.add("linhas-chave");
-    container.appendChild(svg);
-
-    svg.setAttribute("width", container.scrollWidth);
-    svg.setAttribute("height", container.scrollHeight);
-    svg.setAttribute("viewBox", `0 0 ${container.scrollWidth} ${container.scrollHeight}`);
-    
-    const grid = container.querySelector(".chave-grid");
-    const rectContainer = container.getBoundingClientRect();
-
-if (!grid) return;
-
-    const conexoes = [
-        [75, 78, 90],
-        [73, 76, 89],
-        [84, 83, 93],
-        [82, 81, 94],
-
-        [90, 89, 97],
-        [93, 94, 98],
-        [97, 98, 101],
-
-        [74, 77, 91],
-        [79, 80, 92],
-        [87, 86, 95],
-        [85, 88, 96],
-
-        [91, 92, 99],
-        [95, 96, 100],
-        [99, 100, 102]
-    ];
-
-    conexoes.forEach(([jogoA, jogoB, jogoDestino]) => {
-        const a = container.querySelector(`[data-jogo="${jogoA}"]`);
-        const b = container.querySelector(`[data-jogo="${jogoB}"]`);
-        const destino = container.querySelector(`[data-jogo="${jogoDestino}"]`);
-
-        if (!a || !b || !destino) return;
-
-        const ra = a.getBoundingClientRect();
-        const rb = b.getBoundingClientRect();
-        const rd = destino.getBoundingClientRect();
-
-        const ladoEsquerdo = ra.left < rd.left;
-
-        const xA = ladoEsquerdo ? ra.right - rectContainer.left : ra.left - rectContainer.left;
-        const yA = ra.top + ra.height / 2 - rectContainer.top;
-
-        const xB = ladoEsquerdo ? rb.right - rectContainer.left : rb.left - rectContainer.left;
-        const yB = rb.top + rb.height / 2 - rectContainer.top;
-
-        const xD = ladoEsquerdo ? rd.left - rectContainer.left : rd.right - rectContainer.left;
-
-        const xMeio = ladoEsquerdo
-            ? xA + (xD - xA) / 2
-            : xA - (xA - xD) / 2;
-
-        const yMeio = (yA + yB) / 2;
-
-        const path = `
-            M ${xA} ${yA}
-            H ${xMeio}
-            V ${yB}
-            H ${xB}
-            M ${xMeio} ${yMeio}
-            H ${xD}
-        `;
-
-        const linha = document.createElementNS("http://www.w3.org/2000/svg", "path");
-        linha.setAttribute("d", path);
-        linha.setAttribute("fill", "none");
-        linha.setAttribute("stroke", "#111");
-        linha.setAttribute("stroke-width", "2");
-
-        svg.appendChild(linha);
-
-        console.log("Linhas desenhadas:", svg.querySelectorAll("path").length);
-        
-    });
-}
-
-window.addEventListener("resize", desenharLinhasChave);
 
 function cardCampeao(){
 
