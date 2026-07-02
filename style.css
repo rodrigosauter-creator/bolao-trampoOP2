@@ -1264,3 +1264,106 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
     color:#111827;
 
 }
+
+/* ============================= */
+/* AJUSTE VISUAL DO BRACKET */
+/* ============================= */
+
+.chave-grid-bracket{
+    grid-template-columns: repeat(9, 190px);
+    align-items:start;
+    gap:28px;
+}
+
+.grupo-chave{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+/* Espaçamento vertical entre blocos */
+.fase-16avos .grupo-chave{
+    margin-bottom:20px;
+}
+
+.fase-oitavas .grupo-chave{
+    margin-bottom:134px;
+    padding-top:57px;
+}
+
+.fase-quartas .grupo-chave{
+    margin-bottom:350px;
+    padding-top:160px;
+}
+
+.fase-semis{
+    padding-top:390px;
+}
+
+.chave-centro{
+    padding-top:255px;
+}
+
+/* Linhas do lado esquerdo */
+.esquerda .grupo-chave::before{
+    content:"";
+    position:absolute;
+    right:-28px;
+    top:47px;
+    width:28px;
+    border-top:2px solid #111;
+}
+
+.esquerda .grupo-chave::after{
+    content:"";
+    position:absolute;
+    right:-28px;
+    top:47px;
+    height:109px;
+    border-right:2px solid #111;
+}
+
+/* Linhas do lado direito */
+.direita .grupo-chave::before{
+    content:"";
+    position:absolute;
+    left:-28px;
+    top:47px;
+    width:28px;
+    border-top:2px solid #111;
+}
+
+.direita .grupo-chave::after{
+    content:"";
+    position:absolute;
+    left:-28px;
+    top:47px;
+    height:109px;
+    border-left:2px solid #111;
+}
+
+/* Remove linha vertical onde só há um card */
+.fase-oitavas .grupo-chave::after,
+.fase-quartas .grupo-chave::after{
+    display:none;
+}
+
+/* Linhas maiores entre fases */
+.fase-oitavas.esquerda .grupo-chave::before,
+.fase-quartas.esquerda .grupo-chave::before{
+    right:-28px;
+}
+
+.fase-oitavas.direita .grupo-chave::before,
+.fase-quartas.direita .grupo-chave::before{
+    left:-28px;
+}
+
+/* Ajuste mobile */
+@media(max-width:900px){
+    .chave-grid-bracket{
+        grid-template-columns: repeat(9, 190px);
+        overflow-x:auto;
+    }
+}
