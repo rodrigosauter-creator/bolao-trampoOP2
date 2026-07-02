@@ -1141,7 +1141,7 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
 }
 
 /* ============================= */
-/* CHAVEAMENTO NOVO */
+/* CHAVEAMENTO - NOVO MODELO */
 /* ============================= */
 
 #chaveamento{
@@ -1150,68 +1150,118 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
     padding:20px 0;
 }
 
-.bracket-wrapper{
+.mata-mata{
+    min-width:2200px;
     display:flex;
-    align-items:center;
     justify-content:center;
-    gap:36px;
-    min-width:2100px;
+    align-items:center;
+    gap:40px;
 }
 
-/* LADOS DO BRACKET */
-
-.bracket-side{
+.lado-chave{
     display:flex;
     align-items:center;
-    gap:36px;
+    gap:32px;
 }
 
-.right-side{
+.lado-direito{
     flex-direction:row;
 }
 
-.left-side{
-    flex-direction:row;
+.fase{
+    display:flex;
+    flex-direction:column;
+    gap:32px;
 }
 
-/* RODADAS */
+.fase h3{
+    text-align:center;
+    color:#1e3a8a;
+    font-weight:800;
+    margin-bottom:8px;
+}
 
-.bracket-round{
+.confronto{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
+
+.confronto-origem{
     display:flex;
     flex-direction:column;
     gap:14px;
+}
+
+.confronto-destino{
+    display:flex;
+    align-items:center;
+}
+
+/* linha entre dois jogos e o próximo */
+.linha-confronto{
+    width:34px;
+    height:110px;
     position:relative;
+    border-right:2px solid #111;
 }
 
-.bracket-round h3{
-    text-align:center;
-    color:#1e3a8a;
-    margin-bottom:10px;
-    font-weight:800;
+.linha-confronto::before,
+.linha-confronto::after{
+    content:"";
+    position:absolute;
+    right:0;
+    width:34px;
+    border-top:2px solid #111;
 }
 
-/* Espaçamentos para centralizar fases */
-
-.round-oitavas{
-    gap:118px;
-    margin-top:78px;
+.linha-confronto::before{
+    top:0;
 }
 
-.round-quartas{
+.linha-confronto::after{
+    bottom:0;
+}
+
+.linha-confronto{
+    margin-right:-18px;
+}
+
+/* Lado direito espelhado */
+.lado-direito .confronto{
+    flex-direction:row-reverse;
+}
+
+.lado-direito .linha-confronto{
+    border-right:none;
+    border-left:2px solid #111;
+    margin-right:0;
+    margin-left:-18px;
+}
+
+.lado-direito .linha-confronto::before,
+.lado-direito .linha-confronto::after{
+    right:auto;
+    left:0;
+}
+
+/* Espaçamento por fase */
+.fase-oitavas{
+    gap:170px;
+}
+
+.fase-quartas{
     gap:360px;
-    margin-top:230px;
 }
 
-.round-semis{
-    margin-top:430px;
+.fase-semis{
+    justify-content:center;
 }
 
-/* CENTRO */
-
-.bracket-center{
-    width:230px;
+/* Centro */
+.centro-chave{
+    width:220px;
     text-align:center;
-    margin-top:250px;
 }
 
 .titulo-final{
@@ -1221,8 +1271,7 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
     margin:14px 0 8px;
 }
 
-/* CARDS */
-
+/* Cards */
 .chave-card{
     width:200px;
     background:#fff;
@@ -1231,7 +1280,6 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
     padding:12px;
     box-shadow:0 4px 12px rgba(0,0,0,.08);
     min-height:95px;
-    position:relative;
 }
 
 .chave-numero{
@@ -1269,8 +1317,7 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
     padding:18px 0;
 }
 
-/* CAMPEÃO */
-
+/* Campeão */
 .card-campeao{
     text-align:center;
     margin-bottom:24px;
