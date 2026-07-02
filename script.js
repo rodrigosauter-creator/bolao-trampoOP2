@@ -1002,129 +1002,157 @@ function cardChave(numero) {
     `;
 }
 
+function slotChave(numero) {
+    return `
+        <div class="slot-chave" data-jogo="${numero}">
+            ${cardChave(numero)}
+        </div>
+    `;
+}
+
 function montarChaveamento() {
     const container = document.getElementById("chaveamento");
     if (!container) return;
 
     container.innerHTML = `
-        <div class="chave-grid chave-grid-bracket">
+        <div class="chave-grid">
 
-            <div class="chave-coluna fase-16avos esquerda">
+            <div class="chave-coluna">
                 <h3>16-Avos</h3>
-
-                <div class="grupo-chave">
-                    ${cardChave(75)}
-                    ${cardChave(78)}
-                </div>
-
-                <div class="grupo-chave">
-                    ${cardChave(73)}
-                    ${cardChave(76)}
-                </div>
-
-                <div class="grupo-chave">
-                    ${cardChave(84)}
-                    ${cardChave(83)}
-                </div>
-
-                <div class="grupo-chave">
-                    ${cardChave(82)}
-                    ${cardChave(81)}
-                </div>
+                ${[75, 78, 73, 76, 84, 83, 82, 81].map(slotChave).join("")}
             </div>
 
-            <div class="chave-coluna fase-oitavas esquerda">
-    <h3>Oitavas</h3>
+            <div class="chave-coluna">
+                <h3>Oitavas</h3>
+                ${[90, 89, 93, 94].map(slotChave).join("")}
+            </div>
 
-    <div class="grupo-chave">
-        ${cardChave(90)}
-        ${cardChave(89)}
-    </div>
+            <div class="chave-coluna">
+                <h3>Quartas</h3>
+                ${[97, 98].map(slotChave).join("")}
+            </div>
 
-    <div class="grupo-chave">
-        ${cardChave(93)}
-        ${cardChave(94)}
-    </div>
-</div>
-
-<div class="chave-coluna fase-quartas esquerda">
-    <h3>Quartas</h3>
-
-    <div class="grupo-chave">
-        ${cardChave(97)}
-        ${cardChave(98)}
-    </div>
-</div>
-
-            <div class="chave-coluna fase-semis esquerda">
+            <div class="chave-coluna">
                 <h3>Semifinais</h3>
-                ${cardChave(101)}
+                ${slotChave(101)}
             </div>
 
             <div class="chave-coluna chave-centro">
                 ${cardCampeao()}
 
                 <div class="titulo-final">🏆 Final</div>
-                ${cardChave(104)}
+                ${slotChave(104)}
 
                 <div class="titulo-final">🥉 3º Lugar</div>
-                ${cardChave(103)}
+                ${slotChave(103)}
             </div>
 
-            <div class="chave-coluna fase-semis direita">
+            <div class="chave-coluna">
                 <h3>Semifinais</h3>
-                ${cardChave(102)}
+                ${slotChave(102)}
             </div>
 
-            <div class="chave-coluna fase-quartas direita">
-    <h3>Quartas</h3>
+            <div class="chave-coluna">
+                <h3>Quartas</h3>
+                ${[99, 100].map(slotChave).join("")}
+            </div>
 
-    <div class="grupo-chave">
-        ${cardChave(99)}
-        ${cardChave(100)}
-    </div>
-</div>
+            <div class="chave-coluna">
+                <h3>Oitavas</h3>
+                ${[91, 92, 95, 96].map(slotChave).join("")}
+            </div>
 
-<div class="chave-coluna fase-oitavas direita">
-    <h3>Oitavas</h3>
-
-    <div class="grupo-chave">
-        ${cardChave(91)}
-        ${cardChave(92)}
-    </div>
-
-    <div class="grupo-chave">
-        ${cardChave(95)}
-        ${cardChave(96)}
-    </div>
-</div>
-            <div class="chave-coluna fase-16avos direita">
+            <div class="chave-coluna">
                 <h3>16-Avos</h3>
-
-                <div class="grupo-chave">
-                    ${cardChave(74)}
-                    ${cardChave(77)}
-                </div>
-
-                <div class="grupo-chave">
-                    ${cardChave(79)}
-                    ${cardChave(80)}
-                </div>
-
-                <div class="grupo-chave">
-                    ${cardChave(87)}
-                    ${cardChave(86)}
-                </div>
-
-                <div class="grupo-chave">
-                    ${cardChave(85)}
-                    ${cardChave(88)}
-                </div>
+                ${[74, 77, 79, 80, 87, 86, 85, 88].map(slotChave).join("")}
             </div>
 
         </div>
     `;
+
+    requestAnimationFrame(desenharLinhasChave);
 }
+
+function desenharLinhasChave() {
+    const container = document.getElementById("chaveamento");
+    if (!container) return;
+
+    const antiga = container.querySelector(".linhas-chave");
+    if (antiga) antiga.remove();
+
+    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.classList.add("linhas-chave");
+    container.appendChild(svg);
+
+    const rectContainer = container.getBoundingClientRect();
+
+    const conexoes = [
+        [75, 78, 90],
+        [73, 76, 89],
+        [84, 83, 93],
+        [82, 81, 94],
+
+        [90, 89, 97],
+        [93, 94, 98],
+        [97, 98, 101],
+
+        [74, 77, 91],
+        [79, 80, 92],
+        [87, 86, 95],
+        [85, 88, 96],
+
+        [91, 92, 99],
+        [95, 96, 100],
+        [99, 100, 102]
+    ];
+
+    conexoes.forEach(([jogoA, jogoB, jogoDestino]) => {
+        const a = container.querySelector(`[data-jogo="${jogoA}"]`);
+        const b = container.querySelector(`[data-jogo="${jogoB}"]`);
+        const destino = container.querySelector(`[data-jogo="${jogoDestino}"]`);
+
+        if (!a || !b || !destino) return;
+
+        const ra = a.getBoundingClientRect();
+        const rb = b.getBoundingClientRect();
+        const rd = destino.getBoundingClientRect();
+
+        const ladoEsquerdo = ra.left < rd.left;
+
+        const xA = ladoEsquerdo ? ra.right - rectContainer.left : ra.left - rectContainer.left;
+        const yA = ra.top + ra.height / 2 - rectContainer.top;
+
+        const xB = ladoEsquerdo ? rb.right - rectContainer.left : rb.left - rectContainer.left;
+        const yB = rb.top + rb.height / 2 - rectContainer.top;
+
+        const xD = ladoEsquerdo ? rd.left - rectContainer.left : rd.right - rectContainer.left;
+
+        const xMeio = ladoEsquerdo
+            ? xA + (xD - xA) / 2
+            : xA - (xA - xD) / 2;
+
+        const yMeio = (yA + yB) / 2;
+
+        const path = `
+            M ${xA} ${yA}
+            H ${xMeio}
+            V ${yB}
+            H ${xB}
+            M ${xMeio} ${yMeio}
+            H ${xD}
+        `;
+
+        const linha = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        linha.setAttribute("d", path);
+        linha.setAttribute("fill", "none");
+        linha.setAttribute("stroke", "#111");
+        linha.setAttribute("stroke-width", "2");
+
+        svg.appendChild(linha);
+    });
+}
+
+window.addEventListener("resize", desenharLinhasChave);
 
 function cardCampeao(){
 
@@ -1140,7 +1168,6 @@ function cardCampeao(){
             : final.vencedor;
 
         bandeira = flag(nome);
-
     }
 
     return `
