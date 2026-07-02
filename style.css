@@ -1147,7 +1147,7 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
 #chaveamento{
     width:100%;
     overflow-x:auto;
-    padding:20px 0;
+    padding:20px 24px;
 }
 
 .mata-mata{
@@ -1248,14 +1248,16 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
 /* Espaçamento por fase */
 .fase-oitavas{
     gap:170px;
+    margin-top:120px;
 }
 
 .fase-quartas{
     gap:360px;
+    margin-top:300px;
 }
 
 .fase-semis{
-    justify-content:center;
+    margin-top:430px;
 }
 
 /* Centro */
