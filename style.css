@@ -1288,21 +1288,21 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
 }
 
 .fase-oitavas .grupo-chave{
-    margin-bottom:134px;
-    padding-top:57px;
+    margin-bottom:155px;
+    padding-top:70px;
 }
 
 .fase-quartas .grupo-chave{
-    margin-bottom:350px;
-    padding-top:160px;
+    margin-bottom:370px;
+    padding-top:195px;
 }
 
 .fase-semis{
-    padding-top:390px;
+    padding-top:455px;
 }
 
 .chave-centro{
-    padding-top:255px;
+    padding-top:300px;
 }
 
 /* Linhas do lado esquerdo */
@@ -1341,12 +1341,6 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
     top:47px;
     height:109px;
     border-left:2px solid #111;
-}
-
-/* Remove linha vertical onde só há um card */
-.fase-oitavas .grupo-chave::after,
-.fase-quartas .grupo-chave::after{
-    display:none;
 }
 
 /* Linhas maiores entre fases */
