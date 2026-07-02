@@ -1007,60 +1007,138 @@ function montarChaveamento() {
     if (!container) return;
 
     container.innerHTML = `
-        <div class="chave-grid">
+        <div class="chave-grid chave-grid-bracket">
 
-            <div class="chave-coluna">
+            <div class="chave-coluna fase-16avos esquerda">
                 <h3>16-Avos</h3>
-                ${[75, 78, 73, 76, 84, 83, 82, 81].map(cardChave).join("")}
+
+                <div class="grupo-chave">
+                    ${cardChave(75)}
+                    ${cardChave(78)}
+                </div>
+
+                <div class="grupo-chave">
+                    ${cardChave(73)}
+                    ${cardChave(76)}
+                </div>
+
+                <div class="grupo-chave">
+                    ${cardChave(84)}
+                    ${cardChave(83)}
+                </div>
+
+                <div class="grupo-chave">
+                    ${cardChave(82)}
+                    ${cardChave(81)}
+                </div>
             </div>
 
-            <div class="chave-coluna">
+            <div class="chave-coluna fase-oitavas esquerda">
                 <h3>Oitavas</h3>
-                ${[90, 89, 93, 94].map(cardChave).join("")}
+
+                <div class="grupo-chave">
+                    ${cardChave(90)}
+                </div>
+
+                <div class="grupo-chave">
+                    ${cardChave(89)}
+                </div>
+
+                <div class="grupo-chave">
+                    ${cardChave(93)}
+                </div>
+
+                <div class="grupo-chave">
+                    ${cardChave(94)}
+                </div>
             </div>
 
-            <div class="chave-coluna">
+            <div class="chave-coluna fase-quartas esquerda">
                 <h3>Quartas</h3>
-                ${[97, 98].map(cardChave).join("")}
+
+                <div class="grupo-chave">
+                    ${cardChave(97)}
+                </div>
+
+                <div class="grupo-chave">
+                    ${cardChave(98)}
+                </div>
             </div>
 
-            <div class="chave-coluna">
+            <div class="chave-coluna fase-semis esquerda">
                 <h3>Semifinais</h3>
-                ${[101].map(cardChave).join("")}
+                ${cardChave(101)}
             </div>
 
-<div class="chave-coluna chave-centro">
+            <div class="chave-coluna chave-centro">
+                ${cardCampeao()}
 
-    ${cardCampeao()}
-
-    <div class="titulo-final">
-        🏆 Final
-    </div>
-
-    ${cardChave(104)}
+                <div class="titulo-final">🏆 Final</div>
+                ${cardChave(104)}
 
                 <div class="titulo-final">🥉 3º Lugar</div>
                 ${cardChave(103)}
             </div>
 
-            <div class="chave-coluna">
+            <div class="chave-coluna fase-semis direita">
                 <h3>Semifinais</h3>
-                ${[102].map(cardChave).join("")}
+                ${cardChave(102)}
             </div>
 
-            <div class="chave-coluna">
+            <div class="chave-coluna fase-quartas direita">
                 <h3>Quartas</h3>
-                ${[99, 100].map(cardChave).join("")}
+
+                <div class="grupo-chave">
+                    ${cardChave(99)}
+                </div>
+
+                <div class="grupo-chave">
+                    ${cardChave(100)}
+                </div>
             </div>
 
-            <div class="chave-coluna">
+            <div class="chave-coluna fase-oitavas direita">
                 <h3>Oitavas</h3>
-                ${[91, 92, 95, 96].map(cardChave).join("")}
+
+                <div class="grupo-chave">
+                    ${cardChave(91)}
+                </div>
+
+                <div class="grupo-chave">
+                    ${cardChave(92)}
+                </div>
+
+                <div class="grupo-chave">
+                    ${cardChave(95)}
+                </div>
+
+                <div class="grupo-chave">
+                    ${cardChave(96)}
+                </div>
             </div>
 
-            <div class="chave-coluna">
+            <div class="chave-coluna fase-16avos direita">
                 <h3>16-Avos</h3>
-                ${[74, 77, 79, 80, 87, 86, 85, 88].map(cardChave).join("")}
+
+                <div class="grupo-chave">
+                    ${cardChave(74)}
+                    ${cardChave(77)}
+                </div>
+
+                <div class="grupo-chave">
+                    ${cardChave(79)}
+                    ${cardChave(80)}
+                </div>
+
+                <div class="grupo-chave">
+                    ${cardChave(87)}
+                    ${cardChave(86)}
+                </div>
+
+                <div class="grupo-chave">
+                    ${cardChave(85)}
+                    ${cardChave(88)}
+                </div>
             </div>
 
         </div>
