@@ -1010,67 +1010,81 @@ function slotChave(numero) {
     `;
 }
 
+function slotChave(numero, coluna, y) {
+    return `
+        <div class="slot-chave" data-jogo="${numero}" style="left:${coluna}px; top:${y}px;">
+            ${cardChave(numero)}
+        </div>
+    `;
+}
+
 function montarChaveamento() {
     const container = document.getElementById("chaveamento");
     if (!container) return;
 
     container.innerHTML = `
-        <div class="chave-grid">
+        <div class="chave-area">
 
-            <div class="chave-coluna">
-                <h3>16-Avos</h3>
-                ${[75, 78, 73, 76, 84, 83, 82, 81].map(slotChave).join("")}
-            </div>
+            <h3 class="titulo-fase" style="left:20px; top:10px;">16-Avos</h3>
+            <h3 class="titulo-fase" style="left:300px; top:280px;">Oitavas</h3>
+            <h3 class="titulo-fase" style="left:580px; top:430px;">Quartas</h3>
+            <h3 class="titulo-fase" style="left:860px; top:540px;">Semifinais</h3>
 
-            <div class="chave-coluna">
-                <h3>Oitavas</h3>
-                ${[90, 89, 93, 94].map(slotChave).join("")}
-            </div>
+            ${slotChave(75, 20, 70)}
+            ${slotChave(78, 20, 225)}
+            ${slotChave(73, 20, 380)}
+            ${slotChave(76, 20, 535)}
+            ${slotChave(84, 20, 690)}
+            ${slotChave(83, 20, 845)}
+            ${slotChave(82, 20, 1000)}
+            ${slotChave(81, 20, 1155)}
 
-            <div class="chave-coluna">
-                <h3>Quartas</h3>
-                ${[97, 98].map(slotChave).join("")}
-            </div>
+            ${slotChave(90, 300, 300)}
+            ${slotChave(89, 300, 455)}
+            ${slotChave(93, 300, 765)}
+            ${slotChave(94, 300, 920)}
 
-            <div class="chave-coluna">
-                <h3>Semifinais</h3>
-                ${slotChave(101)}
-            </div>
+            ${slotChave(97, 580, 500)}
+            ${slotChave(98, 580, 820)}
 
-            <div class="chave-coluna chave-centro">
+            ${slotChave(101, 860, 650)}
+
+            <div class="centro-final" style="left:1140px; top:330px;">
                 ${cardCampeao()}
-
                 <div class="titulo-final">🏆 Final</div>
-                ${slotChave(104)}
-
+                ${slotChave(104, 0, 180)}
                 <div class="titulo-final">🥉 3º Lugar</div>
-                ${slotChave(103)}
+                ${slotChave(103, 0, 350)}
             </div>
 
-            <div class="chave-coluna">
-                <h3>Semifinais</h3>
-                ${slotChave(102)}
-            </div>
+            <h3 class="titulo-fase" style="left:1420px; top:540px;">Semifinais</h3>
+            <h3 class="titulo-fase" style="left:1700px; top:430px;">Quartas</h3>
+            <h3 class="titulo-fase" style="left:1980px; top:280px;">Oitavas</h3>
+            <h3 class="titulo-fase" style="left:2260px; top:10px;">16-Avos</h3>
 
-            <div class="chave-coluna">
-                <h3>Quartas</h3>
-                ${[99, 100].map(slotChave).join("")}
-            </div>
+            ${slotChave(102, 1420, 650)}
 
-            <div class="chave-coluna">
-                <h3>Oitavas</h3>
-                ${[91, 92, 95, 96].map(slotChave).join("")}
-            </div>
+            ${slotChave(99, 1700, 500)}
+            ${slotChave(100, 1700, 820)}
 
-            <div class="chave-coluna">
-                <h3>16-Avos</h3>
-                ${[74, 77, 79, 80, 87, 86, 85, 88].map(slotChave).join("")}
-            </div>
+            ${slotChave(91, 1980, 300)}
+            ${slotChave(92, 1980, 455)}
+            ${slotChave(95, 1980, 765)}
+            ${slotChave(96, 1980, 920)}
+
+            ${slotChave(74, 2260, 70)}
+            ${slotChave(77, 2260, 225)}
+            ${slotChave(79, 2260, 380)}
+            ${slotChave(80, 2260, 535)}
+            ${slotChave(87, 2260, 690)}
+            ${slotChave(86, 2260, 845)}
+            ${slotChave(85, 2260, 1000)}
+            ${slotChave(88, 2260, 1155)}
 
         </div>
     `;
 
-    requestAnimationFrame(desenharLinhasChave);
+    setTimeout(desenharLinhasChave, 300);
 }
 
 function desenharLinhasChave() {
