@@ -1146,6 +1146,8 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
 
 #chaveamento{
     position:relative;
+    overflow-x:auto;
+    overflow-y:visible;
 }
 
 .chave-grid{
@@ -1153,9 +1155,10 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
     grid-template-columns:repeat(9, minmax(180px, 1fr));
     gap:20px;
     align-items:center;
-    overflow-x:auto;
     padding:20px 0;
     position:relative;
+    overflow:visible;
+    min-width:1800px;
 }
 
 .titulo-final{
@@ -1178,7 +1181,7 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
 
 .slot-chave{
     position:relative;
-    z-index:2;
+    z-index:10;
 }
 
 .chave-card{
@@ -1189,7 +1192,7 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
     box-shadow:0 4px 12px rgba(0,0,0,.08);
     min-height:95px;
     position:relative;
-    z-index:2;
+    z-index:10;
 }
 
 .chave-numero{
@@ -1233,9 +1236,11 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
 
 .linhas-chave{
     position:absolute;
-    inset:0;
+    top:0;
+    left:0;
     width:100%;
     height:100%;
+    min-height:900px;
     pointer-events:none;
     z-index:1;
 }
