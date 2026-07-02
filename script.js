@@ -1002,89 +1002,41 @@ function cardChave(numero) {
     `;
 }
 
-function confronto(jogo1, jogo2) {
-    return `
-        <div class="confronto">
-            <div class="confronto-origem">
-                ${cardChave(jogo1)}
-                ${cardChave(jogo2)}
-            </div>
-            <div class="linha-confronto"></div>
-        </div>
-    `;
-}
-
 function montarChaveamento() {
     const container = document.getElementById("chaveamento");
     if (!container) return;
 
     container.innerHTML = `
-        <div class="mata-mata">
+        <div class="chave-simples">
 
-            <div class="lado-chave lado-esquerdo">
-
-                <div class="fase fase-16avos">
-                    <h3>16-Avos</h3>
-                    ${confronto(75, 78)}
-                    ${confronto(73, 76)}
-                    ${confronto(84, 83)}
-                    ${confronto(82, 81)}
-                </div>
-
-                <div class="fase fase-oitavas">
-                    <h3>Oitavas</h3>
-                    ${confronto(90, 89)}
-                    ${confronto(93, 94)}
-                </div>
-
-                <div class="fase fase-quartas">
-                    <h3>Quartas</h3>
-                    ${confronto(97, 98)}
-                </div>
-
-                <div class="fase fase-semis">
-                    <h3>Semifinais</h3>
-                    ${cardChave(101)}
-                </div>
-
+            <div class="chave-fase">
+                <h3>16-Avos</h3>
+                ${[75, 78, 73, 76, 84, 83, 82, 81, 74, 77, 79, 80, 87, 86, 85, 88].map(cardChave).join("")}
             </div>
 
-            <div class="centro-chave">
+            <div class="chave-fase">
+                <h3>Oitavas</h3>
+                ${[90, 89, 93, 94, 91, 92, 95, 96].map(cardChave).join("")}
+            </div>
+
+            <div class="chave-fase">
+                <h3>Quartas</h3>
+                ${[97, 98, 99, 100].map(cardChave).join("")}
+            </div>
+
+            <div class="chave-fase">
+                <h3>Semifinais</h3>
+                ${[101, 102].map(cardChave).join("")}
+            </div>
+
+            <div class="chave-fase chave-final">
                 ${cardCampeao()}
 
-                <div class="titulo-final">🏆 Final</div>
+                <h3>Final</h3>
                 ${cardChave(104)}
 
-                <div class="titulo-final">🥉 3º Lugar</div>
+                <h3>3º Lugar</h3>
                 ${cardChave(103)}
-            </div>
-
-            <div class="lado-chave lado-direito">
-
-                <div class="fase fase-semis">
-                    <h3>Semifinais</h3>
-                    ${cardChave(102)}
-                </div>
-
-                <div class="fase fase-quartas">
-                    <h3>Quartas</h3>
-                    ${confronto(99, 100)}
-                </div>
-
-                <div class="fase fase-oitavas">
-                    <h3>Oitavas</h3>
-                    ${confronto(91, 92)}
-                    ${confronto(95, 96)}
-                </div>
-
-                <div class="fase fase-16avos">
-                    <h3>16-Avos</h3>
-                    ${confronto(74, 77)}
-                    ${confronto(79, 80)}
-                    ${confronto(87, 86)}
-                    ${confronto(85, 88)}
-                </div>
-
             </div>
 
         </div>
