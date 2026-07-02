@@ -1002,18 +1002,19 @@ function cardChave(numero) {
     `;
 }
 
-function slotChave(numero) {
+function confronto(jogo1, jogo2, proximo) {
     return `
-        <div class="slot-chave" data-jogo="${numero}">
-            ${cardChave(numero)}
-        </div>
-    `;
-}
+        <div class="confronto">
+            <div class="confronto-origem">
+                ${cardChave(jogo1)}
+                ${cardChave(jogo2)}
+            </div>
 
-function slotChave(numero, coluna, y) {
-    return `
-        <div class="slot-chave" data-jogo="${numero}" style="left:${coluna}px; top:${y}px;">
-            ${cardChave(numero)}
+            <div class="linha-confronto"></div>
+
+            <div class="confronto-destino">
+                ${cardChave(proximo)}
+            </div>
         </div>
     `;
 }
@@ -1023,33 +1024,37 @@ function montarChaveamento() {
     if (!container) return;
 
     container.innerHTML = `
-        <div class="bracket-wrapper">
+        <div class="mata-mata">
 
-            <div class="bracket-side left-side">
+            <div class="lado-chave lado-esquerdo">
 
-                <div class="bracket-round">
+                <div class="fase fase-16avos">
                     <h3>16-Avos</h3>
-                    ${[75,78,73,76,84,83,82,81].map(cardChave).join("")}
+                    ${confronto(75, 78, 90)}
+                    ${confronto(73, 76, 89)}
+                    ${confronto(84, 83, 93)}
+                    ${confronto(82, 81, 94)}
                 </div>
 
-                <div class="bracket-round round-oitavas">
+                <div class="fase fase-oitavas">
                     <h3>Oitavas</h3>
-                    ${[90,89,93,94].map(cardChave).join("")}
+                    ${confronto(90, 89, 97)}
+                    ${confronto(93, 94, 98)}
                 </div>
 
-                <div class="bracket-round round-quartas">
+                <div class="fase fase-quartas">
                     <h3>Quartas</h3>
-                    ${[97,98].map(cardChave).join("")}
+                    ${confronto(97, 98, 101)}
                 </div>
 
-                <div class="bracket-round round-semis">
+                <div class="fase fase-semis">
                     <h3>Semifinais</h3>
                     ${cardChave(101)}
                 </div>
 
             </div>
 
-            <div class="bracket-center">
+            <div class="centro-chave">
                 ${cardCampeao()}
 
                 <div class="titulo-final">🏆 Final</div>
@@ -1059,26 +1064,30 @@ function montarChaveamento() {
                 ${cardChave(103)}
             </div>
 
-            <div class="bracket-side right-side">
+            <div class="lado-chave lado-direito">
 
-                <div class="bracket-round round-semis">
+                <div class="fase fase-semis">
                     <h3>Semifinais</h3>
                     ${cardChave(102)}
                 </div>
 
-                <div class="bracket-round round-quartas">
+                <div class="fase fase-quartas">
                     <h3>Quartas</h3>
-                    ${[99,100].map(cardChave).join("")}
+                    ${confronto(99, 100, 102)}
                 </div>
 
-                <div class="bracket-round round-oitavas">
+                <div class="fase fase-oitavas">
                     <h3>Oitavas</h3>
-                    ${[91,92,95,96].map(cardChave).join("")}
+                    ${confronto(91, 92, 99)}
+                    ${confronto(95, 96, 100)}
                 </div>
 
-                <div class="bracket-round">
+                <div class="fase fase-16avos">
                     <h3>16-Avos</h3>
-                    ${[74,77,79,80,87,86,85,88].map(cardChave).join("")}
+                    ${confronto(74, 77, 91)}
+                    ${confronto(79, 80, 92)}
+                    ${confronto(87, 86, 95)}
+                    ${confronto(85, 88, 96)}
                 </div>
 
             </div>
@@ -1086,7 +1095,6 @@ function montarChaveamento() {
         </div>
     `;
 }
-
 function cardCampeao(){
 
     const final = buscarJogo(104);
