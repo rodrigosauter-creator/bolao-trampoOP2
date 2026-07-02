@@ -1084,7 +1084,14 @@ function desenharLinhasChave() {
     svg.classList.add("linhas-chave");
     container.appendChild(svg);
 
+    svg.setAttribute("width", container.scrollWidth);
+    svg.setAttribute("height", container.scrollHeight);
+    svg.setAttribute("viewBox", `0 0 ${container.scrollWidth} ${container.scrollHeight}`);
+    
+    const grid = container.querySelector(".chave-grid");
     const rectContainer = container.getBoundingClientRect();
+
+if (!grid) return;
 
     const conexoes = [
         [75, 78, 90],
