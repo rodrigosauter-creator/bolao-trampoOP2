@@ -1022,6 +1022,7 @@ function montarChaveamento() {
         <div class="mata-mata">
 
             <div class="lado-chave lado-esquerdo">
+
                 <div class="fase fase-16avos">
                     <h3>16-Avos</h3>
                     ${confronto(75, 78)}
@@ -1032,33 +1033,34 @@ function montarChaveamento() {
 
                 <div class="fase fase-oitavas">
                     <h3>Oitavas</h3>
-                    ${cardChave(90)}
-                    ${cardChave(89)}
-                    ${cardChave(93)}
-                    ${cardChave(94)}
+                    ${confronto(90, 89)}
+                    ${confronto(93, 94)}
                 </div>
 
                 <div class="fase fase-quartas">
                     <h3>Quartas</h3>
-                    ${cardChave(97)}
-                    ${cardChave(98)}
+                    ${confronto(97, 98)}
                 </div>
 
                 <div class="fase fase-semis">
                     <h3>Semifinais</h3>
                     ${cardChave(101)}
                 </div>
+
             </div>
 
             <div class="centro-chave">
                 ${cardCampeao()}
+
                 <div class="titulo-final">🏆 Final</div>
                 ${cardChave(104)}
+
                 <div class="titulo-final">🥉 3º Lugar</div>
                 ${cardChave(103)}
             </div>
 
             <div class="lado-chave lado-direito">
+
                 <div class="fase fase-semis">
                     <h3>Semifinais</h3>
                     ${cardChave(102)}
@@ -1066,16 +1068,13 @@ function montarChaveamento() {
 
                 <div class="fase fase-quartas">
                     <h3>Quartas</h3>
-                    ${cardChave(99)}
-                    ${cardChave(100)}
+                    ${confronto(99, 100)}
                 </div>
 
                 <div class="fase fase-oitavas">
                     <h3>Oitavas</h3>
-                    ${cardChave(91)}
-                    ${cardChave(92)}
-                    ${cardChave(95)}
-                    ${cardChave(96)}
+                    ${confronto(91, 92)}
+                    ${confronto(95, 96)}
                 </div>
 
                 <div class="fase fase-16avos">
@@ -1085,6 +1084,7 @@ function montarChaveamento() {
                     ${confronto(87, 86)}
                     ${confronto(85, 88)}
                 </div>
+
             </div>
 
         </div>
