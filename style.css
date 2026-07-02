@@ -1145,42 +1145,29 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
 /* ============================= */
 
 #chaveamento{
-    position:relative;
+    width:100%;
     overflow-x:auto;
-    overflow-y:visible;
-}
-
-.chave-grid{
-    display:grid;
-    grid-template-columns:repeat(9, minmax(180px, 1fr));
-    gap:20px;
-    align-items:center;
-    padding:20px 0;
+    overflow-y:hidden;
     position:relative;
-    overflow:visible;
-    min-width:1800px;
 }
 
-.titulo-final{
+.chave-area{
+    position:relative;
+    width:2520px;
+    height:1350px;
+}
+
+.titulo-fase{
+    position:absolute;
+    width:230px;
     text-align:center;
+    color:#1e3a8a;
     font-weight:800;
-    color:#1e3a8a;
-    margin:10px 0 6px;
-}
-
-.chave-coluna{
-    display:flex;
-    flex-direction:column;
-    gap:14px;
-}
-
-.chave-coluna h3{
-    text-align:center;
-    color:#1e3a8a;
 }
 
 .slot-chave{
-    position:relative;
+    position:absolute;
+    width:230px;
     z-index:10;
 }
 
@@ -1191,8 +1178,6 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
     padding:12px;
     box-shadow:0 4px 12px rgba(0,0,0,.08);
     min-height:95px;
-    position:relative;
-    z-index:10;
 }
 
 .chave-numero{
@@ -1230,28 +1215,22 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
     padding:18px 0;
 }
 
-/* ============================= */
-/* LINHAS DESENHADAS VIA JS */
-/* ============================= */
-
-.linhas-chave{
+.centro-final{
     position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    min-height:900px;
-    pointer-events:none;
-    z-index:1;
+    width:230px;
+    text-align:center;
 }
 
-/* ============================= */
-/* CAMPEÃO */
-/* ============================= */
+.titulo-final{
+    text-align:center;
+    font-weight:800;
+    color:#1e3a8a;
+    margin:14px 0 8px;
+}
 
 .card-campeao{
     text-align:center;
-    margin-bottom:30px;
+    margin-bottom:20px;
 }
 
 .titulo-campeao{
@@ -1262,17 +1241,9 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
 }
 
 .bandeira-campeao{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    margin-bottom:10px;
     font-size:72px;
     line-height:1;
-}
-
-.bandeira-campeao img{
-    width:72px;
-    height:72px;
+    margin-bottom:8px;
 }
 
 .nome-campeao{
@@ -1281,25 +1252,12 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
     color:#111827;
 }
 
-/* ============================= */
-/* AJUSTES POR FASE */
-/* ============================= */
-
-.chave-centro{
-    align-self:center;
-}
-
-.fase-semis{
-    align-self:center;
-}
-
-/* ============================= */
-/* MOBILE */
-/* ============================= */
-
-@media(max-width:900px){
-    .chave-grid{
-        grid-template-columns:repeat(9, 190px);
-        overflow-x:auto;
-    }
+.linhas-chave{
+    position:absolute;
+    top:0;
+    left:0;
+    width:2520px;
+    height:1350px;
+    pointer-events:none;
+    z-index:1;
 }
