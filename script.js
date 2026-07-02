@@ -1034,36 +1034,27 @@ function montarChaveamento() {
             </div>
 
             <div class="chave-coluna fase-oitavas esquerda">
-                <h3>Oitavas</h3>
+    <h3>Oitavas</h3>
 
-                <div class="grupo-chave">
-                    ${cardChave(90)}
-                </div>
+    <div class="grupo-chave">
+        ${cardChave(90)}
+        ${cardChave(89)}
+    </div>
 
-                <div class="grupo-chave">
-                    ${cardChave(89)}
-                </div>
+    <div class="grupo-chave">
+        ${cardChave(93)}
+        ${cardChave(94)}
+    </div>
+</div>
 
-                <div class="grupo-chave">
-                    ${cardChave(93)}
-                </div>
+<div class="chave-coluna fase-quartas esquerda">
+    <h3>Quartas</h3>
 
-                <div class="grupo-chave">
-                    ${cardChave(94)}
-                </div>
-            </div>
-
-            <div class="chave-coluna fase-quartas esquerda">
-                <h3>Quartas</h3>
-
-                <div class="grupo-chave">
-                    ${cardChave(97)}
-                </div>
-
-                <div class="grupo-chave">
-                    ${cardChave(98)}
-                </div>
-            </div>
+    <div class="grupo-chave">
+        ${cardChave(97)}
+        ${cardChave(98)}
+    </div>
+</div>
 
             <div class="chave-coluna fase-semis esquerda">
                 <h3>Semifinais</h3>
@@ -1086,37 +1077,27 @@ function montarChaveamento() {
             </div>
 
             <div class="chave-coluna fase-quartas direita">
-                <h3>Quartas</h3>
+    <h3>Quartas</h3>
 
-                <div class="grupo-chave">
-                    ${cardChave(99)}
-                </div>
+    <div class="grupo-chave">
+        ${cardChave(99)}
+        ${cardChave(100)}
+    </div>
+</div>
 
-                <div class="grupo-chave">
-                    ${cardChave(100)}
-                </div>
-            </div>
+<div class="chave-coluna fase-oitavas direita">
+    <h3>Oitavas</h3>
 
-            <div class="chave-coluna fase-oitavas direita">
-                <h3>Oitavas</h3>
+    <div class="grupo-chave">
+        ${cardChave(91)}
+        ${cardChave(92)}
+    </div>
 
-                <div class="grupo-chave">
-                    ${cardChave(91)}
-                </div>
-
-                <div class="grupo-chave">
-                    ${cardChave(92)}
-                </div>
-
-                <div class="grupo-chave">
-                    ${cardChave(95)}
-                </div>
-
-                <div class="grupo-chave">
-                    ${cardChave(96)}
-                </div>
-            </div>
-
+    <div class="grupo-chave">
+        ${cardChave(95)}
+        ${cardChave(96)}
+    </div>
+</div>
             <div class="chave-coluna fase-16avos direita">
                 <h3>16-Avos</h3>
 
