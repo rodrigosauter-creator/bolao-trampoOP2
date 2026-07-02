@@ -1156,6 +1156,9 @@ if (!grid) return;
         linha.setAttribute("stroke-width", "2");
 
         svg.appendChild(linha);
+
+        console.log("Linhas desenhadas:", svg.querySelectorAll("path").length);
+        
     });
 }
 
