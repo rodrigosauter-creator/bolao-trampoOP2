@@ -1141,7 +1141,7 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
 }
 
 /* ===========================
-   CHAVEAMENTO
+   CHAVEAMENTO SEM LINHAS
 =========================== */
 
 #chaveamento{
@@ -1150,159 +1150,148 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
 }
 
 .chave-wrapper{
-
     display:flex;
     justify-content:center;
-    align-items:flex-start;
+    align-items:center;
     gap:45px;
-
-    min-width:1800px;
-
+    min-width:1900px;
 }
 
-/* lados */
+/* LADOS */
 
 .lado-chave{
-
     display:flex;
+    align-items:center;
     gap:24px;
-    align-items:flex-start;
-
 }
 
+/* Não inverter com row-reverse */
 .lado-direito{
-
-    flex-direction:row-reverse;
-
+    flex-direction:row;
 }
 
-/* colunas */
+/* COLUNAS */
 
 .chave-coluna{
-
     width:215px;
-
     display:flex;
     flex-direction:column;
     gap:14px;
-
 }
 
 .chave-coluna h3{
-
     text-align:center;
     color:#1e3a8a;
     font-weight:800;
     margin-bottom:8px;
-
 }
 
-/* centro */
+/* AFUNILAMENTO DAS FASES */
+
+.fase-16avos{
+    justify-content:center;
+}
+
+.fase-oitavas{
+    justify-content:center;
+    gap:48px;
+}
+
+.fase-quartas{
+    justify-content:center;
+    gap:145px;
+}
+
+.fase-semis{
+    justify-content:center;
+}
+
+/* CENTRO */
 
 .centro-chave{
-
     width:230px;
-
     display:flex;
     flex-direction:column;
     align-items:center;
-
+    justify-content:center;
 }
 
 .titulo-final{
-
     margin:18px 0 8px;
     color:#1e3a8a;
     font-weight:800;
-
 }
 
-/* cards */
+.titulo-terceiro{
+    margin-top:25px;
+}
+
+/* CARDS */
 
 .chave-card{
-
     background:#fff;
     border:1px solid #e5e7eb;
     border-radius:14px;
     padding:12px;
     box-shadow:0 4px 12px rgba(0,0,0,.08);
     min-height:95px;
-
 }
 
 .chave-numero{
-
     color:#2563eb;
     font-weight:800;
     margin-bottom:8px;
-
 }
 
 .chave-time{
-
     display:grid;
     grid-template-columns:auto 1fr auto;
     align-items:center;
     gap:6px;
     margin:6px 0;
-
 }
 
 .chave-vencedor{
-
     background:#dcfce7;
     border-radius:8px;
     padding:2px 4px;
     font-weight:800;
-
 }
 
 .chave-penaltis{
-
     margin-top:8px;
     color:#2563eb;
     font-size:13px;
     font-weight:700;
-
 }
 
 .chave-indefinido{
-
     text-align:center;
     color:#64748b;
     font-weight:700;
     padding:18px 0;
-
 }
 
-/* campeão */
+/* CAMPEÃO */
 
 .card-campeao{
-
     text-align:center;
     margin-bottom:20px;
-
 }
 
 .titulo-campeao{
-
     color:#1e3a8a;
     font-weight:800;
     margin-bottom:8px;
-
 }
 
 .bandeira-campeao{
-
     font-size:70px;
     line-height:1;
     margin-bottom:8px;
-
 }
 
 .nome-campeao{
-
     font-size:22px;
     font-weight:800;
-
 }
