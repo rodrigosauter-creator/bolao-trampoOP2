@@ -453,8 +453,23 @@ function montarJogos(jogos, fase = "todos") {
 
     container.innerHTML = "";
 
+    let faseAtualLista = "";
+    
     jogosFiltrados.forEach(jogo => {
 
+        const nomeFase =
+    obterNomeFase(jogo.jogo);
+
+if (nomeFase !== faseAtualLista) {
+
+    faseAtualLista = nomeFase;
+
+    adicionarTituloFase(
+        container,
+        nomeFase
+    );
+}
+        
         const confrontoDefinido =
         jogo.selecao_a || jogo.selecao_b;
 
@@ -610,6 +625,32 @@ function filtrarJogosPorFase(jogos, fase) {
         jogo.jogo >= inicio &&
         jogo.jogo <= fim
     );
+}
+
+function obterNomeFase(jogo) {
+
+    const numero = Number(jogo);
+
+    if (numero >= 1 && numero <= 24) return "1ª Rodada";
+    if (numero >= 25 && numero <= 48) return "2ª Rodada";
+    if (numero >= 49 && numero <= 72) return "3ª Rodada";
+    if (numero >= 73 && numero <= 88) return "16-Avos";
+    if (numero >= 89 && numero <= 96) return "Oitavas de Final";
+    if (numero >= 97 && numero <= 100) return "Quartas de Final";
+    if (numero >= 101 && numero <= 102) return "Semifinais";
+    if (numero === 103) return "Disputa de 3º Lugar";
+    if (numero === 104) return "Final";
+
+    return "Outros";
+}
+
+function adicionarTituloFase(container, nomeFase) {
+
+    container.innerHTML += `
+        <div class="titulo-fase-lista">
+            ${nomeFase}
+        </div>
+    `;
 }
 
 // =====================================================
@@ -776,9 +817,26 @@ if (faseAtual === "placar-exato") {
         <div class="lista-palpites-card">
     `;
 
+    let faseAtualLista = "";
+    
     palpitesFiltrados.forEach(palpite => {
 
-const jogoReal =
+
+        const nomeFase =
+    obterNomeFase(palpite.jogo);
+
+if (nomeFase !== faseAtualLista) {
+
+    faseAtualLista = nomeFase;
+
+    html += `
+        <div class="titulo-fase-lista">
+            ${nomeFase}
+        </div>
+    `;
+}
+        
+        const jogoReal =
     dadosGlobais.jogos.find(
         j => j.jogo === palpite.jogo
     );
