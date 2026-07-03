@@ -824,8 +824,14 @@ if (temPalpite) {
 }
 
         html += `
-            <div class="palpite-card ${acertouEmCheio ? "palpite-card-certo" : ""}">
-
+            <div class="palpite-card
+    ${
+        acertouEmCheio
+            ? "palpite-card-certo"
+            : palpiteNaoRealizado
+                ? "palpite-card-sem-palpite"
+                : ""
+    }">
                 
 <div class="palpite-topo ${
     acertouEmCheio || palpiteNaoRealizado
