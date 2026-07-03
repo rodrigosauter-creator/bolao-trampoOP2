@@ -777,6 +777,9 @@ function mostrarApostador(apostador, faseAtual = "todos") {
 
 const jogoRealizado =
     jogoReal?.realizado ?? false;
+
+        const palpiteNaoRealizado =
+    jogoRealizado && !temPalpite;
         
         const acertouEmCheio =
             Number(palpite.palpite_certo) === 1;
@@ -825,28 +828,47 @@ if (temPalpite) {
             <div class="palpite-card ${acertouEmCheio ? "palpite-card-certo" : ""}">
 
                 
-                <div class="palpite-topo ${acertouEmCheio ? "com-selo" : "sem-selo"}">
+<div class="palpite-topo ${
+    acertouEmCheio || palpiteNaoRealizado
+        ? "com-selo"
+        : "sem-selo"
+}">
 
     <span>
-        ${acertouEmCheio ? "🏆" : "⚽"}
+        ${
+            acertouEmCheio
+                ? "🏆"
+                : palpiteNaoRealizado
+                    ? "🚫"
+                    : "⚽"
+        }
         Jogo ${palpite.jogo}
     </span>
 
     ${
         acertouEmCheio
-        ? `<div class="selo-palpite">PLACAR EXATO</div>`
+            ? `<div class="selo-palpite">
+                    PLACAR EXATO
+               </div>`
+
+        : palpiteNaoRealizado
+
+            ? `<div class="selo-sem-palpite">
+                    PALPITE NÃO REALIZADO
+               </div>`
+
         : ""
     }
 
-${
-    jogoRealizado
-        ? `
-            <strong class="pontos-jogo">
-                ${palpite.pontos} pts
-            </strong>
-        `
-        : ""
-}
+    ${
+        jogoRealizado && !palpiteNaoRealizado
+            ? `
+                <strong class="pontos-jogo">
+                    ${palpite.pontos} pts
+                </strong>
+            `
+            : ""
+    }
 
 </div>
 
