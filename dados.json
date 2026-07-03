@@ -2,21 +2,21 @@
   "classificacao": [
     {
       "posicao": 1,
+      "nome": "Isa",
+      "pontos": 200,
+      "acertos": 6
+    },
+    {
+      "posicao": 2,
       "nome": "Arthur",
       "pontos": 189,
       "acertos": 7
     },
     {
-      "posicao": 1,
+      "posicao": 2,
       "nome": "Rodrigo",
       "pontos": 189,
       "acertos": 7
-    },
-    {
-      "posicao": 3,
-      "nome": "Isa",
-      "pontos": 188,
-      "acertos": 5
     },
     {
       "posicao": 4,
@@ -2501,79 +2501,79 @@
       },
       {
         "jogo": 86,
-        "pontos": 188
+        "pontos": 200
       },
       {
         "jogo": 87,
-        "pontos": 188
+        "pontos": 200
       },
       {
         "jogo": 88,
-        "pontos": 188
+        "pontos": 200
       },
       {
         "jogo": 89,
-        "pontos": 188
+        "pontos": 200
       },
       {
         "jogo": 90,
-        "pontos": 188
+        "pontos": 200
       },
       {
         "jogo": 91,
-        "pontos": 188
+        "pontos": 200
       },
       {
         "jogo": 92,
-        "pontos": 188
+        "pontos": 200
       },
       {
         "jogo": 93,
-        "pontos": 188
+        "pontos": 200
       },
       {
         "jogo": 94,
-        "pontos": 188
+        "pontos": 200
       },
       {
         "jogo": 95,
-        "pontos": 188
+        "pontos": 200
       },
       {
         "jogo": 96,
-        "pontos": 188
+        "pontos": 200
       },
       {
         "jogo": 97,
-        "pontos": 188
+        "pontos": 200
       },
       {
         "jogo": 98,
-        "pontos": 188
+        "pontos": 200
       },
       {
         "jogo": 99,
-        "pontos": 188
+        "pontos": 200
       },
       {
         "jogo": 100,
-        "pontos": 188
+        "pontos": 200
       },
       {
         "jogo": 101,
-        "pontos": 188
+        "pontos": 200
       },
       {
         "jogo": 102,
-        "pontos": 188
+        "pontos": 200
       },
       {
         "jogo": 103,
-        "pontos": 188
+        "pontos": 200
       },
       {
         "jogo": 104,
-        "pontos": 188
+        "pontos": 200
       }
     ],
     "Trops": [
@@ -2999,7 +2999,7 @@
       }
     ]
   },
-  "jogos_realizados": 85,
+  "jogos_realizados": 86,
   "jogos": [
     {
       "jogo": 1,
@@ -3854,12 +3854,12 @@
     {
       "jogo": 86,
       "selecao_a": "Austrália",
-      "gols_a": null,
-      "gols_b": null,
+      "gols_a": 1,
+      "gols_b": 1,
       "selecao_b": "Egito",
-      "vencedor": "-",
-      "penaltis": "x",
-      "realizado": false
+      "vencedor": "Empate",
+      "penaltis": "Egito",
+      "realizado": true
     },
     {
       "jogo": 87,
@@ -3946,7 +3946,7 @@
       "selecao_a": null,
       "gols_a": null,
       "gols_b": null,
-      "selecao_b": null,
+      "selecao_b": "Egito",
       "vencedor": "-",
       "penaltis": "x",
       "realizado": false
@@ -4986,10 +4986,10 @@
         {
           "jogo": 86,
           "selecao_a": "Austrália",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 2,
+          "gols_b": 3,
           "selecao_b": "Egito",
-          "vencedor": "-",
+          "vencedor": "Egito",
           "penaltis": "x",
           "palpite_certo": 0,
           "pontos": 0
@@ -4997,21 +4997,21 @@
         {
           "jogo": 87,
           "selecao_a": "Argentina",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 1,
+          "gols_b": 1,
           "selecao_b": "Cabo Verde",
-          "vencedor": "-",
-          "penaltis": "x",
+          "vencedor": "Empate",
+          "penaltis": "Cabo Verde",
           "palpite_certo": 0,
           "pontos": 0
         },
         {
           "jogo": 88,
           "selecao_a": "Colômbia",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 2,
+          "gols_b": 1,
           "selecao_b": "Gana",
-          "vencedor": "-",
+          "vencedor": "Colômbia",
           "penaltis": "x",
           "palpite_certo": 0,
           "pontos": 0
@@ -5087,7 +5087,7 @@
           "selecao_a": 0,
           "gols_a": null,
           "gols_b": null,
-          "selecao_b": 0,
+          "selecao_b": "Egito",
           "vencedor": "-",
           "penaltis": "x",
           "palpite_certo": 0,
@@ -6137,10 +6137,10 @@
         {
           "jogo": 86,
           "selecao_a": "Austrália",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 1,
+          "gols_b": 2,
           "selecao_b": "Egito",
-          "vencedor": "-",
+          "vencedor": "Egito",
           "penaltis": "x",
           "palpite_certo": 0,
           "pontos": 0
@@ -6148,10 +6148,10 @@
         {
           "jogo": 87,
           "selecao_a": "Argentina",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 3,
+          "gols_b": 1,
           "selecao_b": "Cabo Verde",
-          "vencedor": "-",
+          "vencedor": "Argentina",
           "penaltis": "x",
           "palpite_certo": 0,
           "pontos": 0
@@ -6159,10 +6159,10 @@
         {
           "jogo": 88,
           "selecao_a": "Colômbia",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 2,
+          "gols_b": 1,
           "selecao_b": "Gana",
-          "vencedor": "-",
+          "vencedor": "Colômbia",
           "penaltis": "x",
           "palpite_certo": 0,
           "pontos": 0
@@ -6238,7 +6238,7 @@
           "selecao_a": 0,
           "gols_a": null,
           "gols_b": null,
-          "selecao_b": 0,
+          "selecao_b": "Egito",
           "vencedor": "-",
           "penaltis": "x",
           "palpite_certo": 0,
@@ -7288,10 +7288,10 @@
         {
           "jogo": 86,
           "selecao_a": "Austrália",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 0,
+          "gols_b": 1,
           "selecao_b": "Egito",
-          "vencedor": "-",
+          "vencedor": "Egito",
           "penaltis": "x",
           "palpite_certo": 0,
           "pontos": 0
@@ -7299,10 +7299,10 @@
         {
           "jogo": 87,
           "selecao_a": "Argentina",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 3,
+          "gols_b": 0,
           "selecao_b": "Cabo Verde",
-          "vencedor": "-",
+          "vencedor": "Argentina",
           "penaltis": "x",
           "palpite_certo": 0,
           "pontos": 0
@@ -7310,10 +7310,10 @@
         {
           "jogo": 88,
           "selecao_a": "Colômbia",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 2,
+          "gols_b": 0,
           "selecao_b": "Gana",
-          "vencedor": "-",
+          "vencedor": "Colômbia",
           "penaltis": "x",
           "palpite_certo": 0,
           "pontos": 0
@@ -7389,7 +7389,7 @@
           "selecao_a": 0,
           "gols_a": null,
           "gols_b": null,
-          "selecao_b": 0,
+          "selecao_b": "Egito",
           "vencedor": "-",
           "penaltis": "x",
           "palpite_certo": 0,
@@ -8439,10 +8439,10 @@
         {
           "jogo": 86,
           "selecao_a": "Austrália",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 0,
+          "gols_b": 2,
           "selecao_b": "Egito",
-          "vencedor": "-",
+          "vencedor": "Egito",
           "penaltis": "x",
           "palpite_certo": 0,
           "pontos": 0
@@ -8450,21 +8450,21 @@
         {
           "jogo": 87,
           "selecao_a": "Argentina",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 2,
+          "gols_b": 2,
           "selecao_b": "Cabo Verde",
-          "vencedor": "-",
-          "penaltis": "x",
+          "vencedor": "Empate",
+          "penaltis": "Cabo Verde",
           "palpite_certo": 0,
           "pontos": 0
         },
         {
           "jogo": 88,
           "selecao_a": "Colômbia",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 3,
+          "gols_b": 1,
           "selecao_b": "Gana",
-          "vencedor": "-",
+          "vencedor": "Colômbia",
           "penaltis": "x",
           "palpite_certo": 0,
           "pontos": 0
@@ -8540,7 +8540,7 @@
           "selecao_a": 0,
           "gols_a": null,
           "gols_b": null,
-          "selecao_b": 0,
+          "selecao_b": "Egito",
           "vencedor": "-",
           "penaltis": "x",
           "palpite_certo": 0,
@@ -9691,7 +9691,7 @@
           "selecao_a": 0,
           "gols_a": null,
           "gols_b": null,
-          "selecao_b": 0,
+          "selecao_b": "Egito",
           "vencedor": "-",
           "penaltis": "x",
           "palpite_certo": 0,
@@ -10741,32 +10741,32 @@
         {
           "jogo": 86,
           "selecao_a": "Austrália",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 1,
+          "gols_b": 1,
           "selecao_b": "Egito",
-          "vencedor": "-",
-          "penaltis": "x",
-          "palpite_certo": 0,
-          "pontos": 0
+          "vencedor": "Empate",
+          "penaltis": "Egito",
+          "palpite_certo": 1,
+          "pontos": 12
         },
         {
           "jogo": 87,
           "selecao_a": "Argentina",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 1,
+          "gols_b": 1,
           "selecao_b": "Cabo Verde",
-          "vencedor": "-",
-          "penaltis": "x",
+          "vencedor": "Empate",
+          "penaltis": "Cabo Verde",
           "palpite_certo": 0,
           "pontos": 0
         },
         {
           "jogo": 88,
           "selecao_a": "Colômbia",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 2,
+          "gols_b": 1,
           "selecao_b": "Gana",
-          "vencedor": "-",
+          "vencedor": "Colômbia",
           "penaltis": "x",
           "palpite_certo": 0,
           "pontos": 0
@@ -10842,7 +10842,7 @@
           "selecao_a": 0,
           "gols_a": null,
           "gols_b": null,
-          "selecao_b": 0,
+          "selecao_b": "Egito",
           "vencedor": "-",
           "penaltis": "x",
           "palpite_certo": 0,
@@ -11892,10 +11892,10 @@
         {
           "jogo": 86,
           "selecao_a": "Austrália",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 1,
+          "gols_b": 2,
           "selecao_b": "Egito",
-          "vencedor": "-",
+          "vencedor": "Egito",
           "penaltis": "x",
           "palpite_certo": 0,
           "pontos": 0
@@ -11903,21 +11903,21 @@
         {
           "jogo": 87,
           "selecao_a": "Argentina",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 1,
+          "gols_b": 1,
           "selecao_b": "Cabo Verde",
-          "vencedor": "-",
-          "penaltis": "x",
+          "vencedor": "Empate",
+          "penaltis": "Cabo Verde",
           "palpite_certo": 0,
           "pontos": 0
         },
         {
           "jogo": 88,
           "selecao_a": "Colômbia",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 3,
+          "gols_b": 1,
           "selecao_b": "Gana",
-          "vencedor": "-",
+          "vencedor": "Colômbia",
           "penaltis": "x",
           "palpite_certo": 0,
           "pontos": 0
@@ -11993,7 +11993,7 @@
           "selecao_a": 0,
           "gols_a": null,
           "gols_b": null,
-          "selecao_b": 0,
+          "selecao_b": "Egito",
           "vencedor": "-",
           "penaltis": "x",
           "palpite_certo": 0,
@@ -15114,9 +15114,13 @@
     },
     {
       "jogo": 0,
-      "vencedor_rodada": "Arthur",
-      "maior_pontuacao": 0,
+      "vencedor_rodada": " Isa",
+      "maior_pontuacao": 12,
       "ranking": [
+        {
+          "nome": " Isa",
+          "pontos": 12
+        },
         {
           "nome": "Arthur",
           "pontos": 0
@@ -15131,10 +15135,6 @@
         },
         {
           "nome": "Ana",
-          "pontos": 0
-        },
-        {
-          "nome": " Isa",
           "pontos": 0
         },
         {
@@ -16211,93 +16211,93 @@
     },
     {
       "jogo": 86,
-      "lider": "Rodrigo",
-      "pontos": 189
+      "lider": "Isa",
+      "pontos": 200
     },
     {
       "jogo": 87,
-      "lider": "Rodrigo",
-      "pontos": 189
+      "lider": "Isa",
+      "pontos": 200
     },
     {
       "jogo": 88,
-      "lider": "Rodrigo",
-      "pontos": 189
+      "lider": "Isa",
+      "pontos": 200
     },
     {
       "jogo": 89,
-      "lider": "Rodrigo",
-      "pontos": 189
+      "lider": "Isa",
+      "pontos": 200
     },
     {
       "jogo": 90,
-      "lider": "Rodrigo",
-      "pontos": 189
+      "lider": "Isa",
+      "pontos": 200
     },
     {
       "jogo": 91,
-      "lider": "Rodrigo",
-      "pontos": 189
+      "lider": "Isa",
+      "pontos": 200
     },
     {
       "jogo": 92,
-      "lider": "Rodrigo",
-      "pontos": 189
+      "lider": "Isa",
+      "pontos": 200
     },
     {
       "jogo": 93,
-      "lider": "Rodrigo",
-      "pontos": 189
+      "lider": "Isa",
+      "pontos": 200
     },
     {
       "jogo": 94,
-      "lider": "Rodrigo",
-      "pontos": 189
+      "lider": "Isa",
+      "pontos": 200
     },
     {
       "jogo": 95,
-      "lider": "Rodrigo",
-      "pontos": 189
+      "lider": "Isa",
+      "pontos": 200
     },
     {
       "jogo": 96,
-      "lider": "Rodrigo",
-      "pontos": 189
+      "lider": "Isa",
+      "pontos": 200
     },
     {
       "jogo": 97,
-      "lider": "Rodrigo",
-      "pontos": 189
+      "lider": "Isa",
+      "pontos": 200
     },
     {
       "jogo": 98,
-      "lider": "Rodrigo",
-      "pontos": 189
+      "lider": "Isa",
+      "pontos": 200
     },
     {
       "jogo": 99,
-      "lider": "Rodrigo",
-      "pontos": 189
+      "lider": "Isa",
+      "pontos": 200
     },
     {
       "jogo": 100,
-      "lider": "Rodrigo",
-      "pontos": 189
+      "lider": "Isa",
+      "pontos": 200
     },
     {
       "jogo": 101,
-      "lider": "Rodrigo",
-      "pontos": 189
+      "lider": "Isa",
+      "pontos": 200
     },
     {
       "jogo": 102,
-      "lider": "Rodrigo",
-      "pontos": 189
+      "lider": "Isa",
+      "pontos": 200
     },
     {
       "jogo": 103,
-      "lider": "Rodrigo",
-      "pontos": 189
+      "lider": "Isa",
+      "pontos": 200
     }
   ]
 }
