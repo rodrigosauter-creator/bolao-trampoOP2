@@ -1002,49 +1002,71 @@ function cardChave(numero) {
     `;
 }
 
-function colunaFase(titulo, jogos, classeExtra = "") {
-    return `
-        <div class="chave-coluna ${classeExtra}">
-            <h3>${titulo}</h3>
-            ${jogos.map(cardChave).join("")}
-        </div>
-    `;
-}
-
 function montarChaveamento() {
     const container = document.getElementById("chaveamento");
     if (!container) return;
 
     container.innerHTML = `
-        <div class="chave-wrapper">
+        <div class="chave-grid">
 
-            <div class="lado-chave lado-esquerdo">
-                ${colunaFase("16-Avos", [75,78,73,76,84,83,82,81], "fase-16avos")}
-                ${colunaFase("Oitavas", [90,89,93,94], "fase-oitavas")}
-                ${colunaFase("Quartas", [97,98], "fase-quartas")}
-                ${colunaFase("Semifinais", [101], "fase-semis")}
+            <div class="chave-coluna">
+                <h3>16-Avos</h3>
+                ${[75, 78, 73, 76, 84, 83, 82, 81].map(cardChave).join("")}
             </div>
 
-            <div class="centro-chave">
-                ${cardCampeao()}
+            <div class="chave-coluna">
+                <h3>Oitavas</h3>
+                ${[90, 89, 93, 94].map(cardChave).join("")}
+            </div>
 
-                <div class="titulo-final">🏆 Final</div>
-                ${cardChave(104)}
+            <div class="chave-coluna">
+                <h3>Quartas</h3>
+                ${[97, 98].map(cardChave).join("")}
+            </div>
 
-                <div class="titulo-final titulo-terceiro">🥉 3º Lugar</div>
+            <div class="chave-coluna">
+                <h3>Semifinais</h3>
+                ${[101].map(cardChave).join("")}
+            </div>
+
+<div class="chave-coluna chave-centro">
+
+    ${cardCampeao()}
+
+    <div class="titulo-final">
+        🏆 Final
+    </div>
+
+    ${cardChave(104)}
+
+                <div class="titulo-final">🥉 3º Lugar</div>
                 ${cardChave(103)}
             </div>
 
-            <div class="lado-chave lado-direito">
-                ${colunaFase("Semifinais", [102], "fase-semis")}
-                ${colunaFase("Quartas", [99,100], "fase-quartas")}
-                ${colunaFase("Oitavas", [91,92,95,96], "fase-oitavas")}
-                ${colunaFase("16-Avos", [74,77,79,80,87,86,85,88], "fase-16avos")}
+            <div class="chave-coluna">
+                <h3>Semifinais</h3>
+                ${[102].map(cardChave).join("")}
+            </div>
+
+            <div class="chave-coluna">
+                <h3>Quartas</h3>
+                ${[99, 100].map(cardChave).join("")}
+            </div>
+
+            <div class="chave-coluna">
+                <h3>Oitavas</h3>
+                ${[91, 92, 95, 96].map(cardChave).join("")}
+            </div>
+
+            <div class="chave-coluna">
+                <h3>16-Avos</h3>
+                ${[74, 77, 79, 80, 87, 86, 85, 88].map(cardChave).join("")}
             </div>
 
         </div>
     `;
 }
+
 function cardCampeao(){
 
     const final = buscarJogo(104);
@@ -1059,6 +1081,7 @@ function cardCampeao(){
             : final.vencedor;
 
         bandeira = flag(nome);
+
     }
 
     return `
