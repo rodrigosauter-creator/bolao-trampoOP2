@@ -1140,40 +1140,27 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
     color:#64748b;
 }
 
-/* ===========================
-   CHAVEAMENTO SEM LINHAS
-=========================== */
+/* ============================= */
+/* CHAVEAMENTO - GRID ALINHADO */
+/* ============================= */
 
-#chaveamento{
+.chave-grid{
+    display:grid;
+    grid-template-columns:repeat(9, minmax(180px, 1fr));
+    gap:20px;
+    align-items:center;
     overflow-x:auto;
-    padding:25px 0;
+    padding:20px 0;
 }
 
-.chave-wrapper{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:45px;
-    min-width:1900px;
+.titulo-final{
+    text-align:center;
+    font-weight:800;
+    color:#1e3a8a;
+    margin:10px 0 6px;
 }
-
-/* LADOS */
-
-.lado-chave{
-    display:flex;
-    align-items:center;
-    gap:24px;
-}
-
-/* Não inverter com row-reverse */
-.lado-direito{
-    flex-direction:row;
-}
-
-/* COLUNAS */
 
 .chave-coluna{
-    width:215px;
     display:flex;
     flex-direction:column;
     gap:14px;
@@ -1182,51 +1169,7 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
 .chave-coluna h3{
     text-align:center;
     color:#1e3a8a;
-    font-weight:800;
-    margin-bottom:8px;
 }
-
-/* AFUNILAMENTO DAS FASES */
-
-.fase-16avos{
-    justify-content:center;
-}
-
-.fase-oitavas{
-    justify-content:center;
-    gap:48px;
-}
-
-.fase-quartas{
-    justify-content:center;
-    gap:145px;
-}
-
-.fase-semis{
-    justify-content:center;
-}
-
-/* CENTRO */
-
-.centro-chave{
-    width:230px;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-}
-
-.titulo-final{
-    margin:18px 0 8px;
-    color:#1e3a8a;
-    font-weight:800;
-}
-
-.titulo-terceiro{
-    margin-top:25px;
-}
-
-/* CARDS */
 
 .chave-card{
     background:#fff;
@@ -1238,8 +1181,8 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
 }
 
 .chave-numero{
-    color:#2563eb;
     font-weight:800;
+    color:#2563eb;
     margin-bottom:8px;
 }
 
@@ -1260,8 +1203,8 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
 
 .chave-penaltis{
     margin-top:8px;
-    color:#2563eb;
     font-size:13px;
+    color:#2563eb;
     font-weight:700;
 }
 
@@ -1272,26 +1215,52 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
     padding:18px 0;
 }
 
-/* CAMPEÃO */
-
 .card-campeao{
+
     text-align:center;
-    margin-bottom:20px;
+
+    margin-bottom:30px;
+
 }
 
 .titulo-campeao{
-    color:#1e3a8a;
+
+    font-size:15px;
+
     font-weight:800;
+
+    color:#1e3a8a;
+
     margin-bottom:8px;
+
 }
 
 .bandeira-campeao{
-    font-size:70px;
-    line-height:1;
-    margin-bottom:8px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:10px;
+
+}
+
+.bandeira-campeao img{
+
+    width:72px;
+
+    height:72px;
+
 }
 
 .nome-campeao{
+
     font-size:22px;
+
     font-weight:800;
+
+    color:#111827;
+
 }
