@@ -1302,3 +1302,14 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
     box-shadow:0 2px 6px rgba(220,38,38,.35);
 
 }
+
+.titulo-fase-lista{
+    margin:28px 0 10px;
+    padding:10px 16px;
+    border-left:5px solid #2563eb;
+    background:#eff6ff;
+    color:#1e3a8a;
+    font-size:20px;
+    font-weight:800;
+    border-radius:10px;
+}
