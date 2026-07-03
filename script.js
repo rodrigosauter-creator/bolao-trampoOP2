@@ -719,19 +719,27 @@ function mostrarApostador(apostador, faseAtual = "todos") {
     let palpitesFiltrados =
         todosPalpites;
 
-    if (faseAtual !== "todos") {
+if (faseAtual === "placar-exato") {
 
-        palpitesFiltrados =
-            todosPalpites.filter(
-                p =>
-                    Number(p.jogo) >= inicio &&
-                    Number(p.jogo) <= fim
-            );
-    }
+    palpitesFiltrados =
+        todosPalpites.filter(
+            p => Number(p.palpite_certo) === 1
+        );
+
+} else if (faseAtual !== "todos") {
+
+    palpitesFiltrados =
+        todosPalpites.filter(
+            p =>
+                Number(p.jogo) >= inicio &&
+                Number(p.jogo) <= fim
+        );
+}
 
     const filtroHTML = `
         <select id="filtroPalpites" class="filtro-rodada">
             <option value="todos" ${faseAtual === "todos" ? "selected" : ""}>Todas as fases</option>
+            <option value="placar-exato" ${faseAtual === "placar-exato" ? "selected" : ""}>Palpites Certos</option>
             <option value="1" ${faseAtual === "1" ? "selected" : ""}>1ª Rodada (1-24)</option>
             <option value="2" ${faseAtual === "2" ? "selected" : ""}>2ª Rodada (25-48)</option>
             <option value="3" ${faseAtual === "3" ? "selected" : ""}>3ª Rodada (49-72)</option>
