@@ -770,7 +770,7 @@ function mostrarApostador(apostador, faseAtual = "todos") {
 
     palpitesFiltrados.forEach(palpite => {
 
-        const jogoReal =
+const jogoReal =
     dadosGlobais.jogos.find(
         j => j.jogo === palpite.jogo
     );
@@ -778,13 +778,10 @@ function mostrarApostador(apostador, faseAtual = "todos") {
 const jogoRealizado =
     jogoReal?.realizado ?? false;
 
-        const palpiteNaoRealizado =
-    jogoRealizado && !temPalpite;
-        
-        const acertouEmCheio =
-            Number(palpite.palpite_certo) === 1;
-        
-        const confrontoDefinido =
+const acertouEmCheio =
+    Number(palpite.palpite_certo) === 1;
+
+const confrontoDefinido =
     palpite.selecao_a || palpite.selecao_b;
 
 const selecaoA =
@@ -807,6 +804,8 @@ const temPalpite =
     palpite.gols_b !== undefined &&
     palpite.gols_b !== "";
 
+const palpiteNaoRealizado =
+    jogoRealizado && !temPalpite;
 let placarPalpite;
 
 if (temPalpite) {
