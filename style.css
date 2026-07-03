@@ -727,8 +727,23 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
 }
 
 .palpite-card-certo{
+
+    background:#fffbea;
+
     border:2px solid #f59e0b;
-    background:#fffbeb;
+
+    box-shadow:0 4px 12px rgba(245,158,11,.15);
+
+}
+
+.palpite-card-sem-palpite{
+
+    background:#fff1f2;
+
+    border:2px solid #ef4444;
+
+    box-shadow:0 4px 12px rgba(239,68,68,.15);
+
 }
 
 .palpite-topo{
