@@ -1002,44 +1002,70 @@ function cardChave(numero) {
     `;
 }
 
+function colunaFase(titulo, jogos) {
+    return `
+        <div class="chave-coluna">
+            <h3>${titulo}</h3>
+            ${jogos.map(cardChave).join("")}
+        </div>
+    `;
+}
+
 function montarChaveamento() {
+
     const container = document.getElementById("chaveamento");
     if (!container) return;
 
     container.innerHTML = `
-        <div class="chave-simples">
 
-            <div class="chave-fase">
-                <h3>16-Avos</h3>
-                ${[75, 78, 73, 76, 84, 83, 82, 81, 74, 77, 79, 80, 87, 86, 85, 88].map(cardChave).join("")}
-            </div>
+    <div class="chave-wrapper">
 
-            <div class="chave-fase">
-                <h3>Oitavas</h3>
-                ${[90, 89, 93, 94, 91, 92, 95, 96].map(cardChave).join("")}
-            </div>
+        <!-- LADO ESQUERDO -->
+        <div class="lado-chave">
 
-            <div class="chave-fase">
-                <h3>Quartas</h3>
-                ${[97, 98, 99, 100].map(cardChave).join("")}
-            </div>
+            ${colunaFase("16-Avos",[75,78,73,76,84,83,82,81])}
 
-            <div class="chave-fase">
-                <h3>Semifinais</h3>
-                ${[101, 102].map(cardChave).join("")}
-            </div>
+            ${colunaFase("Oitavas",[90,89,93,94])}
 
-            <div class="chave-fase chave-final">
-                ${cardCampeao()}
+            ${colunaFase("Quartas",[97,98])}
 
-                <h3>Final</h3>
-                ${cardChave(104)}
-
-                <h3>3º Lugar</h3>
-                ${cardChave(103)}
-            </div>
+            ${colunaFase("Semifinais",[101])}
 
         </div>
+
+        <!-- CENTRO -->
+        <div class="centro-chave">
+
+            ${cardCampeao()}
+
+            <div class="titulo-final">
+                🏆 Final
+            </div>
+
+            ${cardChave(104)}
+
+            <div class="titulo-final" style="margin-top:25px">
+                🥉 3º Lugar
+            </div>
+
+            ${cardChave(103)}
+
+        </div>
+
+        <!-- LADO DIREITO -->
+        <div class="lado-chave lado-direito">
+
+            ${colunaFase("Semifinais",[102])}
+
+            ${colunaFase("Quartas",[99,100])}
+
+            ${colunaFase("Oitavas",[91,92,95,96])}
+
+            ${colunaFase("16-Avos",[74,77,79,80,87,86,85,88])}
+
+        </div>
+
+    </div>
     `;
 }
 
