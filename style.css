@@ -1140,107 +1140,169 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
     color:#64748b;
 }
 
-/* ============================= */
-/* CHAVEAMENTO SIMPLES */
-/* ============================= */
+/* ===========================
+   CHAVEAMENTO
+=========================== */
 
 #chaveamento{
-    width:100%;
     overflow-x:auto;
-    padding:20px 0;
+    padding:25px 0;
 }
 
-.chave-simples{
-    display:grid;
-    grid-template-columns:repeat(5, minmax(220px, 1fr));
-    gap:22px;
-    align-items:start;
+.chave-wrapper{
+
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    gap:45px;
+
+    min-width:1800px;
+
 }
 
-.chave-fase{
+/* lados */
+
+.lado-chave{
+
+    display:flex;
+    gap:24px;
+    align-items:flex-start;
+
+}
+
+.lado-direito{
+
+    flex-direction:row-reverse;
+
+}
+
+/* colunas */
+
+.chave-coluna{
+
+    width:215px;
+
     display:flex;
     flex-direction:column;
     gap:14px;
+
 }
 
-.chave-fase h3{
+.chave-coluna h3{
+
     text-align:center;
     color:#1e3a8a;
     font-weight:800;
-    margin:6px 0 8px;
+    margin-bottom:8px;
+
 }
 
+/* centro */
+
+.centro-chave{
+
+    width:230px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+}
+
+.titulo-final{
+
+    margin:18px 0 8px;
+    color:#1e3a8a;
+    font-weight:800;
+
+}
+
+/* cards */
+
 .chave-card{
+
     background:#fff;
     border:1px solid #e5e7eb;
     border-radius:14px;
     padding:12px;
     box-shadow:0 4px 12px rgba(0,0,0,.08);
     min-height:95px;
+
 }
 
 .chave-numero{
-    font-weight:800;
+
     color:#2563eb;
+    font-weight:800;
     margin-bottom:8px;
+
 }
 
 .chave-time{
+
     display:grid;
     grid-template-columns:auto 1fr auto;
     align-items:center;
     gap:6px;
     margin:6px 0;
+
 }
 
 .chave-vencedor{
+
     background:#dcfce7;
     border-radius:8px;
     padding:2px 4px;
     font-weight:800;
+
 }
 
 .chave-penaltis{
+
     margin-top:8px;
-    font-size:13px;
     color:#2563eb;
+    font-size:13px;
     font-weight:700;
+
 }
 
 .chave-indefinido{
+
     text-align:center;
     color:#64748b;
     font-weight:700;
     padding:18px 0;
+
 }
 
+/* campeão */
+
 .card-campeao{
+
     text-align:center;
-    margin-bottom:18px;
+    margin-bottom:20px;
+
 }
 
 .titulo-campeao{
-    font-size:15px;
-    font-weight:800;
+
     color:#1e3a8a;
+    font-weight:800;
     margin-bottom:8px;
+
 }
 
 .bandeira-campeao{
-    font-size:72px;
+
+    font-size:70px;
     line-height:1;
     margin-bottom:8px;
+
 }
 
 .nome-campeao{
+
     font-size:22px;
     font-weight:800;
-    color:#111827;
-}
 
-/* Mobile */
-@media(max-width:900px){
-    .chave-simples{
-        grid-template-columns:repeat(5, 220px);
-    }
 }
