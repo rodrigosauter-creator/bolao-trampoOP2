@@ -2999,7 +2999,7 @@
       }
     ]
   },
-  "jogos_realizados": 86,
+  "jogos_realizados": 87,
   "jogos": [
     {
       "jogo": 1,
@@ -3864,12 +3864,12 @@
     {
       "jogo": 87,
       "selecao_a": "Argentina",
-      "gols_a": null,
-      "gols_b": null,
+      "gols_a": 3,
+      "gols_b": 2,
       "selecao_b": "Cabo Verde",
-      "vencedor": "-",
+      "vencedor": "Argentina",
       "penaltis": "x",
-      "realizado": false
+      "realizado": true
     },
     {
       "jogo": 88,
@@ -3943,7 +3943,7 @@
     },
     {
       "jogo": 95,
-      "selecao_a": null,
+      "selecao_a": "Argentina",
       "gols_a": null,
       "gols_b": null,
       "selecao_b": "Egito",
@@ -5084,7 +5084,7 @@
         },
         {
           "jogo": 95,
-          "selecao_a": 0,
+          "selecao_a": "Argentina",
           "gols_a": null,
           "gols_b": null,
           "selecao_b": "Egito",
@@ -6148,10 +6148,10 @@
         {
           "jogo": 87,
           "selecao_a": "Argentina",
-          "gols_a": 3,
-          "gols_b": 1,
+          "gols_a": null,
+          "gols_b": null,
           "selecao_b": "Cabo Verde",
-          "vencedor": "Argentina",
+          "vencedor": "-",
           "penaltis": "x",
           "palpite_certo": 0,
           "pontos": 0
@@ -6235,7 +6235,7 @@
         },
         {
           "jogo": 95,
-          "selecao_a": 0,
+          "selecao_a": "Argentina",
           "gols_a": null,
           "gols_b": null,
           "selecao_b": "Egito",
@@ -7299,10 +7299,10 @@
         {
           "jogo": 87,
           "selecao_a": "Argentina",
-          "gols_a": 3,
-          "gols_b": 0,
+          "gols_a": null,
+          "gols_b": null,
           "selecao_b": "Cabo Verde",
-          "vencedor": "Argentina",
+          "vencedor": "-",
           "penaltis": "x",
           "palpite_certo": 0,
           "pontos": 0
@@ -7386,7 +7386,7 @@
         },
         {
           "jogo": 95,
-          "selecao_a": 0,
+          "selecao_a": "Argentina",
           "gols_a": null,
           "gols_b": null,
           "selecao_b": "Egito",
@@ -8537,7 +8537,7 @@
         },
         {
           "jogo": 95,
-          "selecao_a": 0,
+          "selecao_a": "Argentina",
           "gols_a": null,
           "gols_b": null,
           "selecao_b": "Egito",
@@ -9688,7 +9688,7 @@
         },
         {
           "jogo": 95,
-          "selecao_a": 0,
+          "selecao_a": "Argentina",
           "gols_a": null,
           "gols_b": null,
           "selecao_b": "Egito",
@@ -10839,7 +10839,7 @@
         },
         {
           "jogo": 95,
-          "selecao_a": 0,
+          "selecao_a": "Argentina",
           "gols_a": null,
           "gols_b": null,
           "selecao_b": "Egito",
@@ -11990,7 +11990,7 @@
         },
         {
           "jogo": 95,
-          "selecao_a": 0,
+          "selecao_a": "Argentina",
           "gols_a": null,
           "gols_b": null,
           "selecao_b": "Egito",
