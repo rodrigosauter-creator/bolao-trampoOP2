@@ -413,6 +413,10 @@ async function carregarDados() {
         montarListaApostadores(
             dados.apostadores
         );
+        
+        renderizarEstatisticas(
+            dados.apostadores
+        );   
 
         inicializarAbas();
 
@@ -1292,4 +1296,70 @@ function montarOptionsSelecoes(palpites, selecaoAtual = "todas") {
             </option>
         `)
         .join("");
+}
+
+function renderizarEstatisticas(apostadores) {
+    const container =
+        document.getElementById("estatisticasApostadores");
+
+    if (!container) return;
+
+    container.innerHTML = `
+        <div class="filtro-apostador-estatisticas">
+            <label for="selectApostadorEstatisticas">
+                Escolha o apostador:
+            </label>
+
+            <select id="selectApostadorEstatisticas">
+                ${apostadores.map((apostador, index) => `
+                    <option value="${index}">
+                        ${apostador.nome}
+                    </option>
+                `).join("")}
+            </select>
+        </div>
+
+        <div id="rankingSelecoesApostador"></div>
+    `;
+
+    const select =
+        document.getElementById("selectApostadorEstatisticas");
+
+    function atualizarRanking() {
+        const apostador =
+            apostadores[select.value];
+
+        const ranking =
+            calcularPontosPorSelecao(apostador);
+
+        const rankingContainer =
+            document.getElementById("rankingSelecoesApostador");
+
+        rankingContainer.innerHTML = `
+            <div class="card-estatistica">
+                <h3>🌍 Pontos por Seleção</h3>
+                <h4>${apostador.nome}</h4>
+
+                ${ranking.map(item => `
+                    <div class="linha-ranking-selecao">
+                        <span>
+                            ${bandeiras[item.selecao] || "🏳️"}
+                            ${item.selecao}
+                        </span>
+
+                        <strong>
+                            ${item.pontos} pts
+                        </strong>
+                    </div>
+                `).join("")}
+            </div>
+        `;
+    }
+
+    select.addEventListener(
+        "change",
+        atualizarRanking
+    );
+
+    atualizarRanking();
 }
