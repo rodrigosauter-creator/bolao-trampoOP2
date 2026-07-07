@@ -726,7 +726,7 @@ function montarListaApostadores(apostadores) {
 
 }
 
-function mostrarApostador(apostador, faseAtual = "todos") {
+function mostrarApostador(apostador, faseAtual = "todos", selecaoAtual = "todas") {
 
     const detalhes =
         document.getElementById("detalhesApostador");
@@ -757,12 +757,12 @@ function mostrarApostador(apostador, faseAtual = "todos") {
     const [inicio, fim] =
         obterFaixaRodada(faseAtual);
 
-   let palpitesFiltrados = todosPalpites;
+let palpitesFiltrados = todosPalpites;
 
 if (faseAtual === "placar-exato") {
 
     palpitesFiltrados =
-        todosPalpites.filter(
+        palpitesFiltrados.filter(
             p => Number(p.palpite_certo) === 1
         );
 
@@ -772,10 +772,20 @@ if (faseAtual === "placar-exato") {
         obterFaixaRodada(faseAtual);
 
     palpitesFiltrados =
-        todosPalpites.filter(
+        palpitesFiltrados.filter(
             p =>
                 Number(p.jogo) >= inicio &&
                 Number(p.jogo) <= fim
+        );
+}
+
+if (selecaoAtual !== "todas") {
+
+    palpitesFiltrados =
+        palpitesFiltrados.filter(
+            p =>
+                p.selecao_a === selecaoAtual ||
+                p.selecao_b === selecaoAtual
         );
 }
 
@@ -795,10 +805,12 @@ if (faseAtual === "placar-exato") {
             <option value="final" ${faseAtual === "final" ? "selected" : ""}>Final (104)</option>
         </select>
 
-                <select id="filtroSelecao" class="filtro-rodada">
-            <option value="todas">Todas as seleções</option>
-            ${montarOptionsSelecoes(todosPalpites)}
-        </select>
+<select id="filtroSelecao" class="filtro-rodada">
+    <option value="todas" ${selecaoAtual === "todas" ? "selected" : ""}>
+        Todas as seleções
+    </option>
+    ${montarOptionsSelecoes(todosPalpites, selecaoAtual)}
+</select>
 
     `;
 
@@ -1013,48 +1025,24 @@ selectFase.addEventListener("change", e => {
             ...apostador,
             palpitesOriginais: todosPalpites
         },
-        e.target.value
+        e.target.value,
+        selectSelecao.value
     );
 
 });
 
 selectSelecao.addEventListener("change", e => {
 
-    const selecaoEscolhida =
-        e.target.value;
+    mostrarApostador(
+        {
+            ...apostador,
+            palpitesOriginais: todosPalpites
+        },
+        selectFase.value,
+        e.target.value
+    );
 
-    let listaFiltrada =
-        todosPalpites;
-
-    if (selectFase.value === "placar-exato") {
-
-        listaFiltrada =
-            listaFiltrada.filter(
-                p => Number(p.palpite_certo) === 1
-            );
-
-    } else if (selectFase.value !== "todos") {
-
-        const [inicio, fim] =
-            obterFaixaRodada(selectFase.value);
-
-        listaFiltrada =
-            listaFiltrada.filter(
-                p =>
-                    Number(p.jogo) >= inicio &&
-                    Number(p.jogo) <= fim
-            );
-    }
-
-    if (selecaoEscolhida !== "todas") {
-
-        listaFiltrada =
-            listaFiltrada.filter(
-                p =>
-                    p.selecao_a === selecaoEscolhida ||
-                    p.selecao_b === selecaoEscolhida
-            );
-    }
+});
 
     mostrarApostador(
         {
@@ -1285,7 +1273,7 @@ function calcularPontosPorSelecao(apostador) {
         .sort((a, b) => b.pontos - a.pontos);
 }
 
-function montarOptionsSelecoes(palpites) {
+function montarOptionsSelecoes(palpites, selecaoAtual = "todas") {
 
     const selecoes = new Set();
 
@@ -1297,7 +1285,9 @@ function montarOptionsSelecoes(palpites) {
     return [...selecoes]
         .sort()
         .map(selecao => `
-            <option value="${selecao}">
+            <option
+                value="${selecao}"
+                ${selecaoAtual === selecao ? "selected" : ""}>
                 ${selecao}
             </option>
         `)
