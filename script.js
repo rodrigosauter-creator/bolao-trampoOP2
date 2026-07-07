@@ -1048,16 +1048,6 @@ selectSelecao.addEventListener("change", e => {
 
 });
 
-    mostrarApostador(
-        {
-            ...apostador,
-            palpitesOriginais: listaFiltrada
-        },
-        "todos"
-    );
-
-});
-
     setTimeout(() => {
 
     const y =
