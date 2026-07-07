@@ -2,44 +2,44 @@
   "classificacao": [
     {
       "posicao": 1,
+      "nome": "Arthur",
+      "pontos": 220,
+      "acertos": 8
+    },
+    {
+      "posicao": 2,
       "nome": "Isa",
       "pontos": 215,
       "acertos": 6
     },
     {
-      "posicao": 2,
-      "nome": "Arthur",
-      "pontos": 211,
-      "acertos": 7
-    },
-    {
       "posicao": 3,
-      "nome": "Ana",
-      "pontos": 202,
-      "acertos": 5
+      "nome": "Rodrigo",
+      "pontos": 209,
+      "acertos": 7
     },
     {
       "posicao": 4,
-      "nome": "Dudu",
-      "pontos": 200,
-      "acertos": 9
+      "nome": "Ana",
+      "pontos": 208,
+      "acertos": 5
     },
     {
       "posicao": 5,
-      "nome": "Rodrigo",
-      "pontos": 200,
-      "acertos": 7
+      "nome": "Dudu",
+      "pontos": 206,
+      "acertos": 9
     },
     {
       "posicao": 6,
       "nome": "Carol",
-      "pontos": 179,
+      "pontos": 185,
       "acertos": 6
     },
     {
       "posicao": 7,
       "nome": "Trops",
-      "pontos": 152,
+      "pontos": 157,
       "acertos": 1
     }
   ],
@@ -427,43 +427,43 @@
       },
       {
         "jogo": 95,
-        "pontos": 200
+        "pontos": 206
       },
       {
         "jogo": 96,
-        "pontos": 200
+        "pontos": 209
       },
       {
         "jogo": 97,
-        "pontos": 200
+        "pontos": 209
       },
       {
         "jogo": 98,
-        "pontos": 200
+        "pontos": 209
       },
       {
         "jogo": 99,
-        "pontos": 200
+        "pontos": 209
       },
       {
         "jogo": 100,
-        "pontos": 200
+        "pontos": 209
       },
       {
         "jogo": 101,
-        "pontos": 200
+        "pontos": 209
       },
       {
         "jogo": 102,
-        "pontos": 200
+        "pontos": 209
       },
       {
         "jogo": 103,
-        "pontos": 200
+        "pontos": 209
       },
       {
         "jogo": 104,
-        "pontos": 200
+        "pontos": 209
       }
     ],
     "Arthur": [
@@ -849,43 +849,43 @@
       },
       {
         "jogo": 95,
-        "pontos": 211
+        "pontos": 220
       },
       {
         "jogo": 96,
-        "pontos": 211
+        "pontos": 220
       },
       {
         "jogo": 97,
-        "pontos": 211
+        "pontos": 220
       },
       {
         "jogo": 98,
-        "pontos": 211
+        "pontos": 220
       },
       {
         "jogo": 99,
-        "pontos": 211
+        "pontos": 220
       },
       {
         "jogo": 100,
-        "pontos": 211
+        "pontos": 220
       },
       {
         "jogo": 101,
-        "pontos": 211
+        "pontos": 220
       },
       {
         "jogo": 102,
-        "pontos": 211
+        "pontos": 220
       },
       {
         "jogo": 103,
-        "pontos": 211
+        "pontos": 220
       },
       {
         "jogo": 104,
-        "pontos": 211
+        "pontos": 220
       }
     ],
     "Dudu": [
@@ -1271,43 +1271,43 @@
       },
       {
         "jogo": 95,
-        "pontos": 200
+        "pontos": 206
       },
       {
         "jogo": 96,
-        "pontos": 200
+        "pontos": 206
       },
       {
         "jogo": 97,
-        "pontos": 200
+        "pontos": 206
       },
       {
         "jogo": 98,
-        "pontos": 200
+        "pontos": 206
       },
       {
         "jogo": 99,
-        "pontos": 200
+        "pontos": 206
       },
       {
         "jogo": 100,
-        "pontos": 200
+        "pontos": 206
       },
       {
         "jogo": 101,
-        "pontos": 200
+        "pontos": 206
       },
       {
         "jogo": 102,
-        "pontos": 200
+        "pontos": 206
       },
       {
         "jogo": 103,
-        "pontos": 200
+        "pontos": 206
       },
       {
         "jogo": 104,
-        "pontos": 200
+        "pontos": 206
       }
     ],
     "Carol": [
@@ -1693,43 +1693,43 @@
       },
       {
         "jogo": 95,
-        "pontos": 179
+        "pontos": 185
       },
       {
         "jogo": 96,
-        "pontos": 179
+        "pontos": 185
       },
       {
         "jogo": 97,
-        "pontos": 179
+        "pontos": 185
       },
       {
         "jogo": 98,
-        "pontos": 179
+        "pontos": 185
       },
       {
         "jogo": 99,
-        "pontos": 179
+        "pontos": 185
       },
       {
         "jogo": 100,
-        "pontos": 179
+        "pontos": 185
       },
       {
         "jogo": 101,
-        "pontos": 179
+        "pontos": 185
       },
       {
         "jogo": 102,
-        "pontos": 179
+        "pontos": 185
       },
       {
         "jogo": 103,
-        "pontos": 179
+        "pontos": 185
       },
       {
         "jogo": 104,
-        "pontos": 179
+        "pontos": 185
       }
     ],
     "Ana": [
@@ -2115,43 +2115,43 @@
       },
       {
         "jogo": 95,
-        "pontos": 202
+        "pontos": 208
       },
       {
         "jogo": 96,
-        "pontos": 202
+        "pontos": 208
       },
       {
         "jogo": 97,
-        "pontos": 202
+        "pontos": 208
       },
       {
         "jogo": 98,
-        "pontos": 202
+        "pontos": 208
       },
       {
         "jogo": 99,
-        "pontos": 202
+        "pontos": 208
       },
       {
         "jogo": 100,
-        "pontos": 202
+        "pontos": 208
       },
       {
         "jogo": 101,
-        "pontos": 202
+        "pontos": 208
       },
       {
         "jogo": 102,
-        "pontos": 202
+        "pontos": 208
       },
       {
         "jogo": 103,
-        "pontos": 202
+        "pontos": 208
       },
       {
         "jogo": 104,
-        "pontos": 202
+        "pontos": 208
       }
     ],
     "Isa": [
@@ -2959,47 +2959,47 @@
       },
       {
         "jogo": 95,
-        "pontos": 152
+        "pontos": 157
       },
       {
         "jogo": 96,
-        "pontos": 152
+        "pontos": 157
       },
       {
         "jogo": 97,
-        "pontos": 152
+        "pontos": 157
       },
       {
         "jogo": 98,
-        "pontos": 152
+        "pontos": 157
       },
       {
         "jogo": 99,
-        "pontos": 152
+        "pontos": 157
       },
       {
         "jogo": 100,
-        "pontos": 152
+        "pontos": 157
       },
       {
         "jogo": 101,
-        "pontos": 152
+        "pontos": 157
       },
       {
         "jogo": 102,
-        "pontos": 152
+        "pontos": 157
       },
       {
         "jogo": 103,
-        "pontos": 152
+        "pontos": 157
       },
       {
         "jogo": 104,
-        "pontos": 152
+        "pontos": 157
       }
     ]
   },
-  "jogos_realizados": 94,
+  "jogos_realizados": 96,
   "jogos": [
     {
       "jogo": 1,
@@ -3944,22 +3944,22 @@
     {
       "jogo": 95,
       "selecao_a": "Argentina",
-      "gols_a": null,
-      "gols_b": null,
+      "gols_a": 3,
+      "gols_b": 2,
       "selecao_b": "Egito",
-      "vencedor": "-",
+      "vencedor": "Argentina",
       "penaltis": "x",
-      "realizado": false
+      "realizado": true
     },
     {
       "jogo": 96,
       "selecao_a": "Suíça",
-      "gols_a": null,
-      "gols_b": null,
+      "gols_a": 0,
+      "gols_b": 0,
       "selecao_b": "Colômbia",
-      "vencedor": "-",
-      "penaltis": "x",
-      "realizado": false
+      "vencedor": "Empate",
+      "penaltis": "Suíça",
+      "realizado": true
     },
     {
       "jogo": 97,
@@ -3993,10 +3993,10 @@
     },
     {
       "jogo": 100,
-      "selecao_a": null,
+      "selecao_a": "Argentina",
       "gols_a": null,
       "gols_b": null,
-      "selecao_b": null,
+      "selecao_b": "Suíça",
       "vencedor": "-",
       "penaltis": "x",
       "realizado": false
@@ -5085,24 +5085,24 @@
         {
           "jogo": 95,
           "selecao_a": "Argentina",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 3,
+          "gols_b": 1,
           "selecao_b": "Egito",
-          "vencedor": "-",
+          "vencedor": "Argentina",
           "penaltis": "x",
           "palpite_certo": 0,
-          "pontos": 0
+          "pontos": 6
         },
         {
           "jogo": 96,
           "selecao_a": "Suíça",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 1,
+          "gols_b": 1,
           "selecao_b": "Colômbia",
-          "vencedor": "-",
-          "penaltis": "x",
+          "vencedor": "Empate",
+          "penaltis": "Colômbia",
           "palpite_certo": 0,
-          "pontos": 0
+          "pontos": 3
         },
         {
           "jogo": 97,
@@ -5139,10 +5139,10 @@
         },
         {
           "jogo": 100,
-          "selecao_a": 0,
+          "selecao_a": "Argentina",
           "gols_a": null,
           "gols_b": null,
-          "selecao_b": 0,
+          "selecao_b": "Suíça",
           "vencedor": "-",
           "penaltis": "x",
           "palpite_certo": 0,
@@ -6236,21 +6236,21 @@
         {
           "jogo": 95,
           "selecao_a": "Argentina",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 3,
+          "gols_b": 2,
           "selecao_b": "Egito",
-          "vencedor": "-",
+          "vencedor": "Argentina",
           "penaltis": "x",
-          "palpite_certo": 0,
-          "pontos": 0
+          "palpite_certo": 1,
+          "pontos": 9
         },
         {
           "jogo": 96,
           "selecao_a": "Suíça",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 1,
+          "gols_b": 2,
           "selecao_b": "Colômbia",
-          "vencedor": "-",
+          "vencedor": "Colômbia",
           "penaltis": "x",
           "palpite_certo": 0,
           "pontos": 0
@@ -6290,10 +6290,10 @@
         },
         {
           "jogo": 100,
-          "selecao_a": 0,
+          "selecao_a": "Argentina",
           "gols_a": null,
           "gols_b": null,
-          "selecao_b": 0,
+          "selecao_b": "Suíça",
           "vencedor": "-",
           "penaltis": "x",
           "palpite_certo": 0,
@@ -7387,21 +7387,21 @@
         {
           "jogo": 95,
           "selecao_a": "Argentina",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 3,
+          "gols_b": 1,
           "selecao_b": "Egito",
-          "vencedor": "-",
+          "vencedor": "Argentina",
           "penaltis": "x",
           "palpite_certo": 0,
-          "pontos": 0
+          "pontos": 6
         },
         {
           "jogo": 96,
           "selecao_a": "Suíça",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 1,
+          "gols_b": 2,
           "selecao_b": "Colômbia",
-          "vencedor": "-",
+          "vencedor": "Colômbia",
           "penaltis": "x",
           "palpite_certo": 0,
           "pontos": 0
@@ -7441,10 +7441,10 @@
         },
         {
           "jogo": 100,
-          "selecao_a": 0,
+          "selecao_a": "Argentina",
           "gols_a": null,
           "gols_b": null,
-          "selecao_b": 0,
+          "selecao_b": "Suíça",
           "vencedor": "-",
           "penaltis": "x",
           "palpite_certo": 0,
@@ -8538,21 +8538,21 @@
         {
           "jogo": 95,
           "selecao_a": "Argentina",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 3,
+          "gols_b": 1,
           "selecao_b": "Egito",
-          "vencedor": "-",
+          "vencedor": "Argentina",
           "penaltis": "x",
           "palpite_certo": 0,
-          "pontos": 0
+          "pontos": 6
         },
         {
           "jogo": 96,
           "selecao_a": "Suíça",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 1,
+          "gols_b": 2,
           "selecao_b": "Colômbia",
-          "vencedor": "-",
+          "vencedor": "Colômbia",
           "penaltis": "x",
           "palpite_certo": 0,
           "pontos": 0
@@ -8592,10 +8592,10 @@
         },
         {
           "jogo": 100,
-          "selecao_a": 0,
+          "selecao_a": "Argentina",
           "gols_a": null,
           "gols_b": null,
-          "selecao_b": 0,
+          "selecao_b": "Suíça",
           "vencedor": "-",
           "penaltis": "x",
           "palpite_certo": 0,
@@ -9689,21 +9689,21 @@
         {
           "jogo": 95,
           "selecao_a": "Argentina",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 3,
+          "gols_b": 1,
           "selecao_b": "Egito",
-          "vencedor": "-",
+          "vencedor": "Argentina",
           "penaltis": "x",
           "palpite_certo": 0,
-          "pontos": 0
+          "pontos": 6
         },
         {
           "jogo": 96,
           "selecao_a": "Suíça",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 1,
+          "gols_b": 2,
           "selecao_b": "Colômbia",
-          "vencedor": "-",
+          "vencedor": "Colômbia",
           "penaltis": "x",
           "palpite_certo": 0,
           "pontos": 0
@@ -9743,10 +9743,10 @@
         },
         {
           "jogo": 100,
-          "selecao_a": 0,
+          "selecao_a": "Argentina",
           "gols_a": null,
           "gols_b": null,
-          "selecao_b": 0,
+          "selecao_b": "Suíça",
           "vencedor": "-",
           "penaltis": "x",
           "palpite_certo": 0,
@@ -10840,21 +10840,21 @@
         {
           "jogo": 95,
           "selecao_a": "Argentina",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 1,
+          "gols_b": 1,
           "selecao_b": "Egito",
-          "vencedor": "-",
-          "penaltis": "x",
+          "vencedor": "Empate",
+          "penaltis": "Egito",
           "palpite_certo": 0,
           "pontos": 0
         },
         {
           "jogo": 96,
           "selecao_a": "Suíça",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 1,
+          "gols_b": 2,
           "selecao_b": "Colômbia",
-          "vencedor": "-",
+          "vencedor": "Colômbia",
           "penaltis": "x",
           "palpite_certo": 0,
           "pontos": 0
@@ -10894,10 +10894,10 @@
         },
         {
           "jogo": 100,
-          "selecao_a": 0,
+          "selecao_a": "Argentina",
           "gols_a": null,
           "gols_b": null,
-          "selecao_b": 0,
+          "selecao_b": "Suíça",
           "vencedor": "-",
           "penaltis": "x",
           "palpite_certo": 0,
@@ -11991,21 +11991,21 @@
         {
           "jogo": 95,
           "selecao_a": "Argentina",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 2,
+          "gols_b": 1,
           "selecao_b": "Egito",
-          "vencedor": "-",
+          "vencedor": "Argentina",
           "penaltis": "x",
           "palpite_certo": 0,
-          "pontos": 0
+          "pontos": 5
         },
         {
           "jogo": 96,
           "selecao_a": "Suíça",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 0,
+          "gols_b": 2,
           "selecao_b": "Colômbia",
-          "vencedor": "-",
+          "vencedor": "Colômbia",
           "penaltis": "x",
           "palpite_certo": 0,
           "pontos": 0
@@ -12045,10 +12045,10 @@
         },
         {
           "jogo": 100,
-          "selecao_a": 0,
+          "selecao_a": "Argentina",
           "gols_a": null,
           "gols_b": null,
-          "selecao_b": 0,
+          "selecao_b": "Suíça",
           "vencedor": "-",
           "penaltis": "x",
           "palpite_certo": 0,
@@ -15428,32 +15428,32 @@
       ]
     },
     {
-      "jogo": 0,
+      "jogo": 6,
       "vencedor_rodada": "Arthur",
-      "maior_pontuacao": 0,
+      "maior_pontuacao": 9,
       "ranking": [
         {
           "nome": "Arthur",
-          "pontos": 0
+          "pontos": 9
         },
         {
           "nome": "Dudu",
-          "pontos": 0
+          "pontos": 6
         },
         {
           "nome": "Carol",
-          "pontos": 0
+          "pontos": 6
         },
         {
           "nome": "Ana",
-          "pontos": 0
-        },
-        {
-          "nome": " Isa",
-          "pontos": 0
+          "pontos": 6
         },
         {
           "nome": "Trops",
+          "pontos": 5
+        },
+        {
+          "nome": " Isa",
           "pontos": 0
         },
         {
@@ -15463,7 +15463,7 @@
       ]
     },
     {
-      "jogo": 0,
+      "jogo": 3,
       "vencedor_rodada": "Arthur",
       "maior_pontuacao": 0,
       "ranking": [
@@ -16256,48 +16256,48 @@
     },
     {
       "jogo": 95,
-      "lider": "Isa",
-      "pontos": 215
+      "lider": "Arthur",
+      "pontos": 220
     },
     {
       "jogo": 96,
-      "lider": "Isa",
-      "pontos": 215
+      "lider": "Arthur",
+      "pontos": 220
     },
     {
       "jogo": 97,
-      "lider": "Isa",
-      "pontos": 215
+      "lider": "Arthur",
+      "pontos": 220
     },
     {
       "jogo": 98,
-      "lider": "Isa",
-      "pontos": 215
+      "lider": "Arthur",
+      "pontos": 220
     },
     {
       "jogo": 99,
-      "lider": "Isa",
-      "pontos": 215
+      "lider": "Arthur",
+      "pontos": 220
     },
     {
       "jogo": 100,
-      "lider": "Isa",
-      "pontos": 215
+      "lider": "Arthur",
+      "pontos": 220
     },
     {
       "jogo": 101,
-      "lider": "Isa",
-      "pontos": 215
+      "lider": "Arthur",
+      "pontos": 220
     },
     {
       "jogo": 102,
-      "lider": "Isa",
-      "pontos": 215
+      "lider": "Arthur",
+      "pontos": 220
     },
     {
       "jogo": 103,
-      "lider": "Isa",
-      "pontos": 215
+      "lider": "Arthur",
+      "pontos": 220
     }
   ]
 }
