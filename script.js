@@ -757,23 +757,13 @@ function mostrarApostador(apostador, faseAtual = "todos") {
     const [inicio, fim] =
         obterFaixaRodada(faseAtual);
 
-    let palpitesFiltrados =
-        todosPalpites;
+   let palpitesFiltrados = todosPalpites;
 
 if (faseAtual === "placar-exato") {
 
     palpitesFiltrados =
         todosPalpites.filter(
             p => Number(p.palpite_certo) === 1
-        );
-
-} else if (faseAtual === "argentina") {
-
-    palpitesFiltrados =
-        todosPalpites.filter(
-            p =>
-                p.selecao_a === "Argentina" ||
-                p.selecao_b === "Argentina"
         );
 
 } else if (faseAtual !== "todos") {
@@ -804,6 +794,12 @@ if (faseAtual === "placar-exato") {
             <option value="terceiro" ${faseAtual === "terceiro" ? "selected" : ""}>3º Lugar (103)</option>
             <option value="final" ${faseAtual === "final" ? "selected" : ""}>Final (104)</option>
         </select>
+
+                <select id="filtroSelecao" class="filtro-rodada">
+            <option value="todas">Todas as seleções</option>
+            ${montarOptionsSelecoes(todosPalpites)}
+        </select>
+
     `;
 
     let html = `
@@ -1004,20 +1000,71 @@ if (temPalpite) {
 
     detalhes.innerHTML = html;
 
-    document
-        .getElementById("filtroPalpites")
-        .addEventListener("change", e => {
+const selectFase =
+    document.getElementById("filtroPalpites");
 
-            mostrarApostador(
-                {
-                    ...apostador,
-                    palpitesOriginais:
-                        todosPalpites
-                },
-                e.target.value
+const selectSelecao =
+    document.getElementById("filtroSelecao");
+
+selectFase.addEventListener("change", e => {
+
+    mostrarApostador(
+        {
+            ...apostador,
+            palpitesOriginais: todosPalpites
+        },
+        e.target.value
+    );
+
+});
+
+selectSelecao.addEventListener("change", e => {
+
+    const selecaoEscolhida =
+        e.target.value;
+
+    let listaFiltrada =
+        todosPalpites;
+
+    if (selectFase.value === "placar-exato") {
+
+        listaFiltrada =
+            listaFiltrada.filter(
+                p => Number(p.palpite_certo) === 1
             );
 
-        });
+    } else if (selectFase.value !== "todos") {
+
+        const [inicio, fim] =
+            obterFaixaRodada(selectFase.value);
+
+        listaFiltrada =
+            listaFiltrada.filter(
+                p =>
+                    Number(p.jogo) >= inicio &&
+                    Number(p.jogo) <= fim
+            );
+    }
+
+    if (selecaoEscolhida !== "todas") {
+
+        listaFiltrada =
+            listaFiltrada.filter(
+                p =>
+                    p.selecao_a === selecaoEscolhida ||
+                    p.selecao_b === selecaoEscolhida
+            );
+    }
+
+    mostrarApostador(
+        {
+            ...apostador,
+            palpitesOriginais: listaFiltrada
+        },
+        "todos"
+    );
+
+});
 
     setTimeout(() => {
 
@@ -1207,4 +1254,52 @@ function cardCampeao(){
 
         </div>
     `;
+}
+
+function calcularPontosPorSelecao(apostador) {
+
+    const rankingSelecoes = {};
+
+    apostador.palpites.forEach(palpite => {
+
+        const pontos =
+            Number(palpite.pontos) || 0;
+
+        if (palpite.selecao_a) {
+            rankingSelecoes[palpite.selecao_a] =
+                (rankingSelecoes[palpite.selecao_a] || 0) + pontos;
+        }
+
+        if (palpite.selecao_b) {
+            rankingSelecoes[palpite.selecao_b] =
+                (rankingSelecoes[palpite.selecao_b] || 0) + pontos;
+        }
+
+    });
+
+    return Object.entries(rankingSelecoes)
+        .map(([selecao, pontos]) => ({
+            selecao,
+            pontos
+        }))
+        .sort((a, b) => b.pontos - a.pontos);
+}
+
+function montarOptionsSelecoes(palpites) {
+
+    const selecoes = new Set();
+
+    palpites.forEach(p => {
+        if (p.selecao_a) selecoes.add(p.selecao_a);
+        if (p.selecao_b) selecoes.add(p.selecao_b);
+    });
+
+    return [...selecoes]
+        .sort()
+        .map(selecao => `
+            <option value="${selecao}">
+                ${selecao}
+            </option>
+        `)
+        .join("");
 }
