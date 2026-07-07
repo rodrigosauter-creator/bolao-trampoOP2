@@ -1313,3 +1313,14 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
     font-weight:800;
     border-radius:10px;
 }
+
+.filtros-apostador{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-bottom:20px;
+}
+
+.filtros-apostador .filtro-rodada{
+    margin-bottom:0;
+}
