@@ -767,7 +767,19 @@ if (faseAtual === "placar-exato") {
             p => Number(p.palpite_certo) === 1
         );
 
+} else if (faseAtual === "argentina") {
+
+    palpitesFiltrados =
+        todosPalpites.filter(
+            p =>
+                p.selecao_a === "Argentina" ||
+                p.selecao_b === "Argentina"
+        );
+
 } else if (faseAtual !== "todos") {
+
+    const [inicio, fim] =
+        obterFaixaRodada(faseAtual);
 
     palpitesFiltrados =
         todosPalpites.filter(
@@ -781,6 +793,7 @@ if (faseAtual === "placar-exato") {
         <select id="filtroPalpites" class="filtro-rodada">
             <option value="todos" ${faseAtual === "todos" ? "selected" : ""}>Todas as fases</option>
             <option value="placar-exato" ${faseAtual === "placar-exato" ? "selected" : ""}>Palpites Certos</option>
+            <option value="argentina" ${faseAtual === "argentina" ? "selected" : ""}>Argentina</option>
             <option value="1" ${faseAtual === "1" ? "selected" : ""}>1ª Rodada (1-24)</option>
             <option value="2" ${faseAtual === "2" ? "selected" : ""}>2ª Rodada (25-48)</option>
             <option value="3" ${faseAtual === "3" ? "selected" : ""}>3ª Rodada (49-72)</option>
