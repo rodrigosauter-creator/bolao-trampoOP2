@@ -652,6 +652,41 @@ function obterNomeFase(jogo) {
     return "Outros";
 }
 
+// =====================================================
+// UTILITÁRIOS DE JOGOS REALIZADOS
+// =====================================================
+
+function jogoFoiRealizado(numeroJogo) {
+
+    const jogo =
+        dadosGlobais.jogos.find(
+            j => Number(j.jogo) === Number(numeroJogo)
+        );
+
+    return jogo ? jogo.realizado === true : false;
+}
+
+function obterPalpitesRealizados(apostador) {
+
+    return apostador.palpites.filter(
+        palpite => jogoFoiRealizado(palpite.jogo)
+    );
+}
+
+function obterNumerosJogosRealizados() {
+
+    return dadosGlobais.jogos
+        .filter(jogo => jogo.realizado === true)
+        .map(jogo => Number(jogo.jogo));
+}
+
+function obterPalpiteDoJogo(apostador, numeroJogo) {
+
+    return apostador.palpites.find(
+        palpite => Number(palpite.jogo) === Number(numeroJogo)
+    );
+}
+
 function adicionarTituloFase(container, nomeFase) {
 
     container.innerHTML += `
@@ -1261,7 +1296,7 @@ function contarPalpitesCertos(apostador) {
 
 function contarPalpitesEmpate(apostador) {
 
-    return apostador.palpites.filter(p => {
+    return obterPalpitesRealizados(apostador).filter(p => {
 
         const golsA =
             Number(p.gols_a);
@@ -1441,7 +1476,7 @@ function calcularDistribuicaoPontos(apostador) {
 function calcularAproveitamento(apostador) {
 
     const jogosValidos =
-        apostador.palpites.filter(
+        obterPalpitesRealizados(apostador).filter(
             p => p.pontos !== null &&
                  p.pontos !== undefined &&
                  p.pontos !== ""
@@ -1472,7 +1507,7 @@ function calcularSequencias(apostador) {
     let atualPontuando = 0;
     let atualZerando = 0;
 
-    apostador.palpites.forEach(palpite => {
+    obterPalpitesRealizados(apostador).forEach(palpite => {
 
         const pontos =
             Number(palpite.pontos) || 0;
@@ -1788,7 +1823,7 @@ function mostrarEstatisticasApostador(apostador) {
         infoRanking ? infoRanking.acertos : 0;
 
     const jogosValidos =
-        apostador.palpites.filter(
+        obterPalpitesRealizados(apostador).filter(
             p => p.pontos !== null &&
                  p.pontos !== undefined &&
                  p.pontos !== ""
@@ -2526,10 +2561,10 @@ function calcularHallDaVergonha(apostadores) {
         obterEmpatados(
             lista.map(apostador => {
 
-                const zerados =
-                    apostador.palpites.filter(
-                        p => Number(p.pontos) === 0
-                    ).length;
+const zerados =
+    obterPalpitesRealizados(apostador).filter(
+        p => Number(p.pontos) === 0
+    ).length;
 
                 return {
                     nome: apostador.nome,
