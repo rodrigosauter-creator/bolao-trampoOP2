@@ -2178,7 +2178,7 @@ const maiorArrancada =
             return {
                 nome: apostador.nome,
                 valor: arrancada.pontos,
-                detalhe: `${arrancada.jogos} jogo(s)`
+                detalhe: `${arrancada.jogos} jogos`
             };
         }),
         "valor"
@@ -2331,7 +2331,7 @@ function montarHallDaFama(apostadores) {
                 <div class="hall-card">
                     <div class="hall-titulo">📊 IRA 20000</div>
                     <div class="hall-nome">${nomesEmpatados(hall.melhorMediaGeral)}</div>
-                    <div class="hall-valor">${detalhesEmpatados(hall.melhorMediaGeral, " pts/jogo (maior média)")}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.melhorMediaGeral, " pts/jogo de média geral")}</div>
                 </div>
 
                 <div class="hall-card">
@@ -2349,7 +2349,7 @@ function montarHallDaFama(apostadores) {
                 <div class="hall-card">
                     <div class="hall-titulo">⚔️ Contra tudo e contra todos</div>
                     <div class="hall-nome">${nomesEmpatados(hall.contraTudo)}</div>
-                    <div class="hall-valor">${detalhesEmpatados(hall.contraTudo, " jogo(s) sozinho")}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.contraTudo, " jogos que pontuou sozinho(a)")}</div>
                 </div>
                 
                 <div class="hall-card">
@@ -2362,7 +2362,7 @@ function montarHallDaFama(apostadores) {
                         )}
                     </div>
                     <div class="hall-nome">${nomesEmpatados(hall.reiRainhaAllIn)}</div>
-                    <div class="hall-valor">${detalhesEmpatados(hall.reiRainhaAllIn, " all-in(s)")}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.reiRainhaAllIn, " all-ins")}</div>
                 </div>
 
             </div>
@@ -2416,10 +2416,10 @@ function tituloHater(posicao) {
             return "🐐 Fanboyzinho do Messi";
 
         case 3:
-            return "💬 'Maradona é melhor que o Pelé'";
+            return "💬 Maradona é melhor que o Pelé";
 
         case 4:
-            return "🙄 'Ain eu torço pra quem eu quiser'";
+            return "🙄 Ain eu torço pra quem eu quiser";
 
         case 5:
             return "🤨 Argentina????";
@@ -2673,7 +2673,7 @@ function renderizarHallDaVergonha(apostadores) {
                 </div>
 
                 <div class="hall-card vergonha-card">
-                    <div class="hall-titulo">🤡 Especialista em zicar</div>
+                    <div class="hall-titulo">🤡 Professor Pardal</div>
                     <div class="hall-nome">${nomesEmpatados(hall.especialistaEmZicar)}</div>
                     <div class="hall-valor">${detalhesEmpatados(hall.especialistaEmZicar, " jogos seguidos zerando")}</div>
                 </div>
@@ -2691,13 +2691,13 @@ function renderizarHallDaVergonha(apostadores) {
                 </div>
 
                 <div class="hall-card vergonha-card">
-                    <div class="hall-titulo">🤝 Amigo do empate</div>
+                    <div class="hall-titulo">🦆 Empata foda</div>
                     <div class="hall-nome">${nomesEmpatados(hall.amigoDoEmpate)}</div>
                     <div class="hall-valor">${detalhesEmpatados(hall.amigoDoEmpate, " empates apostados")}</div>
                 </div>
                 
                 <div class="hall-card vergonha-card">
-                    <div class="hall-titulo">🥈 Vice profissional</div>
+                    <div class="hall-titulo">🥈 Vasco da Gama</div>
                     <div class="hall-nome">${nomesEmpatados(hall.viceProfissional)}</div>
                     <div class="hall-valor">${detalhesEmpatados(hall.viceProfissional, " rodadas em 2º")}</div>
                 </div>
@@ -2709,21 +2709,21 @@ function renderizarHallDaVergonha(apostadores) {
                 </div>
 
                 <div class="hall-card vergonha-card">
-                    <div class="hall-titulo">🐑 Maria Vai com as Outras</div>
+                    <div class="hall-titulo">🐑 Maria vai com as outras</div>
                     <div class="hall-nome">${nomesEmpatados(hall.mariaVaiComAsOutras)}</div>
-                    <div class="hall-valor">${detalhesEmpatados(hall.mariaVaiComAsOutras, " vez(es) sozinho")}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.mariaVaiComAsOutras, " vezes que teve o palpite igual ao de alguém")}</div>
                 </div>
 
                 <div class="hall-card vergonha-card">
                     <div class="hall-titulo">🐎 Cavalo Paraguaio</div>
                     <div class="hall-nome">${nomesEmpatados(hall.cavaloParaguaio)}</div>
-                    <div class="hall-valor">${detalhesEmpatados(hall.cavaloParaguaio, " posição(ões)")}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.cavaloParaguaio, " posições perdidas)")}</div>
                 </div>
                 
                 <div class="hall-card vergonha-card">
                     <div class="hall-titulo">🛗 Elevador</div>
                     <div class="hall-nome">${nomesEmpatados(hall.elevador)}</div>
-                    <div class="hall-valor">${detalhesEmpatados(hall.elevador, " mudança(s)")}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.elevador, " mudanças de posição")}</div>
                 </div>
 
                 <div class="hall-card vergonha-card">
@@ -3062,5 +3062,19 @@ function calcularMariaVaiComAsOutras(apostadores) {
         "valor"
 
     );
+
+    const ranking = Object.entries(repeticoes)
+    .map(([nome, valor]) => ({
+        nome,
+        valor
+    }))
+    .sort((a, b) => b.valor - a.valor);
+
+// Debug
+console.group("🐑 Maria Vai com as Outras");
+console.table(ranking);
+console.groupEnd();
+
+return obterEmpatados(ranking, "valor");
 
 }
