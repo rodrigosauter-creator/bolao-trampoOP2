@@ -2135,7 +2135,7 @@ function calcularHallDaFama(apostadores) {
                 return {
                     nome: apostador.nome,
                     valor: melhor ? melhor.pontos : 0,
-                    detalhe: melhor ? melhor.selecao : "-"
+                    detalhe: melhor ? melhor.selecao : "- até parece que torce para o"
                 };
             }),
             "valor"
@@ -2312,19 +2312,19 @@ function montarHallDaFama(apostadores) {
                 <div class="hall-card">
                     <div class="hall-titulo">🔮 Nostradamus</div>
                     <div class="hall-nome">${nomesEmpatados(hall.nostradamus)}</div>
-                    <div class="hall-valor">${detalhesEmpatados(hall.nostradamus, " palpites certos")}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.nostradamus, " palpites certos. Qual foi o pacto?")}</div>
                 </div>
 
                 <div class="hall-card">
                     <div class="hall-titulo">🔥 Orgulho do Duolingo</div>
                     <div class="hall-nome">${nomesEmpatados(hall.maiorSequencia)}</div>
-                    <div class="hall-valor">${detalhesEmpatados(hall.maiorSequencia, " jogos seguidos pontuando")}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.maiorSequencia, " jogos seguidos pontuando, a ofensiva tá como bb")}</div>
                 </div>
 
                 <div class="hall-card">
                     <div class="hall-titulo">⚡ Usain Bolt</div>
                     <div class="hall-nome">${nomesEmpatados(hall.maiorArrancada)}</div>
-                    <div class="hall-valor">${detalhesEmpatados(hall.maiorArrancada, " pts")}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.maiorArrancada, " pts. Tá querendo se provar?")}</div>
                 </div>
 
                 <div class="hall-card">
@@ -2336,7 +2336,7 @@ function montarHallDaFama(apostadores) {
                     )}
                 </div>
                     <div class="hall-nome">${nomesEmpatados(hall.melhorAproveitamento)}</div>
-                    <div class="hall-valor">${detalhesEmpatados(hall.melhorAproveitamento, "% dos jogos em que deu green")}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.melhorAproveitamento, "% dos jogos em que deu green seu viciado 🐯🤑")}</div>
                 </div>
 
                 <div class="hall-card">
@@ -2360,7 +2360,7 @@ function montarHallDaFama(apostadores) {
                 <div class="hall-card">
                     <div class="hall-titulo">📊 IRA 20000</div>
                     <div class="hall-nome">${nomesEmpatados(hall.melhorMediaGeral)}</div>
-                    <div class="hall-valor">${detalhesEmpatados(hall.melhorMediaGeral, " pts/jogo de média geral")}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.melhorMediaGeral, " pts/jogo de média geral. Queria eu que fosse meu IRA")}</div>
                 </div>
 
                 <div class="hall-card">
