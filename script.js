@@ -2016,7 +2016,7 @@ function calcularMaiorRecuperacao() {
     return obterEmpatados(recuperacoes, "valor");
 }
 
-function calcularMaisJogosEmPrimeiro() {
+function calcularRankingJogosEmPrimeiro() {
 
     const nomes =
         Object.keys(dadosGlobais.evolucao);
@@ -2028,17 +2028,16 @@ function calcularMaisJogosEmPrimeiro() {
     });
 
     const jogos =
-        dadosGlobais.evolucao[nomes[0]]
-            .filter(item => item.jogo !== 0)
-            .map(item => item.jogo);
+        obterNumerosJogosRealizados();
 
     jogos.forEach(jogo => {
 
         const pontosNaRodada =
             nomes.map(nome => {
+
                 const registro =
                     dadosGlobais.evolucao[nome].find(
-                        item => item.jogo === jogo
+                        item => Number(item.jogo) === Number(jogo)
                     );
 
                 return {
@@ -2057,14 +2056,40 @@ function calcularMaisJogosEmPrimeiro() {
             });
     });
 
-    const lista =
-        Object.entries(contagem).map(([nome, valor]) => ({
-            nome,
-            valor
-        }));
-
-    return obterEmpatados(lista, "valor");
+    return Object.entries(contagem).map(([nome, valor]) => ({
+        nome,
+        valor
+    }));
 }
+
+function calcularMaisJogosEmPrimeiro() {
+
+    return obterEmpatados(
+        calcularRankingJogosEmPrimeiro(),
+        "valor"
+    );
+}
+
+function calcularPipocou() {
+
+    const rankingPrimeiro =
+        calcularRankingJogosEmPrimeiro();
+
+    const liderAtual =
+        dadosGlobais.classificacao[0].nome;
+
+    const candidatos =
+        rankingPrimeiro.filter(
+            item => item.nome !== liderAtual
+        );
+
+    return obterEmpatados(
+        candidatos,
+        "valor"
+    );
+}
+
+
 
 function calcularHallDaFama(apostadores) {
 
@@ -2637,6 +2662,9 @@ const mariaVaiComAsOutras =
     const elevador =
     calcularElevador();
 
+    const pipocou =
+    calcularPipocou();
+
     return {
         maiorHaterBrasil,
         reiDoQuase,
@@ -2648,7 +2676,7 @@ const mariaVaiComAsOutras =
         viceProfissional,
         tartaruga,
         mariaVaiComAsOutras,
-        cavaloParaguaio,
+        pipocou,
         elevador
     };
 }
@@ -2714,7 +2742,7 @@ function renderizarHallDaVergonha(apostadores) {
                 </div>
                 
                 <div class="hall-card vergonha-card">
-                    <div class="hall-titulo">🐢 Tartaruga</div>
+                    <div class="hall-titulo">🔦 Lanterninha</div>
                     <div class="hall-nome">${nomesEmpatados(hall.tartaruga)}</div>
                     <div class="hall-valor">${detalhesEmpatados(hall.tartaruga, " rodadas em último")}</div>
                 </div>
@@ -2726,9 +2754,9 @@ function renderizarHallDaVergonha(apostadores) {
                 </div>
 
                 <div class="hall-card vergonha-card">
-                    <div class="hall-titulo">🐎 Cavalo Paraguaio</div>
-                    <div class="hall-nome">${nomesEmpatados(hall.cavaloParaguaio)}</div>
-                    <div class="hall-valor">${detalhesEmpatados(hall.cavaloParaguaio, " posições perdidas)")}</div>
+                    <div class="hall-titulo">🍿 Botafogo 2023</div>
+                    <div class="hall-nome">${nomesEmpatados(hall.pipocou)}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.pipocou, " jogos em 1º (e não tá mais kkkkk)")}</div>
                 </div>
                 
                 <div class="hall-card vergonha-card">
