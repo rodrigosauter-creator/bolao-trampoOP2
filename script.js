@@ -2135,7 +2135,7 @@ function calcularHallDaFama(apostadores) {
                 return {
                     nome: apostador.nome,
                     valor: melhor ? melhor.pontos : 0,
-                    detalhe: melhor ? melhor.selecao : "- até parece que torce para o"
+                    detalhe: melhor ? melhor.selecao : "-"
                 };
             }),
             "valor"
@@ -2324,7 +2324,8 @@ function montarHallDaFama(apostadores) {
                 <div class="hall-card">
                     <div class="hall-titulo">⚡ Usain Bolt</div>
                     <div class="hall-nome">${nomesEmpatados(hall.maiorArrancada)}</div>
-                    <div class="hall-valor">${detalhesEmpatados(hall.maiorArrancada, " pts. Tá querendo se provar?")}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.maiorArrancada, " pts.")}</div>
+                    <div class="hall-frase"> Tá querendo se provar? </div>
                 </div>
 
                 <div class="hall-card">
@@ -2349,12 +2350,14 @@ function montarHallDaFama(apostadores) {
                     </div>
                     <div class="hall-nome">${nomesEmpatados(hall.maiorPontuacaoSelecao)}</div>
                     <div class="hall-valor">${detalhesEmpatados(hall.maiorPontuacaoSelecao, " pts")}</div>
+                    <div class="hall-frase"> Duvido que sabe o hino inteiro. </div>
                 </div>
 
                 <div class="hall-card">
                     <div class="hall-titulo">🏅 Se fosse só essa fase...</div>
                     <div class="hall-nome">${nomesEmpatados(hall.melhorMediaFase)}</div>
                     <div class="hall-valor">${detalhesEmpatados(hall.melhorMediaFase, " pts/jogo")}</div>
+                    <div class="hall-frase"> Era campeão disparado com essa pontuação. </div>
                 </div>
 
                 <div class="hall-card">
@@ -2744,7 +2747,8 @@ function renderizarHallDaVergonha(apostadores) {
                 <div class="hall-card vergonha-card">
                     <div class="hall-titulo">🥈 Vasco da Gama</div>
                     <div class="hall-nome">${nomesEmpatados(hall.viceProfissional)}</div>
-                    <div class="hall-valor">${detalhesEmpatados(hall.viceProfissional, " rodadas em 2º: Você 🤝 Vasco")}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.viceProfissional, " rodadas em 2º")}</div>
+                    <div class="hall-frase">Você 🤝 Vasco</div>
                 </div>
                 
                 <div class="hall-card vergonha-card">
