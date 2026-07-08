@@ -1619,6 +1619,33 @@ function renderizarDistribuicaoFases(fases) {
     `;
 }
 
+function generoApostador(nome) {
+
+    const garotas = ["Ana", "Isa", "Carol", "Trops"];
+
+    return garotas.includes(nome)
+        ? "feminino"
+        : "masculino";
+}
+
+function tituloReiRainha(lista, tituloMasculino, tituloFeminino, tituloPlural) {
+
+    if (!lista || lista.length === 0) {
+        return tituloMasculino;
+    }
+
+    if (lista.length > 1) {
+        return tituloPlural;
+    }
+
+    const nome =
+        lista[0].nome;
+
+    return generoApostador(nome) === "feminino"
+        ? tituloFeminino
+        : tituloMasculino;
+}
+
 function classeCorFase(fase) {
 
     if (fase.includes("1ª")) return "fase-azul";
@@ -2104,51 +2131,63 @@ function montarHallDaFama(apostadores) {
             <div class="hall-grid">
 
                 <div class="hall-card">
-                    <div class="hall-titulo">🔥 Maior sequência pontuando</div>
+                    <div class="hall-titulo">🔥 Orgulho do Duolingo</div>
                     <div class="hall-nome">${nomesEmpatados(hall.maiorSequencia)}</div>
-                    <div class="hall-valor">${detalhesEmpatados(hall.maiorSequencia, " jogos")}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.maiorSequencia, " jogos seguidos pontuando")}</div>
                 </div>
 
                 <div class="hall-card">
-                    <div class="hall-titulo">⚡ Maior arrancada</div>
+                    <div class="hall-titulo">⚡ Usain Bolt</div>
                     <div class="hall-nome">${nomesEmpatados(hall.maiorArrancada)}</div>
                     <div class="hall-valor">${detalhesEmpatados(hall.maiorArrancada, " pts")}</div>
                 </div>
 
                 <div class="hall-card">
-                    <div class="hall-titulo">✅ Melhor aproveitamento</div>
+                    <div class="hall-titulo">✅ ${tituloReiRainha(
+                        hall.melhorAproveitamento,
+                        "Rei da bet",
+                        "Rainha da bet",
+                        "Reis da bet"
+                    )}
+                </div>
                     <div class="hall-nome">${nomesEmpatados(hall.melhorAproveitamento)}</div>
-                    <div class="hall-valor">${detalhesEmpatados(hall.melhorAproveitamento, "%")}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.melhorAproveitamento, "% dos jogos pontuando")}</div>
                 </div>
 
                 <div class="hall-card">
-                    <div class="hall-titulo">🌍 Maior pontuação com seleção</div>
+                    <div class="hall-titulo">🤞 ${tituloReiRainha(
+                            hall.maiorPontuacaoSelecao,
+                            "O verdadeiro patriota",
+                            "A verdadeira patriota",
+                            "Os verdadeiros patriotas"
+                        )}
+                    </div>
                     <div class="hall-nome">${nomesEmpatados(hall.maiorPontuacaoSelecao)}</div>
                     <div class="hall-valor">${detalhesEmpatados(hall.maiorPontuacaoSelecao, " pts")}</div>
                 </div>
 
                 <div class="hall-card">
-                    <div class="hall-titulo">🏅 Melhor média em fase</div>
+                    <div class="hall-titulo">🏅 Se fosse só essa fase...</div>
                     <div class="hall-nome">${nomesEmpatados(hall.melhorMediaFase)}</div>
                     <div class="hall-valor">${detalhesEmpatados(hall.melhorMediaFase, " pts/jogo")}</div>
                 </div>
 
                 <div class="hall-card">
-                    <div class="hall-titulo">📊 Maior média geral</div>
+                    <div class="hall-titulo">📊 IRA 20000</div>
                     <div class="hall-nome">${nomesEmpatados(hall.melhorMediaGeral)}</div>
-                    <div class="hall-valor">${detalhesEmpatados(hall.melhorMediaGeral, " pts/jogo")}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.melhorMediaGeral, " pts/jogo (maior média)")}</div>
                 </div>
 
                 <div class="hall-card">
-                    <div class="hall-titulo">🚀 Maior recuperação</div>
+                    <div class="hall-titulo">🚀 Os humilhados serão exaltados</div>
                     <div class="hall-nome">${nomesEmpatados(hall.maiorRecuperacao)}</div>
                     <div class="hall-valor">${detalhesEmpatados(hall.maiorRecuperacao, " posições")}</div>
                 </div>
 
                 <div class="hall-card">
-                    <div class="hall-titulo">👑 Mais jogos em 1º lugar</div>
+                    <div class="hall-titulo">👑 São Paulo hipotético</div>
                     <div class="hall-nome">${nomesEmpatados(hall.maisJogosPrimeiro)}</div>
-                    <div class="hall-valor">${detalhesEmpatados(hall.maisJogosPrimeiro, " jogos")}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.maisJogosPrimeiro, " jogos em 1° lugar")}</div>
                 </div>
 
             </div>
@@ -2391,7 +2430,14 @@ function renderizarHallDaVergonha(apostadores) {
                 </div>
 
                 <div class="hall-card vergonha-card">
-                    <div class="hall-titulo">😭 Rei do quase</div>
+                    <div class="hall-titulo">
+                        😭 ${tituloReiRainha(
+                            hall.reiDoQuase,
+                            "Rei do quase",
+                            "Rainha do quase",
+                            "Reis do quase"
+                        )}
+                    </div>
                     <div class="hall-nome">${nomesEmpatados(hall.reiDoQuase)}</div>
                     <div class="hall-valor">${detalhesEmpatados(hall.reiDoQuase, " quase cravadas")}</div>
                 </div>
@@ -2399,7 +2445,7 @@ function renderizarHallDaVergonha(apostadores) {
                 <div class="hall-card vergonha-card">
                     <div class="hall-titulo">🤡 Especialista em zicar</div>
                     <div class="hall-nome">${nomesEmpatados(hall.especialistaEmZicar)}</div>
-                    <div class="hall-valor">${detalhesEmpatados(hall.especialistaEmZicar, " jogos zerando")}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.especialistaEmZicar, " jogos seguidos zerando")}</div>
                 </div>
 
                 <div class="hall-card vergonha-card">
@@ -2409,15 +2455,15 @@ function renderizarHallDaVergonha(apostadores) {
                 </div>
 
                 <div class="hall-card vergonha-card">
-                    <div class="hall-titulo">⚽ Artilheiro dos gols inúteis</div>
+                    <div class="hall-titulo">🚫 Inimigo do placar</div>
                     <div class="hall-nome">${nomesEmpatados(hall.artilheiroGolsInuteis)}</div>
-                    <div class="hall-valor">${detalhesEmpatados(hall.artilheiroGolsInuteis, " vez(es)")}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.artilheiroGolsInuteis, " vezes que só acertou o vencedor")}</div>
                 </div>
 
                 <div class="hall-card vergonha-card">
                     <div class="hall-titulo">🧱 Tonhão</div>
                     <div class="hall-nome">${nomesEmpatados(hall.tonhao)}</div>
-                    <div class="hall-valor">${detalhesEmpatados(hall.tonhao, " vez(es) único zerado")}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.tonhao, " vezes que todo mundo pontuou menos você")}</div>
                 </div>
 
             </div>
