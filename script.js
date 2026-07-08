@@ -1278,13 +1278,6 @@ function contarPalpitesEmpate(apostador) {
 
 function calcularPosicoesPorRodada() {
 
-   const jogosRealizados =
-    obterNumerosJogosRealizados();
-
-jogosRealizados.forEach(numeroJogo => {
-    ...
-});
-
     const palpite =
     apostador.palpites.find(
         p => Number(p.jogo) === Number(numeroJogo)
@@ -1937,13 +1930,6 @@ function obterEmpatados(lista, campoValor) {
 
 function calcularMaiorRecuperacao() {
 
-   const jogosRealizados =
-    obterNumerosJogosRealizados();
-
-jogosRealizados.forEach(numeroJogo => {
-    ...
-});
-
     const palpite =
     apostador.palpites.find(
         p => Number(p.jogo) === Number(numeroJogo)
@@ -2008,13 +1994,6 @@ jogosRealizados.forEach(numeroJogo => {
 }
 
 function calcularMaisJogosEmPrimeiro() {
-
-   const jogosRealizados =
-    obterNumerosJogosRealizados();
-
-jogosRealizados.forEach(numeroJogo => {
-    ...
-});
 
     const palpite =
     apostador.palpites.find(
@@ -2198,13 +2177,6 @@ const maiorArrancada =
 
     const unicosPontuadores =
     calcularUnicosPontuadores(apostadores);
-
-   const jogosRealizados =
-    obterNumerosJogosRealizados();
-
-jogosRealizados.forEach(numeroJogo => {
-    ...
-});
 
     const palpite =
     apostador.palpites.find(
@@ -2863,13 +2835,6 @@ function ehGolInutil(palpite) {
 
 function calcularTonhao(apostadores) {
 
-    const jogosRealizados =
-    obterNumerosJogosRealizados();
-
-jogosRealizados.forEach(numeroJogo => {
-    ...
-});
-
     const palpite =
     apostador.palpites.find(
         p => Number(p.jogo) === Number(numeroJogo)
@@ -2929,13 +2894,6 @@ jogosRealizados.forEach(numeroJogo => {
 }
 
 function calcularHistoricoPosicoes() {
-
-       const jogosRealizados =
-    obterNumerosJogosRealizados();
-
-jogosRealizados.forEach(numeroJogo => {
-    ...
-});
 
     const palpite =
     apostador.palpites.find(
