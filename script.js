@@ -2756,13 +2756,13 @@ function renderizarHallDaVergonha(apostadores) {
                 <div class="hall-card vergonha-card">
                     <div class="hall-titulo">🍿 Botafogo 2023</div>
                     <div class="hall-nome">${nomesEmpatados(hall.pipocou)}</div>
-                    <div class="hall-valor">${detalhesEmpatados(hall.pipocou, " jogos em 1º (e não tá mais kkkkk)")}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.pipocou, " jogos em 1º pra isso kkkkk?")}</div>
                 </div>
                 
                 <div class="hall-card vergonha-card">
-                    <div class="hall-titulo">🛗 Elevador</div>
+                    <div class="hall-titulo">🍾 Desce, sobe, empina e rebola</div>
                     <div class="hall-nome">${nomesEmpatados(hall.elevador)}</div>
-                    <div class="hall-valor">${detalhesEmpatados(hall.elevador, " mudanças de posição")}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.elevador, " vezes que mudou de colocação")}</div>
                 </div>
 
                 <div class="hall-card vergonha-card">
