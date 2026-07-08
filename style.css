@@ -1616,3 +1616,18 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
         font-size:16px;
     }
 }
+.hall-frase{
+
+    margin-top:8px;
+
+    font-size:14px;
+
+    font-style:italic;
+
+    font-weight:600;
+
+    opacity:.9;
+
+    line-height:1.3;
+
+}
