@@ -1340,8 +1340,76 @@ function mostrarEstatisticasApostador(apostador) {
     const ranking =
         calcularPontosPorSelecao(apostador);
 
+    const infoRanking =
+        dadosGlobais.classificacao.find(
+            p => p.nome === apostador.nome
+        );
+
+    const pontos =
+        infoRanking ? infoRanking.pontos : 0;
+
+    const posicao =
+        infoRanking ? infoRanking.posicao : "-";
+
+    const acertos =
+        infoRanking ? infoRanking.acertos : 0;
+
+    const jogosComPontos =
+        apostador.palpites.filter(
+            p => Number(p.pontos) > 0 || Number(p.pontos) === 0
+        );
+
+    const media =
+        jogosComPontos.length > 0
+            ? (pontos / jogosComPontos.length).toFixed(2)
+            : "0.00";
+
+    const melhorSelecao =
+        ranking[0];
+
+    const piorSelecao =
+        ranking[ranking.length - 1];
+
     container.innerHTML = `
         <h2>${apostador.nome}</h2>
+
+        <div class="apostador-resumo">
+
+            <div class="resumo-card">
+                📊 ${posicao}º lugar
+            </div>
+
+            <div class="resumo-card">
+                🏆 ${pontos} pts
+            </div>
+
+            <div class="resumo-card">
+                🎯 ${acertos} acerto(s)
+            </div>
+
+            <div class="resumo-card">
+                📈 ${media} pts/jogo
+            </div>
+
+        </div>
+
+        <div class="apostador-resumo">
+
+            <div class="resumo-card">
+                ⭐ Melhor seleção:
+                ${melhorSelecao ? flag(melhorSelecao.selecao) : ""}
+                ${melhorSelecao ? melhorSelecao.selecao : "-"}
+                ${melhorSelecao ? `(${melhorSelecao.pontos} pts)` : ""}
+            </div>
+
+            <div class="resumo-card">
+                💀 Pior seleção:
+                ${piorSelecao ? flag(piorSelecao.selecao) : ""}
+                ${piorSelecao ? piorSelecao.selecao : "-"}
+                ${piorSelecao ? `(${piorSelecao.pontos} pts)` : ""}
+            </div>
+
+        </div>
 
         <div class="card-estatistica">
             <h3>🌍 Pontos por Seleção</h3>
