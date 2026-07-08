@@ -1248,6 +1248,31 @@ function cardCampeao(){
     `;
 }
 
+function calcularPontosPorFase(apostador) {
+
+    const fases = {};
+
+    apostador.palpites.forEach(palpite => {
+
+        const fase =
+            obterNomeFase(palpite.jogo);
+
+        const pontos =
+            Number(palpite.pontos) || 0;
+
+        fases[fase] =
+            (fases[fase] || 0) + pontos;
+
+    });
+
+    return Object.entries(fases)
+        .map(([fase, pontos]) => ({
+            fase,
+            pontos
+        }))
+        .sort((a, b) => b.pontos - a.pontos);
+}
+
 function calcularPontosPorSelecao(apostador) {
 
     const rankingSelecoes = {};
@@ -1415,6 +1440,70 @@ function renderizarEstatisticas(apostadores) {
         });
 }
 
+function renderizarDistribuicaoFases(fases) {
+
+    if (fases.length === 0) {
+        return "";
+    }
+
+    const maiorPontuacao =
+        Math.max(...fases.map(item => item.pontos));
+
+    return `
+        <div class="card-estatistica">
+            <h3>🏆 Pontuação por Fase</h3>
+
+            <div class="histograma-pontos">
+
+                ${fases.map(item => {
+
+                    const largura =
+                        maiorPontuacao > 0
+                            ? (item.pontos / maiorPontuacao) * 100
+                            : 0;
+
+                    return `
+                        <div class="linha-histograma">
+
+                            <div class="label-fase">
+                                ${item.fase}
+                            </div>
+
+                            <div class="barra-histograma-fundo">
+                                <div
+                                    class="barra-histograma ${classeCorFase(item.fase)}"
+                                    style="width:${largura}%">
+                                </div>
+                            </div>
+
+                            <div class="quantidade-pontos">
+                                ${item.pontos} pts
+                            </div>
+
+                        </div>
+                    `;
+                }).join("")}
+
+            </div>
+        </div>
+    `;
+}
+
+function classeCorFase(fase) {
+
+    if (fase.includes("1ª")) return "fase-azul";
+    if (fase.includes("2ª")) return "fase-roxa";
+    if (fase.includes("3ª")) return "fase-verde";
+    if (fase.includes("16")) return "fase-ciano";
+    if (fase.includes("Oitavas")) return "fase-amarela";
+    if (fase.includes("Quartas")) return "fase-laranja";
+    if (fase.includes("Semifinais")) return "fase-vermelha";
+    if (fase.includes("3º")) return "fase-cinza";
+    if (fase.includes("Final")) return "fase-dourada";
+
+    return "fase-azul";
+}
+
 function mostrarEstatisticasApostador(apostador) {
 
     const container =
@@ -1428,6 +1517,12 @@ function mostrarEstatisticasApostador(apostador) {
     const distribuicao =
         calcularDistribuicaoPontos(apostador);
 
+    const fases =
+        calcularPontosPorFase(apostador);
+    
+    const melhorFase =
+        fases[0];
+    
     const infoRanking =
         dadosGlobais.classificacao.find(
             p => p.nome === apostador.nome
@@ -1481,6 +1576,12 @@ function mostrarEstatisticasApostador(apostador) {
                 📈 ${media} pts/jogo
             </div>
 
+            <div class="resumo-card">
+                🏅 Melhor fase:
+                ${melhorFase ? melhorFase.fase : "-"}
+                ${melhorFase ? `(${melhorFase.pontos} pts)` : ""}
+            </div>
+
         </div>
 
         <div class="apostador-resumo">
@@ -1502,6 +1603,8 @@ function mostrarEstatisticasApostador(apostador) {
         </div>
 
         ${renderizarDistribuicaoPontos(distribuicao)}
+
+        ${renderizarDistribuicaoFases(fases)}
 
         <div class="card-estatistica">
             <h3>🌍 Pontos por Seleção</h3>
