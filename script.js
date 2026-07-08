@@ -2054,6 +2054,27 @@ function nomesEmpatados(lista) {
 }
 
 function detalhesEmpatados(lista, sufixo = "") {
+
+    if (!lista || lista.length === 0) {
+        return "";
+    }
+
+    const todosDetalhesIguais =
+        lista.every(item =>
+            item.valor === lista[0].valor &&
+            item.detalhe === lista[0].detalhe
+        );
+
+    if (todosDetalhesIguais) {
+
+        const detalhe =
+            lista[0].detalhe
+                ? ` — ${lista[0].detalhe}`
+                : "";
+
+        return `${lista[0].valor}${sufixo}${detalhe}`;
+    }
+
     return lista.map(item => {
 
         const detalhe =
