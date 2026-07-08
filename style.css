@@ -1417,3 +1417,45 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
         width:0;
     }
 }
+
+.label-fase{
+    font-weight:800;
+    color:#1e293b;
+    font-size:14px;
+}
+
+.fase-azul{
+    background:#2563eb;
+}
+
+.fase-roxa{
+    background:#7c3aed;
+}
+
+.fase-verde{
+    background:#22c55e;
+}
+
+.fase-ciano{
+    background:#06b6d4;
+}
+
+.fase-amarela{
+    background:#eab308;
+}
+
+.fase-laranja{
+    background:#f97316;
+}
+
+.fase-vermelha{
+    background:#ef4444;
+}
+
+.fase-cinza{
+    background:#64748b;
+}
+
+.fase-dourada{
+    background:#f59e0b;
+}
