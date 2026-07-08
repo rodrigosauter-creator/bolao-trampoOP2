@@ -2331,33 +2331,33 @@ function calcularHallDaVergonha(apostadores) {
             "valor"
         );
 
-    const maisImprevisivel =
+    const peFrio =
         obterEmpatados(
             lista.map(apostador => {
 
-                const pontos =
-                    apostador.palpites
-                        .filter(p =>
-                            p.pontos !== null &&
-                            p.pontos !== undefined &&
-                            p.pontos !== ""
-                        )
-                        .map(p => Number(p.pontos) || 0);
-
-                const maior =
-                    pontos.length > 0
-                        ? Math.max(...pontos)
-                        : 0;
-
-                const menor =
-                    pontos.length > 0
-                        ? Math.min(...pontos)
-                        : 0;
+                const zerados =
+                    apostador.palpites.filter(
+                        p => Number(p.pontos) === 0
+                    ).length;
 
                 return {
                     nome: apostador.nome,
-                    valor: maior - menor,
-                    detalhe: `${menor} a ${maior} pts`
+                    valor: zerados
+                };
+            }),
+            "valor"
+        );
+
+    const artilheiroGolsInuteis =
+        obterEmpatados(
+            lista.map(apostador => {
+
+                const quantidade =
+                    apostador.palpites.filter(ehGolInutil).length;
+
+                return {
+                    nome: apostador.nome,
+                    valor: quantidade
                 };
             }),
             "valor"
@@ -2367,7 +2367,9 @@ function calcularHallDaVergonha(apostadores) {
         maiorHaterBrasil,
         reiDoQuase,
         especialistaEmZicar,
-        maisImprevisivel
+        peFrio,
+        artilheiroGolsInuteis,
+        tonhao: calcularTonhao(apostadores)
     };
 }
 
@@ -2391,7 +2393,7 @@ function renderizarHallDaVergonha(apostadores) {
                 <div class="hall-card vergonha-card">
                     <div class="hall-titulo">😭 Rei do quase</div>
                     <div class="hall-nome">${nomesEmpatados(hall.reiDoQuase)}</div>
-                    <div class="hall-valor">${detalhesEmpatados(hall.reiDoQuase, " quase(s)")}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.reiDoQuase, " quase cravadas")}</div>
                 </div>
 
                 <div class="hall-card vergonha-card">
@@ -2401,14 +2403,107 @@ function renderizarHallDaVergonha(apostadores) {
                 </div>
 
                 <div class="hall-card vergonha-card">
-                    <div class="hall-titulo">🎲 Mais imprevisível</div>
-                    <div class="hall-nome">${nomesEmpatados(hall.maisImprevisivel)}</div>
-                    <div class="hall-valor">${detalhesEmpatados(hall.maisImprevisivel, " pts de variação")}</div>
+                    <div class="hall-titulo">🥶 Pé frio</div>
+                    <div class="hall-nome">${nomesEmpatados(hall.peFrio)}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.peFrio, " jogos zerados")}</div>
+                </div>
+
+                <div class="hall-card vergonha-card">
+                    <div class="hall-titulo">⚽ Artilheiro dos gols inúteis</div>
+                    <div class="hall-nome">${nomesEmpatados(hall.artilheiroGolsInuteis)}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.artilheiroGolsInuteis, " vez(es)")}</div>
+                </div>
+
+                <div class="hall-card vergonha-card">
+                    <div class="hall-titulo">🧱 Tonhão</div>
+                    <div class="hall-nome">${nomesEmpatados(hall.tonhao)}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.tonhao, " vez(es) único zerado")}</div>
                 </div>
 
             </div>
         </section>
-
-        
     `;
 }
+
+function ehGolInutil(palpite) {
+
+    const jogo =
+        Number(palpite.jogo);
+
+    const pontos =
+        Number(palpite.pontos) || 0;
+
+    const envolveBrasil =
+        palpite.selecao_a === "Brasil" ||
+        palpite.selecao_b === "Brasil";
+
+    if (jogo >= 1 && jogo <= 72) {
+        return envolveBrasil
+            ? pontos === 4
+            : pontos === 2;
+    }
+
+    if (jogo >= 73) {
+        return envolveBrasil
+            ? pontos === 6
+            : pontos === 3;
+    }
+
+    return false;
+}
+
+function calcularTonhao(apostadores) {
+
+    const lista =
+        Object.values(apostadores);
+
+    const contagem = {};
+
+    lista.forEach(apostador => {
+        contagem[apostador.nome] = 0;
+    });
+
+    const totalJogos =
+        Math.max(
+            ...lista.map(apostador =>
+                apostador.palpites.length
+            )
+        );
+
+    for (let i = 0; i < totalJogos; i++) {
+
+        const palpitesDoJogo =
+            lista
+                .map(apostador => ({
+                    nome: apostador.nome,
+                    palpite: apostador.palpites[i]
+                }))
+                .filter(item => item.palpite);
+
+        const zerados =
+            palpitesDoJogo.filter(item =>
+                Number(item.palpite.pontos) === 0
+            );
+
+        const pontuaram =
+            palpitesDoJogo.filter(item =>
+                Number(item.palpite.pontos) > 0
+            );
+
+        if (
+            zerados.length === 1 &&
+            pontuaram.length === palpitesDoJogo.length - 1
+        ) {
+            contagem[zerados[0].nome]++;
+        }
+    }
+
+    const ranking =
+        Object.entries(contagem).map(([nome, valor]) => ({
+            nome,
+            valor
+        }));
+
+    return obterEmpatados(ranking, "valor");
+}
+
