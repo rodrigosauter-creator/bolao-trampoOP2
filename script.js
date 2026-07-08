@@ -2336,7 +2336,7 @@ function montarHallDaFama(apostadores) {
                     )}
                 </div>
                     <div class="hall-nome">${nomesEmpatados(hall.melhorAproveitamento)}</div>
-                    <div class="hall-valor">${detalhesEmpatados(hall.melhorAproveitamento, "% dos jogos pontuando")}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.melhorAproveitamento, "% dos jogos em que deu green")}</div>
                 </div>
 
                 <div class="hall-card">
@@ -2372,13 +2372,13 @@ function montarHallDaFama(apostadores) {
                 <div class="hall-card">
                     <div class="hall-titulo">👑 São Paulo hipotético</div>
                     <div class="hall-nome">${nomesEmpatados(hall.maisJogosPrimeiro)}</div>
-                    <div class="hall-valor">${detalhesEmpatados(hall.maisJogosPrimeiro, " jogos em 1° lugar")}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.maisJogosPrimeiro, " jogos em 1° lugar igual ao SPFC em pontos corridos")}</div>
                 </div>
 
                 <div class="hall-card">
                     <div class="hall-titulo">⚔️ Contra tudo e contra todos</div>
                     <div class="hall-nome">${nomesEmpatados(hall.contraTudo)}</div>
-                    <div class="hall-valor">${detalhesEmpatados(hall.contraTudo, " jogos que pontuou sozinho(a)")}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.contraTudo, " jogos em que botou na mesa e mandou medir")}</div>
                 </div>
                 
                 <div class="hall-card">
@@ -2391,13 +2391,19 @@ function montarHallDaFama(apostadores) {
                         )}
                     </div>
                     <div class="hall-nome">${nomesEmpatados(hall.reiRainhaAllIn)}</div>
-                    <div class="hall-valor">${detalhesEmpatados(hall.reiRainhaAllIn, " all-ins")}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.reiRainhaAllIn, " all-ins porque o desespero bateu")}</div>
                 </div>
 
                 <div class="hall-card">
-                    <div class="hall-titulo">🧠 Diferentão</div>
+                    <div class="hall-titulo">🧠 ${tituloReiRainha(
+                            hall.palpitesUnicos,
+                            "Diferentão",
+                            "Diferentona",
+                            "Diferentões"
+                        )}
+                    </div>
                     <div class="hall-nome">${nomesEmpatados(hall.palpitesUnicos)}</div>
-                    <div class="hall-valor">${detalhesEmpatados(hall.palpitesUnicos, " palpites só seus")}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.palpitesUnicos, " palpites só seus. Até parece que tem personalidade.")}</div>
                 </div>
                 
 
@@ -2481,7 +2487,7 @@ function renderizarRankingArgentina(apostadores) {
             <h2>Maiores haters do Brasil</h2>
 
             <p class="ranking-argentina-subtitulo">
-                (aqueles que mais pontuaram com a Argentina)
+                (quem mais pontuou com a Argentina)
             </p>
 
             <div class="ranking-argentina-lista">
@@ -2695,7 +2701,7 @@ function renderizarHallDaVergonha(apostadores) {
                 <div class="hall-card vergonha-card">
                     <div class="hall-titulo">🇦🇷 Maior hater do Brasil</div>
                     <div class="hall-nome">${nomesEmpatados(hall.maiorHaterBrasil)}</div>
-                    <div class="hall-valor">${detalhesEmpatados(hall.maiorHaterBrasil, " pts com Argentina")}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.maiorHaterBrasil, " pts com Argentina seu nojento")}</div>
                 </div>
 
                 <div class="hall-card vergonha-card">
@@ -2708,49 +2714,49 @@ function renderizarHallDaVergonha(apostadores) {
                         )}
                     </div>
                     <div class="hall-nome">${nomesEmpatados(hall.reiDoQuase)}</div>
-                    <div class="hall-valor">${detalhesEmpatados(hall.reiDoQuase, " quase cravadas")}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.reiDoQuase, " quase cravadas, igual aos quase gols do Brasil")}</div>
                 </div>
 
                 <div class="hall-card vergonha-card">
                     <div class="hall-titulo">🤡 Professor Pardal</div>
                     <div class="hall-nome">${nomesEmpatados(hall.especialistaEmZicar)}</div>
-                    <div class="hall-valor">${detalhesEmpatados(hall.especialistaEmZicar, " jogos seguidos zerando")}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.especialistaEmZicar, " jogos seguidos zerando, Diniz?")}</div>
                 </div>
 
                 <div class="hall-card vergonha-card">
                     <div class="hall-titulo">🥶 Pé frio</div>
                     <div class="hall-nome">${nomesEmpatados(hall.peFrio)}</div>
-                    <div class="hall-valor">${detalhesEmpatados(hall.peFrio, " jogos zerados")}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.peFrio, " jogos zerados. Depois perguntam por que fomos eliminados")}</div>
                 </div>
 
                 <div class="hall-card vergonha-card">
                     <div class="hall-titulo">🚫 Inimigo do placar</div>
                     <div class="hall-nome">${nomesEmpatados(hall.artilheiroGolsInuteis)}</div>
-                    <div class="hall-valor">${detalhesEmpatados(hall.artilheiroGolsInuteis, " vezes que só acertou o vencedor")}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.artilheiroGolsInuteis, " vezes que faltou personalidade e quis jogar safe só no vencedor")}</div>
                 </div>
 
                 <div class="hall-card vergonha-card">
                     <div class="hall-titulo">🦆 Empata foda</div>
                     <div class="hall-nome">${nomesEmpatados(hall.amigoDoEmpate)}</div>
-                    <div class="hall-valor">${detalhesEmpatados(hall.amigoDoEmpate, " empates apostados")}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.amigoDoEmpate, " empates apostados. Sai de cima do muro!")}</div>
                 </div>
                 
                 <div class="hall-card vergonha-card">
                     <div class="hall-titulo">🥈 Vasco da Gama</div>
                     <div class="hall-nome">${nomesEmpatados(hall.viceProfissional)}</div>
-                    <div class="hall-valor">${detalhesEmpatados(hall.viceProfissional, " rodadas em 2º")}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.viceProfissional, " rodadas em 2º: Você 🤝 Vasco")}</div>
                 </div>
                 
                 <div class="hall-card vergonha-card">
                     <div class="hall-titulo">🔦 Lanterninha</div>
                     <div class="hall-nome">${nomesEmpatados(hall.tartaruga)}</div>
-                    <div class="hall-valor">${detalhesEmpatados(hall.tartaruga, " rodadas em último")}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.tartaruga, " rodadas em último. Já pensou em mudar de hobby?")}</div>
                 </div>
 
                 <div class="hall-card vergonha-card">
                     <div class="hall-titulo">🐑 Maria vai com as outras</div>
                     <div class="hall-nome">${nomesEmpatados(hall.mariaVaiComAsOutras)}</div>
-                    <div class="hall-valor">${detalhesEmpatados(hall.mariaVaiComAsOutras, " vezes que teve o palpite igual ao de alguém")}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.mariaVaiComAsOutras, " vezes que te copiaram, porque claaaaramente você é original")}</div>
                 </div>
 
                 <div class="hall-card vergonha-card">
@@ -2768,7 +2774,7 @@ function renderizarHallDaVergonha(apostadores) {
                 <div class="hall-card vergonha-card">
                     <div class="hall-titulo">🧱 Tonhão</div>
                     <div class="hall-nome">${nomesEmpatados(hall.tonhao)}</div>
-                    <div class="hall-valor">${detalhesEmpatados(hall.tonhao, " vezes que todo mundo pontuou menos você")}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.tonhao, " vezes que todo mundo pontuou menos você, seu tonhão!")}</div>
                 </div>
 
             </div>
