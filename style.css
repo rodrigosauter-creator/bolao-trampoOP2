@@ -8,7 +8,17 @@ body{margin:0;font-family:Segoe UI,sans-serif;background:#0f172a;color:#fff}
 .podio .card{text-align:center}
 table{width:100%;border-collapse:collapse}
 th,td{padding:12px;border-bottom:1px solid #ddd}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
+.grid,
+.participantes-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(220px,1fr));
+
+    gap:15px;
+
+}
 .player{box-shadow:0 2px 8px rgba(0,0,0,.15)}
 
 /* ============================= */
