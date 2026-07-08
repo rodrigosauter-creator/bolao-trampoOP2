@@ -2210,6 +2210,9 @@ const reiRainhaAllIn =
         })),
         "valor"
     );
+
+    const palpitesUnicos =
+    calcularPalpitesUnicos(apostadores);
     
     return {
         maiorSequencia,
@@ -2222,7 +2225,8 @@ const reiRainhaAllIn =
         maiorArrancada,
         nostradamus,
         contraTudo,
-        reiRainhaAllIn
+        reiRainhaAllIn,
+        palpitesUnicos
     };
 }
 
@@ -2364,6 +2368,13 @@ function montarHallDaFama(apostadores) {
                     <div class="hall-nome">${nomesEmpatados(hall.reiRainhaAllIn)}</div>
                     <div class="hall-valor">${detalhesEmpatados(hall.reiRainhaAllIn, " all-ins")}</div>
                 </div>
+
+                <div class="hall-card">
+                    <div class="hall-titulo">🧠 Diferentão</div>
+                    <div class="hall-nome">${nomesEmpatados(hall.palpitesUnicos)}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.palpitesUnicos, " palpites só seus")}</div>
+                </div>
+                
 
             </div>
         </section>
@@ -3023,17 +3034,16 @@ function calcularMariaVaiComAsOutras(apostadores) {
             const palpite =
                 obterPalpiteDoJogo(apostador, numeroJogo);
 
-            if (!palpite)
-                return;
+            if (!palpite) return;
 
             const chave =
                 `${palpite.gols_a}x${palpite.gols_b}`;
 
-            if (!grupos[chave])
+            if (!grupos[chave]) {
                 grupos[chave] = [];
+            }
 
             grupos[chave].push(apostador.nome);
-
         });
 
         Object.values(grupos).forEach(grupo => {
@@ -3050,31 +3060,81 @@ function calcularMariaVaiComAsOutras(apostadores) {
 
     });
 
-    return obterEmpatados(
-
-        Object.entries(repeticoes).map(
-            ([nome, valor]) => ({
+    const ranking =
+        Object.entries(repeticoes)
+            .map(([nome, valor]) => ({
                 nome,
                 valor
-            })
-        ),
+            }))
+            .sort((a, b) => b.valor - a.valor);
 
+    console.group("🐑 Maria Vai com as Outras");
+    console.table(ranking);
+    console.groupEnd();
+
+    return obterEmpatados(ranking, "valor");
+}
+
+
+function calcularPalpitesUnicos(apostadores) {
+
+    const lista =
+        Object.values(apostadores);
+
+    const unicos = {};
+
+    lista.forEach(apostador => {
+        unicos[apostador.nome] = 0;
+    });
+
+    const jogos =
+        obterNumerosJogosRealizados();
+
+    jogos.forEach(numeroJogo => {
+
+        const grupos = {};
+
+        lista.forEach(apostador => {
+
+            const palpite =
+                obterPalpiteDoJogo(apostador, numeroJogo);
+
+            if (!palpite) return;
+
+            const golsA =
+                Number(palpite.gols_a);
+
+            const golsB =
+                Number(palpite.gols_b);
+
+            if (isNaN(golsA) || isNaN(golsB)) return;
+
+            const chave =
+                `${golsA}x${golsB}`;
+
+            if (!grupos[chave]) {
+                grupos[chave] = [];
+            }
+
+            grupos[chave].push(apostador.nome);
+
+        });
+
+        Object.values(grupos).forEach(grupo => {
+
+            if (grupo.length === 1) {
+                unicos[grupo[0]]++;
+            }
+
+        });
+
+    });
+
+    return obterEmpatados(
+        Object.entries(unicos).map(([nome, valor]) => ({
+            nome,
+            valor
+        })),
         "valor"
-
     );
-
-    const ranking = Object.entries(repeticoes)
-    .map(([nome, valor]) => ({
-        nome,
-        valor
-    }))
-    .sort((a, b) => b.valor - a.valor);
-
-// Debug
-console.group("🐑 Maria Vai com as Outras");
-console.table(ranking);
-console.groupEnd();
-
-return obterEmpatados(ranking, "valor");
-
 }
