@@ -1453,7 +1453,7 @@ function calcularDistribuicaoPontos(apostador) {
 
     const distribuicao = {};
 
-    apostador.palpites.forEach(palpite => {
+   obterPalpitesRealizados(apostador).forEach(palpite => {
 
         const pontos =
             Number(palpite.pontos) || 0;
