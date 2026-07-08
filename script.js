@@ -2617,14 +2617,8 @@ const tartaruga =
         "valor"
     );
 
-    const unicosPontuadores =
-    calcularUnicosPontuadores(apostadores);
-
-    const mariaVaiComAsOutras =
-    obterMenorEmpatados(
-        unicosPontuadores,
-        "valor"
-    );
+const mariaVaiComAsOutras =
+    calcularMariaVaiComAsOutras(apostadores);
 
     const cavaloParaguaio =
     calcularCavaloParaguaio();
@@ -3005,4 +2999,68 @@ function calcularElevador() {
         });
 
     return obterEmpatados(lista, "valor");
+}
+
+function calcularMariaVaiComAsOutras(apostadores) {
+
+    const lista = Object.values(apostadores);
+
+    const repeticoes = {};
+
+    lista.forEach(a => {
+        repeticoes[a.nome] = 0;
+    });
+
+    const jogos =
+        obterNumerosJogosRealizados();
+
+    jogos.forEach(numeroJogo => {
+
+        const grupos = {};
+
+        lista.forEach(apostador => {
+
+            const palpite =
+                obterPalpiteDoJogo(apostador, numeroJogo);
+
+            if (!palpite)
+                return;
+
+            const chave =
+                `${palpite.gols_a}x${palpite.gols_b}`;
+
+            if (!grupos[chave])
+                grupos[chave] = [];
+
+            grupos[chave].push(apostador.nome);
+
+        });
+
+        Object.values(grupos).forEach(grupo => {
+
+            if (grupo.length >= 2) {
+
+                grupo.forEach(nome => {
+                    repeticoes[nome]++;
+                });
+
+            }
+
+        });
+
+    });
+
+    return obterEmpatados(
+
+        Object.entries(repeticoes).map(
+            ([nome, valor]) => ({
+                nome,
+                valor
+            })
+        ),
+
+        "valor"
+
+    );
+
 }
