@@ -1317,9 +1317,7 @@ function calcularPosicoesPorRodada() {
         Object.keys(dadosGlobais.evolucao);
 
     const jogos =
-        dadosGlobais.evolucao[nomes[0]]
-            .filter(item => item.jogo !== 0)
-            .map(item => item.jogo);
+        obterNumerosJogosRealizados();
 
     const posicoes = {};
 
@@ -2151,7 +2149,7 @@ function calcularHallDaFama(apostadores) {
                     info ? info.pontos : 0;
 
                 const jogosValidos =
-                    apostador.palpites.filter(
+                    obterPalpitesRealizados(apostador).filter(
                         p => p.pontos !== null &&
                              p.pontos !== undefined &&
                              p.pontos !== ""
