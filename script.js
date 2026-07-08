@@ -2593,6 +2593,12 @@ const tartaruga =
         "valor"
     );
 
+    const cavaloParaguaio =
+    calcularCavaloParaguaio();
+
+    const elevador =
+    calcularElevador();
+
     return {
         maiorHaterBrasil,
         reiDoQuase,
@@ -2603,7 +2609,9 @@ const tartaruga =
         amigoDoEmpate,
         viceProfissional,
         tartaruga,
-        mariaVaiComAsOutras
+        mariaVaiComAsOutras,
+        cavaloParaguaio,
+        elevador
     };
 }
 
@@ -2677,6 +2685,18 @@ function renderizarHallDaVergonha(apostadores) {
                     <div class="hall-titulo">🐑 Maria Vai com as Outras</div>
                     <div class="hall-nome">${nomesEmpatados(hall.mariaVaiComAsOutras)}</div>
                     <div class="hall-valor">${detalhesEmpatados(hall.mariaVaiComAsOutras, " vez(es) sozinho")}</div>
+                </div>
+
+                <div class="hall-card vergonha-card">
+                    <div class="hall-titulo">🐎 Cavalo Paraguaio</div>
+                    <div class="hall-nome">${nomesEmpatados(hall.cavaloParaguaio)}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.cavaloParaguaio, " posição(ões)")}</div>
+                </div>
+                
+                <div class="hall-card vergonha-card">
+                    <div class="hall-titulo">🛗 Elevador</div>
+                    <div class="hall-nome">${nomesEmpatados(hall.elevador)}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.elevador, " mudança(s)")}</div>
                 </div>
 
                 <div class="hall-card vergonha-card">
@@ -2848,3 +2868,108 @@ function calcularTonhao(apostadores) {
     return obterEmpatados(ranking, "valor");
 }
 
+function calcularHistoricoPosicoes() {
+
+    const nomes =
+        Object.keys(dadosGlobais.evolucao);
+
+    const jogos =
+        dadosGlobais.evolucao[nomes[0]]
+            .filter(item => item.jogo !== 0)
+            .map(item => item.jogo);
+
+    const historico = {};
+
+    nomes.forEach(nome => {
+        historico[nome] = [];
+    });
+
+    jogos.forEach(jogo => {
+
+        const tabela =
+            nomes.map(nome => {
+
+                const registro =
+                    dadosGlobais.evolucao[nome].find(
+                        item => item.jogo === jogo
+                    );
+
+                return {
+                    nome,
+                    pontos: registro ? registro.pontos : 0
+                };
+
+            }).sort((a, b) => b.pontos - a.pontos);
+
+        let posicaoAtual = 1;
+
+        tabela.forEach((item, index) => {
+
+            if (
+                index > 0 &&
+                item.pontos < tabela[index - 1].pontos
+            ) {
+                posicaoAtual = index + 1;
+            }
+
+            historico[item.nome].push(posicaoAtual);
+        });
+    });
+
+    return historico;
+}
+
+function calcularCavaloParaguaio() {
+
+    const historico =
+        calcularHistoricoPosicoes();
+
+    const lista =
+        dadosGlobais.classificacao.map(participante => {
+
+            const posicoes =
+                historico[participante.nome] || [];
+
+            const melhorPosicao =
+                posicoes.length > 0
+                    ? Math.min(...posicoes)
+                    : participante.posicao;
+
+            const posicaoFinal =
+                participante.posicao;
+
+            return {
+                nome: participante.nome,
+                valor: posicaoFinal - melhorPosicao,
+                detalhe: `${melhorPosicao}º → ${posicaoFinal}º`
+            };
+        });
+
+    return obterEmpatados(lista, "valor");
+}
+
+function calcularElevador() {
+
+    const historico =
+        calcularHistoricoPosicoes();
+
+    const lista =
+        Object.entries(historico).map(([nome, posicoes]) => {
+
+            let mudancas = 0;
+
+            for (let i = 1; i < posicoes.length; i++) {
+
+                if (posicoes[i] !== posicoes[i - 1]) {
+                    mudancas++;
+                }
+            }
+
+            return {
+                nome,
+                valor: mudancas
+            };
+        });
+
+    return obterEmpatados(lista, "valor");
+}
