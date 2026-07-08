@@ -1250,6 +1250,18 @@ function cardCampeao(){
 
 function calcularPontosPorFase(apostador) {
 
+    const ordemFases = [
+        "1ª Rodada",
+        "2ª Rodada",
+        "3ª Rodada",
+        "16-Avos",
+        "Oitavas de Final",
+        "Quartas de Final",
+        "Semifinais",
+        "Disputa de 3º Lugar",
+        "Final"
+    ];
+
     const fases = {};
 
     apostador.palpites.forEach(palpite => {
@@ -1260,17 +1272,28 @@ function calcularPontosPorFase(apostador) {
         const pontos =
             Number(palpite.pontos) || 0;
 
-        fases[fase] =
-            (fases[fase] || 0) + pontos;
+        if (!fases[fase]) {
+            fases[fase] = {
+                fase,
+                pontos: 0,
+                jogos: 0
+            };
+        }
 
+        fases[fase].pontos += pontos;
+        fases[fase].jogos += 1;
     });
 
-    return Object.entries(fases)
-        .map(([fase, pontos]) => ({
+    return ordemFases
+        .filter(fase => fases[fase])
+        .map(fase => ({
             fase,
-            pontos
-        }))
-        .sort((a, b) => b.pontos - a.pontos);
+            pontos: fases[fase].pontos,
+            jogos: fases[fase].jogos,
+            media: fases[fase].jogos > 0
+                ? fases[fase].pontos / fases[fase].jogos
+                : 0
+        }));
 }
 
 function calcularPontosPorSelecao(apostador) {
@@ -1446,8 +1469,8 @@ function renderizarDistribuicaoFases(fases) {
         return "";
     }
 
-    const maiorPontuacao =
-        Math.max(...fases.map(item => item.pontos));
+    const maiorMedia =
+        Math.max(...fases.map(item => item.media));
 
     return `
         <div class="card-estatistica">
@@ -1458,8 +1481,8 @@ function renderizarDistribuicaoFases(fases) {
                 ${fases.map(item => {
 
                     const largura =
-                        maiorPontuacao > 0
-                            ? (item.pontos / maiorPontuacao) * 100
+                        maiorMedia > 0
+                            ? (item.media / maiorMedia) * 100
                             : 0;
 
                     return `
@@ -1477,7 +1500,9 @@ function renderizarDistribuicaoFases(fases) {
                             </div>
 
                             <div class="quantidade-pontos">
-                                ${item.pontos} pts
+                                ${item.media.toFixed(2)} pts/jogo
+                                <br>
+                                <small>${item.pontos} pts</small>
                             </div>
 
                         </div>
@@ -1521,7 +1546,7 @@ function mostrarEstatisticasApostador(apostador) {
         calcularPontosPorFase(apostador);
     
     const melhorFase =
-        fases[0];
+    [...fases].sort((a, b) => b.media - a.media)[0];
     
     const infoRanking =
         dadosGlobais.classificacao.find(
@@ -1579,9 +1604,8 @@ function mostrarEstatisticasApostador(apostador) {
             <div class="resumo-card">
                 🏅 Melhor fase:
                 ${melhorFase ? melhorFase.fase : "-"}
-                ${melhorFase ? `(${melhorFase.pontos} pts)` : ""}
+                ${melhorFase ? `(${melhorFase.media.toFixed(2)} pts/jogo)` : ""}
             </div>
-
         </div>
 
         <div class="apostador-resumo">
