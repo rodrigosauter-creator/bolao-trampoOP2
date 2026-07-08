@@ -769,8 +769,8 @@ function mostrarApostador(apostador, faseAtual = "todos", selecaoAtual = "todas"
         infoRanking ? infoRanking.acertos : apostador.acertos;
     
     const todosPalpites =
-        obterPalpitesRealizados(apostador)Originais ||
-        obterPalpitesRealizados(apostador);
+       apostador.palpitesOriginais ||
+        obterPalpitesRealizados(apostador)
 
     const [inicio, fim] =
         obterFaixaRodada(faseAtual);
