@@ -381,6 +381,10 @@ async function carregarDados() {
             dados.classificacao
         );
 
+        montarHallDaFama(
+            dados.apostadores
+        );
+
         montarGrafico(
             dados.evolucao
         );
@@ -1750,3 +1754,323 @@ function mostrarEstatisticasApostador(apostador) {
         block: "start"
     });
 }
+
+function criarRecorde(titulo, valor, detalhe = "") {
+    return {
+        titulo,
+        valor,
+        detalhe
+    };
+}
+
+function obterEmpatados(lista, campoValor) {
+    const maior =
+        Math.max(...lista.map(item => item[campoValor]));
+
+    return lista.filter(
+        item => item[campoValor] === maior
+    );
+}
+
+function calcularMaiorRecuperacao() {
+
+    const nomes =
+        Object.keys(dadosGlobais.evolucao);
+
+    const jogos =
+        dadosGlobais.evolucao[nomes[0]]
+            .filter(item => item.jogo !== 0)
+            .map(item => item.jogo);
+
+    const pioresPosicoes = {};
+
+    nomes.forEach(nome => {
+        pioresPosicoes[nome] = 1;
+    });
+
+    jogos.forEach(jogo => {
+
+        const tabela =
+            nomes.map(nome => {
+                const registro =
+                    dadosGlobais.evolucao[nome].find(
+                        item => item.jogo === jogo
+                    );
+
+                return {
+                    nome,
+                    pontos: registro ? registro.pontos : 0
+                };
+            }).sort((a, b) => b.pontos - a.pontos);
+
+        let posicaoAtual = 1;
+
+        tabela.forEach((item, index) => {
+
+            if (
+                index > 0 &&
+                item.pontos < tabela[index - 1].pontos
+            ) {
+                posicaoAtual = index + 1;
+            }
+
+            pioresPosicoes[item.nome] =
+                Math.max(
+                    pioresPosicoes[item.nome],
+                    posicaoAtual
+                );
+        });
+    });
+
+    const recuperacoes =
+        dadosGlobais.classificacao.map(p => ({
+            nome: p.nome,
+            valor: pioresPosicoes[p.nome] - p.posicao,
+            detalhe: `${pioresPosicoes[p.nome]}º → ${p.posicao}º`
+        }));
+
+    return obterEmpatados(recuperacoes, "valor");
+}
+
+function calcularMaisJogosEmPrimeiro() {
+
+    const nomes =
+        Object.keys(dadosGlobais.evolucao);
+
+    const contagem = {};
+
+    nomes.forEach(nome => {
+        contagem[nome] = 0;
+    });
+
+    const jogos =
+        dadosGlobais.evolucao[nomes[0]]
+            .filter(item => item.jogo !== 0)
+            .map(item => item.jogo);
+
+    jogos.forEach(jogo => {
+
+        const pontosNaRodada =
+            nomes.map(nome => {
+                const registro =
+                    dadosGlobais.evolucao[nome].find(
+                        item => item.jogo === jogo
+                    );
+
+                return {
+                    nome,
+                    pontos: registro ? registro.pontos : 0
+                };
+            });
+
+        const maiorPontuacao =
+            Math.max(...pontosNaRodada.map(p => p.pontos));
+
+        pontosNaRodada
+            .filter(p => p.pontos === maiorPontuacao)
+            .forEach(p => {
+                contagem[p.nome]++;
+            });
+    });
+
+    const lista =
+        Object.entries(contagem).map(([nome, valor]) => ({
+            nome,
+            valor
+        }));
+
+    return obterEmpatados(lista, "valor");
+}
+
+function calcularHallDaFama(apostadores) {
+
+    const lista =
+        Object.values(apostadores);
+
+    const maiorSequencia =
+        obterEmpatados(
+            lista.map(apostador => {
+                const seq = calcularSequencias(apostador);
+
+                return {
+                    nome: apostador.nome,
+                    valor: seq.maiorPontuando
+                };
+            }),
+            "valor"
+        );
+
+    const melhorAproveitamento =
+        obterEmpatados(
+            lista.map(apostador => {
+                const ap = calcularAproveitamento(apostador);
+
+                return {
+                    nome: apostador.nome,
+                    valor: Number(ap.percentual.toFixed(1))
+                };
+            }),
+            "valor"
+        );
+
+    const maiorPontuacaoSelecao =
+        obterEmpatados(
+            lista.map(apostador => {
+                const ranking =
+                    calcularPontosPorSelecao(apostador);
+
+                const melhor =
+                    ranking[0];
+
+                return {
+                    nome: apostador.nome,
+                    valor: melhor ? melhor.pontos : 0,
+                    detalhe: melhor ? melhor.selecao : "-"
+                };
+            }),
+            "valor"
+        );
+
+    const melhorMediaFase =
+        obterEmpatados(
+            lista.map(apostador => {
+                const fases =
+                    calcularPontosPorFase(apostador);
+
+                const melhor =
+                    [...fases].sort(
+                        (a, b) => b.media - a.media
+                    )[0];
+
+                return {
+                    nome: apostador.nome,
+                    valor: melhor ? Number(melhor.media.toFixed(2)) : 0,
+                    detalhe: melhor ? melhor.fase : "-"
+                };
+            }),
+            "valor"
+        );
+
+    const melhorMediaGeral =
+        obterEmpatados(
+            lista.map(apostador => {
+
+                const info =
+                    dadosGlobais.classificacao.find(
+                        p => p.nome === apostador.nome
+                    );
+
+                const pontos =
+                    info ? info.pontos : 0;
+
+                const jogosValidos =
+                    apostador.palpites.filter(
+                        p => p.pontos !== null &&
+                             p.pontos !== undefined &&
+                             p.pontos !== ""
+                    );
+
+                const media =
+                    jogosValidos.length > 0
+                        ? pontos / jogosValidos.length
+                        : 0;
+
+                return {
+                    nome: apostador.nome,
+                    valor: Number(media.toFixed(2))
+                };
+            }),
+            "valor"
+        );
+
+    return {
+        maiorSequencia,
+        melhorAproveitamento,
+        maiorPontuacaoSelecao,
+        melhorMediaFase,
+        melhorMediaGeral,
+        maiorRecuperacao: calcularMaiorRecuperacao(),
+        maisJogosPrimeiro: calcularMaisJogosEmPrimeiro()
+    };
+}
+
+function nomesEmpatados(lista) {
+    return lista.map(item => item.nome).join(", ");
+}
+
+function detalhesEmpatados(lista, sufixo = "") {
+    return lista.map(item => {
+
+        const detalhe =
+            item.detalhe
+                ? ` — ${item.detalhe}`
+                : "";
+
+        return `${item.valor}${sufixo}${detalhe}`;
+
+    }).join("<br>");
+}
+
+function montarHallDaFama(apostadores) {
+
+    const container =
+        document.getElementById("hallDaFama");
+
+    if (!container) return;
+
+    const hall =
+        calcularHallDaFama(apostadores);
+
+    container.innerHTML = `
+        <section class="hall-da-fama">
+            <h2>🏆 Hall da Fama OP2</h2>
+
+            <div class="hall-grid">
+
+                <div class="hall-card">
+                    <div class="hall-titulo">🔥 Maior sequência pontuando</div>
+                    <div class="hall-nome">${nomesEmpatados(hall.maiorSequencia)}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.maiorSequencia, " jogos")}</div>
+                </div>
+
+                <div class="hall-card">
+                    <div class="hall-titulo">✅ Melhor aproveitamento</div>
+                    <div class="hall-nome">${nomesEmpatados(hall.melhorAproveitamento)}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.melhorAproveitamento, "%")}</div>
+                </div>
+
+                <div class="hall-card">
+                    <div class="hall-titulo">🌍 Maior pontuação com seleção</div>
+                    <div class="hall-nome">${nomesEmpatados(hall.maiorPontuacaoSelecao)}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.maiorPontuacaoSelecao, " pts")}</div>
+                </div>
+
+                <div class="hall-card">
+                    <div class="hall-titulo">🏅 Melhor média em fase</div>
+                    <div class="hall-nome">${nomesEmpatados(hall.melhorMediaFase)}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.melhorMediaFase, " pts/jogo")}</div>
+                </div>
+
+                <div class="hall-card">
+                    <div class="hall-titulo">📊 Maior média geral</div>
+                    <div class="hall-nome">${nomesEmpatados(hall.melhorMediaGeral)}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.melhorMediaGeral, " pts/jogo")}</div>
+                </div>
+
+                <div class="hall-card">
+                    <div class="hall-titulo">🚀 Maior recuperação</div>
+                    <div class="hall-nome">${nomesEmpatados(hall.maiorRecuperacao)}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.maiorRecuperacao, " posições")}</div>
+                </div>
+
+                <div class="hall-card">
+                    <div class="hall-titulo">👑 Mais jogos em 1º lugar</div>
+                    <div class="hall-nome">${nomesEmpatados(hall.maisJogosPrimeiro)}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.maisJogosPrimeiro, " jogos")}</div>
+                </div>
+
+            </div>
+        </section>
+    `;
+}
+
