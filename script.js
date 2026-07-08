@@ -2180,6 +2180,36 @@ function calcularRankingArgentina(apostadores) {
         .sort((a, b) => b.pontos - a.pontos);
 }
 
+function tituloHater(posicao) {
+
+    switch (posicao) {
+
+        case 1:
+            return "👃 Nariz do Maradona";
+
+        case 2:
+            return "🐐 Fanboyzinho do Messi";
+
+        case 3:
+            return "💬 'Maradona é melhor que o Pelé'";
+
+        case 4:
+            return "🙄 'Ain eu torço pra quem eu quiser'";
+
+        case 5:
+            return "🤨 Argentina????";
+
+        case 6:
+            return "🥊 Todos acima merecem apanhar";
+
+        case 7:
+            return "🇧🇷🙅‍♀️ Aqui é Brasil porraaaaa! 🙅‍♀️🇧🇷";
+
+        default:
+            return `${posicao}º`;
+    }
+}
+
 function renderizarRankingArgentina(apostadores) {
 
     const ranking =
@@ -2187,7 +2217,11 @@ function renderizarRankingArgentina(apostadores) {
 
     return `
         <section class="ranking-argentina">
-            <h2>🇦🇷 Maiores haters do Brasil</h2>
+            <h2>Maiores haters do Brasil</h2>
+
+            <p class="ranking-argentina-subtitulo">
+                (aqueles que mais pontuaram com a Argentina)
+            </p>
 
             <div class="ranking-argentina-lista">
 
@@ -2195,7 +2229,7 @@ function renderizarRankingArgentina(apostadores) {
                     <div class="ranking-argentina-linha">
 
                         <div class="ranking-argentina-posicao">
-                            ${index + 1}º
+                            ${tituloHater(index + 1)}
                         </div>
 
                         <div class="ranking-argentina-nome">
