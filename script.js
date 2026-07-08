@@ -1294,62 +1294,89 @@ function renderizarEstatisticas(apostadores) {
 
     if (!container) return;
 
-    container.innerHTML = `
-        <div class="filtro-apostador-estatisticas">
-            <label for="selectApostadorEstatisticas">
-                Escolha o apostador:
-            </label>
+    const listaApostadores =
+        Object.values(apostadores);
 
-            <select id="selectApostadorEstatisticas">
-                ${apostadores.map((apostador, index) => `
-                    <option value="${index}">
-                        ${apostador.nome}
-                    </option>
-                `).join("")}
-            </select>
+    container.innerHTML = `
+        <div class="participantes-grid estatisticas-grid">
+            ${listaApostadores.map(apostador => `
+                <div
+                    class="participante-card estatistica-apostador-card"
+                    data-apostador="${apostador.nome}">
+
+                    <div class="card-apostador">
+                        <img
+                            src="imagens/cards/${apostador.nome}.png"
+                            alt="${apostador.nome}"
+                            class="imagem-card">
+
+                        <div class="faixa-card">
+                            <div class="pontos-card">
+                                📊 Estatísticas
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            `).join("")}
         </div>
 
-        <div id="rankingSelecoesApostador"></div>
+        <div id="detalhesEstatisticas"></div>
     `;
 
-    const select =
-        document.getElementById("selectApostadorEstatisticas");
+    document
+        .querySelectorAll(".estatistica-apostador-card")
+        .forEach(card => {
 
-    function atualizarRanking() {
-        const apostador =
-            apostadores[select.value];
+            card.addEventListener("click", () => {
 
-        const ranking =
-            calcularPontosPorSelecao(apostador);
+                const nome =
+                    card.dataset.apostador;
 
-        const rankingContainer =
-            document.getElementById("rankingSelecoesApostador");
+                const apostador =
+                    listaApostadores.find(
+                        a => a.nome === nome
+                    );
 
-        rankingContainer.innerHTML = `
-            <div class="card-estatistica">
-                <h3>🌍 Pontos por Seleção</h3>
-                <h4>${apostador.nome}</h4>
+                mostrarEstatisticasApostador(apostador);
 
-                ${ranking.map(item => `
-                    <div class="linha-ranking-selecao">
-                        <span>
-                            ${bandeiras[item.selecao] || "🏳️"}
-                            ${item.selecao}
-                        </span>
+            });
 
-                        <strong>
-                            ${item.pontos} pts
-                        </strong>
-                    </div>
-                `).join("")}
-            </div>
-        `;
-    }
+        });
+}
 
-    select.addEventListener(
-        "change",
-        atualizarRanking
-    );
+function mostrarEstatisticasApostador(apostador) {
+    const container =
+        document.getElementById("detalhesEstatisticas");
 
-    atualizarRanking();
+    if (!container) return;
+
+    const ranking =
+        calcularPontosPorSelecao(apostador);
+
+    container.innerHTML = `
+        <h2>${apostador.nome}</h2>
+
+        <div class="card-estatistica">
+            <h3>🌍 Pontos por Seleção</h3>
+
+            ${ranking.map(item => `
+                <div class="linha-ranking-selecao">
+                    <span>
+                        ${flag(item.selecao)}
+                        ${item.selecao}
+                    </span>
+
+                    <strong>
+                        ${item.pontos} pts
+                    </strong>
+                </div>
+            `).join("")}
+        </div>
+    `;
+
+    container.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
 }
