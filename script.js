@@ -1252,6 +1252,93 @@ function cardCampeao(){
     `;
 }
 
+function contarPalpitesCertos(apostador) {
+
+    return apostador.palpites.filter(
+        p => Number(p.palpite_certo) === 1
+    ).length;
+}
+
+function contarPalpitesEmpate(apostador) {
+
+    return apostador.palpites.filter(p => {
+
+        const golsA =
+            Number(p.gols_a);
+
+        const golsB =
+            Number(p.gols_b);
+
+        return !isNaN(golsA) &&
+               !isNaN(golsB) &&
+               golsA === golsB;
+
+    }).length;
+}
+
+function calcularPosicoesPorRodada() {
+
+    const nomes =
+        Object.keys(dadosGlobais.evolucao);
+
+    const jogos =
+        dadosGlobais.evolucao[nomes[0]]
+            .filter(item => item.jogo !== 0)
+            .map(item => item.jogo);
+
+    const posicoes = {};
+
+    nomes.forEach(nome => {
+        posicoes[nome] = {
+            segundo: 0,
+            ultimo: 0
+        };
+    });
+
+    jogos.forEach(jogo => {
+
+        const tabela =
+            nomes.map(nome => {
+
+                const registro =
+                    dadosGlobais.evolucao[nome].find(
+                        item => item.jogo === jogo
+                    );
+
+                return {
+                    nome,
+                    pontos: registro ? registro.pontos : 0
+                };
+
+            }).sort((a, b) => b.pontos - a.pontos);
+
+        let posicaoAtual = 1;
+
+        tabela.forEach((item, index) => {
+
+            if (
+                index > 0 &&
+                item.pontos < tabela[index - 1].pontos
+            ) {
+                posicaoAtual = index + 1;
+            }
+
+            if (posicaoAtual === 2) {
+                posicoes[item.nome].segundo++;
+            }
+
+            if (posicaoAtual === tabela.length) {
+                posicoes[item.nome].ultimo++;
+            }
+
+        });
+    });
+
+    return posicoes;
+}
+
+
+
 function calcularPontosPorFase(apostador) {
 
     const ordemFases = [
@@ -2063,6 +2150,33 @@ const maiorArrancada =
         }),
         "valor"
     );
+
+    const nostradamus =
+    obterEmpatados(
+        lista.map(apostador => ({
+            nome: apostador.nome,
+            valor: contarPalpitesCertos(apostador)
+        })),
+        "valor"
+    );
+
+    const unicosPontuadores =
+    calcularUnicosPontuadores(apostadores);
+
+const contraTudo =
+    obterEmpatados(
+        unicosPontuadores,
+        "valor"
+    );
+
+const reiRainhaAllIn =
+    obterEmpatados(
+        lista.map(apostador => ({
+            nome: apostador.nome,
+            valor: contarAllInMataMata(apostador)
+        })),
+        "valor"
+    );
     
     return {
         maiorSequencia,
@@ -2072,7 +2186,10 @@ const maiorArrancada =
         melhorMediaGeral,
         maiorRecuperacao: calcularMaiorRecuperacao(),
         maisJogosPrimeiro: calcularMaisJogosEmPrimeiro(),
-        maiorArrancada
+        maiorArrancada,
+        nostradamus,
+        contraTudo,
+        reiRainhaAllIn
     };
 }
 
@@ -2129,6 +2246,12 @@ function montarHallDaFama(apostadores) {
             <h2>🏆 Hall da Fama OP2</h2>
 
             <div class="hall-grid">
+
+                <div class="hall-card">
+                    <div class="hall-titulo">🔮 Nostradamus</div>
+                    <div class="hall-nome">${nomesEmpatados(hall.nostradamus)}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.nostradamus, " palpites certos")}</div>
+                </div>
 
                 <div class="hall-card">
                     <div class="hall-titulo">🔥 Orgulho do Duolingo</div>
@@ -2190,6 +2313,25 @@ function montarHallDaFama(apostadores) {
                     <div class="hall-valor">${detalhesEmpatados(hall.maisJogosPrimeiro, " jogos em 1° lugar")}</div>
                 </div>
 
+                <div class="hall-card">
+                    <div class="hall-titulo">⚔️ Contra tudo e contra todos</div>
+                    <div class="hall-nome">${nomesEmpatados(hall.contraTudo)}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.contraTudo, " jogo(s) sozinho")}</div>
+                </div>
+                
+                <div class="hall-card">
+                    <div class="hall-titulo">
+                        🎰 ${tituloReiRainha(
+                            hall.reiRainhaAllIn,
+                            "Rei do All-In",
+                            "Rainha do All-In",
+                            "Reis do All-In"
+                        )}
+                    </div>
+                    <div class="hall-nome">${nomesEmpatados(hall.reiRainhaAllIn)}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.reiRainhaAllIn, " all-in(s)")}</div>
+                </div>
+
             </div>
         </section>
 
@@ -2218,6 +2360,16 @@ function calcularRankingArgentina(apostadores) {
             };
         })
         .sort((a, b) => b.pontos - a.pontos);
+}
+
+function obterMenorEmpatados(lista, campoValor) {
+
+    const menor =
+        Math.min(...lista.map(item => item[campoValor]));
+
+    return lista.filter(
+        item => item[campoValor] === menor
+    );
 }
 
 function tituloHater(posicao) {
@@ -2402,13 +2554,56 @@ function calcularHallDaVergonha(apostadores) {
             "valor"
         );
 
+    const amigoDoEmpate =
+    obterEmpatados(
+        lista.map(apostador => ({
+            nome: apostador.nome,
+            valor: contarPalpitesEmpate(apostador)
+        })),
+        "valor"
+    );
+
+const posicoesPorRodada =
+    calcularPosicoesPorRodada();
+
+const viceProfissional =
+    obterEmpatados(
+        Object.entries(posicoesPorRodada).map(([nome, dados]) => ({
+            nome,
+            valor: dados.segundo
+        })),
+        "valor"
+    );
+
+const tartaruga =
+    obterEmpatados(
+        Object.entries(posicoesPorRodada).map(([nome, dados]) => ({
+            nome,
+            valor: dados.ultimo
+        })),
+        "valor"
+    );
+
+    const unicosPontuadores =
+    calcularUnicosPontuadores(apostadores);
+
+    const mariaVaiComAsOutras =
+    obterMenorEmpatados(
+        unicosPontuadores,
+        "valor"
+    );
+
     return {
         maiorHaterBrasil,
         reiDoQuase,
         especialistaEmZicar,
         peFrio,
         artilheiroGolsInuteis,
-        tonhao: calcularTonhao(apostadores)
+        tonhao: calcularTonhao(apostadores),
+        amigoDoEmpate,
+        viceProfissional,
+        tartaruga,
+        mariaVaiComAsOutras
     };
 }
 
@@ -2461,6 +2656,24 @@ function renderizarHallDaVergonha(apostadores) {
                 </div>
 
                 <div class="hall-card vergonha-card">
+                    <div class="hall-titulo">🤝 Amigo do empate</div>
+                    <div class="hall-nome">${nomesEmpatados(hall.amigoDoEmpate)}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.amigoDoEmpate, " empates apostados")}</div>
+                </div>
+                
+                <div class="hall-card vergonha-card">
+                    <div class="hall-titulo">🥈 Vice profissional</div>
+                    <div class="hall-nome">${nomesEmpatados(hall.viceProfissional)}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.viceProfissional, " rodadas em 2º")}</div>
+                </div>
+                
+                <div class="hall-card vergonha-card">
+                    <div class="hall-titulo">🐢 Tartaruga</div>
+                    <div class="hall-nome">${nomesEmpatados(hall.tartaruga)}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.tartaruga, " rodadas em último")}</div>
+                </div>
+
+                <div class="hall-card vergonha-card">
                     <div class="hall-titulo">🧱 Tonhão</div>
                     <div class="hall-nome">${nomesEmpatados(hall.tonhao)}</div>
                     <div class="hall-valor">${detalhesEmpatados(hall.tonhao, " vezes que todo mundo pontuou menos você")}</div>
@@ -2470,6 +2683,82 @@ function renderizarHallDaVergonha(apostadores) {
         </section>
     `;
 }
+
+function calcularUnicosPontuadores(apostadores) {
+
+    const lista =
+        Object.values(apostadores);
+
+    const contagem = {};
+
+    lista.forEach(apostador => {
+        contagem[apostador.nome] = 0;
+    });
+
+    const totalJogos =
+        Math.max(
+            ...lista.map(apostador => apostador.palpites.length)
+        );
+
+    for (let i = 0; i < totalJogos; i++) {
+
+        const pontuadores =
+            lista
+                .map(apostador => ({
+                    nome: apostador.nome,
+                    palpite: apostador.palpites[i]
+                }))
+                .filter(item =>
+                    item.palpite &&
+                    Number(item.palpite.pontos) > 0
+                );
+
+        if (pontuadores.length === 1) {
+            contagem[pontuadores[0].nome]++;
+        }
+    }
+
+    return Object.entries(contagem)
+        .map(([nome, valor]) => ({
+            nome,
+            valor
+        }));
+}
+
+function ehAllInMataMata(palpite) {
+
+    const jogo =
+        Number(palpite.jogo);
+
+    if (jogo < 73) {
+        return false;
+    }
+
+    const golsA =
+        Number(palpite.gols_a);
+
+    const golsB =
+        Number(palpite.gols_b);
+
+    const apostouEmpate =
+        !isNaN(golsA) &&
+        !isNaN(golsB) &&
+        golsA === golsB;
+
+    const pontuou =
+        Number(palpite.pontos) > 0;
+
+    return apostouEmpate && pontuou;
+}
+
+function contarAllInMataMata(apostador) {
+
+    return apostador.palpites
+        .filter(ehAllInMataMata)
+        .length;
+}
+
+
 
 function ehGolInutil(palpite) {
 
