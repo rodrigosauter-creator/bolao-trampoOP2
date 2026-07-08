@@ -1467,3 +1467,51 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
     font-size:22px;
     font-weight:800;
 }
+
+.hall-da-fama{
+    background:linear-gradient(135deg,#0f172a,#1e3a8a);
+    color:white;
+    border-radius:20px;
+    padding:24px;
+    margin:30px 0;
+    box-shadow:0 8px 24px rgba(0,0,0,.25);
+}
+
+.hall-da-fama h2{
+    text-align:center;
+    margin-top:0;
+    margin-bottom:22px;
+}
+
+.hall-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:16px;
+}
+
+.hall-card{
+    background:rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.18);
+    border-radius:16px;
+    padding:18px;
+    text-align:center;
+}
+
+.hall-titulo{
+    font-size:15px;
+    font-weight:700;
+    opacity:.9;
+    margin-bottom:10px;
+}
+
+.hall-nome{
+    font-size:22px;
+    font-weight:900;
+    margin-bottom:8px;
+}
+
+.hall-valor{
+    font-size:15px;
+    font-weight:700;
+    line-height:1.5;
+}
