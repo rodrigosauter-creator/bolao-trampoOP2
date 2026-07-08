@@ -661,6 +661,54 @@ function adicionarTituloFase(container, nomeFase) {
 // APOSTADORES
 // =====================================================
 
+function criarCardApostador(apostador, aoClicar) {
+
+    const infoRanking =
+        dadosGlobais.classificacao.find(
+            p => p.nome === apostador.nome
+        );
+
+    const pontos =
+        infoRanking ? infoRanking.pontos : 0;
+
+    const acertos =
+        infoRanking ? infoRanking.acertos : 0;
+
+    const card =
+        document.createElement("div");
+
+    card.className = "participante-card";
+
+    card.innerHTML = `
+        <div class="card-apostador">
+
+            <img
+                src="imagens/cards/${apostador.nome}.png"
+                alt="${apostador.nome}"
+                class="imagem-card">
+
+            <div class="faixa-card">
+
+                <div class="pontos-card">
+                    🏆 ${pontos} pts
+                </div>
+
+                <div class="acertos-card">
+                    🎯 ${acertos} acerto(s)
+                </div>
+
+            </div>
+
+        </div>
+    `;
+
+    card.addEventListener("click", () => {
+        aoClicar(apostador);
+    });
+
+    return card;
+}
+
 function montarListaApostadores(apostadores) {
 
     const grid =
@@ -673,61 +721,23 @@ function montarListaApostadores(apostadores) {
     Object.values(apostadores)
         .forEach(apostador => {
 
-            const infoRanking =
-                dadosGlobais.classificacao.find(
-                    p => p.nome === apostador.nome
-                );
-
-            const pontos =
-                infoRanking ? infoRanking.pontos : 0;
-
-            const acertos =
-                infoRanking ? infoRanking.acertos : 0;
-
             const card =
-                document.createElement("div");
-
-            card.className = "participante-card";
-
-            card.innerHTML = `
-                <div class="card-apostador">
-
-                    <img
-                        src="imagens/cards/${apostador.nome}.png"
-                        alt="${apostador.nome}"
-                        class="imagem-card">
-
-                    <div class="faixa-card">
-
-                        <div class="pontos-card">
-                            🏆 ${pontos} pts
-                        </div>
-
-                        <div class="acertos-card">
-                            🎯 ${acertos} acerto(s)
-                        </div>
-
-                    </div>
-
-                </div>
-            `;
-
-            card.addEventListener(
-                "click",
-                () =>
-                    mostrarApostador(
-                        {
-                            ...apostador,
-                            palpitesOriginais:
-                                apostador.palpites
-                        }
-                    )
-            );
+                criarCardApostador(
+                    apostador,
+                    apostadorSelecionado => {
+                        mostrarApostador(
+                            {
+                                ...apostadorSelecionado,
+                                palpitesOriginais:
+                                    apostadorSelecionado.palpites
+                            }
+                        );
+                    }
+                );
 
             grid.appendChild(card);
 
         });
-
 }
 
 function mostrarApostador(apostador, faseAtual = "todos", selecaoAtual = "todas") {
@@ -1289,6 +1299,7 @@ function montarOptionsSelecoes(palpites, selecaoAtual = "todas") {
 }
 
 function renderizarEstatisticas(apostadores) {
+
     const container =
         document.getElementById("estatisticasApostadores");
 
@@ -1302,56 +1313,22 @@ function renderizarEstatisticas(apostadores) {
     const grid =
         document.getElementById("participantesGridEstatisticas");
 
-    grid.innerHTML = "";
+    Object.values(apostadores)
+        .forEach(apostador => {
 
-    Object.values(apostadores).forEach(apostador => {
+            const card =
+                criarCardApostador(
+                    apostador,
+                    apostadorSelecionado => {
+                        mostrarEstatisticasApostador(
+                            apostadorSelecionado
+                        );
+                    }
+                );
 
-        const infoRanking =
-            dadosGlobais.classificacao.find(
-                p => p.nome === apostador.nome
-            );
+            grid.appendChild(card);
 
-        const pontos =
-            infoRanking ? infoRanking.pontos : 0;
-
-        const acertos =
-            infoRanking ? infoRanking.acertos : 0;
-
-        const card =
-            document.createElement("div");
-
-        card.className =
-            "participante-card estatistica-apostador-card";
-
-        card.innerHTML = `
-            <div class="card-apostador">
-
-                <img
-                    src="imagens/cards/${apostador.nome}.png"
-                    alt="${apostador.nome}"
-                    class="imagem-card">
-
-                <div class="faixa-card">
-
-                    <div class="pontos-card">
-                        🏆 ${pontos} pts
-                    </div>
-
-                    <div class="acertos-card">
-                        🎯 ${acertos} acerto(s)
-                    </div>
-
-                </div>
-
-            </div>
-        `;
-
-        card.addEventListener("click", () => {
-            mostrarEstatisticasApostador(apostador);
         });
-
-        grid.appendChild(card);
-    });
 }
 
 function mostrarEstatisticasApostador(apostador) {
