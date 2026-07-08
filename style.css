@@ -1459,3 +1459,11 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
 .fase-dourada{
     background:#f59e0b;
 }
+
+.titulo-bloco-estatistica{
+    margin-top:28px;
+    margin-bottom:12px;
+    color:#1e3a8a;
+    font-size:22px;
+    font-weight:800;
+}
