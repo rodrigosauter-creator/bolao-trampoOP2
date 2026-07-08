@@ -1347,6 +1347,70 @@ function calcularDistribuicaoPontos(apostador) {
         .sort((a, b) => b.pontos - a.pontos);
 }
 
+function calcularAproveitamento(apostador) {
+
+    const jogosValidos =
+        apostador.palpites.filter(
+            p => p.pontos !== null &&
+                 p.pontos !== undefined &&
+                 p.pontos !== ""
+        );
+
+    const jogosPontuando =
+        jogosValidos.filter(
+            p => Number(p.pontos) > 0
+        );
+
+    const percentual =
+        jogosValidos.length > 0
+            ? (jogosPontuando.length / jogosValidos.length) * 100
+            : 0;
+
+    return {
+        percentual,
+        jogosPontuando: jogosPontuando.length,
+        jogosValidos: jogosValidos.length
+    };
+}
+
+function calcularSequencias(apostador) {
+
+    let maiorPontuando = 0;
+    let maiorZerando = 0;
+
+    let atualPontuando = 0;
+    let atualZerando = 0;
+
+    apostador.palpites.forEach(palpite => {
+
+        const pontos =
+            Number(palpite.pontos) || 0;
+
+        if (pontos > 0) {
+
+            atualPontuando++;
+            atualZerando = 0;
+
+        } else {
+
+            atualZerando++;
+            atualPontuando = 0;
+
+        }
+
+        maiorPontuando =
+            Math.max(maiorPontuando, atualPontuando);
+
+        maiorZerando =
+            Math.max(maiorZerando, atualZerando);
+    });
+
+    return {
+        maiorPontuando,
+        maiorZerando
+    };
+}
+
 function classeCorPontuacao(pontos) {
 
     if (pontos >= 12) return "barra-verde";
@@ -1544,6 +1608,12 @@ function mostrarEstatisticasApostador(apostador) {
 
     const fases =
         calcularPontosPorFase(apostador);
+
+    const aproveitamento =
+    calcularAproveitamento(apostador);
+
+    const sequencias =
+        calcularSequencias(apostador);
     
     const melhorFase =
     [...fases].sort((a, b) => b.media - a.media)[0];
@@ -1581,72 +1651,99 @@ function mostrarEstatisticasApostador(apostador) {
         ranking[ranking.length - 1];
 
     container.innerHTML = `
-        <h2>${apostador.nome}</h2>
+    <h2>📋 Scout OP2 - ${apostador.nome}</h2>
 
-        <div class="apostador-resumo">
+    <h3 class="titulo-bloco-estatistica">📊 Resumo</h3>
 
-            <div class="resumo-card">
-                📊 ${posicao}º lugar
-            </div>
+    <div class="apostador-resumo">
 
-            <div class="resumo-card">
-                🏆 ${pontos} pts
-            </div>
-
-            <div class="resumo-card">
-                🎯 ${acertos} acerto(s)
-            </div>
-
-            <div class="resumo-card">
-                📈 ${media} pts/jogo
-            </div>
-
-            <div class="resumo-card">
-                🏅 Melhor fase:
-                ${melhorFase ? melhorFase.fase : "-"}
-                ${melhorFase ? `(${melhorFase.media.toFixed(2)} pts/jogo)` : ""}
-            </div>
+        <div class="resumo-card">
+            📊 ${posicao}º lugar
         </div>
 
-        <div class="apostador-resumo">
-
-            <div class="resumo-card">
-                ⭐ Melhor seleção:
-                ${melhorSelecao ? flag(melhorSelecao.selecao) : ""}
-                ${melhorSelecao ? melhorSelecao.selecao : "-"}
-                ${melhorSelecao ? `(${melhorSelecao.pontos} pts)` : ""}
-            </div>
-
-            <div class="resumo-card">
-                💀 Pior seleção:
-                ${piorSelecao ? flag(piorSelecao.selecao) : ""}
-                ${piorSelecao ? piorSelecao.selecao : "-"}
-                ${piorSelecao ? `(${piorSelecao.pontos} pts)` : ""}
-            </div>
-
+        <div class="resumo-card">
+            🏆 ${pontos} pts
         </div>
 
-        ${renderizarDistribuicaoPontos(distribuicao)}
-
-        ${renderizarDistribuicaoFases(fases)}
-
-        <div class="card-estatistica">
-            <h3>🌍 Pontos por Seleção</h3>
-
-            ${ranking.map(item => `
-                <div class="linha-ranking-selecao">
-                    <span>
-                        ${flag(item.selecao)}
-                        ${item.selecao}
-                    </span>
-
-                    <strong>
-                        ${item.pontos} pts
-                    </strong>
-                </div>
-            `).join("")}
+        <div class="resumo-card">
+            🎯 ${acertos} acerto(s)
         </div>
-    `;
+
+        <div class="resumo-card">
+            📈 ${media} pts/jogo
+        </div>
+
+    </div>
+
+    <h3 class="titulo-bloco-estatistica">⭐ Destaques</h3>
+
+    <div class="apostador-resumo">
+
+        <div class="resumo-card">
+            ⭐ Melhor seleção:
+            ${melhorSelecao ? flag(melhorSelecao.selecao) : ""}
+            ${melhorSelecao ? melhorSelecao.selecao : "-"}
+            ${melhorSelecao ? `(${melhorSelecao.pontos} pts)` : ""}
+        </div>
+
+        <div class="resumo-card">
+            💀 Pior seleção:
+            ${piorSelecao ? flag(piorSelecao.selecao) : ""}
+            ${piorSelecao ? piorSelecao.selecao : "-"}
+            ${piorSelecao ? `(${piorSelecao.pontos} pts)` : ""}
+        </div>
+
+        <div class="resumo-card">
+            🏅 Melhor fase:
+            ${melhorFase ? melhorFase.fase : "-"}
+            ${melhorFase ? `(${melhorFase.media.toFixed(2)} pts/jogo)` : ""}
+        </div>
+
+        <div class="resumo-card">
+            ✅ Aproveitamento:
+            ${aproveitamento.percentual.toFixed(1)}%
+            (${aproveitamento.jogosPontuando}/${aproveitamento.jogosValidos})
+        </div>
+
+    </div>
+
+    <h3 class="titulo-bloco-estatistica">🔥 Consistência</h3>
+
+    <div class="apostador-resumo">
+
+        <div class="resumo-card">
+            🔥 Maior sequência pontuando:
+            ${sequencias.maiorPontuando} jogo(s)
+        </div>
+
+        <div class="resumo-card">
+            💀 Maior sequência sem pontuar:
+            ${sequencias.maiorZerando} jogo(s)
+        </div>
+
+    </div>
+
+    ${renderizarDistribuicaoPontos(distribuicao)}
+
+    ${renderizarDistribuicaoFases(fases)}
+
+    <div class="card-estatistica">
+        <h3>🌍 Pontos por Seleção</h3>
+
+        ${ranking.map(item => `
+            <div class="linha-ranking-selecao">
+                <span>
+                    ${flag(item.selecao)}
+                    ${item.selecao}
+                </span>
+
+                <strong>
+                    ${item.pontos} pts
+                </strong>
+            </div>
+        `).join("")}
+    </div>
+`;
 
     container.scrollIntoView({
         behavior: "smooth",
