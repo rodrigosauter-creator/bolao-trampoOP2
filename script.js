@@ -2674,6 +2674,12 @@ function renderizarHallDaVergonha(apostadores) {
                 </div>
 
                 <div class="hall-card vergonha-card">
+                    <div class="hall-titulo">🐑 Maria Vai com as Outras</div>
+                    <div class="hall-nome">${nomesEmpatados(hall.mariaVaiComAsOutras)}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.mariaVaiComAsOutras, " vez(es) sozinho")}</div>
+                </div>
+
+                <div class="hall-card vergonha-card">
                     <div class="hall-titulo">🧱 Tonhão</div>
                     <div class="hall-nome">${nomesEmpatados(hall.tonhao)}</div>
                     <div class="hall-valor">${detalhesEmpatados(hall.tonhao, " vezes que todo mundo pontuou menos você")}</div>
