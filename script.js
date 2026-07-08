@@ -769,8 +769,8 @@ function mostrarApostador(apostador, faseAtual = "todos", selecaoAtual = "todas"
         infoRanking ? infoRanking.acertos : apostador.acertos;
     
     const todosPalpites =
-       apostador.palpitesOriginais ||
-        obterPalpitesRealizados(apostador)
+        apostador.palpitesOriginais ||
+        apostador.palpites;
 
     const [inicio, fim] =
         obterFaixaRodada(faseAtual);
@@ -1254,14 +1254,14 @@ function cardCampeao(){
 
 function contarPalpitesCertos(apostador) {
 
-    return obterPalpitesRealizados(apostador).filter(
+    return apostador.palpites.filter(
         p => Number(p.palpite_certo) === 1
     ).length;
 }
 
 function contarPalpitesEmpate(apostador) {
 
-    return obterPalpitesRealizados(apostador).filter(p => {
+    return apostador.palpites.filter(p => {
 
         const golsA =
             Number(p.gols_a);
@@ -1278,11 +1278,6 @@ function contarPalpitesEmpate(apostador) {
 
 function calcularPosicoesPorRodada() {
 
-    const palpite =
-    apostador.palpites.find(
-        p => Number(p.jogo) === Number(numeroJogo)
-    );
-    
     const nomes =
         Object.keys(dadosGlobais.evolucao);
 
@@ -1360,7 +1355,7 @@ function calcularPontosPorFase(apostador) {
 
     const fases = {};
 
-    obterPalpitesRealizados(apostador).forEach(palpite => {
+    apostador.palpites.forEach(palpite => {
 
         const fase =
             obterNomeFase(palpite.jogo);
@@ -1396,7 +1391,7 @@ function calcularPontosPorSelecao(apostador) {
 
     const rankingSelecoes = {};
 
-    obterPalpitesRealizados(apostador).forEach(palpite => {
+    apostador.palpites.forEach(palpite => {
 
         const pontos =
             Number(palpite.pontos) || 0;
@@ -1425,7 +1420,7 @@ function calcularDistribuicaoPontos(apostador) {
 
     const distribuicao = {};
 
-    obterPalpitesRealizados(apostador).forEach(palpite => {
+    apostador.palpites.forEach(palpite => {
 
         const pontos =
             Number(palpite.pontos) || 0;
@@ -1446,7 +1441,7 @@ function calcularDistribuicaoPontos(apostador) {
 function calcularAproveitamento(apostador) {
 
     const jogosValidos =
-        obterPalpitesRealizados(apostador).filter(
+        apostador.palpites.filter(
             p => p.pontos !== null &&
                  p.pontos !== undefined &&
                  p.pontos !== ""
@@ -1477,7 +1472,7 @@ function calcularSequencias(apostador) {
     let atualPontuando = 0;
     let atualZerando = 0;
 
-    obterPalpitesRealizados(apostador).forEach(palpite => {
+    apostador.palpites.forEach(palpite => {
 
         const pontos =
             Number(palpite.pontos) || 0;
@@ -1515,7 +1510,7 @@ function calcularMaiorArrancada(apostador) {
     let pontosAtuais = 0;
     let sequenciaAtual = 0;
 
-    obterPalpitesRealizados(apostador).forEach(palpite => {
+    apostador.palpites.forEach(palpite => {
 
         const pontos =
             Number(palpite.pontos) || 0;
@@ -1793,7 +1788,7 @@ function mostrarEstatisticasApostador(apostador) {
         infoRanking ? infoRanking.acertos : 0;
 
     const jogosValidos =
-        obterPalpitesRealizados(apostador).filter(
+        apostador.palpites.filter(
             p => p.pontos !== null &&
                  p.pontos !== undefined &&
                  p.pontos !== ""
@@ -1930,11 +1925,6 @@ function obterEmpatados(lista, campoValor) {
 
 function calcularMaiorRecuperacao() {
 
-    const palpite =
-    apostador.palpites.find(
-        p => Number(p.jogo) === Number(numeroJogo)
-    );
-    
     const nomes =
         Object.keys(dadosGlobais.evolucao);
 
@@ -1995,11 +1985,6 @@ function calcularMaiorRecuperacao() {
 
 function calcularMaisJogosEmPrimeiro() {
 
-    const palpite =
-    apostador.palpites.find(
-        p => Number(p.jogo) === Number(numeroJogo)
-    );
-    
     const nomes =
         Object.keys(dadosGlobais.evolucao);
 
@@ -2131,7 +2116,7 @@ function calcularHallDaFama(apostadores) {
                     info ? info.pontos : 0;
 
                 const jogosValidos =
-                    obterPalpitesRealizados(apostador).filter(
+                    apostador.palpites.filter(
                         p => p.pontos !== null &&
                              p.pontos !== undefined &&
                              p.pontos !== ""
@@ -2178,11 +2163,6 @@ const maiorArrancada =
     const unicosPontuadores =
     calcularUnicosPontuadores(apostadores);
 
-    const palpite =
-    apostador.palpites.find(
-        p => Number(p.jogo) === Number(numeroJogo)
-    );
-    
 const contraTudo =
     obterEmpatados(
         unicosPontuadores,
@@ -2517,7 +2497,7 @@ function calcularHallDaVergonha(apostadores) {
             lista.map(apostador => {
 
                 const quantidade =
-                    obterPalpitesRealizados(apostador).filter(ehQuase).length;
+                    apostador.palpites.filter(ehQuase).length;
 
                 return {
                     nome: apostador.nome,
@@ -2547,7 +2527,7 @@ function calcularHallDaVergonha(apostadores) {
             lista.map(apostador => {
 
                 const zerados =
-                    obterPalpitesRealizados(apostador).filter(
+                    apostador.palpites.filter(
                         p => Number(p.pontos) === 0
                     ).length;
 
@@ -2564,7 +2544,7 @@ function calcularHallDaVergonha(apostadores) {
             lista.map(apostador => {
 
                 const quantidade =
-                    obterPalpitesRealizados(apostador).filter(ehGolInutil).length;
+                    apostador.palpites.filter(ehGolInutil).length;
 
                 return {
                     nome: apostador.nome,
@@ -2743,7 +2723,7 @@ function calcularUnicosPontuadores(apostadores) {
 
     const totalJogos =
         Math.max(
-            ...lista.map(apostador => obterPalpitesRealizados(apostador).length)
+            ...lista.map(apostador => apostador.palpites.length)
         );
 
     for (let i = 0; i < totalJogos; i++) {
@@ -2752,7 +2732,7 @@ function calcularUnicosPontuadores(apostadores) {
             lista
                 .map(apostador => ({
                     nome: apostador.nome,
-                    palpite: obterPalpitesRealizados(apostador)[i]
+                    palpite: apostador.palpites[i]
                 }))
                 .filter(item =>
                     item.palpite &&
@@ -2799,7 +2779,7 @@ function ehAllInMataMata(palpite) {
 
 function contarAllInMataMata(apostador) {
 
-    return obterPalpitesRealizados(apostador)
+    return apostador.palpites
         .filter(ehAllInMataMata)
         .length;
 }
@@ -2835,11 +2815,6 @@ function ehGolInutil(palpite) {
 
 function calcularTonhao(apostadores) {
 
-    const palpite =
-    apostador.palpites.find(
-        p => Number(p.jogo) === Number(numeroJogo)
-    );
-    
     const lista =
         Object.values(apostadores);
 
@@ -2852,7 +2827,7 @@ function calcularTonhao(apostadores) {
     const totalJogos =
         Math.max(
             ...lista.map(apostador =>
-                obterPalpitesRealizados(apostador).length
+                apostador.palpites.length
             )
         );
 
@@ -2862,7 +2837,7 @@ function calcularTonhao(apostadores) {
             lista
                 .map(apostador => ({
                     nome: apostador.nome,
-                    palpite: obterPalpitesRealizados(apostador)[i]
+                    palpite: apostador.palpites[i]
                 }))
                 .filter(item => item.palpite);
 
@@ -2895,11 +2870,6 @@ function calcularTonhao(apostadores) {
 
 function calcularHistoricoPosicoes() {
 
-    const palpite =
-    apostador.palpites.find(
-        p => Number(p.jogo) === Number(numeroJogo)
-    );
-    
     const nomes =
         Object.keys(dadosGlobais.evolucao);
 
@@ -3002,28 +2972,4 @@ function calcularElevador() {
         });
 
     return obterEmpatados(lista, "valor");
-}
-
-function jogoFoiRealizado(numeroJogo) {
-
-    const jogo =
-        dadosGlobais.jogos.find(
-            j => Number(j.jogo) === Number(numeroJogo)
-        );
-
-    return jogo ? Boolean(jogo.realizado) : false;
-}
-
-function obterPalpitesRealizados(apostador) {
-
-    return apostador.palpites.filter(
-        palpite => jogoFoiRealizado(palpite.jogo)
-    );
-}
-
-function obterNumerosJogosRealizados() {
-
-    return dadosGlobais.jogos
-        .filter(jogo => jogo.realizado)
-        .map(jogo => Number(jogo.jogo));
 }
