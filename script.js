@@ -1415,6 +1415,43 @@ function calcularSequencias(apostador) {
     };
 }
 
+function calcularMaiorArrancada(apostador) {
+
+    let melhorPontuacao = 0;
+    let melhorSequencia = 0;
+
+    let pontosAtuais = 0;
+    let sequenciaAtual = 0;
+
+    apostador.palpites.forEach(palpite => {
+
+        const pontos =
+            Number(palpite.pontos) || 0;
+
+        if (pontos > 0) {
+
+            pontosAtuais += pontos;
+            sequenciaAtual++;
+
+            if (pontosAtuais > melhorPontuacao) {
+                melhorPontuacao = pontosAtuais;
+                melhorSequencia = sequenciaAtual;
+            }
+
+        } else {
+
+            pontosAtuais = 0;
+            sequenciaAtual = 0;
+
+        }
+    });
+
+    return {
+        pontos: melhorPontuacao,
+        jogos: melhorSequencia
+    };
+}
+
 function classeCorPontuacao(pontos) {
 
     if (pontos >= 12) return "barra-verde";
@@ -1922,6 +1959,7 @@ function calcularHallDaFama(apostadores) {
                 const melhor =
                     ranking[0];
 
+                
                 return {
                     nome: apostador.nome,
                     valor: melhor ? melhor.pontos : 0,
@@ -1982,7 +2020,23 @@ function calcularHallDaFama(apostadores) {
             }),
             "valor"
         );
+    
+const maiorArrancada =
+    obterEmpatados(
+        lista.map(apostador => {
 
+            const arrancada =
+                calcularMaiorArrancada(apostador);
+
+            return {
+                nome: apostador.nome,
+                valor: arrancada.pontos,
+                detalhe: `${arrancada.jogos} jogo(s)`
+            };
+        }),
+        "valor"
+    );
+    
     return {
         maiorSequencia,
         melhorAproveitamento,
@@ -1990,7 +2044,8 @@ function calcularHallDaFama(apostadores) {
         melhorMediaFase,
         melhorMediaGeral,
         maiorRecuperacao: calcularMaiorRecuperacao(),
-        maisJogosPrimeiro: calcularMaisJogosEmPrimeiro()
+        maisJogosPrimeiro: calcularMaisJogosEmPrimeiro(),
+        maiorArrancada
     };
 }
 
@@ -2034,6 +2089,12 @@ function montarHallDaFama(apostadores) {
                 </div>
 
                 <div class="hall-card">
+                    <div class="hall-titulo">⚡ Maior arrancada</div>
+                    <div class="hall-nome">${nomesEmpatados(hall.maiorArrancada)}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.maiorArrancada, " pts")}</div>
+                </div>
+
+                <div class="hall-card">
                     <div class="hall-titulo">✅ Melhor aproveitamento</div>
                     <div class="hall-nome">${nomesEmpatados(hall.melhorAproveitamento)}</div>
                     <div class="hall-valor">${detalhesEmpatados(hall.melhorAproveitamento, "%")}</div>
@@ -2071,6 +2132,63 @@ function montarHallDaFama(apostadores) {
 
             </div>
         </section>
+
+        ${renderizarRankingArgentina(apostadores)}
+        
     `;
 }
 
+function calcularRankingArgentina(apostadores) {
+
+    return Object.values(apostadores)
+        .map(apostador => {
+
+            const rankingSelecoes =
+                calcularPontosPorSelecao(apostador);
+
+            const argentina =
+                rankingSelecoes.find(
+                    item => item.selecao === "Argentina"
+                );
+
+            return {
+                nome: apostador.nome,
+                pontos: argentina ? argentina.pontos : 0
+            };
+        })
+        .sort((a, b) => b.pontos - a.pontos);
+}
+
+function renderizarRankingArgentina(apostadores) {
+
+    const ranking =
+        calcularRankingArgentina(apostadores);
+
+    return `
+        <section class="ranking-argentina">
+            <h2>🇦🇷 Maiores haters do Brasil</h2>
+
+            <div class="ranking-argentina-lista">
+
+                ${ranking.map((item, index) => `
+                    <div class="ranking-argentina-linha">
+
+                        <div class="ranking-argentina-posicao">
+                            ${index + 1}º
+                        </div>
+
+                        <div class="ranking-argentina-nome">
+                            ${item.nome}
+                        </div>
+
+                        <div class="ranking-argentina-pontos">
+                            ${item.pontos} pts
+                        </div>
+
+                    </div>
+                `).join("")}
+
+            </div>
+        </section>
+    `;
+}
