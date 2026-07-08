@@ -2154,6 +2154,7 @@ function montarHallDaFama(apostadores) {
             </div>
         </section>
 
+        ${renderizarHallDaVergonha(apostadores)}
         ${renderizarRankingArgentina(apostadores)}
         
     `;
@@ -2245,5 +2246,169 @@ function renderizarRankingArgentina(apostadores) {
 
             </div>
         </section>
+    `;
+}
+
+function ehQuase(palpite) {
+
+    const jogo =
+        Number(palpite.jogo);
+
+    const pontos =
+        Number(palpite.pontos) || 0;
+
+    const envolveBrasil =
+        palpite.selecao_a === "Brasil" ||
+        palpite.selecao_b === "Brasil";
+
+    if (jogo >= 1 && jogo <= 72) {
+        return envolveBrasil
+            ? pontos === 8
+            : pontos === 4;
+    }
+
+    if (jogo >= 73) {
+        return envolveBrasil
+            ? pontos === 12
+            : pontos === 6;
+    }
+
+    return false;
+}
+
+function calcularHallDaVergonha(apostadores) {
+
+    const lista =
+        Object.values(apostadores);
+
+    const maiorHaterBrasil =
+        obterEmpatados(
+            lista.map(apostador => {
+
+                const rankingSelecoes =
+                    calcularPontosPorSelecao(apostador);
+
+                const argentina =
+                    rankingSelecoes.find(
+                        item => item.selecao === "Argentina"
+                    );
+
+                return {
+                    nome: apostador.nome,
+                    valor: argentina ? argentina.pontos : 0
+                };
+            }),
+            "valor"
+        );
+
+    const reiDoQuase =
+        obterEmpatados(
+            lista.map(apostador => {
+
+                const quantidade =
+                    apostador.palpites.filter(ehQuase).length;
+
+                return {
+                    nome: apostador.nome,
+                    valor: quantidade
+                };
+            }),
+            "valor"
+        );
+
+    const especialistaEmZicar =
+        obterEmpatados(
+            lista.map(apostador => {
+
+                const seq =
+                    calcularSequencias(apostador);
+
+                return {
+                    nome: apostador.nome,
+                    valor: seq.maiorZerando
+                };
+            }),
+            "valor"
+        );
+
+    const maisImprevisivel =
+        obterEmpatados(
+            lista.map(apostador => {
+
+                const pontos =
+                    apostador.palpites
+                        .filter(p =>
+                            p.pontos !== null &&
+                            p.pontos !== undefined &&
+                            p.pontos !== ""
+                        )
+                        .map(p => Number(p.pontos) || 0);
+
+                const maior =
+                    pontos.length > 0
+                        ? Math.max(...pontos)
+                        : 0;
+
+                const menor =
+                    pontos.length > 0
+                        ? Math.min(...pontos)
+                        : 0;
+
+                return {
+                    nome: apostador.nome,
+                    valor: maior - menor,
+                    detalhe: `${menor} a ${maior} pts`
+                };
+            }),
+            "valor"
+        );
+
+    return {
+        maiorHaterBrasil,
+        reiDoQuase,
+        especialistaEmZicar,
+        maisImprevisivel
+    };
+}
+
+function renderizarHallDaVergonha(apostadores) {
+
+    const hall =
+        calcularHallDaVergonha(apostadores);
+
+    return `
+        <section class="hall-da-vergonha">
+            <h2>🚨 Hall da Vergonha OP2</h2>
+
+            <div class="hall-grid">
+
+                <div class="hall-card vergonha-card">
+                    <div class="hall-titulo">🇦🇷 Maior hater do Brasil</div>
+                    <div class="hall-nome">${nomesEmpatados(hall.maiorHaterBrasil)}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.maiorHaterBrasil, " pts com Argentina")}</div>
+                </div>
+
+                <div class="hall-card vergonha-card">
+                    <div class="hall-titulo">😭 Rei do quase</div>
+                    <div class="hall-nome">${nomesEmpatados(hall.reiDoQuase)}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.reiDoQuase, " quase(s)")}</div>
+                </div>
+
+                <div class="hall-card vergonha-card">
+                    <div class="hall-titulo">🤡 Especialista em zicar</div>
+                    <div class="hall-nome">${nomesEmpatados(hall.especialistaEmZicar)}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.especialistaEmZicar, " jogos zerando")}</div>
+                </div>
+
+                <div class="hall-card vergonha-card">
+                    <div class="hall-titulo">🎲 Mais imprevisível</div>
+                    <div class="hall-nome">${nomesEmpatados(hall.maisImprevisivel)}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.maisImprevisivel, " pts de variação")}</div>
+                </div>
+
+            </div>
+        </section>
+
+        
     `;
 }
