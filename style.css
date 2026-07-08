@@ -1586,3 +1586,23 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
     font-style:italic;
 
 }
+
+.hall-da-vergonha{
+    background:linear-gradient(135deg,#450a0a,#991b1b);
+    color:white;
+    border-radius:20px;
+    padding:24px;
+    margin:30px 0;
+    box-shadow:0 8px 24px rgba(0,0,0,.25);
+}
+
+.hall-da-vergonha h2{
+    text-align:center;
+    margin-top:0;
+    margin-bottom:22px;
+}
+
+.vergonha-card{
+    background:rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.18);
+}
