@@ -1294,55 +1294,64 @@ function renderizarEstatisticas(apostadores) {
 
     if (!container) return;
 
-    const listaApostadores =
-        Object.values(apostadores);
-
     container.innerHTML = `
-        <div class="participantes-grid estatisticas-grid">
-            ${listaApostadores.map(apostador => `
-                <div
-                    class="participante-card estatistica-apostador-card"
-                    data-apostador="${apostador.nome}">
-
-                    <div class="card-apostador">
-                        <img
-                            src="imagens/cards/${apostador.nome}.png"
-                            alt="${apostador.nome}"
-                            class="imagem-card">
-
-                        <div class="faixa-card">
-                            <div class="pontos-card">
-                                📊 Estatísticas
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            `).join("")}
-        </div>
-
+        <div id="participantesGridEstatisticas" class="participantes-grid"></div>
         <div id="detalhesEstatisticas"></div>
     `;
 
-    document
-        .querySelectorAll(".estatistica-apostador-card")
-        .forEach(card => {
+    const grid =
+        document.getElementById("participantesGridEstatisticas");
 
-            card.addEventListener("click", () => {
+    grid.innerHTML = "";
 
-                const nome =
-                    card.dataset.apostador;
+    Object.values(apostadores).forEach(apostador => {
 
-                const apostador =
-                    listaApostadores.find(
-                        a => a.nome === nome
-                    );
+        const infoRanking =
+            dadosGlobais.classificacao.find(
+                p => p.nome === apostador.nome
+            );
 
-                mostrarEstatisticasApostador(apostador);
+        const pontos =
+            infoRanking ? infoRanking.pontos : 0;
 
-            });
+        const acertos =
+            infoRanking ? infoRanking.acertos : 0;
 
+        const card =
+            document.createElement("div");
+
+        card.className =
+            "participante-card estatistica-apostador-card";
+
+        card.innerHTML = `
+            <div class="card-apostador">
+
+                <img
+                    src="imagens/cards/${apostador.nome}.png"
+                    alt="${apostador.nome}"
+                    class="imagem-card">
+
+                <div class="faixa-card">
+
+                    <div class="pontos-card">
+                        🏆 ${pontos} pts
+                    </div>
+
+                    <div class="acertos-card">
+                        🎯 ${acertos} acerto(s)
+                    </div>
+
+                </div>
+
+            </div>
+        `;
+
+        card.addEventListener("click", () => {
+            mostrarEstatisticasApostador(apostador);
         });
+
+        grid.appendChild(card);
+    });
 }
 
 function mostrarEstatisticasApostador(apostador) {
