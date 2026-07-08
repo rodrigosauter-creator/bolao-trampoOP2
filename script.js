@@ -1277,6 +1277,90 @@ function calcularPontosPorSelecao(apostador) {
         .sort((a, b) => b.pontos - a.pontos);
 }
 
+function calcularDistribuicaoPontos(apostador) {
+
+    const distribuicao = {};
+
+    apostador.palpites.forEach(palpite => {
+
+        const pontos =
+            Number(palpite.pontos) || 0;
+
+        distribuicao[pontos] =
+            (distribuicao[pontos] || 0) + 1;
+
+    });
+
+    return Object.entries(distribuicao)
+        .map(([pontos, quantidade]) => ({
+            pontos: Number(pontos),
+            quantidade
+        }))
+        .sort((a, b) => b.pontos - a.pontos);
+}
+
+function classeCorPontuacao(pontos) {
+
+    if (pontos >= 12) return "barra-verde";
+    if (pontos >= 6) return "barra-amarela";
+    if (pontos >= 3) return "barra-laranja";
+
+    return "barra-vermelha";
+}
+
+function renderizarDistribuicaoPontos(distribuicao) {
+
+    if (distribuicao.length === 0) {
+        return `
+            <div class="card-estatistica">
+                <h3>📊 Distribuição dos Pontos</h3>
+                <p>Nenhum palpite encontrado.</p>
+            </div>
+        `;
+    }
+
+    const maiorQuantidade =
+        Math.max(...distribuicao.map(item => item.quantidade));
+
+    return `
+        <div class="card-estatistica">
+            <h3>📊 Distribuição dos Pontos</h3>
+
+            <div class="histograma-pontos">
+
+                ${distribuicao.map(item => {
+
+                    const largura =
+                        (item.quantidade / maiorQuantidade) * 100;
+
+                    return `
+                        <div class="linha-histograma">
+
+                            <div class="label-pontos">
+                                ${item.pontos} pts
+                            </div>
+
+                            <div class="barra-histograma-fundo">
+                                <div
+                                    class="barra-histograma ${classeCorPontuacao(item.pontos)}"
+                                    style="width:${largura}%">
+                                </div>
+                            </div>
+
+                            <div class="quantidade-pontos">
+                                ${item.quantidade}
+                                ${item.quantidade === 1 ? "jogo" : "jogos"}
+                            </div>
+
+                        </div>
+                    `;
+                }).join("")}
+
+            </div>
+        </div>
+    `;
+}
+
 function montarOptionsSelecoes(palpites, selecaoAtual = "todas") {
 
     const selecoes = new Set();
@@ -1332,6 +1416,7 @@ function renderizarEstatisticas(apostadores) {
 }
 
 function mostrarEstatisticasApostador(apostador) {
+
     const container =
         document.getElementById("detalhesEstatisticas");
 
@@ -1339,6 +1424,9 @@ function mostrarEstatisticasApostador(apostador) {
 
     const ranking =
         calcularPontosPorSelecao(apostador);
+
+    const distribuicao =
+        calcularDistribuicaoPontos(apostador);
 
     const infoRanking =
         dadosGlobais.classificacao.find(
@@ -1354,14 +1442,16 @@ function mostrarEstatisticasApostador(apostador) {
     const acertos =
         infoRanking ? infoRanking.acertos : 0;
 
-    const jogosComPontos =
+    const jogosValidos =
         apostador.palpites.filter(
-            p => Number(p.pontos) > 0 || Number(p.pontos) === 0
+            p => p.pontos !== null &&
+                 p.pontos !== undefined &&
+                 p.pontos !== ""
         );
 
     const media =
-        jogosComPontos.length > 0
-            ? (pontos / jogosComPontos.length).toFixed(2)
+        jogosValidos.length > 0
+            ? (pontos / jogosValidos.length).toFixed(2)
             : "0.00";
 
     const melhorSelecao =
@@ -1410,6 +1500,8 @@ function mostrarEstatisticasApostador(apostador) {
             </div>
 
         </div>
+
+        ${renderizarDistribuicaoPontos(distribuicao)}
 
         <div class="card-estatistica">
             <h3>🌍 Pontos por Seleção</h3>
