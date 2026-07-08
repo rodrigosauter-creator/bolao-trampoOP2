@@ -1540,7 +1540,7 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
 
 .ranking-argentina-linha{
     display:grid;
-    grid-template-columns:60px 1fr auto;
+    grid-template-columns:260px 1fr auto;
     align-items:center;
     gap:12px;
     background:#f8fafc;
@@ -1557,4 +1557,32 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
 .ranking-argentina-pontos{
     color:#dc2626;
     font-size:18px;
+}
+
+.ranking-argentina-subtitulo{
+
+    text-align:center;
+
+    color:#64748b;
+
+    font-size:15px;
+
+    margin-top:-10px;
+
+    margin-bottom:20px;
+
+    font-style:italic;
+
+}
+
+.ranking-argentina-posicao{
+
+    color:#2563eb;
+
+    font-weight:700;
+
+    font-size:15px;
+
+    font-style:italic;
+
 }
