@@ -1370,7 +1370,42 @@ function calcularPosicoesPorRodada() {
     return posicoes;
 }
 
+function calcularSoberbaPrecedeQueda() {
 
+    const historico =
+        calcularHistoricoPosicoes();
+
+    const lista =
+        Object.entries(historico).map(([nome, posicoes]) => {
+
+            let melhorAntes = posicoes[0];
+            let maiorQueda = 0;
+            let detalhe = "";
+
+            posicoes.forEach(posicaoAtual => {
+
+                if (posicaoAtual < melhorAntes) {
+                    melhorAntes = posicaoAtual;
+                }
+
+                const queda =
+                    posicaoAtual - melhorAntes;
+
+                if (queda > maiorQueda) {
+                    maiorQueda = queda;
+                    detalhe = `${melhorAntes}º → ${posicaoAtual}º`;
+                }
+            });
+
+            return {
+                nome,
+                valor: maiorQueda,
+                detalhe
+            };
+        });
+
+    return obterEmpatados(lista, "valor");
+}
 
 function calcularPontosPorFase(apostador) {
 
@@ -1802,6 +1837,12 @@ function mostrarEstatisticasApostador(apostador) {
 
     const sequencias =
         calcularSequencias(apostador);
+
+    const placarMaisApostado =
+        calcularPlacarMaisApostado(apostador);
+
+    const totalGolsPalpitados =
+        calcularTotalGolsPalpitados(apostador);
     
     const melhorFase =
     [...fases].sort((a, b) => b.media - a.media)[0];
@@ -1886,6 +1927,17 @@ function mostrarEstatisticasApostador(apostador) {
             ${melhorFase ? melhorFase.fase : "-"}
             ${melhorFase ? `(${melhorFase.media.toFixed(2)} pts/jogo)` : ""}
         </div>
+        
+        <div class="resumo-card">
+            🎯 Placar favorito:
+            ${placarMaisApostado ? placarMaisApostado.placar : "-"}
+            ${placarMaisApostado ? `(${placarMaisApostado.quantidade}x)` : ""}
+        </div>
+        
+        <div class="resumo-card">
+            ⚽ Total de gols palpitados:
+            ${totalGolsPalpitados}
+        </div>
 
         <div class="resumo-card">
             ✅ Aproveitamento:
@@ -1947,6 +1999,38 @@ function criarRecorde(titulo, valor, detalhe = "") {
     };
 }
 
+function calcularPlacarMaisApostado(apostador) {
+
+    const contagem = {};
+
+    obterPalpitesRealizados(apostador).forEach(palpite => {
+
+        const golsA =
+            Number(palpite.gols_a);
+
+        const golsB =
+            Number(palpite.gols_b);
+
+        if (isNaN(golsA) || isNaN(golsB)) return;
+
+        const placar =
+            `${golsA} x ${golsB}`;
+
+        contagem[placar] =
+            (contagem[placar] || 0) + 1;
+    });
+
+    const ranking =
+        Object.entries(contagem)
+            .map(([placar, quantidade]) => ({
+                placar,
+                quantidade
+            }))
+            .sort((a, b) => b.quantidade - a.quantidade);
+
+    return ranking[0] || null;
+}
+
 function obterEmpatados(lista, campoValor) {
     const maior =
         Math.max(...lista.map(item => item[campoValor]));
@@ -1962,9 +2046,7 @@ function calcularMaiorRecuperacao() {
         Object.keys(dadosGlobais.evolucao);
 
     const jogos =
-        dadosGlobais.evolucao[nomes[0]]
-            .filter(item => item.jogo !== 0)
-            .map(item => item.jogo);
+        obterNumerosJogosRealizados();
 
     const pioresPosicoes = {};
 
@@ -1976,9 +2058,10 @@ function calcularMaiorRecuperacao() {
 
         const tabela =
             nomes.map(nome => {
+
                 const registro =
                     dadosGlobais.evolucao[nome].find(
-                        item => item.jogo === jogo
+                        item => Number(item.jogo) === Number(jogo)
                     );
 
                 return {
@@ -2010,12 +2093,25 @@ function calcularMaiorRecuperacao() {
         dadosGlobais.classificacao.map(p => ({
             nome: p.nome,
             valor: pioresPosicoes[p.nome] - p.posicao,
+            posicaoFinal: p.posicao,
             detalhe: `${pioresPosicoes[p.nome]}º → ${p.posicao}º`
         }));
 
-    return obterEmpatados(recuperacoes, "valor");
-}
+    const maiorGanho =
+        Math.max(...recuperacoes.map(p => p.valor));
 
+    const candidatos =
+        recuperacoes.filter(
+            p => p.valor === maiorGanho
+        );
+
+    const melhorPosicaoFinal =
+        Math.min(...candidatos.map(p => p.posicaoFinal));
+
+    return candidatos.filter(
+        p => p.posicaoFinal === melhorPosicaoFinal
+    );
+}
 function calcularRankingJogosEmPrimeiro() {
 
     const nomes =
@@ -2089,7 +2185,50 @@ function calcularPipocou() {
     );
 }
 
+function contarAparicoesNosHalls(hallFama, hallVergonha, apostadores) {
 
+    const contagem = {};
+
+    Object.values(apostadores).forEach(apostador => {
+        contagem[apostador.nome] = 0;
+    });
+
+    function adicionar(lista) {
+
+        if (!Array.isArray(lista)) return;
+
+        lista.forEach(item => {
+
+            if (item.nome in contagem) {
+                contagem[item.nome]++;
+            }
+
+        });
+    }
+
+    Object.values(hallFama).forEach(adicionar);
+    Object.values(hallVergonha).forEach(adicionar);
+
+    return Object.entries(contagem).map(([nome, valor]) => ({
+        nome,
+        valor
+    }));
+}
+
+function calcularFiguranteDoBolao(hallFama, hallVergonha, apostadores) {
+
+    const aparicoes =
+        contarAparicoesNosHalls(
+            hallFama,
+            hallVergonha,
+            apostadores
+        );
+
+    return obterMenorEmpatados(
+        aparicoes,
+        "valor"
+    );
+}
 
 function calcularHallDaFama(apostadores) {
 
@@ -2238,6 +2377,15 @@ const reiRainhaAllIn =
 
     const palpitesUnicos =
     calcularPalpitesUnicos(apostadores);
+
+    const chuvaDeGols =
+    obterEmpatados(
+        lista.map(apostador => ({
+            nome: apostador.nome,
+            valor: calcularTotalGolsPalpitados(apostador)
+        })),
+        "valor"
+    );
     
     return {
         maiorSequencia,
@@ -2251,7 +2399,8 @@ const reiRainhaAllIn =
         nostradamus,
         contraTudo,
         reiRainhaAllIn,
-        palpitesUnicos
+        palpitesUnicos,
+        chuvaDeGols
     };
 }
 
@@ -2302,6 +2451,16 @@ function montarHallDaFama(apostadores) {
 
     const hall =
         calcularHallDaFama(apostadores);
+
+    const hallVergonha =
+    calcularHallDaVergonha(apostadores);
+
+const figuranteDoBolao =
+    calcularFiguranteDoBolao(
+        hall,
+        hallVergonha,
+        apostadores
+    );
 
     container.innerHTML = `
         <section class="hall-da-fama">
@@ -2398,6 +2557,12 @@ function montarHallDaFama(apostadores) {
                 </div>
 
                 <div class="hall-card">
+                    <div class="hall-titulo">⚽ Eu quero caos!</div>
+                    <div class="hall-nome">${nomesEmpatados(hall.chuvaDeGols)}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.chuvaDeGols, " gols palpitados. Se você tivesse certo(a) essa seria a maior Copa da história!")}</div>
+                </div>
+
+                <div class="hall-card">
                     <div class="hall-titulo">🧠 ${tituloReiRainha(
                             hall.palpitesUnicos,
                             "Diferentão",
@@ -2413,7 +2578,7 @@ function montarHallDaFama(apostadores) {
             </div>
         </section>
 
-        ${renderizarHallDaVergonha(apostadores)}
+        ${renderizarHallDaVergonha(apostadores, figuranteDoBolao)}
         ${renderizarRankingArgentina(apostadores)}
         
     `;
@@ -2674,6 +2839,9 @@ const mariaVaiComAsOutras =
     const pipocou =
     calcularPipocou();
 
+    const soberbaPrecedeQueda =
+    calcularSoberbaPrecedeQueda();
+
     return {
         maiorHaterBrasil,
         reiDoQuase,
@@ -2686,14 +2854,19 @@ const mariaVaiComAsOutras =
         tartaruga,
         mariaVaiComAsOutras,
         pipocou,
-        elevador
+        elevador,
+        soberbaPrecedeQueda
     };
 }
 
-function renderizarHallDaVergonha(apostadores) {
+function renderizarHallDaVergonha(apostadores, figuranteDoBolao) {
 
     const hall =
         calcularHallDaVergonha(apostadores);
+
+    if (figuranteDoBolao) {
+    hall.figuranteDoBolao = figuranteDoBolao;
+}
 
     return `
         <section class="hall-da-vergonha">
@@ -2723,7 +2896,7 @@ function renderizarHallDaVergonha(apostadores) {
                 <div class="hall-card vergonha-card">
                     <div class="hall-titulo">🤡 Professor Pardal</div>
                     <div class="hall-nome">${nomesEmpatados(hall.especialistaEmZicar)}</div>
-                    <div class="hall-valor">${detalhesEmpatados(hall.especialistaEmZicar, " jogos seguidos zerando, Diniz?")}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.especialistaEmZicar, " jogos seguidos zerando... Diniz?")}</div>
                 </div>
 
                 <div class="hall-card vergonha-card">
@@ -2767,6 +2940,18 @@ function renderizarHallDaVergonha(apostadores) {
                     <div class="hall-titulo">🍿 Botafogo 2023</div>
                     <div class="hall-nome">${nomesEmpatados(hall.pipocou)}</div>
                     <div class="hall-valor">${detalhesEmpatados(hall.pipocou, " jogos em 1º pra isso kkkkk?")}</div>
+                </div>
+
+                <div class="hall-card vergonha-card">
+                    <div class="hall-titulo">📉 A soberba precede a queda</div>
+                    <div class="hall-nome">${nomesEmpatados(hall.soberbaPrecedeQueda)}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.soberbaPrecedeQueda, " posições")}</div>
+                </div>
+
+                <div class="hall-card vergonha-card">
+                    <div class="hall-titulo">🤷 Você sabe que está participando de um bolão, né?</div>
+                    <div class="hall-nome">${nomesEmpatados(hall.figuranteDoBolao)}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.figuranteDoBolao, " vezes que você apareceu em algum destaque, um verdadeiro NPC")}</div>
                 </div>
                 
                 <div class="hall-card vergonha-card">
@@ -2887,6 +3072,26 @@ function ehGolInutil(palpite) {
     }
 
     return false;
+}
+
+function calcularTotalGolsPalpitados(apostador) {
+
+    return obterPalpitesRealizados(apostador)
+        .reduce((total, palpite) => {
+
+            const golsA =
+                Number(palpite.gols_a);
+
+            const golsB =
+                Number(palpite.gols_b);
+
+            if (isNaN(golsA) || isNaN(golsB)) {
+                return total;
+            }
+
+            return total + golsA + golsB;
+
+        }, 0);
 }
 
 function calcularTonhao(apostadores) {
