@@ -1397,16 +1397,36 @@ function calcularSoberbaPrecedeQueda() {
                 }
             });
 
+            const infoAtual =
+                dadosGlobais.classificacao.find(
+                    p => p.nome === nome
+                );
+
             return {
                 nome,
                 valor: maiorQueda,
+                posicaoAtual: infoAtual ? infoAtual.posicao : 999,
                 detalhe
             };
         });
 
-    return obterEmpatados(lista, "valor");
-}
+    const maiorQueda =
+        Math.max(...lista.map(item => item.valor));
 
+    const empatadosNaQueda =
+        lista.filter(
+            item => item.valor === maiorQueda
+        );
+
+    const piorPosicaoAtual =
+        Math.max(
+            ...empatadosNaQueda.map(item => item.posicaoAtual)
+        );
+
+    return empatadosNaQueda.filter(
+        item => item.posicaoAtual === piorPosicaoAtual
+    );
+}
 function calcularPontosPorFase(apostador) {
 
     const ordemFases = [
@@ -2842,6 +2862,15 @@ const mariaVaiComAsOutras =
     const soberbaPrecedeQueda =
     calcularSoberbaPrecedeQueda();
 
+    const inimigoDaEmocao =
+    obterMenorEmpatados(
+        lista.map(apostador => ({
+            nome: apostador.nome,
+            valor: calcularTotalGolsPalpitados(apostador)
+        })),
+        "valor"
+    );
+
     return {
         maiorHaterBrasil,
         reiDoQuase,
@@ -2855,7 +2884,8 @@ const mariaVaiComAsOutras =
         mariaVaiComAsOutras,
         pipocou,
         elevador,
-        soberbaPrecedeQueda
+        soberbaPrecedeQueda,
+        inimigoDaEmocao
     };
 }
 
@@ -2906,10 +2936,30 @@ function renderizarHallDaVergonha(apostadores, figuranteDoBolao) {
                 </div>
 
                 <div class="hall-card vergonha-card">
-                    <div class="hall-titulo">🚫 Inimigo do placar</div>
+                    <div class="hall-titulo">🚫 Retranqueiro</div>
                     <div class="hall-nome">${nomesEmpatados(hall.artilheiroGolsInuteis)}</div>
-                    <div class="hall-valor">${detalhesEmpatados(hall.artilheiroGolsInuteis, " vezes que faltou personalidade e quis jogar safe só no vencedor")}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.artilheiroGolsInuteis, " vezes que só acertou o vencedor")}</div>
                 </div>
+
+                <div class="hall-card vergonha-card">
+
+                <div class="hall-titulo">
+                    😴 Inimigo da emoção
+                </div>
+            
+                <div class="hall-nome">
+                    ${nomesEmpatados(hall.inimigoDaEmocao)}
+                </div>
+            
+                <div class="hall-valor">
+                    ${detalhesEmpatados(hall.inimigoDaEmocao, " gols palpitados")}
+                </div>
+            
+                <div class="hall-frase">
+                    Sua Copa foi tão emocionante quanto uma aula de Análise.
+                </div>
+            
+            </div>
 
                 <div class="hall-card vergonha-card">
                     <div class="hall-titulo">🦆 Empata foda</div>
@@ -2951,7 +3001,7 @@ function renderizarHallDaVergonha(apostadores, figuranteDoBolao) {
                 <div class="hall-card vergonha-card">
                     <div class="hall-titulo">🤷 Você sabe que está participando de um bolão, né?</div>
                     <div class="hall-nome">${nomesEmpatados(hall.figuranteDoBolao)}</div>
-                    <div class="hall-valor">${detalhesEmpatados(hall.figuranteDoBolao, " vezes que você apareceu em algum destaque, um verdadeiro NPC")}</div>
+                    <div class="hall-valor">${detalhesEmpatados(hall.figuranteDoBolao, " destaque(s) apenas? Um verdadeiro NPC")}</div>
                 </div>
                 
                 <div class="hall-card vergonha-card">
