@@ -2033,8 +2033,11 @@ function calcularPlacarMaisApostado(apostador) {
 
         if (isNaN(golsA) || isNaN(golsB)) return;
 
+        const golsOrdenados =
+            [golsA, golsB].sort((a, b) => b - a);
+
         const placar =
-            `${golsA} x ${golsB}`;
+            `${golsOrdenados[0]} x ${golsOrdenados[1]}`;
 
         contagem[placar] =
             (contagem[placar] || 0) + 1;
@@ -2049,15 +2052,6 @@ function calcularPlacarMaisApostado(apostador) {
             .sort((a, b) => b.quantidade - a.quantidade);
 
     return ranking[0] || null;
-}
-
-function obterEmpatados(lista, campoValor) {
-    const maior =
-        Math.max(...lista.map(item => item[campoValor]));
-
-    return lista.filter(
-        item => item[campoValor] === maior
-    );
 }
 
 function calcularMaiorRecuperacao() {
