@@ -5107,10 +5107,10 @@
         {
           "jogo": 97,
           "selecao_a": "França",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 2,
+          "gols_b": 1,
           "selecao_b": "Marrocos",
-          "vencedor": "-",
+          "vencedor": "França",
           "penaltis": "x",
           "palpite_certo": 0,
           "pontos": 0
@@ -6258,10 +6258,10 @@
         {
           "jogo": 97,
           "selecao_a": "França",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 4,
+          "gols_b": 1,
           "selecao_b": "Marrocos",
-          "vencedor": "-",
+          "vencedor": "França",
           "penaltis": "x",
           "palpite_certo": 0,
           "pontos": 0
@@ -7409,10 +7409,10 @@
         {
           "jogo": 97,
           "selecao_a": "França",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 2,
+          "gols_b": 0,
           "selecao_b": "Marrocos",
-          "vencedor": "-",
+          "vencedor": "França",
           "penaltis": "x",
           "palpite_certo": 0,
           "pontos": 0
@@ -8560,11 +8560,11 @@
         {
           "jogo": 97,
           "selecao_a": "França",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 2,
+          "gols_b": 2,
           "selecao_b": "Marrocos",
-          "vencedor": "-",
-          "penaltis": "x",
+          "vencedor": "Empate",
+          "penaltis": "França",
           "palpite_certo": 0,
           "pontos": 0
         },
@@ -9711,10 +9711,10 @@
         {
           "jogo": 97,
           "selecao_a": "França",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 3,
+          "gols_b": 1,
           "selecao_b": "Marrocos",
-          "vencedor": "-",
+          "vencedor": "França",
           "penaltis": "x",
           "palpite_certo": 0,
           "pontos": 0
@@ -10862,11 +10862,11 @@
         {
           "jogo": 97,
           "selecao_a": "França",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 1,
+          "gols_b": 1,
           "selecao_b": "Marrocos",
-          "vencedor": "-",
-          "penaltis": "x",
+          "vencedor": "Empate",
+          "penaltis": "França",
           "palpite_certo": 0,
           "pontos": 0
         },
@@ -12013,10 +12013,10 @@
         {
           "jogo": 97,
           "selecao_a": "França",
-          "gols_a": null,
-          "gols_b": null,
+          "gols_a": 3,
+          "gols_b": 2,
           "selecao_b": "Marrocos",
-          "vencedor": "-",
+          "vencedor": "França",
           "penaltis": "x",
           "palpite_certo": 0,
           "pontos": 0
