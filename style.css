@@ -1485,35 +1485,37 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
 
 .hall-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:16px;
+    grid-template-columns:repeat(auto-fit, minmax(260px, 320px));
+    justify-content:center;
+    gap:20px;
 }
 
 .hall-card{
-    background:rgba(255,255,255,.12);
-    border:1px solid rgba(255,255,255,.18);
-    border-radius:16px;
-    padding:18px;
+    min-height:200px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
     text-align:center;
 }
 
 .hall-titulo{
-    font-size:15px;
-    font-weight:700;
-    opacity:.9;
-    margin-bottom:10px;
+    width:100%;
+    margin-bottom:16px;
 }
 
 .hall-nome{
-    font-size:22px;
-    font-weight:900;
-    margin-bottom:8px;
+    width:100%;
+    text-align:center;
 }
 
 .hall-valor{
-    font-size:15px;
-    font-weight:700;
-    line-height:1.5;
+    width:100%;
+    text-align:center;
+}
+
+.hall-frase{
+    width:100%;
+    text-align:center;
 }
 
 .ranking-argentina-linha{
