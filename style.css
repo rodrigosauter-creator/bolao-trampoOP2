@@ -1631,3 +1631,99 @@ th,td{padding:12px;border-bottom:1px solid #ddd}
     line-height:1.3;
 
 }
+
+.classificacao-sem-argentina{
+    background:white;
+    color:#111827;
+    border-radius:18px;
+    padding:22px;
+    margin:25px 0 35px;
+    box-shadow:0 4px 14px rgba(0,0,0,.08);
+}
+
+.classificacao-sem-argentina h2{
+    width:100%;
+    margin:0 0 8px;
+    color:#1e3a8a;
+    text-align:center;
+}
+
+.classificacao-sem-argentina-subtitulo{
+    margin:0 0 20px;
+    color:#64748b;
+    font-size:15px;
+    font-style:italic;
+    text-align:center;
+}
+
+.classificacao-sem-argentina-lista{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.classificacao-sem-argentina-linha{
+    display:grid;
+    grid-template-columns:55px 1fr auto;
+    align-items:center;
+    gap:12px;
+    padding:12px 16px;
+    background:#f8fafc;
+    border-radius:12px;
+}
+
+.classificacao-sem-argentina-posicao{
+    color:#2563eb;
+    font-size:18px;
+    font-weight:900;
+}
+
+.classificacao-sem-argentina-nome{
+    font-size:17px;
+    font-weight:800;
+}
+
+.classificacao-sem-argentina-detalhes{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+    gap:2px;
+}
+
+.classificacao-sem-argentina-detalhes strong{
+    color:#166534;
+    font-size:18px;
+}
+
+.classificacao-sem-argentina-detalhes small{
+    color:#dc2626;
+    font-size:12px;
+    white-space:nowrap;
+}
+
+@media (max-width:600px){
+
+    .classificacao-sem-argentina{
+        padding:18px 12px;
+    }
+
+    .classificacao-sem-argentina-linha{
+        grid-template-columns:42px 1fr;
+        grid-template-areas:
+            "posicao nome"
+            "posicao detalhes";
+    }
+
+    .classificacao-sem-argentina-posicao{
+        grid-area:posicao;
+    }
+
+    .classificacao-sem-argentina-nome{
+        grid-area:nome;
+    }
+
+    .classificacao-sem-argentina-detalhes{
+        grid-area:detalhes;
+        align-items:flex-start;
+    }
+}
