@@ -2033,8 +2033,11 @@ function calcularPlacarMaisApostado(apostador) {
 
         if (isNaN(golsA) || isNaN(golsB)) return;
 
+        const golsOrdenados =
+            [golsA, golsB].sort((a, b) => b - a);
+
         const placar =
-            `${golsA} x ${golsB}`;
+            `${golsOrdenados[0]} x ${golsOrdenados[1]}`;
 
         contagem[placar] =
             (contagem[placar] || 0) + 1;
