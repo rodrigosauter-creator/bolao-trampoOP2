@@ -2607,6 +2607,124 @@ const figuranteDoBolao =
     `;
 }
 
+function calcularClassificacaoSemArgentina(apostadores) {
+
+    const classificacao =
+        Object.values(apostadores).map(apostador => {
+
+            const infoClassificacao =
+                dadosGlobais.classificacao.find(
+                    participante =>
+                        participante.nome === apostador.nome
+                );
+
+            const pontosAtuais =
+                infoClassificacao
+                    ? Number(infoClassificacao.pontos) || 0
+                    : 0;
+
+            const rankingSelecoes =
+                calcularPontosPorSelecao(apostador);
+
+            const argentina =
+                rankingSelecoes.find(
+                    item => item.selecao === "Argentina"
+                );
+
+            const pontosArgentina =
+                argentina ? Number(argentina.pontos) || 0 : 0;
+
+            return {
+                nome: apostador.nome,
+                pontosAtuais,
+                pontosArgentina,
+                pontosSemArgentina:
+                    pontosAtuais - pontosArgentina
+            };
+        });
+
+    classificacao.sort((a, b) => {
+
+        if (b.pontosSemArgentina !== a.pontosSemArgentina) {
+            return b.pontosSemArgentina - a.pontosSemArgentina;
+        }
+
+        // Em caso de empate, mantém como desempate
+        // quem possui mais pontos na classificação real.
+        return b.pontosAtuais - a.pontosAtuais;
+    });
+
+    let posicaoAtual = 1;
+
+    return classificacao.map((participante, index) => {
+
+        if (
+            index > 0 &&
+            participante.pontosSemArgentina <
+            classificacao[index - 1].pontosSemArgentina
+        ) {
+            posicaoAtual = index + 1;
+        }
+
+        return {
+            ...participante,
+            posicao: posicaoAtual
+        };
+    });
+}
+
+function renderizarClassificacaoSemArgentina(apostadores) {
+
+    const classificacao =
+        calcularClassificacaoSemArgentina(apostadores);
+
+    return `
+        <section class="classificacao-sem-argentina">
+
+            <h2>
+                🇧🇷 Classificação sem os pontos da Argentina
+            </h2>
+
+            <p class="classificacao-sem-argentina-subtitulo">
+                Como estaria o bolão se ninguém tivesse pontuado
+                nos jogos da Argentina
+            </p>
+
+            <div class="classificacao-sem-argentina-lista">
+
+                ${classificacao.map(participante => `
+                    <div class="classificacao-sem-argentina-linha">
+
+                        <div class="classificacao-sem-argentina-posicao">
+                            ${participante.posicao}º
+                        </div>
+
+                        <div class="classificacao-sem-argentina-nome">
+                            ${participante.nome}
+                        </div>
+
+                        <div class="classificacao-sem-argentina-detalhes">
+
+                            <strong>
+                                ${participante.pontosSemArgentina} pts
+                            </strong>
+
+                            <small>
+                                −${participante.pontosArgentina} pts
+                                da Argentina
+                            </small>
+
+                        </div>
+
+                    </div>
+                `).join("")}
+
+            </div>
+
+        </section>
+    `;
+}
+
 function calcularRankingArgentina(apostadores) {
 
     return Object.values(apostadores)
@@ -2675,6 +2793,7 @@ function renderizarRankingArgentina(apostadores) {
 
     return `
         <section class="ranking-argentina">
+
             <h2>Maiores haters do Brasil</h2>
 
             <p class="ranking-argentina-subtitulo">
@@ -2702,7 +2821,10 @@ function renderizarRankingArgentina(apostadores) {
                 `).join("")}
 
             </div>
+
         </section>
+
+        ${renderizarClassificacaoSemArgentina(apostadores)}
     `;
 }
 
